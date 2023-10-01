@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+	<button id="clearAllButton">Clear All</button>
+	<!-- downloadWindow.html -->
+	
+	<button id="open-download-directory">Open Download Directory</button>
+	
+	<script>
+		// Add a click event handler for the "Open Download Directory" button
+		document.getElementById("open-download-directory").addEventListener("click", () => {
+			// Send an IPC message to request opening the download directory
+			ipcRenderer.send("open-download-directory");
+		});
+	</script>
+
+</div>
+
+<h1>Download Items</h1>
+
+<script src="../render/downloadRenderer.js"></script>
+
+<table id="downloadTable">
+	<!-- Table headers go here -->
+	<tbody>
+	<!-- Download items and history go here -->
+	<!-- Example row: -->
+	<!-- <tr>
+			<td>ExampleFile.txt</td>
+			<td>Downloading</td>
+			<td>
+					<button class="openButton">Open</button>
+					<button class="removeButton">Remove</button>
+			</td>
+	</tr> -->
+	</tbody>
+	<thead>
+	<tr>
+		<th>Filename</th>
+		<th>Status</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+</table>
+</body>
+<head>
+	<title>Download Items</title>
+</head>
+</html>
