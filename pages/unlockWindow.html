@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="verify-button">Verify</button>
+<h1>Enter Your PIN to Unlock</h1>
+<input id="pin-input"
+       placeholder="Enter 4-digit PIN"
+       type="password">
+
+<!-- Include Electron's preload script -->
+<script>
+	// Load Electron's preload script for IPC in the renderer process
+	const {ipcRenderer} = require('electron');
+	
+	ipcRenderer.on('get-stored-pin', () => {
+		ipcRenderer.send('get-stored-pin');
+	});
+	
+	ipcRenderer.on('stored-pin', (event, pin) => {
+		// Handle the received PIN for verification
+		// Here, you can implement the logic to verify the entered PIN
+		document.getElementById('verify-button').addEventListener('click', () => {
+			const enteredPin = document.getElementById('pin-input').value;
+			if (enteredPin === pin) {
+				// PIN is correct, perform actions (e.g., unlock the app)
+				// You can also close the unlockWindow here
+			}
+			else {
+				// PIN is incorrect, display an error message
+			}
+		});
+	});
+</script>
+</body>
+<head>
+	<title>Unlock</title>
+</head>
+</html>

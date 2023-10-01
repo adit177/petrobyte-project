@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="set-pin-button">Set Passcode</button>
+<button id="cancel-button">Cancel</button>
+<h1>Set Lock Code</h1>
+<input id="pin-input"
+       placeholder="Enter 4-digit PIN"
+       type="password">
+
+<script>
+	const {ipcRenderer} = require('electron');
+	
+	document.getElementById('set-pin-button').addEventListener('click', () => {
+		const pinInput = document.getElementById('pin-input').value;
+		// Send the set-passcode event to the main process with the entered PIN
+		ipcRenderer.send('set-passcode', pinInput);
+	});
+	
+	document.getElementById('cancel-button').addEventListener('click', () => {
+		// Close the setLockWindow
+		window.close();
+	});
+</script>
+</body>
+<head>
+	<title>Set Lock</title>
+</head>
+</html>
