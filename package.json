@@ -1,0 +1,17 @@
+{
+  "name"            : "petrobyte" ,
+  "version"         : "1.0.0" ,
+  "main"            : "main.js" ,
+  "devDependencies" : {
+    "electron" : "^26.2.0"
+  } ,
+  "scripts"         : {
+    "start" : "electron ." ,
+    "dev"   : "nodemon --exec electron ."
+  } ,
+  "dependencies"    : {
+    "electron-localshortcut" : "^3.2.1" ,
+    "electron-updater"       : "^6.1.4" ,
+    "nodemon"                : "^3.0.1"
+  }
+}
