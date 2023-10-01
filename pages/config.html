@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form>
+	<button id="change-folder">Change</button>
+	
+	<input id="download-folder"
+	       name="download-folder"
+	       type="text">
+	<input id="notification-timeout"
+	       name="notification-timeout"
+	       type="number">
+	<input id="zoom-factor"
+	       name="zoom-factor"
+	       type="number"><input id="app-lock"
+	       name="app-lock"
+	       type="checkbox">
+	
+	<input id="auto-app-lock"
+	       name="auto-app-lock"
+	       type="number">
+	<input id="global-shortcut"
+	       name="global-shortcut"
+	       type="checkbox">
+	<input type="submit"
+	       value="Submit"><label for="download-folder">Default download location:</label>
+	
+	<label for="theme">Default Theme:</label>
+	<label for="notification-type">Notification Type:</label>
+	<label for="notification-timeout">Notification Popup Timeout:</label><label for="zoom-factor">Zoom Factor:</label>
+	
+	<label for="app-lock">Enable App Lock:</label>
+	<label for="auto-app-lock">Enable Auto App Lock After (seconds):</label>
+	<label for="global-shortcut">Enable Global Shortcut Keys:</label><select id="theme"
+	        name="theme">
+		<option value="light">Light</option>
+		<option value="dark">Dark</option>
+	</select>
+	
+	<select id="notification-type"
+	        name="notification-type">
+		<option value="default">Default</option>
+		<option value="custom">Custom</option>
+	</select>
+</form>
+<script src="../render/configRenderer.js">
+
+</script>
+</body>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0"
+	      name="viewport">
+	<title>Configuration</title>
+</head>
+</html>
