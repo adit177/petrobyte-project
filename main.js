@@ -27,6 +27,8 @@ const {
 const {setLockWindow} = require("./windowManger/setLockWindow");
 const {downloadsWindow} = require("./windowManger/downloadWindow");
 let activeWindow = null;
+const createTray = require('./render/tray');
+
 
 function setActiveWindow(window) {
   activeWindow = window;
@@ -110,6 +112,12 @@ ipcMain.on("open-download-directory", () => {
 });
 app.on('ready', () => {
   createWindow();
+});
+app.on('ready', () => {
+    // Create the tray
+    const tray = createTray();
+
+    // Additional main application logic here
 });
 
 app.on("window-all-closed", function () {
