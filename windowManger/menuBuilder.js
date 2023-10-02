@@ -3,7 +3,8 @@ const {
         BrowserWindow,
         clipboard,
         shell,
-        ipcMain
+        ipcMain,
+        menu: Menu,
       } = require("electron");
 const fs = require("fs");
 const {mainWindow} = require("../main");
@@ -131,8 +132,181 @@ function menuTemplate(mainWindow) {
     {
       label  : "Application",
       submenu: [
+
+          {
+            label: 'Setting',
+
+          },
+          {
+            label: 'Configuration',
+            click: () => {
+              createConfigWindow()
+
+            },
+          },
+          {type: 'separator'},
         {
-          label: "Toggle Full Screen",
+          label: "Open Bookmarks",
+        },
+        {
+          label: "Open Downloads",
+          click() {
+            createDownloadsWindow()
+          }
+        },
+          {type: 'separator'},
+        // {
+        //   label  : "Theme",
+        //   submenu: [
+        //     {
+        //       label  : 'Light Mode',
+        //       type   : 'radio',
+        //       checked: true,
+        //       click() {
+        //         mainWindow.webContents.send('change-theme', 'light');
+        //       }
+        //     },
+        //     {
+        //       label: 'Dark Mode',
+        //       type : 'radio',
+        //       click() {
+        //         mainWindow.webContents.send('change-theme', 'dark');
+        //       }
+        //     },
+        //     {
+        //       label: "System Default",
+        //     },
+        //   ],
+        // },
+          {
+              label: 'Update App',
+              click: () => {
+
+              },
+          },
+
+        {
+          label: "Lock App",
+          click: () => {
+            if (!setLockWindow) {
+              createSetLockWindow()
+            }
+
+          }
+        },
+
+        {type: 'separator'},
+        {
+          label      : 'Quit App (exit the application)',
+          accelerator: process.platform === 'darwin' ? 'Cmd+Q' : 'Ctrl+Q',
+          click      : () => {
+            app.quit();
+          },
+        },
+      ],
+    },
+    {
+      label  : "View",
+      submenu: [
+        {
+          label: "Go to Page",
+          // This would require an external library and an appropriate handler. Placeholder here.
+          click: () => {
+            console.log("Awesome search clicked");
+          }
+        },
+        {
+          label      : "Find In Page",
+          accelerator: "CmdOrCtrl+F",
+          click      : () => {
+            mainWindow.webContents.send('show-find-box');
+          }
+        },
+        {type: 'separator'},
+        {
+          label      : "Reload",
+          accelerator: 'CmdOrCtrl+R',
+          click      : () => {
+            let focusedWindow = BrowserWindow.getFocusedWindow();
+            if (focusedWindow) focusedWindow.reload();
+          }
+        },
+        {
+          label      : "Hard Reload",
+          accelerator: 'CmdOrCtrl+Shift+R',
+          click      : () => {
+            let focusedWindow = BrowserWindow.getFocusedWindow();
+            if (focusedWindow) focusedWindow.webContents.reloadIgnoringCache();
+          }
+        },
+        {type: 'separator'},
+          {
+              label: "Zoom-in",
+              click: () => {
+                  const factor = mainWindow.webContents.getZoomFactor();
+                  mainWindow.webContents.setZoomFactor(factor + 0.1);
+              }
+          },
+          {
+              label: "Actual Size",
+              click: () => {
+                  mainWindow.webContents.setZoomFactor(1);
+              }
+          },
+          {
+              label: "Zoom-Out",
+              click: () => {
+                  const factor = mainWindow.webContents.getZoomFactor();
+                  mainWindow.webContents.setZoomFactor(factor - 0.1);
+              }
+          },
+
+          {type: 'separator'},
+        // {
+        //   label: "Copy URL (current page)",
+        //   click: () => {
+        //     let focusedWindow = BrowserWindow.getFocusedWindow();
+        //     if (focusedWindow) {
+        //       const currentURL = focusedWindow.webContents.getURL();
+        //       clipboard.writeText(currentURL);
+        //     }
+        //   }
+        // },
+        {type: 'separator'},
+
+        {
+          label  : "Screen Adjust",
+          submenu: [
+              {
+                  label: "1080p",
+                  type: 'radio',
+                  click: () => {
+                      mainWindow.setSize(1920, 1080);
+                  }
+              },
+              {
+                  label: "720p",
+                  type: 'radio',
+                  click: () => {
+                      mainWindow.setSize(1280, 720);
+                  }
+              },
+            {
+              label: "480p",
+                type: 'radio',
+              click: () => {
+                mainWindow.setSize(854, 480);
+              }
+            },
+
+
+
+
+
+          ],
+        },
+        {
+          label: "Full Screen Toggle",
           click() {
             if (mainWindow.isFullScreen()) {
               mainWindow.setFullScreen(false);
@@ -142,70 +316,60 @@ function menuTemplate(mainWindow) {
             }
           },
         },
-        {
-          label: "Open Bookmark Page",
-        },
-        {
-          label: "Open Download Folder",
-          click() {
-            createDownloadsWindow()
-          }
-        },
-        {
-          label  : "Theme",
-          submenu: [
-            {
-              label  : 'Light Mode',
-              type   : 'radio',
-              checked: true,
-              click() {
-                mainWindow.webContents.send('change-theme', 'light');
-              }
-            },
-            {
-              label: 'Dark Mode',
-              type : 'radio',
-              click() {
-                mainWindow.webContents.send('change-theme', 'dark');
-              }
-            },
-            {
-              label: "System Default",
-            },
-          ],
-        },
-        {
-          label: "Lock Application",
-          click: () => {
-            if (!setLockWindow) {
-              createSetLockWindow()
-            }
 
-          }
-        },
-
-        {
-          label: 'Update Application',
-          click: () => {
-
-          },
-        },
-        {
-          label: 'Configuration Page',
-          click: () => {
-            createConfigWindow()
-
-          },
-        },
-        {type: 'separator'},
-        {
-          label      : 'Quit (exit the application)',
-          accelerator: process.platform === 'darwin' ? 'Cmd+Q' : 'Ctrl+Q',
-          click      : () => {
-            app.quit();
-          },
-        },
       ],
+    },
+    {
+      label  : "Windows",
+      submenu: [
+        {
+          label: "New Window (Home)",
+          click: () => {
+            newHomePageTab();
+          },
+        },
+        {
+          label: "Duplicate Window (Current Page)",
+          click: (menuItem, currentWindow) => {
+            duplicateCurrentTab(currentWindow);
+          },
+        },
+        {
+          type: 'separator',
+        },
+          {
+              label: "Manage Licence",
+          },
+        {
+          label: "Manage Subscription",
+        },
+          {type: 'separator'},
+        {
+          label: "Register Page",
+        },
+          {
+            label:"Payment Page",
+          },
+        {
+          type: 'separator',
+        },
+          {
+                label: "Minimize Window",
+          },
+          {
+            label      : "Close This Window",
+            accelerator: process.platform === 'darwin' ? 'Cmd+W' : 'Ctrl+W',
+            click      : () => {
+              let focusedWindow = BrowserWindow.getFocusedWindow();
+              if (focusedWindow) {
+                focusedWindow.close();
+              }
+            }
+          },
+
+
+
+      ]
     },
     {
       label  : "History",
@@ -224,7 +388,7 @@ function menuTemplate(mainWindow) {
           }
         },
         {
-          label: "Home Page",
+          label: "Home",
           click: () => {
             loadHomePage();
           }
@@ -244,141 +408,15 @@ function menuTemplate(mainWindow) {
             clearHistory();
           }
         },
+          {type: 'separator'},
+          {
+              label:"View Page History",
+          },
+          {
+                label:"View Download History",
+          },
       ],
     },
-    {
-      label  : "Window",
-      submenu: [
-        {
-          label      : "Close",
-          accelerator: process.platform === 'darwin' ? 'Cmd+W' : 'Ctrl+W',
-          click      : () => {
-            let focusedWindow = BrowserWindow.getFocusedWindow();
-            if (focusedWindow) {
-              focusedWindow.close();
-            }
-          }
-        },
-        {
-          type: 'separator',
-        },
-        {
-          label: "Add or Remove Licences",
-        },
-        {
-          label: "Sign In to another Licence",
-        },
-        {
-          label: "Sign Out to this Licence",
-        },
-        {
-          type: 'separator',
-        },
-        {
-          label  : "Screen Size Setup",
-          submenu: [
-            {
-              label: "480p",
-              click: () => {
-                mainWindow.setSize(854, 480);
-              }
-            },
-            {
-              label: "720p",
-              click: () => {
-                mainWindow.setSize(1280, 720);
-              }
-            },
-            {
-              label: "1080p",
-              click: () => {
-                mainWindow.setSize(1920, 1080);
-              }
-            },
-            {
-              label: "zoom-in",
-              click: () => {
-                const factor = mainWindow.webContents.getZoomFactor();
-                mainWindow.webContents.setZoomFactor(factor + 0.1);
-              }
-            },
-            {
-              label: "zoom-out",
-              click: () => {
-                const factor = mainWindow.webContents.getZoomFactor();
-                mainWindow.webContents.setZoomFactor(factor - 0.1);
-              }
-            },
-            {
-              label: "actual size",
-              click: () => {
-                mainWindow.webContents.setZoomFactor(1);
-              }
-            },
-
-
-          ],
-        },
-      ]
-    },
-    {
-      label  : "View",
-      submenu: [
-        {
-          label      : "Find Text",
-          accelerator: "CmdOrCtrl+F",
-          click      : () => {
-            mainWindow.webContents.send('show-find-box');
-          }
-        },
-        {
-          label: "Go to Page",
-          // This would require an external library and an appropriate handler. Placeholder here.
-          click: () => {
-            console.log("Awesome search clicked");
-          }
-        },
-        {
-          label      : "Reload",
-          accelerator: 'CmdOrCtrl+R',
-          click      : () => {
-            let focusedWindow = BrowserWindow.getFocusedWindow();
-            if (focusedWindow) focusedWindow.reload();
-          }
-        },
-        {
-          label      : "Hard Reload",
-          accelerator: 'CmdOrCtrl+Shift+R',
-          click      : () => {
-            let focusedWindow = BrowserWindow.getFocusedWindow();
-            if (focusedWindow) focusedWindow.webContents.reloadIgnoringCache();
-          }
-        },
-        {
-          label: "New Tab (Home Page)",
-          click: () => {
-            newHomePageTab();
-          },
-        },
-        {
-          label: "Duplicate Tab (Current Page)",
-          click: (menuItem, currentWindow) => {
-            duplicateCurrentTab(currentWindow);
-          },
-        },
-        {
-          label: "Copy URL (current page)",
-          click: () => {
-            let focusedWindow = BrowserWindow.getFocusedWindow();
-            if (focusedWindow) {
-              const currentURL = focusedWindow.webContents.getURL();
-              clipboard.writeText(currentURL);
-            }
-          }
-        }
-      ],
-    },
-
 
     {
       label  : "Edit",
@@ -398,6 +436,7 @@ function menuTemplate(mainWindow) {
           accelerator: "CmdOrCtrl+V",
           role       : 'paste'
         },
+          {type: 'separator'},
         {
           label      : "Select All",
           accelerator: "CmdOrCtrl+A",
@@ -417,10 +456,7 @@ function menuTemplate(mainWindow) {
       label  : "Help",
       submenu: [
         {
-          label: "Contact to Support",
-        },
-        {
-          label  : "Follow PetroByte",
+          label  : "Follow Us",
           submenu: [
             {
               label: "Twitter",
@@ -443,36 +479,43 @@ function menuTemplate(mainWindow) {
           ]
         },
         {
-          label: "About Version"
+          label: "About Us"
         },
-        {
-          label: "Manage Subscription"
-        },
-        {
-          label: "Training Videos",
-          click: async () => {
-            await shell.openExternal('https://youtube.com');
-          }
+          {type: 'separator'},
+          {
+              label: "Contact to Support",
+          },
+          {
+              label: "Training Videos",
+              click: async () => {
+                  await shell.openExternal('https://youtube.com');
+              }
 
-        },
+          },
+          {
+              label: "Documentation"
+          },
+          {type:"separator"},
+          {
+              label: "Post a Review",
+              click: () => {
+                  createReviewWindow();
+              }
+          },
         {
-          label: "Report Issue or Bug"
-        },
-        {
-          label: "Public Reviews",
-          click: () => {
-            createReviewWindow();
-          }
+          label: "Give a Feedback"
         },
 
         {
-          label: "Documentation"
+          label: "Report a Bug/Issue"
         },
+        {type:"separator"},
+
+        // {
+        //   label: "Add-On Features"
+        // },
         {
-          label: "Add-On Features"
-        },
-        {
-          label: "View License Detail"
+          label: "View App Version"
         },
         {
           label: "View ShortCut Keys",
