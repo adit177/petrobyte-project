@@ -30,6 +30,12 @@ let activeWindow = null;
 const createTray = require('./render/tray');
 
 
+
+
+
+// Rest of your main.js file
+
+
 function setActiveWindow(window) {
   activeWindow = window;
 }
@@ -119,6 +125,7 @@ app.on('ready', () => {
 
     // Additional main application logic here
 });
+
 
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();

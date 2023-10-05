@@ -11,7 +11,10 @@ const {mainWindow} = require("../main");
 // const {createLockWindow} =require("./lockWindow");
 // const {createRegistrationWindow} =require("./registrationWindow");
 const {createConfigWindow} = require("./configWindow");
+const {createmanageLicenses} = require("./manageLicenses");
+const {createmanageSubscription} = require("./manageSubscription");
 const {createShortCutWindow} = require("../GlobalKeyManager/ShortCutKeyWindow");
+const{createSettingWindow} = require("./settingWindow");
 // const {createSetLockWindow} =require("./setLockWindow");
 const {createUnlockWindow} = require("./unLockWindow");
 const {
@@ -135,6 +138,9 @@ function menuTemplate(mainWindow) {
 
           {
             label: 'Setting',
+              click: () => {
+                createSettingWindow()
+              }
 
           },
           {
@@ -155,29 +161,6 @@ function menuTemplate(mainWindow) {
           }
         },
           {type: 'separator'},
-        // {
-        //   label  : "Theme",
-        //   submenu: [
-        //     {
-        //       label  : 'Light Mode',
-        //       type   : 'radio',
-        //       checked: true,
-        //       click() {
-        //         mainWindow.webContents.send('change-theme', 'light');
-        //       }
-        //     },
-        //     {
-        //       label: 'Dark Mode',
-        //       type : 'radio',
-        //       click() {
-        //         mainWindow.webContents.send('change-theme', 'dark');
-        //       }
-        //     },
-        //     {
-        //       label: "System Default",
-        //     },
-        //   ],
-        // },
           {
               label: 'Update App',
               click: () => {
@@ -273,6 +256,29 @@ function menuTemplate(mainWindow) {
         //   }
         // },
         {type: 'separator'},
+          {
+            label  : "Theme",
+            submenu: [
+              {
+                label  : 'Light Mode',
+                type   : 'radio',
+                checked: true,
+                click() {
+                  mainWindow.webContents.send('change-theme', 'light');
+                }
+              },
+              {
+                label: 'Dark Mode',
+                type : 'radio',
+                click() {
+                  mainWindow.webContents.send('change-theme', 'dark');
+                }
+              },
+              {
+                label: "System Default",
+              },
+            ],
+          },
 
         {
           label  : "Screen Adjust",
@@ -339,9 +345,15 @@ function menuTemplate(mainWindow) {
         },
           {
               label: "Manage Licence",
+              click: () => {
+                  createmanageLicenses()
+              },
           },
         {
           label: "Manage Subscription",
+            click: () => {
+                createmanageSubscription()
+            },
         },
           {type: 'separator'},
         {
