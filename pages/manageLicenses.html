@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ManageLicenses</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="maincontainer">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Bootstrap
+            </a>
+            <button onclick="registerLicenseFunction()">Register License</button>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col">
+            <div class="PetrolPumpName1">Petrol Pump Name</div>
+                <div class="LicensesCode1">Licenses Code</div>
+        </div>
+        <div class="col">
+            <div class="buttons">
+                <button onclick="openFunction()">Open</button>
+                <button onclick="removeFunction()">Remove</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="PetrolPumpName2">Petrol Pump Name</div>
+            <div class="LicensesCode2">Licenses Code</div>
+        </div>
+        <div class="col">
+            <div class="buttons">
+                <button onclick="openFunction()">Open</button>
+                <button onclick="removeFunction()">Remove</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <div>
+            <h4>Add New License</h4>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="License Code">License Code</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="Mobile">Mobile</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3">
+                    <button onclick="continueFunction()">Continue</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+<script src="..render/manageLicensesRendered.js"></script> <!-- Link to external JavaScript file -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

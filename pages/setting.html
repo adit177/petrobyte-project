@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Setting</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="maincontainer">
+       <div class="notfications">
+
+     <nav class="navbar bg-body-tertiary">
+               <div class="container-fluid">
+                   <span class="navbar-brand mb-0 h1">Notification</span>
+               </div>
+           </nav>
+    <div class="row g-0 text-left">
+        <div class="col-6 col-md-4">
+            Notification Type
+        </div>
+        <div class="col-sm-6 col-md-8">
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-sm" type="button">
+                    Notification type
+                </button>
+                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    local
+                </ul>
+                <button type="button" class="btn btn-success">Try</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row g-0 text-left">
+        <div class="col-6 col-md-4">Notification Status</div>
+        <div class="col-sm-6 col-md-8"><div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Enable</label>
+        </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Disable</label>
+            </div>
+
+
+    </div>
+
+
+       </div>
+    <div class="row g-0 text-left">
+    <div class="col-6 col-md-4">Notification Popup-Timeout</div>
+               <div class="col-sm-6 col-md-8">
+                   <div class="input-group mb-3">
+                       <input type="text" class="form-control" placeholder="6 second" aria-label="Recipient's username" aria-describedby="button-addon2">
+                       <button class="btn btn-outline-secondary" type="button" id="button-addon2">Done</button>
+                   </div>
+               </div>
+
+           </div>
+    <div class="row g-0 text-left">
+               <div class="col-6 col-md-4"></div>
+               <div class="col-sm-6 col-md-8">
+                   <button type="button" class="btn btn-success">&#10003; Save</button>
+                   <button type="button" class="btn btn-danger"> &#8635; Reset</button>
+               </div>
+
+           </div>
+      </div>
+<!--    <hr>-->
+    <div class="Download">
+        <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1">Download</span>
+                </div>
+            </nav>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Default download location:</div>
+            <div class="col-sm-6 col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="button" class="btn btn-success">Change</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Show download popup once file download</div>
+            <div class="col-sm-6 col-md-8"><div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Ask the location when the new file Download</div>
+            <div class="col-sm-6 col-md-8"><div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4"></div>
+            <div class="col-sm-6 col-md-8">
+                <button type="button" class="btn btn-success">&#10003; Save</button>
+                <button type="button" class="btn btn-danger"> &#8635; Reset</button>
+            </div>
+
+        </div>
+
+    </div>
+<!--    <hr>-->
+    <div>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Applock</span>
+            </div>
+        </nav>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Enable the app lock on application start</div>
+            <div class="col-sm-6 col-md-8"><div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Enable auto lock after </div>
+            <div class="col-sm-6 col-md-8"><div class="form-check form-check-inline">
+                <div class="button-container">
+                    <button id="minus">-</button>
+                    <button id="default">30 sec</button>
+                    <button id="plus">+</button>
+                    <button type="button" class="btn btn-danger"> &#8635; Reset</button>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4">Current Pass-code</div>
+            <div class="col-sm-6 col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="6 second" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="button" class="btn btn-warning">View</button>
+                    <button type="button" class="btn btn-primary">Reset</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row g-0 text-left">
+            <div class="col-6 col-md-4"></div>
+            <div class="col-sm-6 col-md-8">
+                <button type="button" class="btn btn-success">&#10003; Save</button>
+                <button type="button" class="btn btn-danger"> &#8635; Reset</button>
+            </div>
+
+        </div>
+<!--    <hr>-->
+    <div>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Permissions</span>
+            </div>
+        </nav>
+        <div>New table</div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">SR.no.</th>
+                <th scope="col">Permissions</th>
+                <th scope="col">Configurations</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Notifications</td>
+                <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+<!--                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
+                </div></td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>b</td>
+                <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+<!--                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
+                </div></td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>c</td>
+                <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+<!--                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
+                </div></td>
+
+            </tr>
+
+            </tbody>
+
+        </table>
+        <div class="row g-0 text-center">
+            <div class="col-6 col-md-4"></div>
+            <div class="col-sm-6 col-md-8">
+                <button type="button" class="btn btn-success">&#10003; Save</button>
+                <button type="button" class="btn btn-danger"> &#8635; Reset</button>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Storage Data</span>
+            </div>
+        </nav>
+
+    </div>
+
+
+
+
+
+</div>
+<script src="..render/settingRender.js"></script> <!-- Link to external JavaScript file -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
