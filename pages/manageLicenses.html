@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="maincontainer">
-    <nav class="navbar bg-body-tertiary">
+    <div class="container">  <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -18,32 +18,39 @@
             </a>
             <button onclick="registerLicenseFunction()">Register License</button>
         </div>
-    </nav>
-    <div class="row">
-        <div class="col">
-            <div class="PetrolPumpName1">Petrol Pump Name</div>
-                <div class="LicensesCode1">Licenses Code</div>
-        </div>
-        <div class="col">
-            <div class="buttons">
-                <button onclick="openFunction()">Open</button>
-                <button onclick="removeFunction()">Remove</button>
+    </nav></div>
+    <br>
+   <div class="container"><div class="row">
+       <div class="col">
+           <div class="PetrolPumpName1">Petrol Pump Name</div>
+           <div class="LicensesCode1">Licenses Code</div>
+       </div>
+       <div class="col">
+           <div class="buttons">
+               <button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">Open</button>
+               <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark">Remove</button>
+           </div>
+       </div>
+   </div></div>
+    <div class="card m-5 shadow-sm">
+        <div class="container"><div class="row">
+            <div class="col">
+                <div class="PetrolPumpName2">Petrol Pump Name</div>
+                <div class="LicensesCode2">Licenses Code</div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="PetrolPumpName2">Petrol Pump Name</div>
-            <div class="LicensesCode2">Licenses Code</div>
-        </div>
-        <div class="col">
-            <div class="buttons">
-                <button onclick="openFunction()">Open</button>
-                <button onclick="removeFunction()">Remove</button>
+            <div class="col">
+                <div class="buttons">
+
+
+                    <button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">Open</button>
+                    <button type="button" class="btn btn-outline-danger btn-rounded" data-mdb-ripple-color="dark">Remove</button>
+                </div>
             </div>
-        </div>
+        </div></div>
     </div>
 
+
+<div class="container">
     <div class="container text-center">
         <div>
             <h4>Add New License</h4>
@@ -63,12 +70,14 @@
             </div>
             <div class="col">
                 <div class="input-group mb-3">
-                    <button onclick="continueFunction()">Continue</button>
+                    <button type="button" class="btn btn-outline-success btn-rounded" data-mdb-ripple-color="dark">Continue</button>
                 </div>
             </div>
 
         </div>
     </div>
+</div>
+
 
 
 
