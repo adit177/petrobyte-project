@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
-<body>
-<button id="set-pin-button">Set Passcode</button>
-<button id="cancel-button">Cancel</button>
-<h1>Set Lock Code</h1>
-<input id="pin-input"
-       placeholder="Enter 4-digit PIN"
-       type="password">
-
-<script>
-	const {ipcRenderer} = require('electron');
-	
-	document.getElementById('set-pin-button').addEventListener('click', () => {
-		const pinInput = document.getElementById('pin-input').value;
-		// Send the set-passcode event to the main process with the entered PIN
-		ipcRenderer.send('set-passcode', pinInput);
-	});
-	
-	document.getElementById('cancel-button').addEventListener('click', () => {
-		// Close the setLockWindow
-		window.close();
-	});
-</script>
-</body>
+<html lang="en">
 <head>
-	<title>Set Lock</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Setup</title>
+	<!-- Include Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body>
+
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-body text-center">
+					<img src="your_logo.png" alt="Logo" class="mb-4" width="100">
+					<h2 class="mb-4">Password Setup</h2>
+					<form>
+						<div class="mb-3">
+							<label for="passcode" class="form-label">Enter Passcode:</label>
+							<input type="password" class="form-control" id="passcode" required>
+						</div>
+						<div class="mb-3">
+							<label for="confirmPasscode" class="form-label">Confirm Passcode:</label>
+							<input type="password" class="form-control" id="confirmPasscode" required>
+						</div>
+						<button type="submit" class="btn btn-primary">Set Passcode</button>
+						<button type="button" class="btn btn-danger ml-2" id="cancelSetup">Cancel Lock Setup</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js for Bootstrap features (optional) -->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
+<script src="..render/setLockRenderer.js"></script>
+</body>
 </html>

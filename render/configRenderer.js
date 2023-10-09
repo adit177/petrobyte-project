@@ -1,3 +1,5 @@
+
+console.log('configRenderer.js');
 const {ipcRenderer, webFrame} = require('electron');
 
 document.getElementById('download-folder').addEventListener('change', (event) => {

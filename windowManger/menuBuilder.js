@@ -173,6 +173,8 @@ function menuTemplate(mainWindow) {
           click: () => {
             if (!setLockWindow) {
               createSetLockWindow()
+            }else{
+                console.log("setLockWindow is already open");
             }
 
           }

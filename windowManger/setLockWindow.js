@@ -27,7 +27,7 @@ function createSetLockWindow() {
     isLocked = true;
     mainWindow.hide();
   }
-  setLockWindow.loadFile('setLockWindow.html');
+  setLockWindow.loadFile('pages/setLockWindow.html');
 
   ipcMain.on('set-pin', (event, pin) => {
     // Store the PIN securely (e.g., encrypt it)

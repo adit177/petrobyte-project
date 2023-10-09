@@ -1,5 +1,5 @@
 const {ipcRenderer} = require('electron');
-
+console.log("renderer.js");
 ipcRenderer.on('change-theme', (event, theme) => {
   if (theme === 'light') {
     document.body.classList.add('light-theme');
