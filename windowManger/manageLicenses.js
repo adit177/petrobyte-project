@@ -1,5 +1,5 @@
 const {BrowserWindow} = require("electron");
-
+let isdev=process.env.NODE_ENV!=='development';
 let manageLicenses;
 
 function createmanageLicenses() {
@@ -16,7 +16,7 @@ function createmanageLicenses() {
             contextIsolation: false
         }
     });
-
+if(isdev){manageLicenses.webContents.openDevTools();}
     manageLicenses.loadFile('pages/manageLicenses.html');
     // configWindow.webContents.openDevTools();
     // setActiveWindow(configWindow);

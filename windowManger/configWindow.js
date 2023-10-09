@@ -1,7 +1,7 @@
 const {BrowserWindow} = require("electron");
 
 let configWindow;
-
+let isdev=process.env.NODE_ENV!=='development';
 function createConfigWindow() {
   if (configWindow) {
     configWindow.focus();
@@ -16,7 +16,7 @@ function createConfigWindow() {
       contextIsolation: false
     }
   });
-
+if(isdev){configWindow.webContents.openDevTools();}
   configWindow.loadFile('pages/config.html');
   // configWindow.webContents.openDevTools();
   // setActiveWindow(configWindow);

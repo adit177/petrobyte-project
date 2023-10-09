@@ -16,7 +16,7 @@ let configWindow;
 let storedPin
 let isLocked = true;
 let downloadHistory = [];
-
+const isdev=process.env.NODE_ENV!=='development';
 // const {createLockWindow} =require("./windowManger/lockWindow");
 const {menuTemplate} = require("./windowManger/menuBuilder");
 const {createSetLockWindow} = require("./windowManger/setLockWindow");
@@ -49,7 +49,23 @@ function createWindow() {
       contextIsolation: false,
     },
   });
-
+    // app.on('ready', () => {
+    //     // Create your main window here (e.g., mainWindow = new BrowserWindow(...))
+    //
+    //     // Handle IPC message from renderer process
+    //     ipcMain.on('open-main-window', () => {
+    //         // Open the main window when the correct passcode is entered
+    //         // You can use mainWindow.loadFile to load your main window HTML
+    //         // Example:
+    //         // mainWindow.loadFile(path.join(__dirname, 'main.html'));
+    //         console.log("open main window");
+    //         mainWindow.loadFile("index.html");
+    //         createWindow();
+    //     });
+    // });
+    if(isdev){
+        mainWindow.webContents.openDevTools();
+    }
   mainWindow.loadFile("index.html");
   setActiveWindow(mainWindow);
 
@@ -125,7 +141,10 @@ app.on('ready', () => {
 
     // Additional main application logic here
 });
-
+ipcMain.on('open-main-window', () => {
+    // Open the main window when the correct passcode is entered
+    mainWindow.show();
+});
 
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();

@@ -23,7 +23,7 @@ const {
       } = require("./setLockWindow");
 const {createDownloadsWindow} = require("./downloadWindow");
 const {createReviewWindow} = require("./ReviewWindow");
-let isLocked = true;
+let isLocked = false;
 let pin = null;
 
 function unlockApplication() {
@@ -129,7 +129,13 @@ function setLock(pinValue) {
          console.log('History cleared.');
      }
  }
-
+ipcMain.on('passcode-set', (event, data) => {
+    // Access data like data.isSetpasscode and data.Pin here
+    isLocked = data.isSetpasscode;
+    pin = data.Pin;
+    console.log('isSetpasscode:', data.isSetpasscode);
+    console.log('Pin:', data.Pin);
+});
 function menuTemplate(mainWindow) {
   return [
     {
@@ -171,10 +177,13 @@ function menuTemplate(mainWindow) {
         {
           label: "Lock App",
           click: () => {
-            if (!setLockWindow) {
+              console.log("isLocked",isLocked)
+              console.log("pin",pin)
+            if (!isLocked) {
               createSetLockWindow()
             }else{
                 console.log("setLockWindow is already open");
+                createUnlockWindow()
             }
 
           }

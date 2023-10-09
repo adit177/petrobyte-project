@@ -3,7 +3,9 @@ const {
         ipcMain
       } = require('electron');
 const {createUnlockWindow} = require("./unLockWindow");
-
+// const {isSetpasscode,
+//   Pin}=require("../render/setLockRenderer");
+const isdev=process.env.NODE_ENV!=='development';
 let setLockWindow = null;
 let storedPin;
 let isLocked = true;
@@ -18,21 +20,24 @@ function createSetLockWindow() {
       contextIsolation: false,
     },
   });
-  if (isLocked) {
-    // If locked, ask for the PIN
-    createUnlockWindow();
-  }
-  else {
-    // If unlocked, lock the app
-    isLocked = true;
-    mainWindow.hide();
-  }
+  if(isdev){  setLockWindow.webContents.openDevTools();}
+  // if (1) {
+  //   // If locked, ask for the PIN
+  //   console.log("set")
+  //   createUnlockWindow();
+  // }
+  // else {
+  //   // If unlocked, lock the app
+  //   console.log(unset);
+  //   isLocked = true;
+  //   mainWindow.hide();
+  // }
   setLockWindow.loadFile('pages/setLockWindow.html');
 
-  ipcMain.on('set-pin', (event, pin) => {
-    // Store the PIN securely (e.g., encrypt it)
-    storedPin = pin;
-    setLockWindow.close();
+  ipcMain.on('passcode-set', (event, data) => {
+    // Access data like data.isSetpasscode and data.Pin here
+    console.log('isSetpasscode:', data.isSetpasscode);
+    console.log('Pin:', data.Pin);
   });
 
   // ...
