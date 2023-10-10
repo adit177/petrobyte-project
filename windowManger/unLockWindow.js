@@ -41,4 +41,5 @@ function createUnlockWindow() {
 
 module.exports = {
   createUnlockWindow,
+    unlockWindow,
 };

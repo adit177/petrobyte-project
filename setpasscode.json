@@ -6,18 +6,34 @@
   "latency": 0,
   "port": 4002,
   "hostname": "",
-  "folders": [],
+  "folders": [
+    {
+      "uuid": "da9e4a31-c6e3-4e11-8cad-71747300e675",
+      "name": "passcode",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "13ab42b6-7243-47cb-9b55-25dfb0f112a1"
+        },
+        {
+          "type": "route",
+          "uuid": "6a6b861c-965f-482f-a3eb-2adf5e5f81b7"
+        }
+      ]
+    }
+  ],
   "routes": [
     {
       "uuid": "66a82aee-ee30-4921-86d8-d5106984e8ee",
       "type": "http",
       "documentation": "",
-      "method": "get",
+      "method": "post",
       "endpoint": "",
       "responses": [
         {
           "uuid": "de3c4879-473c-4590-9066-c2ed4d4e7579",
-          "body": "{\r\n  \"passcode\": \"asdf\"\r\n}\r\n",
+          "body": "{\r\n  \"passcode\": \"\"\r\n}\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -36,12 +52,74 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "13ab42b6-7243-47cb-9b55-25dfb0f112a1",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "54cdeef5-2c4a-474b-aba2-113f38cb38d4",
+          "body": "{\r\n  \"passcode\": \"qwert\"\r\n}\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "6a6b861c-965f-482f-a3eb-2adf5e5f81b7",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "update",
+      "responses": [
+        {
+          "uuid": "37ba8b9f-6cbe-49f9-96cc-45c6e55557a3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 205,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Lenovo\\WebstormProjects\\package-ejs\\setpasscode.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "66a82aee-ee30-4921-86d8-d5106984e8ee"
+    },
+    {
+      "type": "folder",
+      "uuid": "da9e4a31-c6e3-4e11-8cad-71747300e675"
     }
   ],
   "proxyMode": false,

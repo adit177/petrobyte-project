@@ -10,13 +10,7 @@ let setLockWindow = null;
 let pin;
 let isLocked = true;
 const {mainWindow} = require("../main");
-ipcMain.on('passcode-set', (event, data) => {
-  // Access data like data.isSetpasscode and data.Pin here
-  isLocked = data.isSetpasscode;
-  pin = data.Pin;
-  console.log('isSetpasscodeinsetlockwindow:', data.isSetpasscode);
-  console.log('Pin:', data.Pin);
-});
+
 function createSetLockWindow() {
   setLockWindow = new BrowserWindow({
     width         : 800,

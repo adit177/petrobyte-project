@@ -26,16 +26,10 @@ const {createReviewWindow} = require("./ReviewWindow");
 let isLocked = false;
 let pin = null;
 
-function unlockApplication() {
-  isLocked = false;
-  mainWindow.show();
-}
 
 
-function setLock(pinValue) {
-  pin = pinValue;
-  createUnlockWindow();
-}
+
+
 
  function goBack() {
      if (activeWindow !== mainWindow) {

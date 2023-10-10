@@ -141,10 +141,25 @@ app.on('ready', () => {
 
     // Additional main application logic here
 });
+ipcMain.on('close-current-window', () => {
+    // Close the current window
+    const currentWindow = BrowserWindow.getFocusedWindow();
+    if (currentWindow) {
+        currentWindow.close();
+    }
+});
+ipcMain.on('close-setlock-window', () => {
+    // Close the "Set Passcode" window
+    const currentWindow = BrowserWindow.getFocusedWindow();
+    if (currentWindow) {
+        currentWindow.close();
+    }
+});
 ipcMain.on('open-main-window', () => {
     // Open the main window when the correct passcode is entered
     mainWindow.show();
 });
+
 
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();
