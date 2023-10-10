@@ -554,4 +554,5 @@ function menuTemplate(mainWindow) {
 
 module.exports = {
   menuTemplate,
+
 }

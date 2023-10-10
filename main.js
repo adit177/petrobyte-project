@@ -155,5 +155,6 @@ app.on("activate", function () {
 })
 
 module.exports = {
-  mainWindow
+  mainWindow,
+
 }

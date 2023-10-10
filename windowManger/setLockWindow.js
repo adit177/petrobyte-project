@@ -7,10 +7,16 @@ const {createUnlockWindow} = require("./unLockWindow");
 //   Pin}=require("../render/setLockRenderer");
 const isdev=process.env.NODE_ENV!=='development';
 let setLockWindow = null;
-let storedPin;
+let pin;
 let isLocked = true;
 const {mainWindow} = require("../main");
-
+ipcMain.on('passcode-set', (event, data) => {
+  // Access data like data.isSetpasscode and data.Pin here
+  isLocked = data.isSetpasscode;
+  pin = data.Pin;
+  console.log('isSetpasscodeinsetlockwindow:', data.isSetpasscode);
+  console.log('Pin:', data.Pin);
+});
 function createSetLockWindow() {
   setLockWindow = new BrowserWindow({
     width         : 800,
@@ -34,11 +40,11 @@ function createSetLockWindow() {
   // }
   setLockWindow.loadFile('pages/setLockWindow.html');
 
-  ipcMain.on('passcode-set', (event, data) => {
-    // Access data like data.isSetpasscode and data.Pin here
-    console.log('isSetpasscode:', data.isSetpasscode);
-    console.log('Pin:', data.Pin);
-  });
+  // ipcMain.on('passcode-set', (event, data) => {
+  //   // Access data like data.isSetpasscode and data.Pin here
+  //   console.log('isSetpasscode:', data.isSetpasscode);
+  //   console.log('Pin:', data.Pin);
+  // });
 
   // ...
 
@@ -50,4 +56,5 @@ function createSetLockWindow() {
 module.exports = {
   createSetLockWindow,
   setLockWindow,
+  pin
 };

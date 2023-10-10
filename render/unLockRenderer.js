@@ -1,26 +1,65 @@
+// const { ipcRenderer,
+// ipcMain} = require('electron');
+// // let isLocked = false;
+// let pin = 'asdf';
+//
+// document.addEventListener('DOMContentLoaded',
+//     () => {
+//     const passcodeInput = document.getElementById('passcode');
+//     const unlockForm = document.querySelector('form');
+//     const errorMessageBox = document.getElementById('error-message');
+//
+//     unlockForm.addEventListener('submit', (event) => {
+//         event.preventDefault();
+//
+//         // Get the entered passcode
+//         const enteredPasscode = passcodeInput.value;
+//         const correctPasscode = pin; // Replace with your actual correct passcode
+//
+//         // Check if the entered passcode is correct
+//         if (enteredPasscode === correctPasscode) {
+//             // Send a message to the main process to open the main window
+//             console.log('Correct passcode. Opening main window...');
+//             ipcRenderer.send('open-main-window');
+//         } else {
+//             // Display an error message
+//             console.log('Wrong passcode. Please try again.');
+//             // errorMessageBox.textContent = 'Wrong passcode. Please try again.';
+//         }
+//     });
+// });
 const { ipcRenderer } = require('electron');
+const axios = require('axios'); // Import axios
 
 document.addEventListener('DOMContentLoaded', () => {
     const passcodeInput = document.getElementById('passcode');
     const unlockForm = document.querySelector('form');
     const errorMessageBox = document.getElementById('error-message');
 
-    unlockForm.addEventListener('submit', (event) => {
+    unlockForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        // Get the entered passcode
-        const enteredPasscode = passcodeInput.value;
-        const correctPasscode = 'asdf'; // Replace with your actual correct passcode
+        // Fetch the correct passcode from the API
+        try {
+            const response = await axios.get('http://localhost:4002/');
+            const correctPasscode = response.data.passcode;
 
-        // Check if the entered passcode is correct
-        if (enteredPasscode === correctPasscode) {
-            // Send a message to the main process to open the main window
-            console.log('Correct passcode. Opening main window...');
-            ipcRenderer.send('open-main-window');
-        } else {
-            // Display an error message
-            console.log('Wrong passcode. Please try again.');
-            // errorMessageBox.textContent = 'Wrong passcode. Please try again.';
+            // Get the entered passcode
+            const enteredPasscode = passcodeInput.value;
+
+            // Check if the entered passcode is correct
+            if (enteredPasscode === correctPasscode) {
+                // Send a message to the main process to open the main window
+                console.log('Correct passcode. Opening main window...')
+                ipcRenderer.send('open-main-window');
+            } else {
+                // Display an error message
+                console.log('Wrong passcode. Please try again.');
+                // errorMessageBox.textContent = 'Wrong passcode. Please try again.';
+            }
+        } catch (error) {
+            // Handle any errors that occur during the API request
+            console.error('Error fetching passcode:', error);
         }
     });
 });
