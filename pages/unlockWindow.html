@@ -22,7 +22,8 @@
 </head>
 <body>
 <div class="container mt-5">
-	<div class="row justify-content-center">
+	<!-- Add a row div to contain all buttons -->
+	<div class="row mt-3">
 		<div class="col-md-6 text-center">
 			<div class="circular-logo mx-auto mb-4">
 				<img src="your_circular_logo.png" alt="Circular Logo">
@@ -34,11 +35,14 @@
 					<input type="password" class="form-control" id="passcode" required>
 				</div>
 				<button type="submit" class="btn btn-primary">Go</button>
-				<button type="reset" class="btn btn-danger ml-2">Reset</button>
+				<button type="reset" id="reset" class="btn btn-danger ml-2">Reset</button>
+				<!-- Add the "Quit" button in the same column -->
+				<button id="quit-button" class="btn btn-secondary ml-2">Quit</button>
 			</form>
 			<div id="error-message"></div>
 		</div>
 	</div>
+
 </div>
 
 <!-- Include Bootstrap JS and Popper.js for Bootstrap features (optional) -->

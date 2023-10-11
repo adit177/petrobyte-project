@@ -1,8 +1,9 @@
 const {
         BrowserWindow,
-        ipcMain
-      } = require('electron');
+        ipcMain, ipcRenderer
+} = require('electron');
 const {createUnlockWindow} = require("./unLockWindow");
+const {activeWindow}=require("../main");
 // const {isSetpasscode,
 //   Pin}=require("../render/setLockRenderer");
 const isdev=process.env.NODE_ENV!=='development';
@@ -20,6 +21,7 @@ function createSetLockWindow() {
       contextIsolation: false,
     },
   });
+  console.log(activeWindow)
   if(isdev){  setLockWindow.webContents.openDevTools();}
   // if (1) {
   //   // If locked, ask for the PIN

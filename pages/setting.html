@@ -26,16 +26,21 @@
                     Notification Type
                 </div>
                 <div class="col-sm-5 col-md-7 " >
-                    <div class="dropdown" >
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 60%;">
-                            Notifications
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div>
+                    <form>
+                        <div class="input-group mb-3" style="width: 60%;" >
+
+                        <!--                            <label for="select-option" class="form-label">Select an option:</label>-->
+                            <select class="form-select" id="select-option">
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                            </select>
+
+                            <button type="button" class="btn btn-outline-success btn-rounded" data-mdb-ripple-color="dark">Try</button>
+                        </div>
+
+                    </form>
                 </div>
 
             </div>
@@ -94,16 +99,16 @@
             </nav>
             <br>
             <div style="padding: 3%; padding-top: 0%">
-            <div class="row g-0 text-left">
-                <div class="col-7 col-md-5" style="padding-top: 1%">Default download location:</div>
-                <div class="col-sm-5 col-md-7">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button type="button" class="btn btn-success">Change</button>
+                <div class="row g-0 text-left">
+                    <div class="col-7 col-md-5" style="padding-top: 1%">Default download location:</div>
+                    <div class="col-sm-5 col-md-7">
+                        <div class="input-group mb-3">
+                            <!-- Populate the input element with the default download location value -->
+                            <input type="text" class="form-control" value="/your/default/download/location" aria-label="Default download location" aria-describedby="button-addon2">
+                            <button type="button" class="btn btn-success">Change</button>
+                        </div>
                     </div>
                 </div>
-
-            </div>
                 <br>
             <div class="row g-0 text-left">
                 <div class="col-7 col-md-5">Show download popup once file download</div>
@@ -205,7 +210,7 @@
                     <div class="col-7 col-md-5" style="padding-top: 1% ;">Current Pass-code</div>
                     <div class="col-sm-5 col-md-7">
                         <div class="input-group mb-3" style="width: 80%">
-                            <input type="text" class="form-control" placeholder="6 second" aria-label="Recipient's username" aria-describedby="button-addon2" >
+                            <input type="text" class="form-control" placeholder="******" aria-label="Recipient's username" aria-describedby="button-addon2" >
                             <button type="button" class="btn btn-warning" >View</button>
                             <button type="button" class="btn btn-primary" >Reset</button>
                         </div>

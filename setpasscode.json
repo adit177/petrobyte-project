@@ -62,7 +62,7 @@
       "responses": [
         {
           "uuid": "54cdeef5-2c4a-474b-aba2-113f38cb38d4",
-          "body": "{\r\n  \"passcode\": \"qwert\"\r\n}\r\n",
+          "body": "{\r\n  \"otp\":\"1234\",\r\n  \"passcode\": \"qwert\"\r\n}\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",

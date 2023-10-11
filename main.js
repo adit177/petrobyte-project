@@ -26,18 +26,15 @@ const {
       } = require("./windowManger/unLockWindow");
 const {setLockWindow} = require("./windowManger/setLockWindow");
 const {downloadsWindow} = require("./windowManger/downloadWindow");
-let activeWindow = null;
+let activeWindow = mainWindow;
 const createTray = require('./render/tray');
 
 
 
 
-
-// Rest of your main.js file
-
-
-function setActiveWindow(window) {
-  activeWindow = window;
+function setActiveWindow(awindow) {
+    activeWindow = awindow;
+    // console.log(activeWindow);
 }
 
 function createWindow() {
@@ -49,20 +46,7 @@ function createWindow() {
       contextIsolation: false,
     },
   });
-    // app.on('ready', () => {
-    //     // Create your main window here (e.g., mainWindow = new BrowserWindow(...))
-    //
-    //     // Handle IPC message from renderer process
-    //     ipcMain.on('open-main-window', () => {
-    //         // Open the main window when the correct passcode is entered
-    //         // You can use mainWindow.loadFile to load your main window HTML
-    //         // Example:
-    //         // mainWindow.loadFile(path.join(__dirname, 'main.html'));
-    //         console.log("open main window");
-    //         mainWindow.loadFile("index.html");
-    //         createWindow();
-    //     });
-    // });
+
     if(isdev){
         mainWindow.webContents.openDevTools();
     }
@@ -159,6 +143,23 @@ ipcMain.on('open-main-window', () => {
     // Open the main window when the correct passcode is entered
     mainWindow.show();
 });
+ipcMain.on('create-main-window', () => {
+    // console.log("asdasd")
+    createWindow();
+});
+ipcMain.on('quit-app', () => {
+    // Close all windows (including the main window)
+    BrowserWindow.getAllWindows().forEach((window) => {
+        window.close();
+    });
+
+    // Quit the application
+    app.quit();
+});
+// ipcMain.on('open-main-window', () => {
+//     // Open the main window when the correct passcode is entered
+//     mainWindow.show();
+// });
 
 
 app.on("window-all-closed", function () {
@@ -171,5 +172,6 @@ app.on("activate", function () {
 
 module.exports = {
   mainWindow,
+    activeWindow
 
 }

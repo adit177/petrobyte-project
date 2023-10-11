@@ -4,10 +4,12 @@ const {
         clipboard,
         shell,
         ipcMain,
-        menu: Menu,
+        menu: Menu, ipcRenderer,
       } = require("electron");
 const fs = require("fs");
 const {mainWindow} = require("../main");
+
+let activeWindow = null;
 // const {createLockWindow} =require("./lockWindow");
 // const {createRegistrationWindow} =require("./registrationWindow");
 const {createConfigWindow} = require("./configWindow");
@@ -31,45 +33,45 @@ let pin = null;
 
 
 
- function goBack() {
-     if (activeWindow !== mainWindow) {
-         activeWindow.close();
-         mainWindow.focus();
-     } else{
+ // function goBack() {
+ //     if (activeWindow !== mainWindow) {
+ //         activeWindow.close();
+ //         mainWindow.focus();
+ //     } else{
+ //
+ //         if (activeWindow && activeWindow.webContents.canGoBack()) {
+ //             activeWindow.webContents.goBack();
+ //         }
+ //     }
+ // }
+ // function goForward() {
+ //     if (activeWindow !== mainWindow) {
+ //         //if you want go forward define it.
+ //         activeWindow.close();
+ //         mainWindow.focus();
+ //     }
+ //     else{
+ //
+ //         if (activeWindow && activeWindow.webContents.canGoForward()) {
+ //             activeWindow.webContents.goForward();
+ //         }
+ //     }
+ // }
 
-         if (activeWindow && activeWindow.webContents.canGoBack()) {
-             activeWindow.webContents.goBack();
-         }
-     }
- }
- function goForward() {
-     if (activeWindow !== mainWindow) {
-         //if you want go forward define it.
-         activeWindow.close();
-         mainWindow.focus();
-     }
-     else{
-
-         if (activeWindow && activeWindow.webContents.canGoForward()) {
-             activeWindow.webContents.goForward();
-         }
-     }
- }
-
- function loadHomePage() {
-     if (activeWindow) {
-         // Replace with your home URL
-         activeWindow.loadURL('');
-     }
- }
- function clearCache() {
-     if (activeWindow) {
-         const ses = activeWindow.webContents.session;
-         ses.clearCache().then(() => {
-             console.log('Cache cleared.');
-         });
-     }
- }
+ // function loadHomePage() {
+ //     if (activeWindow) {
+ //         // Replace with your home URL
+ //         activeWindow.loadURL('');
+ //     }
+ // }
+ // function clearCache() {
+ //     if (activeWindow) {
+ //         const ses = activeWindow.webContents.session;
+ //         ses.clearCache().then(() => {
+ //             console.log('Cache cleared.');
+ //         });
+ //     }
+ // }
 
 
  function newHomePageTab() {
@@ -117,12 +119,12 @@ let pin = null;
  }
 
 
- function clearHistory() {
-     if (activeWindow) {
-         activeWindow.webContents.clearHistory();
-         console.log('History cleared.');
-     }
- }
+ // function clearHistory() {
+ //     if (activeWindow) {
+ //         activeWindow.webContents.clearHistory();
+ //         console.log('History cleared.');
+ //     }
+ // }
 ipcMain.on('passcode-set', (event, data) => {
     // Access data like data.isSetpasscode and data.Pin here
     isLocked = data.isSetpasscode;
@@ -139,6 +141,14 @@ function menuTemplate(mainWindow) {
           {
             label: 'Setting',
               click: () => {
+                  const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                  if (focusedWindow) {
+                      focusedWindow.close()
+                      console.log('Currently focused window:', focusedWindow.getTitle());
+                  } else {
+                      console.log('No window is currently focused.');
+                  }
                 createSettingWindow()
               }
 
@@ -146,6 +156,14 @@ function menuTemplate(mainWindow) {
           {
             label: 'Configuration',
             click: () => {
+                const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                if (focusedWindow) {
+                    focusedWindow.close()
+                    console.log('Currently focused window:', focusedWindow.getTitle());
+                } else {
+                    console.log('No window is currently focused.');
+                }
               createConfigWindow()
 
             },
@@ -168,20 +186,31 @@ function menuTemplate(mainWindow) {
               },
           },
 
-        {
-          label: "Lock App",
-          click: () => {
-              console.log("isLocked",isLocked)
-              console.log("pin",pin)
-            if (!isLocked) {
-              createSetLockWindow()
-            }else{
-                console.log("setLockWindow is already open");
-                createUnlockWindow()
-            }
+          {
+              label: "Lock App",
+              click: () => {
 
-          }
-        },
+                  const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                  if (focusedWindow) {
+                      focusedWindow.close()
+                      console.log('Currently focused window:', focusedWindow.getTitle());
+                  } else {
+                      console.log('No window is currently focused.');
+                  }
+
+
+                  console.log("isLocked", isLocked);
+                  console.log("pin", pin);
+
+                  if (!isLocked) {
+                      createSetLockWindow();
+                  } else {
+                      console.log("setLockWindow is already open");
+                      createUnlockWindow();
+                  }
+              }
+          },
 
         {type: 'separator'},
         {
@@ -351,12 +380,28 @@ function menuTemplate(mainWindow) {
           {
               label: "Manage Licence",
               click: () => {
+                  const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                  if (focusedWindow) {
+                      focusedWindow.close()
+                      console.log('Currently focused window:', focusedWindow.getTitle());
+                  } else {
+                      console.log('No window is currently focused.');
+                  }
                   createmanageLicenses()
               },
           },
         {
           label: "Manage Subscription",
             click: () => {
+                const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                if (focusedWindow) {
+                    focusedWindow.close()
+                    console.log('Currently focused window:', focusedWindow.getTitle());
+                } else {
+                    console.log('No window is currently focused.');
+                }
                 createmanageSubscription()
             },
         },

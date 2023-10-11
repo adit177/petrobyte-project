@@ -10,6 +10,8 @@ function createUnlockWindow() {
   unlockWindow = new BrowserWindow({
     width         : 800,
     height        : 600,
+      // frame:false,
+      autoHideMenuBar:true,
     webPreferences: {
       nodeIntegration : true,
       contextIsolation: false,

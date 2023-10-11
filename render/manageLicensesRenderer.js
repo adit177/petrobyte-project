@@ -1,5 +1,4 @@
 // script.js
-console.log('manageLicensesRenderer.js');
 function createPerson(name) {
     // Create elements
     const personDiv = document.createElement('div');
