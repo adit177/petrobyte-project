@@ -1,0 +1,205 @@
+<div data-pb-layout="sample"
+     data-layout="parent">
+	
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		<div id="select"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">select</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        form="select-form"
+					        data-form-submit=""
+					        data-e-nature="option"
+					        name="stack"
+					        value="select"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form class="form"
+				      data-pb-control="combo"
+				      id="select-form">
+					<div class="row fv-row">
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Fund Send From</span>
+								<span class="fw-bold fs-6 text-danger">[-]</span>
+							</label>
+							<select name="credit_lid"
+							        data-pb-source="credit_accounts"
+							        required
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="amount"
+							        data-pb-search="0"
+							        data-pb-placeholder="Select Cash Account"
+							        title="Select Cash Account"> </select>
+						</div>
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Fund Received Into</span>
+								<span class="fw-bold fs-6 text-success">[+]</span>
+							</label>
+							<select name="debit_lid"
+							        data-pb-source="debit_accounts"
+							        required
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="amount"
+							        data-pb-search="0"
+							        data-pb-placeholder="Select Bank Account"
+							        title="Select Bank Account"> </select>
+						</div>
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label required">Transferred By</label>
+							<select name="transferred_by"
+							        data-pb-source="employees"
+							        required
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="image"
+							        data-pb-tack="rich"
+							        data-pb-placeholder="Transferred By"
+							        title="Who Transferred the Cash ?"> </select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="tagify"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">tagify</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        form="tagify-form"
+					        data-form-submit=""
+					        data-e-nature="option"
+					        name="stack"
+					        value="tagify"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="tagify-form"
+				      data-pb-control="combo"
+				      data-form-sno="1"
+				      class="form">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">list of users</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="remote"
+							       data-pb-target="tag_bucket"
+							       data-pb-source="users"
+							       data-tag-force="1"
+							       data-tag-max="3"
+							       type="text"
+							       name="remote"
+							       title=""
+							       placeholder="Click to select"
+							       class="form-control form-control-solid" />
+							<span data-tag-source="tag_bucket"
+							      class="d-none tagify_tags"></span>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="local"
+							       data-pb-target="tag_note"
+							       data-tag-force="0"
+							       data-tag-max="1"
+							       type="text"
+							       name="constant"
+							       placeholder="Click to select"
+							       title=""
+							       class="form-control form-control-solid" />
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="constant"
+							       data-pb-target="units"
+							       data-tag-force="1"
+							       data-tag-max="1"
+							       type="text"
+							       name="constant"
+							       placeholder="Click to select"
+							       title=""
+							       class="form-control form-control-solid" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="range"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">range</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="range"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<!--@@add_content_here-->
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-pb-source</td>
+							<td>it will take the data from object and append into target form input.</td>
+							<td>key of the data object</td>
+							<td>data-pb-source="credit_accounts"</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

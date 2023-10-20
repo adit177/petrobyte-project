@@ -1,0 +1,1316 @@
+<div data-e-welcome="tabs"
+     data-pb-layout="tabs">
+	<div class="card shadow-sm"
+	     id="tabs">
+		<div class="card-body">
+			<div class="d-flex flex-column flex-md-row">
+				<div id="tabs_control">
+					<ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6 min-w-md-250px">
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button name="tab"
+							        value="detailed"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-detailed"
+							        data-pb-target="0">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-list-columns-reverse text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Detailed</span>
+											</span>
+										</span>
+										<span class="fs-6">employee absent activity</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button name="tab"
+							        value="invoice"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-invoice"
+							        data-pb-target="1">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Invoice</span>
+											</span>
+										</span>
+										<span class="fs-6">employee invoice activity</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button name="tab"
+							        value="item"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-item"
+							        data-pb-target="1">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Item</span>
+											</span>
+										</span>
+										<span class="fs-6">employee expense activity</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button name="tab"
+							        value="party"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-party"
+							        data-pb-target="1">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Party</span>
+											</span>
+										</span>
+										<span class="fs-6">employee party activity</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="tabs_action"
+				     class="flex-row-fluid">
+					<div class=""
+					     id="intro">
+						<div class="card">
+							<div class="card-body d-flex flex-column flex-center">
+								<div class="mb-2">
+									<p class="text-center">
+										<i class="fs-5x text-warning las la-life-ring"></i>
+									</p>
+									<h1 class="fw-semibold text-gray-800 text-center lh-lg">
+										Know about Salary Report<br>
+										<span class="fw-bolder">Be Self Export ?</span>
+									</h1>
+								</div>
+								<div class="text-center mt-10 mb-1">
+									<a class="btn btn-light-danger me-2"
+									   data-bs-target="#kt_modal_create_app"
+									   data-bs-toggle="modal">
+										<i class="lab la-youtube fs-2x"></i>
+										Youtube Video
+									</a>
+									<a class="btn btn-light-warning"
+									   href="javascript:">
+										<i class="las la-walking fs-2x"></i>
+										Quick Process
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content"
+					     id="sales">
+						<div class="tab-pane fade"
+						     id="tab-detailed"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-detailed"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Employees</label>
+												<select required
+												        name="employees"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Account"
+												        data-pb-search="0"
+												        title="Employee Account"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        name="report"
+														        form="form-detailed"
+														        value="detailed"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_payroll_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_sf_detailed">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_sf_detailed">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Not-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-placeholder="Select Item Category"
+															        data-pb-search="true">
+																<option value=""></option>
+																<option value="1">Petroleum</option>
+																<option value="1">Lubricants</option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-dom-control="select2"
+															        data-placeholder="Select Fuel Item"
+															        data-hide-search="true">
+																<option value=""></option>
+																<option value="1">Diesel</option>
+																<option value="2">Petrol</option>
+																<option value="3">Speed</option>
+															</select>
+														</div>
+														<div class="col-lg-12">
+															<label class="fs-6 form-label fw-bold text-dark">Lock Status</label>
+															<div class="form-check form-switch form-check-custom form-check-solid mt-1">
+																<input class="form-check-input"
+																       type="checkbox"
+																       value=""
+																       id="entryLock" />
+																<label class="form-check-label"
+																       for="entryLock">Show Only Unlock Entries
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-invoice"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-invoice"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Employees</label>
+												<select required
+												        name="employees"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Account"
+												        data-pb-search="0"
+												        title="Employee Account"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        name="report"
+														        form="form-invoice"
+														        value="invoice"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_invoice_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_sf_invoice">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_sf_invoice">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Not-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-placeholder="Select Item Category"
+															        data-pb-search="true">
+																<option value=""></option>
+																<option value="1">Petroleum</option>
+																<option value="1">Lubricants</option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-dom-control="select2"
+															        data-placeholder="Select Fuel Item"
+															        data-hide-search="true">
+																<option value=""></option>
+																<option value="1">Diesel</option>
+																<option value="2">Petrol</option>
+																<option value="3">Speed</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-item"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-item"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of Employees</label>
+												<select required
+												        name="employees"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Account"
+												        data-pb-search="0"
+												        title="Employee Account"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        name="report"
+														        form="form-item"
+														        value="item"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_item_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_sf_item">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_sf_item">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Not-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-placeholder="Select Item Category"
+															        data-pb-search="true">
+																<option value=""></option>
+																<option value="1">Petroleum</option>
+																<option value="1">Lubricants</option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-dom-control="select2"
+															        data-placeholder="Select Fuel Item"
+															        data-hide-search="true">
+																<option value=""></option>
+																<option value="1">Diesel</option>
+																<option value="2">Petrol</option>
+																<option value="3">Speed</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-party"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-party"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Employees</label>
+												<select required
+												        name="employees"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Account"
+												        data-pb-search="0"
+												        title="Employee Account"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        name="report"
+														        form="form-party"
+														        value="party"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_party_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_sf_party">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_sf_party">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="payment"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing"
+																	       value="-1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Not-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-placeholder="Select Item Category"
+															        data-pb-search="true">
+																<option value=""></option>
+																<option value="1">Petroleum</option>
+																<option value="1">Lubricants</option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        class="form-select form-select-solid"
+															        data-dom-control="select2"
+															        data-placeholder="Select Fuel Item"
+															        data-hide-search="true">
+																<option value=""></option>
+																<option value="1">Diesel</option>
+																<option value="2">Petrol</option>
+																<option value="3">Speed</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-none"
+	     id="result_zone">
+		<div class="d-none"
+		     id="report-detailed">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-target="name">Detailed Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   id="table_header_detailed_link"
+						   data-bs-toggle="collapse"
+						   href="#table_header_detailed">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_detailed_link"
+						   data-bs-toggle="collapse"
+						   href="#table_filters_detailed">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="detailed"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table_header_detailed">
+						<div class="d-block flex-center"
+						     data-pb-control="header">
+							<div class="flex-column text-center">
+								<h3 class="mt-3">$$@account@$$</h3>
+								<p class="mb-1">Sales Transaction Details</p>
+							</div>
+							<div class="d-flex flex-stack">
+								<div class="d-flex flex-column">
+									<span>Closing Balance:</span>
+									<span class="ms-1 fw-semibold text-end"
+									      data-cs-currency="1"
+									      data-cs-round="2">$$@closing@$$
+									</span>
+								</div>
+								<div class="d-flex flex-column">
+									<span class="mb-0">Date Range:</span>
+									<span class="ms-1 fw-semibold">$$@range@$$</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse d-print-none"
+					     id="table_filters_detailed">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Customer
+								</th>
+								<th data-index="2">Quantity</th>
+								<th data-index="3">Taxable Vlue</th>
+								<th data-index="4">IGST</th>
+								<th data-index="5">CGST</th>
+								<th data-index="6">SGST</th>
+								<th data-index="7">Total</th>
+								<th data-index="8">Type</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none"
+		     id="report-invoice">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-target="name">Invoice Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   id="table_header_invoice_link"
+						   data-bs-toggle="collapse"
+						   href="#table_header_invoice">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_invoice_link"
+						   data-bs-toggle="collapse"
+						   href="#table_filters_invoice">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="invoice"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table_header_invoice">
+						<div class="d-block flex-center"
+						     data-pb-control="header">
+							<div class="flex-column text-center">
+								<h3 class="mt-3">$$@account@$$</h3>
+								<p class="mb-1">Sales Transaction Details</p>
+							</div>
+							<div class="d-flex flex-stack">
+								<div class="d-flex flex-column">
+									<span>Closing Balance:</span>
+									<span class="ms-1 fw-semibold text-end"
+									      data-cs-currency="1"
+									      data-cs-round="2">$$@closing@$$
+									</span>
+								</div>
+								<div class="d-flex flex-column">
+									<span class="mb-0">Date Range:</span>
+									<span class="ms-1 fw-semibold">$$@range@$$</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse d-print-none"
+					     id="table_filters_invoice">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Customer
+								</th>
+								<th data-index="2">Quantity</th>
+								<th data-index="3">Taxable Vlue</th>
+								<th data-index="4">IGST</th>
+								<th data-index="5">CGST</th>
+								<th data-index="6">SGST</th>
+								<th data-index="7">Total</th>
+								<th data-index="8">Type</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none"
+		     id="report-item">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-target="name">Item Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   id="table_header_item_link"
+						   data-bs-toggle="collapse"
+						   href="#table_header_item">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_item_link"
+						   data-bs-toggle="collapse"
+						   href="#table_filters_item">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="item"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table_header_item">
+						<div class="d-block flex-center"
+						     data-pb-control="header">
+							<div class="flex-column text-center">
+								<h3 class="mt-3">$$@account@$$</h3>
+								<p class="mb-1">Sales Transaction Details</p>
+							</div>
+							<div class="d-flex flex-stack">
+								<div class="d-flex flex-column">
+									<span>Closing Balance:</span>
+									<span class="ms-1 fw-semibold text-end"
+									      data-cs-currency="1"
+									      data-cs-round="2">$$@closing@$$
+									</span>
+								</div>
+								<div class="d-flex flex-column">
+									<span class="mb-0">Date Range:</span>
+									<span class="ms-1 fw-semibold">$$@range@$$</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse d-print-none"
+					     id="table_filters_item">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Customer
+								</th>
+								<th data-index="2">Quantity</th>
+								<th data-index="3">Taxable Vlue</th>
+								<th data-index="4">IGST</th>
+								<th data-index="5">CGST</th>
+								<th data-index="6">SGST</th>
+								<th data-index="7">Total</th>
+								<th data-index="8">Type</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none"
+		     id="report-party">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-target="name">Party Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   id="table_header_party_link"
+						   data-bs-toggle="collapse"
+						   href="#table_header_party">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_party_link"
+						   data-bs-toggle="collapse"
+						   href="#table_filters_party">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="party"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table_header_party">
+						<div class="d-block flex-center"
+						     data-pb-control="header">
+							<div class="flex-column text-center">
+								<h3 class="mt-3">$$@account@$$</h3>
+								<p class="mb-1">Sales Transaction Details</p>
+							</div>
+							<div class="d-flex flex-stack">
+								<div class="d-flex flex-column">
+									<span>Closing Balance:</span>
+									<span class="ms-1 fw-semibold text-end"
+									      data-cs-currency="1"
+									      data-cs-round="2">$$@closing@$$
+									</span>
+								</div>
+								<div class="d-flex flex-column">
+									<span class="mb-0">Date Range:</span>
+									<span class="ms-1 fw-semibold">$$@range@$$</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse d-print-none"
+					     id="table_filters_party">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Customer
+								</th>
+								<th data-index="2">Quantity</th>
+								<th data-index="3">Taxable Vlue</th>
+								<th data-index="4">IGST</th>
+								<th data-index="5">CGST</th>
+								<th data-index="6">SGST</th>
+								<th data-index="7">Total</th>
+								<th data-index="8">Type</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

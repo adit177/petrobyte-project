@@ -1,0 +1,2353 @@
+<div data-e-welcome="controls"
+     data-pb-layout="buttons"
+     data-layout="parent"
+     class="layout">
+	<div id="controls__buttons"
+	     class="row zone">
+		<div id="menu__buttons"
+		     class="sub-zone col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-12">
+			<div class="card">
+				<div class="card-header pt-1">
+					<form id="change-action"
+					      data-pb-control="combo"
+					      data-pb-method="simple"
+					      autocomplete="off"
+					      class="form-group d-flex flex-stack">
+						<div class="card-title w-50">
+							<h2>
+								<input type="text"
+								       name="work-date"
+								       data-pb-control="date"
+								       data-pb-method="human"
+								       placeholder="Work Date"
+								       title=""
+								       class="form-control form-control-transparent p-0 fs-2" />
+							</h2>
+						</div>
+						<div class="card-toolbar">
+							//redirect to register
+						</div>
+					</form>
+				</div>
+				
+				
+				<div class="card-body pt-5">
+					<div id="menuList"
+					     class="d-flex flex-column gap-5">
+						
+						<menu-list data-menu-key="total"
+						           data-menu-event="payments"
+						           data-menu-text="Total Payments: "></menu-list>
+						<div class="separator separator-dashed"></div>
+						<menu-list data-menu-key="supplier"
+						           data-menu-event="supplier"
+						           data-menu-text="Supplier"
+						           data-menu-tooltip="-"></menu-list>
+						<menu-list data-menu-key="expenses"
+						           data-menu-event="expenses"
+						           data-menu-text="expenses"
+						           data-menu-tooltip="-"></menu-list>
+						<menu-list data-menu-key="salary"
+						           data-menu-event="salary"
+						           data-menu-text="Salaries"
+						           data-menu-tooltip="-"></menu-list>
+						<menu-list data-menu-key="vendor"
+						           data-menu-event="vendor"
+						           data-menu-text="Vendors"
+						           data-menu-tooltip="-"></menu-list>
+						<menu-list data-menu-key="loans"
+						           data-menu-event="loans"
+						           data-menu-text="Loans EMI"
+						           data-menu-tooltip="-"></menu-list>
+						<menu-list data-menu-key="drawing"
+						           data-menu-event="drawing"
+						           data-menu-text="Withdrawing"
+						           data-menu-tooltip="-"></menu-list>
+						<div class="separator separator-dashed"></div>
+						<div data-pb-key="vouchers"
+						     class="d-flex flex-stack">
+							<a href="javascript:"
+							   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Payments Voucher</a>
+							<div data-pb-reserve
+							     class="fs-4 badge badge-light-primary"
+							     data-bs-toggle="tooltip"
+							     title="Total Entry Created">0
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-flex btn-light-primary px-6 w-100"
+					        name="card"
+					        value="search"
+					        data-e-recall=""
+					        type="button">
+						<i class="fs-3x lab la-searchengin"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Search Entry</span>
+							<span class="fs-7">for View, Edit or Delete</span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="buttons__buttons"
+		     class="col-xxl-8 col-xl-7 col-lg-6 col-md-6 col-12">
+			<div class="row">
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Suppliers Payment"
+					             data-card-icon="bi bi-box-seam">
+						<btn data-btn-value="supplier"
+						     data-btn-name="form"
+						     data-btn-recall=""
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="supplier"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Business Expenses"
+					             data-card-icon="bi bi-receipt">
+						<btn data-btn-value="expenses"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="expenses"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Staff Salaries"
+					             data-card-icon="bi bi-person-workspace">
+						<btn data-btn-value="salary"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="salary"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Vendors Payable"
+					             data-card-icon="bi bi-shop">
+						<btn data-btn-value="vendor"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="vendor"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Loans EMI"
+					             data-card-icon="bi bi-file-earmark-diff">
+						<btn data-btn-value="loans"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="loans"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Withdrawing"
+					             data-card-icon="bi bi-out">
+						<btn data-btn-value="drawing"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="drawing"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	<div id="forms__buttons"
+	     class="zone">
+		<div id="supplier-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-supplier"
+					      class="form"
+					      data-pb-control="repeater"
+					      data-pb-method="nested"
+					      data-form-sno="1"
+					      method="post"
+					      autocomplete="off">
+					
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-supplier"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-nature="post"
+							        data-e-value="supplier"
+							        type="button">Reset
+							</button>
+							<button form="form-supplier"
+							        data-form-submit
+							        type="button"
+							        name="action"
+							        value="save"
+							        data-e-value="supplier"
+							        data-e-nature="post"
+							        class="btn btn-primary">
+								<span class="indicator-label">Save Supplier Payments</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="expenses-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-expenses"
+					      class="form"
+					      data-pb-control="repeater"
+					      data-pb-method="nested"
+					      data-form-sno="2"
+					      autocomplete="off"></form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-expenses"
+							        type="button"
+							        name="action"
+							        value="reset"
+							        data-e-value="expenses"
+							        data-e-nature="post"
+							        class="btn btn-light-info btn-active-info mx-3">Reset
+							</button>
+							<button form="form-expenses"
+							        type="button"
+							        name="action"
+							        value="save"
+							        data-e-nature="post"
+							        data-e-value="expenses"
+							        data-form-submit
+							        class="btn btn-primary">
+								<span class="indicator-label">Save Business Expenses</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="salary-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-salary"
+					      class="form"
+					      data-pb-control="repeater"
+					      data-pb-method="nested"
+					      data-form-sno="3"
+					      autocomplete="off"></form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-salary"
+							        type="button"
+							        name="action"
+							        value="reset"
+							        data-e-value="salary"
+							        data-e-nature="post"
+							        class="btn btn-light-info btn-active-info mx-3">Reset
+							</button>
+							<button form="form-salary"
+							        type="button"
+							        name="action"
+							        value="save"
+							        data-e-value="salary"
+							        data-e-nature="post"
+							        data-form-submit
+							        class="btn btn-primary">
+								<span class="indicator-label">Save Staff Salary</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="vendor-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-vendor"
+					      class="form"
+					      data-pb-control="combo"
+					      data-pb-method="table"
+					      data-form-sno="4"
+					      data-form-valid=""
+					      autocomplete="off">
+					
+					
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        value="controls"
+							        name="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-vendor"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-value="vendor"
+							        data-e-nature="post"
+							        type="button">Reset
+							</button>
+							<button form="form-vendor"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="vendor"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save Vendor Payable</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loans-form"
+		     class="d-none">
+			<div class="card shadow-sm">
+				
+				<!--Loading of table in form working for block E-->
+				<div class="card-body py-5">
+					<form id="form-loans"
+					      class=""
+					      data-form-valid=""
+					      data-form-sno="5"
+					      method="post"
+					      data-e-recall=""
+					      autocomplete="off">
+						<!--form inputs will be appended here.-->
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-loans"
+							        type="button"
+							        name="action"
+							        value="reset"
+							        data-e-value="loans"
+							        data-e-nature="post"
+							        class="btn btn-light-info btn-active-info mx-3">Reset
+							
+							</button>
+							<button form="form-loans"
+							        type="button"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="loans"
+							        data-e-nature="post"
+							        class="btn btn-primary">
+								<span class="indicator-label">Save Loans EMI</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div id="tables__buttons"
+	     class="zone">
+		
+		<div id="supplier-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Intra Transfers</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        value="supplier"
+						        name="minus"
+						        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+							<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row mb-10 mt-5"
+					     data-pb-target="filter">
+						<div class="col">
+							<label class="form-label">Search</label>
+							<input type="search"
+							       name="search"
+							       data-dt-regex="1"
+							       class="form-control form-control-sm form-control-solid"
+							       placeholder="search"
+							       title="" />
+						</div>
+						<div class="col">
+							<label class="form-label">Item select</label>
+							<select name="select"
+							        data-dt-column="2"
+							        class="form-select form-select-sm form-select-solid"
+							        aria-label="Item Name">
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<div class="col">
+						
+						</div>
+						<div class="col">
+							<label class="form-label">Date</label>
+							<div class="input-group">
+								<input type="text"
+								       name="date"
+								       data-dt-column="0"
+								       class="form-control form-select-sm form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="range"
+								       placeholder="Select Date"
+								       title="" />
+								<input type="button"
+								       name="clear"
+								       data-pb-target="1"
+								       class="btn btn-sm btn-icon btn-light"
+								       value="X">
+							</div>
+						</div>
+						<div class="col">
+						
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-supplier-payment">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="w-10px pe-2">
+									<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+										<input class="form-check-input"
+										       type="checkbox"
+										       data-kt-check="true"
+										       data-kt-check-target="# .form-check-input"
+										       value="1" />
+									</div>
+								</th>
+								<th>Date</th>
+								<th nowrap="">Withdraw from</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+								<th>Slip Note</th>
+								<th>Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="expenses-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Intra Transfers</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        value="expenses"
+						        name="minus"
+						        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+							<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row mb-10 mt-5"
+					     data-pb-target="filter">
+						<div class="col">
+							<label class="form-label">Search</label>
+							<input type="search"
+							       name="search"
+							       data-dt-regex="1"
+							       class="form-control form-control-sm form-control-solid"
+							       placeholder="search"
+							       title="" />
+						</div>
+						<div class="col">
+							<label class="form-label">Item select</label>
+							<select name="select"
+							        data-dt-column="2"
+							        class="form-select form-select-sm form-select-solid"
+							        aria-label="Item Name">
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<div class="col">
+						
+						</div>
+						<div class="col">
+							<label class="form-label">Date</label>
+							<div class="input-group">
+								<input type="text"
+								       name="date"
+								       data-dt-column="0"
+								       class="form-control form-select-sm form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="range"
+								       placeholder="Select Date"
+								       title="" />
+								<input type="button"
+								       name="clear"
+								       data-pb-target="1"
+								       class="btn btn-sm btn-icon btn-light"
+								       value="X">
+							</div>
+						</div>
+						<div class="col">
+						
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-expenses-expenses">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="w-10px pe-2">
+									<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+										<input class="form-check-input"
+										       type="checkbox"
+										       data-kt-check="true"
+										       data-kt-check-target="# .form-check-input"
+										       value="1" />
+									</div>
+								</th>
+								<th>Date</th>
+								<th nowrap="">Withdraw from</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+								<th>Slip Note</th>
+								<th>Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="salary-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Intra Transfers</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        value="salary"
+						        name="minus"
+						        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+							<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row mb-10 mt-5"
+					     data-pb-target="filter">
+						<div class="col">
+							<label class="form-label">Search</label>
+							<input type="search"
+							       name="search"
+							       data-dt-regex="1"
+							       class="form-control form-control-sm form-control-solid"
+							       placeholder="search"
+							       title="" />
+						</div>
+						<div class="col">
+							<label class="form-label">Item select</label>
+							<select name="select"
+							        data-dt-column="2"
+							        class="form-select form-select-sm form-select-solid"
+							        aria-label="Item Name">
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<div class="col">
+						
+						</div>
+						<div class="col">
+							<label class="form-label">Date</label>
+							<div class="input-group">
+								<input type="text"
+								       name="date"
+								       data-dt-column="0"
+								       class="form-control form-select-sm form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="range"
+								       placeholder="Select Date"
+								       title="" />
+								<input type="button"
+								       name="clear"
+								       data-pb-target="1"
+								       class="btn btn-sm btn-icon btn-light"
+								       value="X">
+							</div>
+						</div>
+						<div class="col">
+						
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-staff-salary">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="w-10px pe-2">
+									<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+										<input class="form-check-input"
+										       type="checkbox"
+										       data-kt-check="true"
+										       data-kt-check-target="# .form-check-input"
+										       value="1" />
+									</div>
+								</th>
+								<th>Date</th>
+								<th nowrap="">Withdraw from</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+								<th>Slip Note</th>
+								<th>Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="vendor-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Vendor Payable</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        value="vendor"
+						        name="minus"
+						        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+							<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row mb-10 mt-5"
+					     data-pb-target="filter">
+						<div class="col">
+							<label class="form-label">Search</label>
+							<input type="search"
+							       name="search"
+							       data-dt-regex="1"
+							       class="form-control form-control-sm form-control-solid"
+							       placeholder="search"
+							       title="" />
+						</div>
+						<div class="col">
+							<label class="form-label">Item select</label>
+							<select name="select"
+							        data-dt-column="2"
+							        class="form-select form-select-sm form-select-solid"
+							        aria-label="Item Name">
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<div class="col">
+						
+						</div>
+						<div class="col">
+							<label class="form-label">Date</label>
+							<div class="input-group">
+								<input type="text"
+								       name="date"
+								       data-dt-column="0"
+								       class="form-control form-select-sm form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="range"
+								       placeholder="Select Date"
+								       title="" />
+								<input type="button"
+								       name="clear"
+								       data-pb-target="1"
+								       class="btn btn-sm btn-icon btn-light"
+								       value="X">
+							</div>
+						</div>
+						<div class="col">
+						
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-vendor-payable">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="w-10px pe-2">
+									<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+										<input class="form-check-input"
+										       type="checkbox"
+										       data-kt-check="true"
+										       data-kt-check-target="# .form-check-input"
+										       value="1" />
+									</div>
+								</th>
+								<th>Date</th>
+								<th nowrap="">Withdraw from</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+								<th>Slip Note</th>
+								<th>Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loans-table"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Loans EMI</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        value="loans"
+						        name="back"
+						        class="btn btn-sm btn-light hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        value="loans"
+						        name="minus"
+						        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+							<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row mb-10 mt-5"
+					     data-pb-target="filter">
+						<div class="col">
+							<label class="form-label">Search</label>
+							<input type="search"
+							       name="search"
+							       data-dt-regex="1"
+							       class="form-control form-control-sm form-control-solid"
+							       placeholder="search"
+							       title="" />
+						</div>
+						<div class="col">
+							<label class="form-label">Item select</label>
+							<select name="select"
+							        data-dt-column="2"
+							        class="form-select form-select-sm form-select-solid"
+							        aria-label="Item Name">
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<div class="col">
+						
+						</div>
+						<div class="col">
+							<label class="form-label">Date</label>
+							<div class="input-group">
+								<input type="text"
+								       name="date"
+								       data-dt-column="0"
+								       class="form-control form-select-sm form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="range"
+								       placeholder="Select Date"
+								       title="" />
+								<input type="button"
+								       name="clear"
+								       data-pb-target="1"
+								       class="btn btn-sm btn-icon btn-light"
+								       value="X">
+							</div>
+						</div>
+						<div class="col">
+						
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-loans-emi">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="w-10px pe-2">
+									<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+										<input class="form-check-input"
+										       type="checkbox"
+										       data-kt-check="true"
+										       data-kt-check-target="# .form-check-input"
+										       value="1" />
+									</div>
+								</th>
+								<th>Date</th>
+								<th nowrap="">Withdraw from</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+								<th>Slip Note</th>
+								<th>Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	</div>
+	<div id="edits_zone"
+	     class="d-none">
+		<!--	Modals-->
+		<div class="modal fade"
+		     tabindex="-1"
+		     id="edit_payment">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered mw-650px">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title text-info">Edit Entry</h3>
+						<div class="btn btn-icon btn-sm btn-active-light-info ms-2"
+						     data-bs-dismiss="modal">
+							<i class="bi bi-x-lg fs-2"></i>
+						</div>
+					</div>
+					<div class="modal-body">
+					
+					</div>
+					<div class="modal-footer">
+						<button type="reset"
+						        class="btn btn-light me-3"
+						        data-pb-modal-action="cancel">Discard
+						</button>
+						<button type="submit"
+						        value="1"
+						        name=""
+						        class="btn btn-primary"
+						        data-pb-modal-action="submit">
+							<span class="indicator-label">Edit Entries</span>
+							<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cards__buttons">
+		<div id="search-card"
+		     class="d-none sub-zone">
+			<div class="card shadow-sm">
+				<div class="card-body"
+				     data-dom-catch="common">
+					<div class="mb-10">
+						<form id="search-entry"
+						      data-pb-control="dom"
+						      class="form-group">
+							<div class="form-group row fv-row">
+								<div class="col-3">
+									<button type="button"
+									        data-e-nature="back"
+									        class="btn btn-flex btn-secondary px-6 py-3 w-100">
+										<i class="fs-2x me-1 bi bi-arrow-left-circle"></i>
+										<span class="d-flex flex-column align-items-start ms-2">
+											<span class="fs-3 fw-bold">Back</span>
+											<span class="fs-7">Home</span>
+										</span>
+									</button>
+								</div>
+								<div class="col-6">
+									<div class="accordion"
+									     id="accordion-search">
+										<div class="accordion-item">
+											<h2 id="accordion-search_item_a"
+											    class="accordion-header">
+												<a class="accordion-button fs-4 fw-semibold collapsed py-7"
+												   type="button"
+												   data-bs-toggle="collapse"
+												   data-bs-target="#accordion-search_item_a_body"
+												   aria-expanded="true"
+												   aria-controls="accordion-search_item_a_body">
+													Select Search Parameters </a>
+											</h2>
+											<div id="accordion-search_item_a_body"
+											     class="accordion-collapse collapse"
+											     aria-labelledby="accordion-search_item_a"
+											     data-bs-parent="#accordion-search">
+												<div class="accordion-body">
+													<div class="row">
+														<div class="col-12 mb-7">
+															<label class="form-label required">Select Date or Range</label>
+															<input required
+															       type="text"
+															       name="txn_date"
+															       data-pb-control="date"
+															       data-pb-method="range"
+															       class="form-control form-control-solid"
+															       placeholder="Select Date or Range"
+															       title="Select Date Range" />
+														</div>
+														<div class="col-12 col-md-6 mb-7">
+															<label class="form-label">Debited Accounts</label>
+															<select name="debits"
+															        multiple
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-tack="subtext"
+															        data-pb-placeholder="Select Deposit Account"
+															        data-pb-source="debit_accounts"
+															        title="Debited Accounts">
+																<option></option>
+															</select>
+														</div>
+														<div class="col-12 col-md-6 mb-7">
+															<label class="form-label">Credited Accounts</label>
+															<select name="credits"
+															        multiple
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-tack="subtext"
+															        data-pb-placeholder="Select Item"
+															        data-pb-source="credit_accounts"
+															        title="Credited Accounts">
+																<option></option>
+															</select>
+														
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<button type="button"
+									        form="search-entry"
+									        name="load"
+									        value="search"
+									        data-form-submit
+									        data-e-nature="post"
+									        data-e-recall=""
+									        class="btn btn-flex btn-primary px-6 py-3 w-100">
+										<i class="fs-2x me-1 bi bi-arrow-right-circle"></i>
+										<span class="d-flex flex-column align-items-start ms-2">
+											<span class="fs-3 fw-bold">Load</span>
+											<span class="fs-7">Transactions</span>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="separator separator-content border-dark opacity-75 mt-10 mb-5">
+						<span class="fw-semibold text-dark w-200px">Matched Transactions</span>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-0">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th nowrap=""
+								    class="min-w-125px text-center">Date
+								</th>
+								<th nowrap=""
+								    class="min-w-125px text-center">Payment Type
+								</th>
+								<th nowrap=""
+								    class="min-w-150px text-center">Ledger Accounts
+								</th>
+								<th nowrap=""
+								    class="min-w-125px text-center">Amount
+								</th>
+								<th nowrap=""
+								    class="min-w-150px text-center">Action
+								</th>
+							</tr>
+							</thead>
+							<!--<tbody class="text-gray-600 fw-semibold fs-5">-->
+							<!--<tr>-->
+							<!--	<td nowrap="">-->
+							<!--		<div class="d-flex flex-column">-->
+							<!--			<span class="text-dark rc_date">2023-02-23</span>-->
+							<!--			<span class="fw-normal fs-6 text-end rc_gap">2023-02-23-->
+							<!--			</span>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td nowrap="">-->
+							<!--		<div class="d-flex flex-column me-n7 pe-7">-->
+							<!--			<span>Banking</span>-->
+							<!--			<span class="fs-7">Intra Transfer</span>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td>-->
+							<!--		<div class="d-flex flex-column">-->
+							<!--			<div class="text-start">-->
+							<!--				<span class="fw-normal text-dark me-2">(DR)</span>-->
+							<!--				<span>ICICI Bank Account</span>-->
+							<!--			</div>-->
+							<!--			<div class="text-end">-->
+							<!--				<span>CASH in Hand</span>-->
+							<!--				<span class="fw-normal text-dark ms-2">(CR)</span>-->
+							<!--			</div>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td class="rc_currency fs-3"-->
+							<!--	    data-cs-currency="1">56801-->
+							<!--	</td>-->
+							<!--	<td class="w-250px">-->
+							<!--		<div class="d-flex flex-row mb-2">-->
+							<!--			<button type="button"-->
+							<!--			        name="card"-->
+							<!--			        value="view"-->
+							<!--			        data-pb-origin="transaction-search"-->
+							<!--			        data-pb-value="12"-->
+							<!--			        class="btn btn-sm py-1 btn-light-primary w-50 me-2"><i class="las fs-2 la-eye me-2"></i>View-->
+							<!--			</button>-->
+							<!--			<button type="button"-->
+							<!--			        name="card"-->
+							<!--			        value="edit"-->
+							<!--			        data-pb-origin="transaction-search"-->
+							<!--			        data-pb-value="2"-->
+							<!--			        class="btn btn-sm py-1 btn-light-info w-50"><i class="las fs-2 la-edit me-2"></i>Edit-->
+							<!--			</button>-->
+							<!--		</div>-->
+							<!--		<button type="button"-->
+							<!--		        class="btn btn-sm py-1 btn-active-light-danger w-100"-->
+							<!--		        name="card"-->
+							<!--		        value="delete"-->
+							<!--		        data-pb-origin="transaction-search"-->
+							<!--		        data-pb-value="2"><i class="las fs-2 la-trash me-2"></i>Delete Entry-->
+							<!--		</button>-->
+							<!--	</td>-->
+							<!--</tr>-->
+							
+							<!--</tbody>-->
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="delete-card"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Delete Entry -&nbsp;
+						<span data-pb-control="voucher_no">000</span>
+					</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="separator separator-content border-secondary opacity- mb-10">
+						<span class="fw-semibold text-gray-800 w-500px">Transaction Preview before Delete</span>
+					</div>
+					<div id="delete-entry-preview"
+					     class="d-flex">
+						// insert template //
+					</div>
+				</div>
+				<div class="card-footer">
+					<form id="delete-entry-form"
+					      class="form"
+					      method="post"
+					      data-form-sno="10"
+					      data-valid-form>
+						<input type="hidden"
+						       name="vou_no"
+						       data-pb-insert="number"
+						       title="">
+						<input type="hidden"
+						       name="txn_id"
+						       data-pb-insert="txn_id"
+						       title="">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<div class="input-group fv-row mw-350px">
+									<span class="input-group-text border-0">Delete Code</span>
+									<input type="text"
+									       name="delete_code"
+									       required
+									       class="form-control form-control-solid"
+									       placeholder="123456"
+									       title="Delete Security Code required for delete any transaction." />
+								</div>
+							</div>
+							<div class="align-items-start">
+								<button type="button"
+								        form="delete-entry-form"
+								        data-e-nature="post"
+								        data-e-catch="txn_id"
+								        value="delete"
+								        name="action"
+								        data-e-value=""
+								        data-form-submit
+								        class="btn btn-danger">
+									<span class="indicator-label">Delete Transaction</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="view-card"
+		     data-pb-id="view-entry"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Transaction Display -
+						<span>000</span>
+					</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        value="search-card"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div id="view-entry"
+					     data-pb-key="voucher_info">
+						// transaction display template
+					</div>
+				</div>
+				<div class="card-footer py-4">
+					<div class="d-flex flex-stack fs-5">
+						<div class="align-items-start">
+							<span>Created On:</span>
+						</div>
+						<div class="align-items-start">
+							<span>Created By:</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="edit-card"
+		     class="sub-zone d-none">
+			<div id="supplier-form-edit"
+			     class="d-none">
+				<div class="card shadow-sm">
+					
+					<div class="card-body py-5">
+						<form id="form-edit-supplier"
+						      class=""
+						      data-pb-control="repeater"
+						      data-pb-method="nested"
+						      data-form-sno="1"
+						      method="post"
+						      data-e-recall=""
+						      autocomplete="off">
+						
+						</form>
+					</div>
+					<div class="card-footer py-5">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<button type="button"
+								        value="search-card"
+								        name="back"
+								        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+									Discard (Back to Home)
+								</button>
+							</div>
+							<div class="align-items-end">
+								<button form="form-edit-supplier"
+								        class="btn btn-light-info btn-active-info mx-3"
+								        name="action"
+								        value="reset"
+								        data-pb-value="supplier"
+								        type="button">Reset
+								</button>
+								<button form="form-edit-supplier"
+								        class="btn btn-primary"
+								        data-form-submit
+								        name="action"
+								        value="save"
+								        data-e-origin="form"
+								        data-pb-value="supplier"
+								        type="button">
+									<span class="indicator-label">Save Suppliers Payment</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="expenses-form-edit"
+			     class="d-none">
+				<div class="card shadow-sm">
+					<div class="card-body py-5">
+						<form id="edit-form-expenses"
+						      class=""
+						      data-pb-control="repeater"
+						      data-pb-method="nested"
+						      data-form-sno="2"
+						      method="post"
+						      autocomplete="off">
+						
+						</form>
+					</div>
+					<div class="card-footer py-5">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<button type="button"
+								        value="search-card"
+								        name="back"
+								        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+									Discard (Back to Home)
+								</button>
+							</div>
+							<div class="align-items-end">
+								<button form="edit-form-expenses"
+								        class="btn btn-light-info btn-active-info mx-3"
+								        name="action"
+								        value="reset"
+								        data-pb-value="expenses"
+								        type="button">Reset
+								</button>
+								<button form="edit-form-expenses"
+								        class="btn btn-primary"
+								        data-form-submit
+								        name="action"
+								        value="save"
+								        data-e-origin="form"
+								        data-pb-value="expenses"
+								        type="button">
+									<span class="indicator-label">Save Cash Withdrawal</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="salary-form-edit"
+			     class="d-none">
+				<div class="card shadow-sm">
+					<div class="card-body py-5">
+						<form id="edit-form-salary"
+						      class=""
+						      data-pb-control="repeater"
+						      data-pb-method="nested"
+						      data-form-sno="3"
+						      data-e-recall=""
+						      method="post"
+						      autocomplete="off">
+						
+						</form>
+					</div>
+					<div class="card-footer py-5">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<button type="button"
+								        value="search-card"
+								        name="back"
+								        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+									Discard (Back to Home)
+								</button>
+							</div>
+							<div class="align-items-end">
+								<button form="edit-form-salary"
+								        class="btn btn-light-info btn-active-info mx-3"
+								        name="action"
+								        value="reset"
+								        data-pb-value="salary"
+								        type="button">Reset
+								</button>
+								<button form="edit-form-salary"
+								        class="btn btn-primary"
+								        data-form-submit
+								        name="action"
+								        value="save"
+								        data-e-origin="form"
+								        data-pb-value="salary"
+								        type="button">
+									<span class="indicator-label">Save Staff Salary</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="vendor-form-edit"
+			     class="d-none">
+				<div class="card shadow-sm">
+					<div class="card-body py-5">
+						<form id="edit-form-vendor"
+						      class=""
+						      data-form-valid=""
+						      data-form-sno="4"
+						      method="post"
+						      autocomplete="off">
+						
+						
+						</form>
+					</div>
+					<div class="card-footer py-5">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<button type="button"
+								        value="search-card"
+								        name="back"
+								        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+									Discard (Back to Home)
+								</button>
+							</div>
+							<div class="align-items-end">
+								<button form="edit-form-vendor"
+								        class="btn btn-light-info btn-active-info mx-3"
+								        name="action"
+								        value="reset"
+								        data-pb-value="vendor"
+								        type="button">Reset
+								</button>
+								<button form="edit-form-vendor"
+								        class="btn btn-primary"
+								        data-form-submit
+								        name="action"
+								        value="save"
+								        data-e-origin="form"
+								        data-pb-value="vendor"
+								        type="button">
+									<span class="indicator-label">Save Vendor Payable</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="loans-form-edit"
+			     class="d-none sub-zone">
+				<div class="card shadow-sm">
+					
+					<!--Loading of table in form working for block E-->
+					<div class="card-body py-5">
+						<form id="edit-form-loans"
+						      class=""
+						      data-form-valid=""
+						      data-form-sno="5"
+						      method="post"
+						      autocomplete="off">
+						
+						
+						</form>
+					</div>
+					<div class="card-footer py-5">
+						<div class="d-flex flex-stack">
+							<div class="align-items-start">
+								<button type="button"
+								        value="search-card"
+								        name="back"
+								        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+									Discard (Back to Home)
+								</button>
+							</div>
+							<div class="align-items-end">
+								<button form="edit-form-loans"
+								        class="btn btn-light-info btn-active-info mx-3"
+								        name="action"
+								        value="reset"
+								        data-pb-value="loans"
+								        type="button">Reset
+								
+								</button>
+								<button form="edit-form-loans"
+								        class="btn btn-primary"
+								        data-form-submit
+								        name="action"
+								        value="save"
+								        data-e-origin="form"
+								        data-pb-value="loans"
+								        type="button">
+									<span class="indicator-label">Save Loans EMI</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<div id="modal-card"
+		     class="d-none">
+			<div class="modal bg-white fade"
+			     tabindex="-1">
+				<div class="modal-dialog modal-fullscreen">
+					<div class="modal-content shadow-none">
+						<div class="modal-header">
+							<h5 class="modal-title">modal_title</h5>
+							<div data-bs-dismiss="modal"
+							     aria-label="Close Modal"
+							     class="btn btn-icon btn-sm btn-active-light-primary ms-2">
+								<i class="bi bi-x-lg fs-2"></i>
+							</div>
+						</div>
+						
+						<div class="modal-body">
+							<div id="modal-payments"
+							     class="d-none">
+								<table class="table table-bordered table-responsive">
+									<thead>
+									<tr>
+										<td>Date</td>
+										<td>Deposited A/c</td>
+										<td>Withdraw A/c</td>
+										<td>Amount</td>
+										<td>Note</td>
+									</tr>
+									</thead>
+								</table>
+							</div>
+							<div id="modal-supplier"
+							     class="d-none">
+								<table class="table table-bordered table-responsive">
+									<thead>
+									<tr>
+										<td>Date</td>
+										<td>Deposited A/c</td>
+										<td>Withdraw A/c</td>
+										<td>Amount</td>
+										<td>Note</td>
+									</tr>
+									</thead>
+								</table>
+							</div>
+							<div id="modal-expenses"
+							     class="d-none">
+								<table class="table table-bordered table-responsive">
+									<thead>
+									<tr>
+										<td>Date</td>
+										<td>Deposited A/c</td>
+										<td>Withdraw A/c</td>
+										<td>Amount</td>
+										<td>Note</td>
+									</tr>
+									</thead>
+								</table>
+							</div>
+							<div id="modal-salary"
+							     class="d-none">
+								<table class="table table-bordered table-responsive">
+									<thead>
+									<tr>
+										<td>Date</td>
+										<td>Deposited A/c</td>
+										<td>Withdraw A/c</td>
+										<td>Amount</td>
+										<td>Note</td>
+									</tr>
+									</thead>
+								</table>
+							</div>
+							<div id="modal-vendor"
+							     class="d-none">
+								<table class="table table-bordered table-responsive">
+									<thead>
+									<tr>
+										<td>Date</td>
+										<td>Deposited A/c</td>
+										<td>Withdraw A/c</td>
+										<td>Amount</td>
+										<td>Note</td>
+									</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div id="modal-loans"
+						     class="d-none">
+							<table class="table table-bordered table-responsive">
+								<thead>
+								<tr>
+									<td>Date</td>
+									<td>Deposited A/c</td>
+									<td>Withdraw A/c</td>
+									<td>Amount</td>
+									<td>Note</td>
+								</tr>
+								</thead>
+							</table>
+						</div>
+						<div id="modal-withdrawal"
+						     class="d-none">
+							<table class="table table-bordered table-responsive">
+								<thead>
+								<tr>
+									<td>Date</td>
+									<td>Deposited A/c</td>
+									<td>Withdraw A/c</td>
+									<td>Amount</td>
+									<td>Note</td>
+								</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button"
+							        class="btn btn-light"
+							        data-bs-dismiss="modal">Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__buttons"
+	     class="d-none">
+		<div aria-description="forms">
+			<form data-pb-template="form-supplier"
+			      data-pb-control="ignore">
+				<div>
+					<div class="form-group">
+						<div class="main-repeater"
+						     data-repeater-list="suppliers">
+							<div data-repeater-item>
+								<div class="row fv-row">
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-5">
+										<label class="form-label">
+											<span class="required">Supplier Account</span>
+										</label>
+										<select name="ledger_dr"
+										        data-pb-source="supplier_accounts"
+										        required
+										        data-pb-control="select"
+										        data-pb-method="account"
+										        data-pb-tack="amount"
+										        data-pb-placeholder="Select Supplier Account"
+										        data-e-listen="change"
+										        data-e-name="change"
+										        data-e-value="supplier"
+										        title="Payment has Sent to ??"
+										        class="form-select form-select-solid"> </select>
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-5">
+										<label class="form-label">
+											<span class="fw-normal text-muted">Outstanding Detail:</span>
+										</label>
+										<div class="input-group"
+										     data-pb-control="due">
+											<input type="text"
+											       readonly
+											       title=""
+											       class="form-control"
+											       placeholder="" />
+											<button type="button"
+											        value="bills"
+											        data-e-name="load"
+											        data-e-nature="post"
+											        data-bs-toggle="tooltip"
+											        data-bs-html="true"
+											        title="<span class='fs-6'>View Due Bills</span>"
+											        class="btn btn-outline btn-outline-secondary text-gray-500 w-40"><i class="las fs-2 la-list me-2 text-gray-500"></i>
+											</button>
+										</div>
+									
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-5">
+										<!-- todo: while adding supplier ac, it should ask for preferable payment account.-->
+										<label class="form-label">
+											<span class="required">Payment Account</span>
+										</label>
+										<select name="ledger_cr"
+										        data-pb-source="payment_accounts"
+										        data-pb-update="payment_accounts"
+										        required
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="account"
+										        data-pb-tack="amount"
+										        data-pb-placeholder="Select Payment Account"
+										        title="Payment has Sent by ??"> </select>
+									</div>
+								</div>
+								<div class="inner-repeater">
+									<div data-repeater-list="supplier_items">
+										<div data-repeater-item>
+											<div class="row fv-row">
+												<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="date"
+													       required
+													       data-pb-control="date"
+													       data-pb-method="human"
+													       placeholder="Payment Date *"
+													       title="What is Payment Date ??"
+													       class="form-control form-control-solid form-control-sm" />
+												</div>
+												<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="amount"
+													       required
+													       data-pb-control="mask"
+													       data-pb-method="amount"
+													       placeholder="Paid Amount *"
+													       title="What is Paid Amount ??"
+													       class="form-control form-control-solid form-control-sm" />
+												</div>
+												<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="charge"
+													       data-pb-control="mask"
+													       data-pb-method="amount"
+													       placeholder="Transaction Charge"
+													       title="Bank Charge ?"
+													       class="form-control form-control-solid form-control-sm" />
+												</div>
+												<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="memo"
+													       placeholder="Note or UTR No."
+													       title="Any Transaction Note"
+													       class="form-control form-control-solid form-control-sm" />
+												</div>
+												<div class="col-xxl-2 col-xl-4 col-lg-4 col-md-4 col-4">
+													<a type="button"
+													   data-e-nature="ignore"
+													   data-repeater-delete
+													   class="btn btn-sm rounded-3 btn-light-danger w-100">
+														<i class="fs-3 fa-solid fa-minus"></i>
+														Delete
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mb-5">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-repeater-create="inner"
+										   class="btn rounded-3 btn-sm btn-light-primary">
+											<i class="fs-3 fa-solid fa-plus"></i>Add Row
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-repeater-delete
+										   class="btn btn-sm btn-light-danger w-100">
+											<i class="fs-3 fa-solid fa-circle-minus"></i>
+											Delete Block
+										</a>
+									</div>
+								</div>
+								<div data-pb-append="separate"
+								     class="col-12"></div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-0">
+						<a type="button"
+						   data-e-nature="ignore"
+						   data-repeater-create="outer"
+						   data-e-recall=""
+						   class="btn btn-sm btn-light-primary">
+							<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+						</a>
+					</div>
+				</div>
+			</form>
+			<form data-pb-template="form-expenses"
+			      data-pb-control="ignore">
+				<div>
+					<div class="form-group">
+						<div class="main-repeater"
+						     data-repeater-list="expenses">
+							<div data-repeater-item>
+								<div class="row fv-row">
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label">
+											<span class="required">Date of Expense</span>
+										</label>
+										<input type="text"
+										       name="date"
+										       required
+										       class="form-control form-control-solid form-control-md"
+										       data-pb-control="date"
+										       data-pb-method="human"
+										       placeholder="Date of Expense *"
+										       title="When the Expense occurred ??" />
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label">
+											<span class="required">Expense Paid Through</span>
+										</label>
+										<select name="ledger_cr"
+										        data-pb-source="payment_accounts"
+										        required
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="account"
+										        data-pb-tack="amount"
+										        data-pb-placeholder="Select Payment Account *"
+										        title="Expense Payment Made by Which Account ??">
+										
+										</select>
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label">Upload Expense Slip</label>
+										<p class="border border-dashed border-gray-400 py-3 rounded-2 text-center mb-0">
+											<span class="text-gray-500 fs-5">Coming soon</span>
+										</p>
+									</div>
+								</div>
+								<div class="inner-repeater">
+									<div data-repeater-list="expense_items">
+										<div data-repeater-item>
+											<div class="row fv-row">
+												<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+													<select name="ledger_dr"
+													        data-pb-source="expense_accounts"
+													        required
+													        class="form-select form-select-solid form-select-sm"
+													        data-pb-control="select"
+													        data-pb-method="account"
+													        data-pb-tack="group"
+													        data-pb-placeholder="Expense Account *"
+													        title="What Type of expense ??"> </select>
+												</div>
+												<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="amount"
+													       required
+													       class="form-control form-control-solid form-control-sm"
+													       data-pb-control="mask"
+													       data-pb-method="amount"
+													       placeholder="Expense Amount *"
+													       title="How Much Expensed ??" />
+												</div>
+												<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+													<input type="text"
+													       name="memo"
+													       class="form-control form-control-solid form-control-sm"
+													       placeholder="Expense Note"
+													       title="Expense is About What ??" />
+												</div>
+												<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+													<a type="button"
+													   data-e-nature="ignore"
+													   data-repeater-delete
+													   class="btn btn-sm rounded-3 btn-light-danger w-100">
+														<i class="fs-3 fa-solid fa-minus"></i>
+														Delete
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mb-5">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-repeater-create="inner"
+										   class="btn btn-sm rounded-3 btn-sm btn-light-primary">
+											<i class="fs-3 fa-solid fa-plus"></i>Add Row
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-repeater-delete
+										   class="btn btn-sm btn-light-danger w-100">
+											<i class="fs-3 fa-solid fa-circle-minus"></i>
+											Delete Block
+										</a>
+									</div>
+								</div>
+								<div class="col-12"
+								     data-pb-append="separate"></div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-0">
+						<a type="button"
+						   data-e-nature="ignore"
+						   data-repeater-create="outer"
+						   class="btn btn-sm btn-light-primary">
+							<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+						</a>
+					</div>
+				</div>
+			</form>
+			<form data-pb-template="form-salary"
+			      data-pb-control="ignore">
+				<div>
+					<div class="form-group">
+						<div class="main-repeater"
+						     data-repeater-list="salaries">
+							<div data-repeater-item="outer">
+								<div class="row fv-row">
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label">
+											<span class="required">Date of Payment</span>
+										</label>
+										<input type="text"
+										       name="date"
+										       required
+										       class="form-control form-control-solid form-control-md"
+										       data-pb-control="date"
+										       data-pb-method="human"
+										       placeholder="Salary Payment Date"
+										       title="When Salaries has Given ??" />
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label">
+											<span class="required">Payment Account</span>
+										</label>
+										<select name="ledger_cr"
+										        data-pb-source="payment_accounts"
+										        required
+										        data-pb-control="select"
+										        data-pb-method="account"
+										        data-pb-tack="amount"
+										        data-pb-placeholder="Select Payment Account"
+										        title="Which Account has used to Pay Salary ??"
+										        class="form-select form-select-solid"> </select>
+									</div>
+									<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+										<label class="form-label required">Month of Payment</label>
+										<input type="text"
+										       name="month"
+										       data-pb-catch="salary_month"
+										       data-pb-control="date"
+										       data-pb-method="month"
+										       placeholder="Month of Payment"
+										       title="Month of Payment"
+										       class="form-control form-control-solid" />
+									
+									</div>
+								</div>
+								<div class="inner-repeater">
+									<div data-repeater-list="salary_items">
+										<div data-repeater-item="inner">
+											<div class="row fv-row">
+												<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-1">
+													<select name="ledger_dr"
+													        data-pb-source="employee_accounts"
+													        required
+													        data-pb-control="select"
+													        data-pb-method="image"
+													        data-pb-tack="rich"
+													        data-pb-placeholder="Select Employee Name"
+													        data-e-listen="change"
+													        data-e-name="change"
+													        data-e-value="salary"
+													        data-e-nature="option"
+													        title="Select Name of Staff (Employee Name)"
+													        class="form-select form-select-solid form-select-sm"> </select>
+												</div>
+												<div data-pb-catch="salary_amount"
+												     class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-1">
+													<input type="text"
+													       name="amount"
+													       required
+													       class="form-control form-control-solid form-control-sm"
+													       data-pb-control="mask"
+													       data-pb-method="amount"
+													       placeholder="Salary Paid Amount"
+													       title="How much Amount Paid ??" />
+													<p></p>
+												</div>
+												<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-1">
+													<input type="text"
+													       name="memo"
+													       class="form-control form-control-solid form-control-sm"
+													       placeholder="Salary Note"
+													       title="What is Salary Payment Note ??" />
+												</div>
+												<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-1">
+													<a type="button"
+													   data-e-nature="ignore"
+													   data-repeater-delete
+													   class="btn btn-sm rounded-3 btn-light-danger w-100">
+														<i class="fs-5 fa-solid fa-minus"></i>
+														Delete
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-e-recall=""
+										   data-repeater-create="inner"
+										   class="btn rounded-3 btn-sm btn-light-primary">
+											<i class="fs-3 fa-solid fa-plus"></i>Add Row
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+										<a type="button"
+										   data-e-nature="ignore"
+										   data-repeater-delete
+										   class="btn btn-sm btn-light-danger w-100">
+											<i class="fs-3 fa-solid fa-circle-minus"></i>
+											Delete Block
+										</a>
+									</div>
+								</div>
+								<div class="col-12"
+								     data-pb-append="separate"></div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-0">
+						<a type="button"
+						   data-e-nature="ignore"
+						   data-e-recall=""
+						   data-repeater-create="outer"
+						   class="btn btn-sm btn-light-primary">
+							<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+						</a>
+					</div>
+				</div>
+			</form>
+			<form data-pb-template="form-vendor"
+			      data-pb-control="ignore">
+				<div class="form-group">
+					<div class="row fv-row">
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+							<label class="form-label">
+								<span class="required">Vendor Account</span>
+							</label>
+							<select name="ledger_dr"
+							        data-pb-source="vendor_accounts"
+							        required
+							        data-pb-prefill="unpaid_bills"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="ledger"
+							        title="Select Staff Account"
+							        data-pb-placeholder="Select Vendor Name"
+							        class="form-select form-select-solid"> </select>
+						</div>
+						<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+							<label class="form-label">
+								<span class="required">Payment Account</span>
+							</label>
+							<select name="ledger_cr"
+							        data-pb-source="payment_accounts"
+							        required
+							        data-pb-prefill="unpaid_bills"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="group"
+							        data-pb-placeholder="Select Bank Account"
+							        title="Select Bank Account"
+							        class="form-select form-select-solid"> </select>
+						</div>
+						<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-3">
+							<label class="form-label required">Payment Date</label>
+							<input type="text"
+							       name="date"
+							       required
+							       data-pb-prefill="unpaid_bills"
+							       data-pb-control="date"
+							       data-pb-method="human"
+							       placeholder="Payment Made On Date"
+							       title="When Payment has Created ??"
+							       class="form-control form-control-solid" />
+						</div>
+						<div class="col-xxl-2 col-xl-2 col-lg-3 col-md-2 col-3">
+							<button type="button"
+							        name="load"
+							        value="invoices"
+							        data-e-recall=""
+							        data-e-nature="post"
+							        data-pb-calling="unpaid_bills"
+							        class="btn btn-flex btn-light-dark px-6">
+								<i class="fs-2 me-1 bi bi-arrow-repeat"></i>
+								<span class="d-flex flex-column align-items-start ms-2">
+									<span class="fs-3 fw-bold"
+									      data-pb-label="text">Load
+									</span>
+									<span class="fs-7">Invoices</span>
+								</span>
+							</button>
+						</div>
+					</div>
+					<div class="table-responsive"
+					     id="vendor-load">
+						<table class="table table-rounded table-hover border border-3 align-middle table-row-dashed gy-2 gs-4
+													text-gray-700 fs-5 d-none">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="min-w-125px">Invoice Date</th>
+								<th class="min-w-125px">Due Date</th>
+								<th class="min-w-150px">Ledger Account</th>
+								<th class="min-w-100px">Description</th>
+								<th class="min-w-100px">Invoice Amount</th>
+								<th class="min-w-50px">Due Amount</th>
+								<th class="min-w-50px">Paid ?</th>
+								<th class="min-w-70px">Payable Amount</th>
+							</tr>
+							</thead>
+							<tbody class="text-gray-700 fs-5">
+							<!--tbody-->
+							</tbody>
+						</table>
+					</div>
+					<div class="row fv-row">
+						<div class="col-xxl-4 col-xl-3"></div>
+						<div class="col-xxl-5 col-xl-5 col-lg-12 col-md-6 col-12 mb-3">
+							<label class="form-label">Payment Note</label>
+							<input type="text"
+							       name="note"
+							       placeholder="Vendor Payment Note"
+							       title="Payment Note"
+							       class="form-control form-control-solid" />
+						</div>
+						<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-3">
+							<label class="form-label required">Total Paid Amount</label>
+							<input type="text"
+							       name="total_paid"
+							       id="total_paid"
+							       required
+							       data-pb-control="mask"
+							       data-pb-method="amount"
+							       placeholder="Paid Amount"
+							       title="Total Paid Amount"
+							       class="form-control form-control-solid text-end" />
+						</div>
+					</div>
+				</div>
+			</form>
+			<form data-pb-template="form-loans"
+			      data-pb-control="ignore">
+				<div class="form-group">
+					<div class="row fv-row">
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Loan Account</span>
+							</label>
+							<select name="loan_ac"
+							        data-pb-source="loan_account"
+							        required
+							        data-pb-prefill="e_a_load_entries"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="ledger"
+							        data-pb-placeholder="Select Loan Name"
+							        title="Select Loan Account"> </select>
+						</div>
+						<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+							<!--todo: it select automatically when user select loan account.-->
+							<label class="form-label">
+								<span class="required">Payment Account</span>
+							</label>
+							<select name="pay_lid"
+							        data-pb-source="payment_account"
+							        required
+							        data-pb-prefill="e_a_load_entries"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="group"
+							        data-pb-placeholder="Select Bank Account"
+							        title="Select Bank Account"> </select>
+						</div>
+						<div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-3">
+							<button type="button"
+							        id="call_loan_emis"
+							        class="btn btn-flex btn-light-dark px-6"
+							        data-pb-calling="e_a_load_entries"
+							        name="load"
+							        data-e-recall=""
+							        value="loans">
+								<i class="fs-2 me-1 bi bi-arrow-repeat"></i>
+								<span class="d-flex flex-column align-items-start ms-2">
+									<span class="fs-3 fw-bold"
+									      data-pb-label="text">Load
+									</span>
+									<span class="fs-7">Entries</span>
+								</span>
+							</button>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<!--todo: more last 3 unpaid EMI till current month will show here,-->
+						<table class="table table-rounded border bg-light-dark align-middle table-row-dashed gy-3 gs-4 py-3 d-none"
+						       data-pb-table="e_a_load_entries">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th class="min-w-125px">Mandate Date</th>
+								<th class="min-w-125px">EMI Month</th>
+								<th class="min-w-150px">EMI Amount</th>
+								<th class="min-w-200px">Amount Breakup</th>
+								<th class="min-w-100px mw-125px">Action</th>
+								<th class="min-w-100px mw-150px">Payment Date
+								</th>
+							</tr>
+							</thead>
+							<!--<tbody class="text-gray-700 fw-semibold fs-5">-->
+							<!--<tr>-->
+							<!--	<td>14 Aug, 2022<p data-cs-method="x"-->
+							<!--	                   class="rc_gap fs-8 text-gray-500 mb-0">-->
+							<!--		2022-12-05</p></td>-->
+							<!--	<td>June 2022</td>-->
+							<!--	<td class="rc_currency"-->
+							<!--	    data-cs-round="0"-->
+							<!--	    data-cs-currency="1"-->
+							<!--	    data-cs-postfix="Only">77182-->
+							<!--	</td>-->
+							<!--	<td>-->
+							<!--		<span class="rc_currency text-dark">46082</span>&nbsp;+&nbsp;<span class="rc_currency text-danger">30900</span>-->
+							<!--	</td>-->
+							<!--	<td>-->
+							<!--		<div class="form-check form-switch">-->
+							<!--			<input class="form-check-input"-->
+							<!--			       type="checkbox"-->
+							<!--			       role="switch"-->
+							<!--			       id="flexSwitchCheckChecked">-->
+							<!--			<label class="form-check-label"-->
+							<!--			       for="flexSwitchCheckChecked"></label>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td>-->
+							<!--		<input type="number"-->
+							<!--		       name="amount"-->
+							<!--		       class="form-control form-control-sm w-150px"-->
+							<!--		       data-pb-control="date"-->
+							<!--		       data-pb-method="human"-->
+							<!--		       placeholder="EMI Payment Date"-->
+							<!--		       title="When EMI has deducted ??" />-->
+							<!--	</td>-->
+							<!--</tr>-->
+							<!--</tbody>-->
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div aria-description="cards">
+			<div data-pb-template="delete-entry-preview">
+				<div class="d-flex">
+					<table class="table border table-rounded align-middle table-row-dashed gy-3 gs-5">
+						<tbody class="fs-5">
+						<tr>
+							<td>Date of Transaction</td>
+							<td>:</td>
+							<td class="rc_date"
+							    data-cs-format="fd_fmi_fy_d">$$@date@$$
+							</td>
+							<!--<td>13 Mar, 2023</td>-->
+						</tr>
+						<tr>
+							<td>Created By</td>
+							<td>:</td>
+							<td>$$@created_by@$$</td>
+							
+							
+							<!--<td>Anil Kumar - -->
+							<!--	<span class="text-muted">Manager</span>-->
+							<!--</td>-->
+						</tr>
+						<tr>
+							<td>Created On</td>
+							<td>:</td>
+							<td class="rc_date"
+							    data-cs-format="fd_fmi_fy_d">$$@created_on@$$
+							</td>
+						</tr>
+						<tr>
+							<td>Transaction Type</td>
+							<td>:</td>
+							<td>$$@type@$$</td>
+							<!--<td>Deposit Entry</td>-->
+						</tr>
+						</tbody>
+					</table>
+					<table class="table border table-rounded align-middle table-row-dashed gy-3 gs-5">
+						<tbody class="fs-5">
+						<tr>
+							<td>Debited Account</td>
+							<td>:</td>
+							<td>
+								<span class="text-muted">$$@debited@$$</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Credited Account</td>
+							<td>:</td>
+							<td>
+								<span class="text-muted">$$@credited@$$</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Amount</td>
+							<td>:</td>
+							<td>
+								<span class="rc_currency">$$@amount@$$</span>
+							
+							</td>
+						</tr>
+						<tr class="text-center">
+							<td colspan="3">$$@narration@$$</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div data-pb-template="view-entry">
+				// to be add the content
+			</div>
+		</div>
+	</div>
+</div>

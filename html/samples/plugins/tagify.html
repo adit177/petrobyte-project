@@ -1,0 +1,478 @@
+<div data-pb-layout="sample"
+     data-layout="parent"
+     data-e-welcome="ground">
+	
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		<div id="tag"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">tag</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="tag"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="tag-form"
+				      data-pb-control="combo"
+				      data-form-sno="1"
+				      class="form">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">remote</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="remote"
+							       data-pb-target="tag_bucket"
+							       data-pb-source="remote_tag_sample"
+							       data-tag-force="1"
+							       data-tag-max="3"
+							       type="text"
+							       name="remote"
+							       title=""
+							       placeholder="Click to select"
+							       class="form-control form-control-solid" />
+							<span data-tag-source="tag_bucket"
+							      class="d-none tagify_tags"></span>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="local"
+							       data-pb-target="tag_note"
+							       data-tag-force="0"
+							       data-tag-max="1"
+							       type="text"
+							       name="constant"
+							       placeholder="Click to select or Type to search"
+							       title=""
+							       class="form-control form-control-solid" />
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="tag"
+							       data-pb-channel="constant"
+							       data-pb-target="units"
+							       data-tag-force="1"
+							       data-tag-max="1"
+							       type="text"
+							       name="constant"
+							       placeholder="Click to select or Type to search"
+							       title=""
+							       class="form-control form-control-solid" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="select"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">select</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="select"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="select-form"
+				      data-pb-control="combo"
+				      data-form-sno="2"
+				      class="form">
+					<div class="d-flex flex-stack">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">remote</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="select"
+							       data-pb-channel="remote"
+							       data-pb-target="select_bucket"
+							       data-pb-source="remote_select_sample"
+							       data-tag-force="0"
+							       data-tag-list="1"
+							       data-tag-items="4"
+							       type="text"
+							       name="remote"
+							       title=""
+							       placeholder="this is placeholder"
+							       class="form-control form-control-solid" />
+							<span data-tag-source="select_bucket"
+							      class="d-none tagify_tags"></span>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="select"
+							       data-pb-channel="local"
+							       data-pb-target="select_note"
+							       data-tag-list="1"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid"
+							       placeholder=""
+							       title="" />
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="select"
+							       data-pb-channel="constant"
+							       data-pb-target="tanks_size"
+							       data-tag-list="1"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid"
+							       placeholder=""
+							       title="" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="inout"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">inout</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="inout"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="inout-form"
+				      data-form-sno="3"
+				      class="form">
+					<div class="d-flex flex-stack">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">remote</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="inout"
+							       data-pb-channel="remote"
+							       data-pb-target="inout_bucket"
+							       data-tag-force="1"
+							       data-tag-max="10"
+							       data-tag-list="1"
+							       data-tag-items="3"
+							       type="text"
+							       name="remote"
+							       placeholder="this is placeholder"
+							       title=""
+							       class="form-control form-control-solid- tagify tagify--outside" />
+							<span data-tag-source="inout_bucket"
+							      class="d-none tagify_tags">
+								ant|banana|car|dolphin|elephant|fox|gorilla|hamburger|island|jellyfish|koala|lemon|monkey|noodle|star
+							</span>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="inout"
+							       data-pb-channel="local"
+							       data-pb-target="inout_note"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid- tagify tagify--outside"
+							       placeholder=""
+							       title="" />
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="inout"
+							       data-pb-channel="constant"
+							       data-pb-target="items"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid- tagify tagify--outside"
+							       placeholder=""
+							       title="" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="outin"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">outin</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="outin"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="outin-form"
+				      data-form-sno="4"
+				      class="form">
+					<div class="d-flex flex-stack">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">remote</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="outin"
+							       data-pb-channel="remote"
+							       data-pb-target="outin_bucket"
+							       data-tag-force="0"
+							       data-tag-max="4"
+							       data-tag-items="-1"
+							       data-tag-suggest="tg_sugg_element"
+							       type="text"
+							       name="remote"
+							       placeholder="this is placeholder"
+							       title=""
+							       class="form-control form-control-solid" />
+							<span data-tag-source="outin_bucket"
+							      class="d-none tagify_tags">
+								astronaut|butterfly|carrot|dolphin|elephant|flamingo|grape|hamburger|island|jellyfish|kiwi|lemon|monkey|noodle|star
+							</span>
+							<div class="mt-10">
+								<span>Select Options from here.</span>
+								<div id="tg_sugg_element"
+								     data-tag-suggest></div>
+								<!--	todo: it can be show and hide with user action but this advance functionality has not initiated yet,-->
+							</div>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="outin"
+							       data-pb-channel="local"
+							       data-pb-target="outin_node"
+							       data-tag-suggest="outin_local_place"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid"
+							       placeholder=""
+							       title="" />
+							<div class="mt-10 tagify--outside">
+								<span>Select Options from here.</span>
+								<div id="outin_local_place"
+								     data-tag-suggest></div>
+							</div>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="outin"
+							       data-pb-channel="constant"
+							       data-pb-target="tanks_size"
+							       data-tag-suggest="outin_constant_place"
+							       type="text"
+							       name="constant"
+							       class="form-control form-control-solid"
+							       placeholder=""
+							       title="" />
+							<div class="mt-10">
+								<span>Select Options from here.</span>
+								<div id="outin_constant_place"
+								     data-tag-suggest></div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="advance"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">advance</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="advance"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="advance-form"
+				      data-form-sno="5"
+				      class="form">
+					<div class="d-flex flex-stack">
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">remote</label>
+							<input data-pb-control="tagify"
+							       data-pb-method="advance"
+							       data-pb-channel="remote"
+							       data-pb-target="advance_bucket"
+							       data-tag-force="1"
+							       data-tag-max="1"
+							       type="text"
+							       name="remote_advance"
+							       placeholder="this is placeholder"
+							       title=""
+							       class="form-control form-control-solid" />
+							<span data-tag-source="advance_bucket"
+							      class="d-none tagify_tags">hello|lokesh|kumar
+							</span>
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">local</label>
+							<!--<input data-pb-control="tagify" data-pb-method="tag" data-pb-channel="local" data-pb-target="tg_node_1" type="text" name="constant" class="form-control form-control-solid" placeholder="" title=""/>-->
+						</div>
+						<div class="col-12 col-md-4 mb-7 px-3">
+							<label class="form-label">constant</label>
+							<!--<input data-pb-control="tagify" data-pb-method="tag" data-pb-channel="local" data-pb-target="units" type="text" name="constant" class="form-control form-control-solid" placeholder="" title=""/>-->
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<div class="btn-group">
+					<button form="tag-form"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="tag"></button>
+					<button form="select-form"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="select"></button>
+					<button form="inout-form"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="inout"></button>
+					<button form="outin-form"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="outin"></button>
+					<button form="advance-form"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="advance"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-dom-control <br> data-pb-control</td>
+							<td></td>
+							<td>tagify</td>
+							<td>data-pb-control="tagify" <br> data-pb-control="tagify"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-method</td>
+							<td>to select the method</td>
+							<td>tag/select/inout/outin/advance</td>
+							<td>data-pb-method="key"</td>
+						</tr>
+						<tr>
+							<td>data-pb-channel</td>
+							<td>source for tags</td>
+							<td>remote</td>
+							<td>data-pb-channel="remote"</td>
+						</tr>
+						<tr>
+							<td>data-pb-target</td>
+							<td>take collection of tags from a html element</td>
+							<td>things to add into the HTML Element:<br> <code>data-tag-source="tags_bucket_1" class="d-none tagify_tags"</code><br> , use <code>|</code> to separate the values.</td>
+							<td>data-pb-target="tgAbcdNote_tag"</td>
+						</tr>
+						<tr>
+							<td colspan="4">Note: in remote data-source, html element should not be kept in non repeating element.</td>
+						</tr>
+						<tr>
+							<td>data-tag-force</td>
+							<td>only allow your white-listed for select.</td>
+							<td>0 or 1</td>
+							<td>data-tag-force="1"</td>
+						</tr>
+						<tr>
+							<td>data-tag-max</td>
+							<td>max tag selection</td>
+							<td>n</td>
+							<td>data-tag-max="4"</td>
+						</tr>
+						<tr>
+							<td>data-tag-items</td>
+							<td>need to check</td>
+							<td>-1(unlimited), n</td>
+							<td>data-tag-items="-1"</td>
+						</tr>
+						<tr>
+							<td>data-tag-suggest</td>
+							<td>only of outin, suggestion list</td>
+							<td>element id.</td>
+							<td>data-tag-suggest="tg_sugg_element"</td>
+						</tr>
+						<tr>
+							<td>data-tag-list</td>
+							<td>do not add to show inline, else to show the list of aal tags.</td>
+							<td>0,1</td>
+							<td>data-tag-list="1"</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

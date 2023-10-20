@@ -16,7 +16,7 @@ const {createConfigWindow} = require("./configWindow");
 const {createmanageLicenses} = require("./manageLicenses");
 const {createmanageSubscription} = require("./manageSubscription");
 const {createShortCutWindow} = require("../GlobalKeyManager/ShortCutKeyWindow");
-const{createSettingWindow} = require("./settingWindow");
+// const{createSettingWindow} = require("./settingWindow");
 // const {createSetLockWindow} =require("./setLockWindow");
 const {createUnlockWindow} = require("./unLockWindow");
 const {

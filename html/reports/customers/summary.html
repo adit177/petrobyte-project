@@ -1,0 +1,1214 @@
+<div data-e-welcome="tabs"
+     data-pb-layout="tabs"
+     data-layout="parent">
+	<div id="tabs__tabs"
+	     class="zone d-none card shadow-sm">
+		<div class="card-body">
+			<div class="d-flex flex-column flex-md-row">
+				<div id="control__tabs"
+				     class="sub-zone">
+					<ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6 min-w-md-250px">
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="accounts"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-accounts"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-file-person text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Accounts Summary</span>
+											</span>
+										</span>
+										<span class="fs-6">all customer accounts</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button type="button"
+							        name="tab"
+							        value="trade"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-trade"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Trade Summary</span>
+											</span>
+										</span>
+										<span class="fs-6">customer business activities</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="group"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-group"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-people text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Group Summary</span>
+											</span>
+										</span>
+										<span class="fs-6">all customer in a group</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="action__tabs"
+				     class="sub-zone flex-row-fluid">
+					<div id="intro"
+					     class="d-block">
+						<div id="states"
+						     class="d-none">
+							// few cards and their details
+						</div>
+						<div id="learning">
+							<div class="card">
+								<div class="card-body d-flex flex-column flex-center">
+									<div class="mb-2">
+										<p class="text-center">
+											<i class="fs-5x text-warning las la-life-ring"></i>
+										</p>
+										<h1 class="fw-semibold text-gray-800 text-center lh-lg">
+											Know about Summary Report<br>
+											<span class="fw-bolder">Be Self Export ?</span>
+										</h1>
+									</div>
+									<div class="text-center mt-10 mb-1">
+										<a class="btn btn-light-danger me-2"
+										   data-bs-target="#kt_modal_create_app"
+										   data-bs-toggle="modal">
+											<i class="lab la-youtube fs-2x"></i>
+											Youtube Video
+										</a>
+										<a class="btn btn-light-warning"
+										   href="javascript:">
+											<i class="las la-walking fs-2x"></i>
+											Quick Process
+										</a>
+										<div>
+											<button type="button"
+											        name="action"
+											        value="hide_intro"
+											        class="btn btn-link">
+												Do not show this Again !!!
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content">
+						<div class="tab-pane fade"
+						     id="tab-accounts"
+						     role="tabpanel">
+							<form id="form-accounts">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label>asdfd</label>
+												<div class="btn-group w-100"
+												     data-kt-buttons="true"
+												     data-kt-buttons-target="[data-kt-button]">
+													
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="1" />
+														All
+													</label>
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="2" />
+														Only Active
+													</label>
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="3" />
+														Only Deactivated
+													</label>
+												</div>
+												<label>asdfd</label>
+												<div class="btn-group w-100"
+												     data-kt-buttons="true"
+												     data-kt-buttons-target="[data-kt-button]">
+													
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="1" />
+														All
+													</label>
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="2" />
+														Only Active
+													</label>
+													<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-primary"
+													       data-kt-button="true">
+														<input class="btn-check"
+														       type="radio"
+														       name="status"
+														       value="3" />
+														Only Deactivated
+													</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        form="form-accounts"
+														        name="report"
+														        value="accounts"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_accounts_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_accounts">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_accounts">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Un-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        multiple="multiple"
+															        name="category_ids"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-source="items_categories"
+															        data-pb-placeholder="Select Item Category"
+															        data-pb-search="0"
+															        class="form-select form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        name="item_ids"
+															        data-pb-source="items"
+															        multiple="multiple"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-placeholder="Select Items"
+															        data-pb-search="0"
+															        class="form-select form-select-sm form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-12">
+															<label class="fs-6 form-label fw-bold text-dark">Lock Status</label>
+															<div class="form-check form-switch form-check-custom form-check-solid mt-1">
+																<input class="form-check-input"
+																       type="checkbox"
+																       value=""
+																       id="entryLock" />
+																<label class="form-check-label"
+																       for="entryLock">Show Only Unlock Entries
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-trade"
+						     role="tabpanel">
+							<form id="form-trade">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of Months With Years</label>
+												<select required
+												        name="month_id"
+												        data-pb-source="months"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="subtext"
+												        data-pb-placeholder="Select Month"
+												        title="Month With Year"
+												        class="form-select form-select-solid"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        form="form-trade"
+														        name="report"
+														        value="trade"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_trade_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_trade">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_trade">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Un-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        multiple="multiple"
+															        name="category_ids"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-source="items_categories"
+															        data-pb-placeholder="Select Item Category"
+															        data-pb-search="0"
+															        class="form-select form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        name="item_ids"
+															        data-pb-source="items"
+															        multiple="multiple"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-placeholder="Select Items"
+															        data-pb-search="0"
+															        class="form-select form-select-sm form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-12">
+															<label class="fs-6 form-label fw-bold text-dark">Lock Status</label>
+															<div class="form-check form-switch form-check-custom form-check-solid mt-1">
+																<input class="form-check-input"
+																       type="checkbox"
+																       value=""
+																       id="entryLock1" />
+																<label class="form-check-label"
+																       for="entryLock">Show Only Unlock Entries
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-group"
+						     role="tabpanel">
+							<form id="form-group">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of Customer Groups</label>
+												<select required
+												        name="group_id"
+												        data-pb-source="groups"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Group"
+												        title="Customer Group"
+												        class="form-select form-select-solid"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        name="report"
+														        value="group"
+														        form="form-group"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_group_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_group">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_group">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="receipt_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+																</label>
+															</div>
+														</div>
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Billing Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="-1"
+																	       checked />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Billed</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="billing_status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Un-Billed</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Goods Category</label>
+															<select title=""
+															        name="category_ids"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-source="items_categories"
+															        data-pb-placeholder="Select Item Category"
+															        data-pb-search="0"
+															        class="form-select form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Items Filter</label>
+															<select title=""
+															        name="item_ids"
+															        data-pb-source="items"
+															        multiple="multiple"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-placeholder="Select Items"
+															        data-pb-search="0"
+															        class="form-select form-select-sm form-select-solid">
+																<option value=""></option>
+															</select>
+														</div>
+														<div class="col-lg-12">
+															<label class="fs-6 form-label fw-bold text-dark">Lock Status</label>
+															<div class="form-check form-switch form-check-custom form-check-solid mt-1">
+																<input class="form-check-input"
+																       type="checkbox"
+																       value=""
+																       id="entryLock2" />
+																<label class="form-check-label"
+																       for="entryLock">Show Only Unlock Entries
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="result__tabs"
+	     class="zone">
+		<div id="report-accounts"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Summary</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-accounts">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-primary ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-header-accounts">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-danger ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-accounts">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-accounts"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div id="table-header-accounts"
+					     class="collapse">
+						<!--insert header template-->
+					</div>
+					<div id="table-filters-accounts"
+					     class="collapse d-print-none">
+						<form class="filter-form">
+							<div class="row mb-3"
+							     data-pb-target="filters">
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">Search</label>
+									<input type="search"
+									       name="global"
+									       data-dt-regex="1"
+									       class="form-control form-control-sm table-input"
+									       placeholder="search"
+									       data-pb-catch="summary-quick-table"
+									       data-col-index="-1"
+									       data-filter-event="text"
+									       title="" />
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">Status</label>
+									<select title=""
+									        name="status"
+									        id="status-select"
+									        data-pb-source="statuses"
+									        data-pb-control="select"
+									        data-pb-method="simple"
+									        data-pb-placeholder="Select Status"
+									        data-pb-search="0"
+									        data-col-index="1"
+									        data-pb-catch="summary-quick-table"
+									        data-filter-event="select"
+									        data-pb-allow-clear="true"
+									        class="form-select form-select-sm form-select-solid table-input">
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">Group By</label>
+									<select title=""
+									        name="status"
+									        id="group-by-select"
+									        data-pb-source="group_by"
+									        data-pb-control="select"
+									        data-pb-method="simple"
+									        data-pb-placeholder="Group By"
+									        data-pb-search="0"
+									        data-col-index="1"
+									        data-pb-catch="summary-quick-table"
+									        data-filter-event="group_by"
+									        data-pb-allow-clear="true"
+									        class="form-select form-select-sm form-select-solid table-input">
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">xxxxx</label>
+									<input type="text"
+									       name=""
+									       class="form-control  form-select-sm"
+									       placeholder=""
+									       title="" />
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">Date</label>
+									<div class="input-group">
+										<input id="summary-quick-table-date-range-filter"
+										       type="text"
+										       name="date"
+										       data-dt-column="0"
+										       class="form-control form-select-sm table-input"
+										       data-pb-control="date"
+										       data-pb-method="range"
+										       placeholder="Select Date"
+										       title=""
+										       data-col-index="3"
+										       data-pb-catch="summary-quick-table"
+										       data-filter-event="date-range" />
+										<input type="button"
+										       id="summary-quick-table-date-range-filter-clear"
+										       name="clear"
+										       data-pb-target="1"
+										       class="btn btn-sm btn-icon btn-light"
+										       value="X">
+									</div>
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">yyyy</label>
+									<input type="text"
+									       name=""
+									       class="form-control form-select-sm"
+									       placeholder=""
+									       data-col-index="3"
+									       title="" />
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<label class="form-label">yyyy</label>
+									<input type="text"
+									       name=""
+									       class="form-control form-select-sm"
+									       placeholder=""
+									       data-col-index="3"
+									       title="" />
+								</div>
+								<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+									<button class="summary-quick-table-export-button"
+									        data-export-method="excel">Excel
+									</button>
+									<button class="summary-quick-table-export-button"
+									        data-export-method="pdf">Pdf
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4"
+						       id="summary-quick-table">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-200px">Customer Info
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Is Active
+								</th>
+								<th data-index="2"
+								    class="min-w-150px">Balance
+								</th>
+								<th data-index="3"
+								    class="min-w-150px">Date
+								</th>
+								<th data-index="4">Age</th>
+								<th data-index="5"
+								    class="min-w-100px">Eye Color
+								</th>
+								<th data-index="6">Gender</th>
+								<th data-index="7">Company</th>
+								<th data-index="8"
+								    class="min-w-200px">Favorite Fruit
+								</th>
+								<th data-index="9"></th>
+							</tr>
+							</thead>
+							<tbody></tbody>
+							<tfoot>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-trade"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Go Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-trade">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-trade">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_trade_link"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-trade">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-trade"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div id="table-header-trade"
+					     aria-description="header of the report - account detail"
+					     class="collapse">
+						<!--// insert group-header-->
+					</div>
+					<div id="table-filters-trade"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Customer Name
+								</th>
+								<th data-index="1">Opening</th>
+								<th data-index="2">Sold</th>
+								<th data-index="3">SubTotal</th>
+								<th data-index="4">Receipts</th>
+								<th data-index="5">Other</th>
+								<th data-index="6">Close</th>
+								<th data-index="7">Current</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-group"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Go Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-group">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-group">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-group">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-group"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div id="table-header-group"
+					     aria-description="header of the report - account detail"
+					     class="collapse">
+						// insert vehicle-header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-group">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Customer Name
+								</th>
+								<th data-index="1">Opening</th>
+								<th data-index="2">Sold</th>
+								<th data-index="3">SubTotal</th>
+								<th data-index="4">Receipts</th>
+								<th data-index="5">Other</th>
+								<th data-index="6">Close</th>
+								<th data-index="7">Current</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__tabs"
+	     class="d-none">
+		<div data-pb-template="table-header-accounts">
+			<div class="d-block flex-center">
+				<div class="flex-column text-center">
+					<h3 class="mt-3">$$@name@$$</h3>
+					<p class="mb-1">Accounts Summary</p>
+				</div>
+				<div class="d-flex flex-stack">
+					<div class="d-flex flex-column">
+						<span>Closing Balance:</span>
+						<span class="ms-1 fw-semibold text-end"
+						      data-cs-currency="1"
+						      data-cs-round="2">$$@closing_balance@$$
+						</span>
+					</div>
+					<div class="d-flex flex-column">
+						<span class="mb-0">Date Range:</span>
+						<span class="ms-1 fw-semibold">$$@date_range@$$</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="table-header-trade">
+			<div class="d-block flex-center">
+				<div class="flex-column text-center">
+					<h3 class="mt-3">$$@name@$$</h3>
+					<p class="mb-1">Trade Summary</p>
+				</div>
+				<div class="d-flex flex-stack">
+					<div class="d-flex flex-column">
+						<span>Closing Balance:</span>
+						<span class="ms-1 fw-semibold text-end"
+						      data-cs-currency="1"
+						      data-cs-round="2">$$@closing_balance@$$
+						</span>
+					</div>
+					<div class="d-flex flex-column">
+						<span class="mb-0">Date Range:</span>
+						<span class="ms-1 fw-semibold">$$@date_range@$$</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="table-header-group">
+			<div class="d-block flex-center">
+				<div class="flex-column text-center">
+					<h3 class="mt-3">$$@name@$$</h3>
+					<p class="mb-1">Group Summary</p>
+				</div>
+				<div class="d-flex flex-stack">
+					<div class="d-flex flex-column">
+						<span>Closing Balance:</span>
+						<span class="ms-1 fw-semibold text-end"
+						      data-cs-currency="1"
+						      data-cs-round="2">$$@closing_balance@$$
+						</span>
+					</div>
+					<div class="d-flex flex-column">
+						<span class="mb-0">Date Range:</span>
+						<span class="ms-1 fw-semibold">$$@date_range@$$</span>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

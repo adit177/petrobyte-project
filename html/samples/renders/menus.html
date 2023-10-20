@@ -1,0 +1,335 @@
+<div data-pb-layout="sample"
+     data-layout="parent">
+	
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		<div id="value"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">value</h3>
+				<div class="card-toolbar">
+					<div class="btn-group">
+						<button type="button"
+						        data-e-nature="option"
+						        name="stack"
+						        value="value"
+						        class="btn btn-sm btn-light-dark">
+							Load Data
+						</button>
+						<button type="button"
+						        data-e-nature="option"
+						        name="change"
+						        value="value"
+						        class="btn btn-sm btn-light-primary">
+							Update Data
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card-body bg-light-info">
+				<div class="row">
+					<div class="col-6">
+						<div class="card">
+							<div class="card-header">
+								<div class="card-title">
+									<h3>this is Title</h3>
+								</div>
+								<div class="card-toolbar">
+									<button type="button"
+									        class="btn btn-sm btn-light">
+										<i class="ki-outline ki-arrow-diagonal fs-2"></i>
+									</button>
+								</div>
+							</div>
+							<div class="card-body pt-5">
+								<div id="menuList"
+								     class="d-flex flex-column gap-5">
+									<div data-pb-key="total"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-type="modal"
+										   data-e-nature="option"
+										   data-e-value="banking"
+										   class="fs-4 py-0 fw-semibold text-dark text-hover-primary">Total Intra Banking: </a>
+										<div data-pb-reserve
+										     class="fs-4 badge badge-light-dark fw-semibold">0
+										</div>
+									</div>
+									<div class="separator separator-dashed"></div>
+									<div data-pb-key="deposit"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-type="modal"
+										   data-e-nature="option"
+										   data-e-value="deposit"
+										   class="fs-4 py-0 fw-semibold text-gray-800 text-hover-primary">Deposits
+											<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-4'>Used for Cash Deposits into Bank</span>"></i>
+										</a>
+										<div data-pb-reserve
+										     class="fs-4 badge fw-normal">0
+										</div>
+									</div>
+									<div data-pb-key="withdraw"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-type="modal"
+										   data-e-nature="option"
+										   data-e-value="withdrawal"
+										   class="fs-4 py-0 fw-semibold text-gray-800 text-hover-primary">Withdrawals
+											<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-4'>Used for Cash Withdrawal from Bank</span>"></i>
+										</a>
+										<div data-pb-reserve
+										     class="fs-4 badge fw-normal">0
+										</div>
+									</div>
+									<div data-pb-key="transfer"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-type="modal"
+										   data-e-nature="option"
+										   data-e-value="transfer"
+										   class="fs-4 py-0 fw-semibold text-gray-800 text-hover-primary">Transfers
+											<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-4'>Used for Internal Banking Transfers</span>"></i>
+										</a>
+										<div data-pb-reserve
+										     class="fs-4 badge fw-normal">0
+										</div>
+									</div>
+									<div data-pb-key="clearance"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-type="modal"
+										   data-e-nature="option"
+										   data-e-value="clearance"
+										   class="fs-4 py-0 fw-semibold text-gray-800 text-hover-primary">Clearances
+											<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-4'>Used for POS / QR Settlement and cheque clearance</span>"></i>
+										</a>
+										<div data-pb-reserve
+										     class="fs-4 badge fw-normal">0
+										</div>
+									</div>
+									<div class="separator separator-dashed"></div>
+									<div data-pb-key="vouchers"
+									     class="d-flex flex-stack">
+										<a type="button"
+										   data-e-nature="ignore"
+										   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Contra Vouchers</a>
+										<div data-pb-reserve
+										     class="fs-4 badge badge-light-primary"
+										     data-bs-toggle="tooltip"
+										     title="Total Entry Created so far">0
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button type="button"
+								        name="card"
+								        value="search"
+								        data-e-recall=""
+								        class="btn btn-flex btn-light-primary px-6 w-100">
+									<i class="fs-3x lab la-searchengin"></i>
+									<span class="d-flex flex-column align-items-start ms-2">
+										<span class="fs-3 fw-bold">Search Entry</span>
+										<span class="fs-7">for View, Edit or Delete</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="stack"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">stack</h3>
+				<div class="card-toolbar">
+					<div class="btn-group">
+						<button type="button"
+						        data-e-nature="option"
+						        name="stack"
+						        value="stack"
+						        class="btn btn-sm btn-light-dark">
+							Load Data
+						</button>
+						<button type="button"
+						        data-e-nature="option"
+						        name="change"
+						        value="stack"
+						        class="btn btn-sm btn-light-primary">
+							Update Data
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6">
+						<div class="card card-flush-">
+							<div class="card-header">
+								<div class="card-title">
+									<h2>Categories</h2>
+								</div>
+								<div class="card-toolbar"
+								     data-bs-toggle="tooltip"
+								     data-bs-placement="left"
+								     data-bs-html="true"
+								     title="<span class='fs-6'>Home page of Contacts</span>">
+									<button type="button"
+									        name="card"
+									        value="start"
+									        data-e-origin=""
+									        class="btn btn-outline btn-outline-dashed btn-outline-dark btn-active-light-primary py-2 ps-3 pe-2">
+										<i class="fs-2x la la-home"></i>
+									</button>
+								</div>
+							</div>
+							<div class="card-body pt-5">
+								<div class="d-flex flex-column gap-5 scroll mh-400px"
+								     id="menuList_stack">
+									<div class="d-flex d-none flex-stack"
+									     data-pb-template="menuList_stack">
+										<a type="button"
+										   data-e-nature="ignore"
+										   class="fs-5 fw-semibold text-gray-800">name</a>
+										<div class="badge fs-4 fw-normal">number</div>
+									</div>
+								</div>
+								<div class="separator my-7"></div>
+								<button type="button"
+								        name="card"
+								        value="new"
+								        data-e-origin="start"
+								        class="btn btn-flex btn-light-primary px-6 w-100 mb-7">
+									<i class="fs-3x me-1 la la-user-plus"></i>
+									<span class="d-flex flex-column align-items-start ms-2">
+										<span class="fs-3 fw-bold">Add Contact</span>
+										<span class="fs-7">Business Contacts</span>
+									</span>
+								</button>
+								<button type="button"
+								        name="card"
+								        value="cate"
+								        data-e-origin="start"
+								        class="btn btn-flex btn-light-info px-6 w-100">
+									<i class="fs-3x me-1 las la-user-tag"></i>
+									<span class="d-flex flex-column align-items-start ms-2">
+										<span class="fs-3 fw-bold">Add Category</span>
+										<span class="fs-7">Business Contacts</span>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bar"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">bar</h3>
+				<div class="card-toolbar">
+					<div class="btn-group">
+						<button type="button"
+						        data-e-nature="option"
+						        name="stack"
+						        value="bar"
+						        class="btn btn-sm btn-light-dark">
+							Load Data
+						</button>
+						<button type="button"
+						        data-e-nature="option"
+						        name="change"
+						        value="bar"
+						        class="btn btn-sm btn-light-primary">
+							Update Data
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<!--@@add_content_here-->
+			</div>
+		</div>
+		<div id="button"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">button</h3>
+				<div class="card-toolbar">
+					<div class="btn-group">
+						<button type="button"
+						        data-e-nature="option"
+						        name="stack"
+						        value="button"
+						        class="btn btn-sm btn-light-dark">
+							Load Data
+						</button>
+						<button type="button"
+						        data-e-nature="option"
+						        name="change"
+						        value="button"
+						        class="btn btn-sm btn-light-primary">
+							Update Data
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<!--@@add_content_here-->
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-dom-method</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

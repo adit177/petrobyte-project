@@ -1,0 +1,630 @@
+<div data-pb-layout="reports"
+     data-e-welcome="eagle"
+     data-layout="parent">
+	<div id="navbar__reports"
+	     class="zone d-none">
+		<div class="card shadow-sm mb-7">
+			<div class="card-body py-3 px-7">
+				<div class="d-grid hover-scroll-overlay-x-">
+					<!--nav-tabs nav-line-tabs nav-line-tabs-2x-->
+					<ul class="nav flex-nowrap text-nowrap row">
+						<li class="nav-item col px-5">
+							<button type="button"
+							        name="navtab"
+							        value="search"
+							        data-e-nature="post"
+							        class="btn btn-active-light-primary btn-color-gray-700 btn-active-color-primary
+									                border border-2 border-opacity-50 border-active-primary
+									                fw-bold fs-4 w-100 hover-elevate-up py-3 active"
+							        data-bs-toggle="tab"
+							        href="#search"><i class="fs-2x d-none d-md-block bi bi-search"></i> Search
+							</button>
+						</li>
+						<li class="nav-item col px-5">
+							<button type="button"
+							        name="navtab"
+							        value="transaction"
+							        data-e-nature="post"
+							        class="btn btn-active-light-primary btn-color-gray-700 btn-active-color-primary
+									                border border-2 border-opacity-50 border-active-primary
+									                fw-bold fs-4 w-100 hover-elevate-up py-3"
+							        data-bs-toggle="tab"
+							        href="#transaction"><i class="fs-2x d-none d-md-block bi bi-journal-text"></i> Report
+							</button>
+						</li>
+						<li class="nav-item col px-5">
+							<button type="button"
+							        name="navtab"
+							        value="summary"
+							        data-e-nature="post"
+							        class="btn btn-active-light-primary btn-color-gray-700 btn-active-color-primary
+									                border border-2 border-opacity-50 border-active-primary
+									                fw-bold fs-4 w-100 hover-elevate-up py-3"
+							        data-bs-toggle="tab"
+							        href="#summary"><i class="fs-2x d-none d-md-block bi bi-view-list"></i> Summary
+							</button>
+						</li>
+						<li class="nav-item col px-5">
+							<button type="button"
+							        name="navtab"
+							        value="charts"
+							        data-e-nature="post"
+							        class="btn btn-active-light-primary btn-color-gray-700 btn-active-color-primary
+									                border border-2 border-opacity-50 border-active-primary
+									                fw-bold fs-4 w-100 hover-elevate-up py-3"
+							        data-bs-toggle="tab"
+							        href="#charts"><i class="fs-2x d-none d-md-block bi bi-graph-up"></i> Charts
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="navtab__reports">
+		<div class="zone tab-content">
+			<div id="eagle__reports"
+			     class="sub-zone d-none">
+				<div id="search"
+				     class="tab-pane fade show active"
+				     role="tabpanel">
+					<div class="card shadow-sm">
+						<div class="card-header">
+							<div class="card-title">
+								<h3>Select Account for Display Report</h3>
+							</div>
+							<div class="card-toolbar">
+								<a id="adv_register_link"
+								   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+								   data-bs-toggle="collapse"
+								   href="#adv_register">Advanced</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<form id="search-form"
+							      autocomplete="off">
+								<div class="collapse"
+								     id="adv_register">
+									<div class="row g-8 mb-8">
+										<div class="col-12 col-md-7 col-xl-8">
+											<label class="fs-6 form-label fw-bold text-dark">Date Range for Report</label>
+											<input type="text"
+											       name="dates"
+											       class="form-control form-control-solid"
+											       placeholder="Select Date Range"
+											       title=""
+											       data-pb-control="range"
+											       data-pb-method="defined" />
+										</div>
+										<div class="col-12 col-md-5 col-xl-4">
+											<label class="fs-6 form-label fw-bold text-dark">Amount Grouping</label>
+											<div class="nav-group nav-group-fluid">
+												<label>
+													<input type="radio"
+													       class="btn-check"
+													       name="wise"
+													       value="0"
+													       checked />
+													<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">Entry</span>
+												</label>
+												<label>
+													<input type="radio"
+													       class="btn-check"
+													       name="wise"
+													       value="1" />
+													<span class="btn btn-sm btn-color-muted btn-active btn-active-dark fw-bold px-4">Date</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="row g-8">
+												<div class="col-12 col-lg-6">
+													<label class="fs-6 form-label fw-bold text-dark">Entry Verification Status</label>
+													<div class="nav-group nav-group-fluid">
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="verify"
+															       value="-1"
+															       checked />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="verify"
+															       value="1" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Verified</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="verify"
+															       value="0" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Un-Verified</span>
+														</label>
+													</div>
+												</div>
+												<div class="col-12 col-lg-6">
+													<label class="fs-6 form-label fw-bold text-dark">Entry Reconciliation Status</label>
+													<div class="nav-group nav-group-fluid">
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="reconcile"
+															       value="-1"
+															       checked />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="reconcile"
+															       value="1" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-info fw-bold px-4">Reconciled</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="reconcile"
+															       value="0" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-warning fw-bold px-4">Not-Reconciled</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row g-8 mb-8">
+										<div class="col-12">
+											<div class="row g-8">
+												<div class="col-lg-6">
+													<label class="fs-6 form-label fw-bold text-dark">Transaction Type</label>
+													<select title=""
+													        name="types"
+													        class="form-select form-select-solid"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-tack="withid"
+													        data-placeholder="Transaction Type"
+													        data-pb-search="true">
+														<option value=""></option>
+													</select>
+												</div>
+												<div class="col-lg-6">
+													<label class="fs-6 form-label fw-bold text-dark">Entry Created By</label>
+													<select title=""
+													        name="users"
+													        class="form-select form-select-solid"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-tack="subtext"
+													        data-placeholder="Select User Account"
+													        data-pb-search="true">
+														<option value=""></option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										<label class="fs-6 form-label fw-bold text-dark">List of Accounts</label>
+										<select required
+										        name="account_id"
+										        data-pb-source="accounts"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="account"
+										        data-pb-tack="group"
+										        data-pb-placeholder="Select Account to View Report"
+										        data-hide-search="true"
+										        title="Ledger Account">
+											<option></option>
+										</select>
+									</div>
+									<div class="col-6">
+										<button form="search-form"
+										        type="button"
+										        name="load"
+										        value="transaction"
+										        data-e-nature="post"
+										        class="btn btn-flex btn-light-primary px-6 w-100">
+											<i class="fs-3x las la-file-invoice"></i>
+											<span class="d-flex flex-column align-items-start ms-2">
+												<span class="fs-3 fw-bold">Load Report</span>
+												<span class="fs-7 fw-normal">Get Table, Summary & Charts in one-click</span>
+											</span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tiger__reports"
+			     class="sub-zone d-none">
+				<div id="transaction"
+				     class="tab-pane fade"
+				     role="tabpanel">
+					<div class="card shadow-sm">
+						<div class="card-header">
+							<h3 class="card-title">Account Name</h3>
+							<div class="card-toolbar">
+								<button type="button"
+								        value="search"
+								        name="navtab"
+								        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+									<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+									<span>Go Back</span>
+								</button>
+							</div>
+						</div>
+						<div class="card-body py-0">
+							<div class="row py-5 bg-light-info"
+							     data-pb-target="filter">
+								// filter section
+							</div>
+							<div class="table-responsive">
+								<table class="table align-middle text-gray-700 fs-5 fw-normal table-row-dashed gy-2 gs-3">
+									<thead>
+									<tr class="text-start fw-semibold fs-6 text-muted text-uppercase">
+										<th data-index="0"
+										    class="min-w-100px">Date
+										</th>
+										<th data-index="1"
+										    class="min-w-200px">Ledger
+										</th>
+										<th data-index="2">Voucher</th>
+										<th data-index="4">Entry Type</th>
+										<th data-index="3">Voucher No</th>
+										<th data-index="5">Amount</th>
+										<th data-index="6">Behave</th>
+										<th data-index="7">Description</th>
+										<th data-index="8">Action</th>
+									</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="card-footer py-5 px-15">
+							<div class="row">
+								<div class="col-6">
+									<button type="button"
+									        name="navtab"
+									        value="search"
+									        class="btn btn-sm btn-outline btn-outline-dark">
+										<i class="bi bi-caret-left-fill p-0"></i>
+										Go To Search
+									</button>
+								</div>
+								<div class="col-6 text-end">
+									<button type="button"
+									        name="navtab"
+									        value="summary"
+									        class="btn btn-sm btn-outline btn-outline-info">
+										Summary
+										<i class="bi bi-caret-right-fill p-0"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="lion__reports"
+			     class="sub-zone d-none">
+				<div id="summary"
+				     class="tab-pane fade"
+				     role="tabpanel">
+					<div class="row">
+						<div class="col-md-6 mb-7">
+							<div class="card shadow-sm mb-7">
+								<div class="card-body"
+								     data-pb-target="balance-snap">
+									<div>
+										<div class="d-flex flex-column text-center card-rounded">
+											<span class="fw-semibold text-gray-600 fs-7 pb-1">Closing Balance</span>
+											<span class="fw-bold text-gray-800 fs-2hx lh-1 pb-1 rc_currency"
+											      data-cs-currency="1"
+											      data-pb-control="amount">$$@closing_balance@$$
+											</span>
+											<span class="fw-bold text-gray-600 fs-4 pb-5">Debit</span>
+											<span class="fw-semibold text-gray-600 fs-7 pb-1">On Date</span>
+											<span class="fw-bold text-gray-800 fs-3 rc_date"
+											      data-pb-control="date">$$@date@$$
+											</span>
+										</div>
+										<div class="separator separator-content border-dark my-5">
+											<span class="fw-semibold text-gray-700 w-200px">Highlights</span>
+										</div>
+										<div class="d-flex flex-stack">
+											<div class="d-flex align-items-center me-5 me-xl-13">
+												<i class="fs-2x text-success bi bi-arrow-down-left-circle-fill me-3"></i>
+												<div class="m-0">
+													<span class="fw-semibold text-gray-400 d-block fs-8">Debited</span>
+													<span class="fs-5 fw-semibold text-gray-800 text-hover-success rc_currency"
+													      data-pb-method="simple"
+													      data-pb-control="amount">$$@debited@$$
+													</span>
+													<span class="fw-bold text-gray-400 text-hover-dark fs-7">($$@debited_txns@$$ txn)</span>
+												</div>
+											</div>
+											<div class="d-flex align-items-center">
+												<i class="fs-2x text-danger bi bi-arrow-up-right-circle-fill me-3"></i>
+												<div class="m-0">
+													<span class="fw-semibold text-gray-400 d-block fs-8">Credited</span>
+													<span class="fs-5 fw-semibold text-gray-800 text-hover-danger rc_currency"
+													      data-cs-currency="1"
+													      data-pb-control="amount">$$@credited@$$
+													</span>
+													<span class="fw-bold text-gray-400 text-hover-dark fs-7">($$@credited_txn@$$ txn)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card card-flush mb-7">
+								<div class="card-body"
+								     data-pb-target="amount-status">
+									<div class="d-flex flex-stack">
+										<div class="text-gray-700 fw-semibold fs-6 me-2">
+											<i class="bi bi-arrow-right-square-fill text-warning fs-4"></i>
+											Opening Balance:
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="text-gray-900 fw-bold fs-6"
+											      data-pb-control="amount">₹ 24,217.8
+											</span>
+											<span class="ms-2 text-gray-400 fw-semibold fs-6">Dr</span>
+										</div>
+									</div>
+									<div class="separator separator-dashed my-3"></div>
+									<div class="d-flex flex-stack">
+										<div class="text-gray-700 fw-semibold fs-6 me-2">
+											<i class="bi bi-arrow-down-left-circle-fill text-success fs-4"></i>
+											Total Debited Amount:
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="text-gray-900 fw-bold fs-6"
+											      data-pb-control="amount">₹ 730
+											</span>
+										</div>
+									</div>
+									<div class="separator separator-dotted my-3"></div>
+									<div class="d-flex flex-stack">
+										<div class="text-gray-700 fw-semibold fs-6 me-2">
+											<i class="bi bi-arrow-up-right-circle-fill text-danger fs-4"></i>
+											Total Credited Amount:
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="text-gray-900 fw-bold fs-6"
+											      data-pb-control="amount">₹ 1,250
+											</span>
+										</div>
+									</div>
+									<div class="separator separator-dashed my-3"></div>
+									<div class="d-flex flex-stack">
+										<div class="text-gray-700 fw-semibold fs-6 me-2">
+											<i class="bi bi-arrow-left-square-fill text-primary fs-4"></i>
+											Closing Balance:
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="text-gray-900 fw-bold fs-6"
+											      data-pb-control="amount">₹ 2,427.8
+											</span>
+											<span class="ms-2 text-gray-400 fw-semibold fs-6">Dr</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card shadow-sm mb-7 card-flush">
+								<div class="card-header">
+									<h4 class="card-title align-items-start flex-column">
+										<span class="card-label fw-bold text-gray-800">Top 5 Accounts</span>
+										<span class="text-gray-400 mt-1 fw-semibold fs-7">as per transaction value</span>
+									</h4>
+									<div class="card-toolbar">
+										<ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x nav-stretch fs-6 border-0">
+											<li class="nav-item">
+												<a class="btn rounded-2 py-2 px-2 me-3 btn-light-success fw-semibold text-active-white active"
+												   data-bs-toggle="tab"
+												   href="#top5_debited">Debits</a>
+											</li>
+											<li class="nav-item">
+												<a class="btn rounded-2 py-2 px-2 btn-light-danger fw-semibold text-active-white"
+												   data-bs-toggle="tab"
+												   href="#top5_credited">Credits</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="tab-content">
+										<div class="tab-pane fade active show"
+										     id="top5_debited"
+										     role="tabpanel"
+										     data-pb-template="top-debits">
+											<div class="d-flex flex-stack mb-6">
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fs-2x bi bi-2-square"></i>
+													</span>
+												</div>
+												<div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
+													<div class="me-5">
+														<button type="button"
+														        name=""
+														        value=""
+														        class="btn btn-link py-0 text-gray-800 fw-bold text-hover-primary fs-4"
+														        data-pb-control="account">ICICI OD
+														</button>
+														<span class="text-gray-400 fw-semibold fs-6 d-block text-start ps-0"
+														      data-pb-control="liability">Long Term Liability
+														</span>
+													</div>
+													<div class="d-flex align-items-center">
+														<span class="text-gray-800 fw-semibold fs-4 me-3 d-block rc_currency"
+														      data-cs-currency="1"
+														      data-pb-control="amount">₹ 4,062
+														</span>
+														<div class="m-0">
+															<span class="badge badge-light-success fs-base"
+															      data-pb-control="percent">
+																15%
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade"
+										     id="top5_credited"
+										     role="tabpanel"
+										     data-pb-template="top-credits">
+											<div class="d-flex flex-stack mb-6">
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fs-2x bi bi-2-square"></i>
+													</span>
+												</div>
+												<div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
+													<div class="me-5">
+														<button type="button"
+														        name=""
+														        value=""
+														        class="btn btn-link py-0 text-gray-800 fw-bold text-hover-primary fs-4"
+														        data-pb-control="account">ICICI OD
+														</button>
+														<span class="text-gray-400 fw-semibold fs-6 d-block text-start ps-0"
+														      data-pb-control="liability">Long Term Liability
+														</span>
+													</div>
+													<div class="d-flex align-items-center">
+														<span class="text-gray-800 fw-semibold fs-4 me-3 d-block rc_currency"
+														      data-cs-currency="1"
+														      data-pb-control="amount">₹ 4,062
+														</span>
+														<div class="m-0">
+															<span class="badge badge-light-danger fs-base"
+															      data-pb-control="percentage">
+																15%
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card card-flush">
+								<div class="card-header pt-7">
+									<h3 class="card-title align-items-start flex-column">
+										<span class="card-label fw-bold text-dark">High Value Transactions</span>
+									</h3>
+									<div class="card-toolbar">
+										//
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="hover-scroll-overlay-y pe-6 me-n6"
+									     style="height: 415px"
+									     data-pb-template="high-transaction">
+										<div>
+											<div class="border border-gray-300 rounded px-7 py-3 mb-6">
+												<div class="d-flex flex-stack mb-3">
+													<div class="me-3">
+														<span class="text-gray-400 fw-bold">From:</span>
+														<a class="text-gray-800 text-hover-primary fw-semibold fs-4"
+														   data-pb-control="account">Cash Account</a>
+													</div>
+													<div class="m-0">
+														<i class="fs-4 text-danger bi bi-arrow-up-right-circle-fill"></i>
+														<i class="fs-4 text-success bi bi-arrow-down-left-circle-fill"></i>
+														<span class="fw-bold fs-4 rc_currency"
+														      data-cs-currency="1"
+														      data-pb-control="amount">₹ 45,990
+														</span>
+													</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<p class="mb-0 text-gray-400 fw-bold">Date:
+														<span class="mb-0 fs-5 fw-normal text-gray-800 rc_date"
+														      data-pb-control="date">24 January, 2023
+														</span>
+													</p>
+													<span class="badge badge-light-success"
+													      data-pb-control="payment_type">EMI Payment
+													</span>
+												</div>
+												<div class="d-flex flex-row">
+													<span class="mb-0 text-gray-400 fw-bold me-1">Note:</span>
+													<span data-pb-control="node">This is the note for this transaction.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+			<div id="bear__reports"
+			     class="sub-zone d-none">
+				<div id="charts"
+				     class="tab-pane fade"
+				     role="tabpanel">
+					<div class="row">
+						<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-6 col-12">
+							<div class="card mb-7 shadow-sm">
+								<div class="card-body">
+									<div data-pb-child="chart">
+										<div data-pb-key="debited"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-6 col-12">
+							<div class="card mb-7 shadow-sm">
+								<div class="card-body">
+									<div data-pb-child="chart">
+										<div data-pb-key="credited"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-7 shadow-sm">
+						<div class="card-body">
+							<div class="col-12 col-md-12 col-xxl-12"
+							     data-pb-child="chart">
+								<div data-pb-key="balance"></div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-7 shadow-sm">
+						<div class="card-body">
+							<div data-pb-child="chart">
+								<div data-pb-key="transaction"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="wolf__reports"
+			     class="sub-zone d-none"></div>
+			<div id="shark__reports"
+			     class="sub-zone d-none"></div>
+			<div id="dolphin__reports"
+			     class="sub-zone d-none"></div>
+		</div>
+	</div>
+</div>

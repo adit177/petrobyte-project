@@ -1,0 +1,392 @@
+<div data-pb-layout="stepper"
+     data-e-welcome="form"
+     data-layout="parent">
+	<div id="form__stepper">
+		<div id="add-user">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<!--@@stepper-->
+					<div id="add-user-stepper"
+					     data-pb-step="4"
+					     class="stepper stepper-pills">
+						<div class="stepper-nav flex-center flex-wrap mb-10">
+							<div class="stepper-item mx-8 my-4 current"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">1</span>
+									</div>
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 1 </h3>
+										
+										<div class="stepper-desc">
+											Description
+										</div>
+									</div>
+								</div>
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">2</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 2 </h3>
+										
+										<div class="stepper-desc">
+											Description
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">3</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 3 </h3>
+										
+										<div class="stepper-desc">
+											Description
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">4</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 4 </h3>
+										
+										<div class="stepper-desc">
+											Description
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+						</div>
+						
+						<form class="form w-lg-500px mx-auto"
+						      novalidate="novalidate"
+						      id="add-user-form">
+							<div class="mb-5">
+								<div id="account"
+								     data-pb-index="1"
+								     class="flex-column current"
+								     data-kt-stepper-element="content">
+									
+									<p>step-1</p>
+									<div class="fv-row mb-10">
+										<label class="form-label">Select Account</label>
+										<select name="account_id"
+										        data-pb-source="account"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Please Select Account"
+										        data-pb-search="0"
+										        title="Select Account">
+											<option></option>
+										</select>
+									</div>
+									<div class="fv-row mb-10">
+										<input type="radio"
+										       class="btn-check"
+										       name="account_type"
+										       value="1"
+										       id="account_type_1" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       for="account_type_1">
+											<i class="ki-duotone ki-setting-2 fs-4x me-4">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Employee</span>
+												<span class="text-muted fw-semibold fs-6">
+													Get codes from an app like Google Authenticator, Microsoft Authenticator, Authy or 1Password.
+												</span>
+											</span>
+										</label>
+										<input type="radio"
+										       class="btn-check"
+										       name="account_type"
+										       value="2"
+										       id="account_type_2" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       for="account_type_2">
+											<i class="ki-duotone ki-setting-2 fs-4x me-4">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Customer</span>
+												<span class="text-muted fw-semibold fs-6">
+													Get codes from an app like Google Authenticator, Microsoft Authenticator, Authy or 1Password.
+												</span>
+											</span>
+										</label>
+										
+										<input type="radio"
+										       class="btn-check"
+										       name="account_type"
+										       value="3"
+										       id="account_type_3" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       for="account_type_3">
+											<i class="ki-duotone ki-setting-2 fs-4x me-4">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Manager</span>
+												<span class="text-muted fw-semibold fs-6">
+													Get codes from an app like Google Authenticator, Microsoft Authenticator, Authy or 1Password.
+												</span>
+											</span>
+										</label>
+										<input type="radio"
+										       class="btn-check"
+										       name="account_type"
+										       value="4"
+										       id="account_type_4" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       for="account_type_4">
+											<i class="ki-duotone ki-setting-2 fs-4x me-4">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">CA</span>
+												<span class="text-muted fw-semibold fs-6">
+													Get codes from an app like Google Authenticator, Microsoft Authenticator, Authy or 1Password.
+												</span>
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div id="role"
+								     data-pb-index="2"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									<p>step-2</p>
+									<div class="fv-row mb-10">
+										<label class="form-label">Select Role</label>
+										<select name="role_id"
+										        data-e-name="action"
+										        data-e-value="role"
+										        data-pb-source="role"
+										        data-e-listen="change"
+										        data-e-origin="add-user"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Please Select Role"
+										        data-pb-search="0"
+										        title="Select Role">
+											<option></option>
+										</select>
+									</div>
+									<div data-pb-append="permission"
+									     class="fv-row mb-10">
+									
+									</div>
+								</div>
+								
+								<div id="login"
+								     data-pb-index="3"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									<p>step-3</p>
+									<div class="fv-row mb-8">
+										<input type="text"
+										       placeholder="Username"
+										       name="email"
+										       autocomplete="off"
+										       class="form-control form-control-solid" />
+									</div>
+									<div class="fv-row mb-8"
+									     data-kt-password-meter="true">
+										<div class="mb-1">
+											<div class="position-relative mb-3">
+												<input class="form-control form-control-solid"
+												       type="password"
+												       placeholder="Password"
+												       name="password"
+												       autocomplete="off" />
+												<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
+												      data-kt-password-meter-control="visibility">
+													<i class="bi bi-eye-slash fs-2"></i>
+													<i class="bi bi-eye fs-2 d-none"></i>
+												</span>
+											</div>
+											<div class="d-flex align-items-center mb-3"
+											     data-kt-password-meter-control="highlight">
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+											</div>
+										</div>
+										<div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+									</div>
+									<div class="fv-row mb-8">
+										<input placeholder="Repeat Password"
+										       name="confirm-password"
+										       type="password"
+										       autocomplete="off"
+										       class="form-control form-control-solid" />
+									</div>
+									<div class="fv-row mb-8">
+										<label class="form-check form-check-inline">
+											<input class="form-check-input"
+											       type="checkbox"
+											       name="toc"
+											       value="1" />
+											<span class="form-check-label fw-semibold text-gray-600 fs-base ms-1">I agree with
+												<a href="#"
+												   class="ms-1 link-primary">Terms</a>
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div id="status"
+								     data-pb-index="4"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									<p>step-4</p>
+									
+									<div class="mb-3">
+										
+										<label class="d-flex align-items-center fs-5 fw-semibold">
+											<span class="required">Specify Your API Method</span>
+											
+											<span class="m2-1"
+											      data-bs-toggle="tooltip"
+											      title="Your billing numbers will be calculated based on your API method">
+												<i class="ki-duotone ki-information fs-7">
+													<span class="path1"></span>
+													<span class="path2"></span>
+													<span class="path3"></span>
+												</i>
+											</span>
+										</label>
+										<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+									</div>
+									<div class="btn-group w-100 w-lg-50"
+									     data-kt-buttons="true"
+									     data-kt-buttons-target="[data-kt-button]">
+										
+										<label class="btn btn-outline btn-color-muted btn-active-success"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="account_status"
+											       value="1" />
+											Active
+										</label>
+										
+										<label class="btn btn-outline btn-color-muted btn-active-success"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="account_status"
+											       value="2" />
+											DeActive
+										</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="d-flex flex-stack">
+								<div class="me-2">
+									<button type="button"
+									        name="load"
+									        value="account"
+									        data-step-action="previous"
+									        data-e-origin="add-user"
+									        class="btn btn-light btn-active-light-primary d-none">
+										Back
+									</button>
+								</div>
+								
+								<div>
+									<button type="button"
+									        name="load"
+									        value="role"
+									        data-step-action="next"
+									        data-e-origin="add-user"
+									        class="btn btn-primary">
+										Continue
+									</button>
+									<button type="button"
+									        name="action"
+									        value="finish"
+									        data-e-origin="add-user"
+									        data-step-action="finish"
+									        data-kt-indicator=""
+									        class="btn btn-primary d-none">
+										<span class="indicator-label">
+											Submit
+										</span>
+										<span class="indicator-progress">
+											Downloading...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__stepper"
+	     class="">
+		<div data-pb-template="permission"
+		     class="d-none">
+			<div class="d-flex flex-stack w-lg-50">
+				<div class="me-5">
+					<label class="fs-6 fw-semibold form-label">$$@permission@$$</label>
+					<div class="fs-7 fw-semibold text-muted">$$@description@$$</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

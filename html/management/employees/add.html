@@ -1,0 +1,1757 @@
+<div data-pb-layout="cards"
+     data-e-welcome="start"
+     data-layout="parent">
+	<div class="row">
+		<div id="menu__cards"
+		     data-pb-leave="start"
+		     class="col-lg-6 col-xl-4">
+			<div class="card card-flush-">
+				<div class="card-header">
+					<div class="card-title">
+						<h2>Employees</h2>
+					</div>
+					<div class="card-toolbar"
+					     data-bs-toggle="tooltip"
+					     data-bs-placement="left"
+					     data-bs-html="true"
+					     title="<span class='fs-6'>Home page of Contacts</span>">
+						<button type="button"
+						        name="card"
+						        value="start"
+						        data-e-origin=""
+						        class="btn btn-outline btn-outline-dashed btn-outline-dark btn-active-light-primary py-2 ps-3 pe-2">
+							<i class="fs-2x la la-home"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body pt-5">
+					<div class="d-flex flex-column gap-5 scroll mh-400px"
+					     id="menuList">
+						<div class="d-flex d-none flex-stack"
+						     data-pb-template="menuList">
+							<a href="javascript:"
+							   class="fs-5 fw-semibold text-gray-800">name</a>
+							<div class="badge fs-4 fw-normal">number</div>
+						</div>
+					</div>
+					<div class="separator my-7"></div>
+					<label class="fs-6 fw-semibold form-label">Add new Employee Role</label>
+					<div class="input-group">
+						<input title=""
+						       type="text"
+						       class="form-control form-control-solid"
+						       placeholder="New Working Role" />
+						<button type="button"
+						        class="btn btn-icon btn-light">
+							<span class="svg-icon svg-icon-2">
+								<svg width="24"
+								     height="24"
+								     viewBox="0 0 24 24"
+								     fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.3"
+									      x="2"
+									      y="2"
+									      width="20"
+									      height="20"
+									      rx="5"
+									      fill="currentColor" />
+									<rect x="10.8891"
+									      y="17.8033"
+									      width="12"
+									      height="2"
+									      rx="1"
+									      transform="rotate(-90 10.8891 17.8033)"
+									      fill="currentColor" />
+									<rect x="6.01041"
+									      y="10.9247"
+									      width="12"
+									      height="2"
+									      rx="1"
+									      fill="currentColor" />
+								</svg>
+							</span>
+						</button>
+					</div>
+					<button type="button"
+					        name="switch"
+					        value="form@type"
+					        data-e-switch="stepper"
+					        data-e-memory="lost"
+					        data-e-origin="start"
+					        class="btn btn-flex btn-light-info px-6 w-100">
+						<i class="fs-3x me-1 la la-user-plus"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Add</span>
+							<span class="fs-7">Employee Detail</span>
+						</span>
+					</button>
+					<button type="button"
+					        name="switch"
+					        value="form@employeeList"
+					        data-e-switch="stepper"
+					        data-e-memory="lost"
+					        data-e-origin="start"
+					        class="btn btn-flex btn-light-info px-6 w-100">
+						<i class="fs-1 bi bi-pencil-square"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Edit</span>
+							<span class="fs-7">Employee Detail</span>
+						</span>
+					</button>
+					<button type="button"
+					        name="card"
+					        value="cate"
+					        data-e-origin="start"
+					        class="btn btn-flex btn-light-info px-6 w-100">
+						<i class="fs-3 bi bi-trash-fill"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Disable</span>
+							<span class="fs-7">Employee Detail</span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="cards__cards"
+		     class="col-lg-6 col-xl-8">
+			<div id="start__cards"
+			     class=""
+			     data-pb-child="card">
+				<div class="card card-flush h-lg-100"
+				     id="kt_contacts_main">
+					<div class="card-body p-0">
+						<div class="card-px text-center py-20 my-10">
+							<h2 class="fs-2x fw-bold mb-10">Welcome to the Employee Details</h2>
+							<p class="text-gray-500 fs-4 fw-semibold mb-10">Manage All your Employee and their transactions.</p>
+							<button type="button"
+							        name="card"
+							        value="list"
+							        data-e-origin="start"
+							        data-e-value="add"
+							        class="btn btn-primary hover-scale">Recently Added Employee
+							</button>
+							<button type="button"
+							        name="card"
+							        value="list"
+							        data-e-origin="start"
+							        data-e-value="disable"
+							        class="btn btn-primary hover-scale">Recently Disabled Employee
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="list__cards"
+			     class="d-none"
+			     data-pb-child="card">
+				<div class="card shadow-sm">
+					<div class="card-header">
+						<div class="card-title">
+							<i class="fs-2x me-2 text-dark las la-users"></i>
+							<h3 class="text-dark">All Contacts</h3>
+						</div>
+						<div class="card-toolbar">
+							<button type="button"
+							        name="redirect"
+							        value="@@@"
+							        class="btn btn-light-primary btn-active-light-primary hover-scale py-2 ps-2 pe-1 me-2"
+							        data-bs-toggle="tooltip"
+							        data-bs-html="true"
+							        title="<span class='fs-6'>Group Report of all Contacts</span>">
+								<i class="fs-1 las la-stream"></i>
+							</button>
+							<button type="button"
+							        value="start"
+							        name="back"
+							        data-e-origin="list"
+							        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+								<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+								<span>Go Back</span>
+							</button>
+						</div>
+					</div>
+					<div class="card-body px-0 py-2">
+						<div class="table-responsive">
+							<table class="table align-middle table-row-dashed gy-1 gs-7 text-gray-700 fs-5 bg-white rounded"
+							       data-load-table="false">
+								<thead>
+								<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+									<th nowrap=""
+									    class="min-w-200px">Employee Name
+									</th>
+									<th nowrap=""
+									    class="min-w-125px">Role
+									</th>
+									<th nowrap=""
+									    class="min-w-125px">Mobile Number
+									</th>
+									<th nowrap=""
+									    class="min-w-125px">Payable Salary
+									</th>
+									<th nowrap=""
+									    class="min-w-50px text-center">Status
+									</th>
+								</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div id="menu__direct"-->
+		<!--     class="col-lg-6 col-xl-4">-->
+		<!--	<div class="card card-flush-">-->
+		<!--		<div class="card-header">-->
+		<!--			<div class="card-title">-->
+		<!--				<h2>Employees</h2>-->
+		<!--			</div>-->
+		<!--			<div class="card-toolbar"-->
+		<!--			     data-bs-toggle="tooltip"-->
+		<!--			     data-bs-placement="left"-->
+		<!--			     data-bs-html="true"-->
+		<!--			     title="<span class='fs-6'>Home page of Add</span>">-->
+		<!--				<button type="button"-->
+		<!--				        name="card"-->
+		<!--				        value="start"-->
+		<!--				        data-e-origin=""-->
+		<!--				        class="btn btn-outline btn-outline-dashed btn-outline-dark btn-active-light-primary py-2 ps-3 pe-2">-->
+		<!--					<i class="fs-2x la la-home"></i>-->
+		<!--				</button>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div class="card-body pt-5">-->
+		<!--			<div class="d-flex flex-column gap-5 scroll mh-400px"-->
+		<!--			     id="menuList">-->
+		<!--				<div class="d-flex d-none flex-stack"-->
+		<!--				     data-pb-template="menuList">-->
+		<!--					<a href="javascript:"-->
+		<!--					   class="fs-5 fw-semibold text-gray-800">name</a>-->
+		<!--					<div class="badge fs-4 fw-normal">number</div>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--			<div class="separator my-7"></div>-->
+		<!--			<label class="fs-6 fw-semibold form-label">Add new Employee Role</label>-->
+		<!--			<div class="input-group">-->
+		<!--				<input title=""-->
+		<!--				       type="text"-->
+		<!--				       class="form-control form-control-solid"-->
+		<!--				       placeholder="New Working Role" />-->
+		<!--				<button type="button"-->
+		<!--				        class="btn btn-icon btn-light">-->
+		<!--					<span class="svg-icon svg-icon-2">-->
+		<!--						<svg width="24"-->
+		<!--						     height="24"-->
+		<!--						     viewBox="0 0 24 24"-->
+		<!--						     fill="none"-->
+		<!--						     xmlns="http://www.w3.org/2000/svg">-->
+		<!--							<rect opacity="0.3"-->
+		<!--							      x="2"-->
+		<!--							      y="2"-->
+		<!--							      width="20"-->
+		<!--							      height="20"-->
+		<!--							      rx="5"-->
+		<!--							      fill="currentColor" />-->
+		<!--							<rect x="10.8891"-->
+		<!--							      y="17.8033"-->
+		<!--							      width="12"-->
+		<!--							      height="2"-->
+		<!--							      rx="1"-->
+		<!--							      transform="rotate(-90 10.8891 17.8033)"-->
+		<!--							      fill="currentColor" />-->
+		<!--							<rect x="6.01041"-->
+		<!--							      y="10.9247"-->
+		<!--							      width="12"-->
+		<!--							      height="2"-->
+		<!--							      rx="1"-->
+		<!--							      fill="currentColor" />-->
+		<!--						</svg>-->
+		<!--					</span>-->
+		<!--				</button>-->
+		<!--			</div>-->
+		<!--			<div class="card-footer">-->
+		<!--				<button class="btn btn-flex btn-light-primary px-6 mb-6 w-100">-->
+		<!--					<i class="fs-1 bi bi-pencil-square"></i>-->
+		<!--					<span class="d-flex flex-column align-items-start ms-2">-->
+		<!--						<span class="fs-3 fw-bold">Edit</span>-->
+		<!--						<span class="fs-7">Working Role</span>-->
+		<!--					</span>-->
+		<!--				</button>-->
+		<!--				<button class="btn btn-flex btn-light-danger px-6 w-100">-->
+		<!--					<i class="fs-3 bi bi-trash-fill"></i>-->
+		<!--					<span class="d-flex flex-column align-items-start ms-2">-->
+		<!--						<span class="fs-3 fw-bold">Delete</span>-->
+		<!--						<span class="fs-7">Working Role</span>-->
+		<!--					</span>-->
+		<!--				</button>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+		<!--<div id="direct__direct"-->
+		<!--     class="col-lg-6 col-xl-8">-->
+		<!--	<div id="visits__direct"-->
+		<!--	     class="">-->
+		<!--		<div class="card">-->
+		<!--			<div class="card-body">-->
+		<!--				<div class="stepper stepper-links d-flex flex-column pt-15"-->
+		<!--				     id="pb_new_employee_ac_stepper">-->
+		<!--					<div class="stepper-nav mb-5">-->
+		<!--						<div class="stepper-item current"-->
+		<!--						     data-kt-stepper-element="nav">-->
+		<!--							<h3 class="stepper-title">1. Type</h3>-->
+		<!--						</div>-->
+		<!--						<div class="stepper-item"-->
+		<!--						     data-kt-stepper-element="nav">-->
+		<!--							<h3 class="stepper-title">2. Details</h3>-->
+		<!--						</div>-->
+		<!--						<div class="stepper-item"-->
+		<!--						     data-kt-stepper-element="nav">-->
+		<!--							<h3 class="stepper-title">3. Payroll</h3>-->
+		<!--						</div>-->
+		<!--						<div class="stepper-item"-->
+		<!--						     data-kt-stepper-element="nav">-->
+		<!--							<h3 class="stepper-title">Completed</h3>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--					<form class="mx-auto mw-600px w-100 pt-15 pb-10"-->
+		<!--					      novalidate="novalidate"-->
+		<!--					      method="post"-->
+		<!--					      id="pb_new_employee_ac_form">-->
+		<!--						<div id="type"-->
+		<!--						     class="current"-->
+		<!--						     data-kt-stepper-element="content">-->
+		<!--							<div class="w-100">-->
+		<!--								<div class="pb-10 pb-lg-15">-->
+		<!--									<h2 class="fw-bold d-flex align-items-center text-dark">Account Type-->
+		<!--										<i class="fas fa-exclamation-circle ms-2 fs-7"-->
+		<!--										   data-bs-toggle="tooltip"-->
+		<!--										   title="Billing is issued based on your selected account type"></i></h2>-->
+		<!--									<div class="text-muted fw-semibold fs-6">If you need more info, please check out-->
+		<!--										<a href="#"-->
+		<!--										   class="link-danger fw-bold">Video</a>-->
+		<!--									                                         .-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--								<div class="fv-row row">-->
+		<!--									<div class="col-lg-6 col-12 mb-7">-->
+		<!--										<div class="row">-->
+		<!--											<div class="col-12 mb-7">-->
+		<!--												<label class="form-label required">Employee Job Role</label>-->
+		<!--												<select name="role_id"-->
+		<!--												        data-pb-source="roles"-->
+		<!--												        class="form-select form-select-solid"-->
+		<!--												        data-pb-control="select"-->
+		<!--												        data-pb-method="simple"-->
+		<!--												        data-pb-tack="direct"-->
+		<!--												        data-pb-placeholder="Select Job Role"-->
+		<!--												        data-pb-search="0"-->
+		<!--												        title="Select Job Role">-->
+		<!--													<option></option>-->
+		<!--												</select>-->
+		<!--											</div>-->
+		<!--											<div class="col-12">-->
+		<!--												<label class="form-label mt-3">-->
+		<!--													<span class="required">Joining Date</span>-->
+		<!--													<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"-->
+		<!--													   data-bs-toggle="tooltip"-->
+		<!--													   title="Joining Date"></i>-->
+		<!--												</label>-->
+		<!--												<input required-->
+		<!--												       type="text"-->
+		<!--												       name="join_date"-->
+		<!--												       class="form-control form-control-solid"-->
+		<!--												       data-pb-control="date"-->
+		<!--												       data-pb-method="human"-->
+		<!--												       placeholder="Joining Date"-->
+		<!--												       title="What is the Joining Date" />-->
+		<!--												<span class="fw-normal text-muted">payroll will be automatically disabled before joining month.</span>-->
+		<!--											</div>-->
+		<!--										</div>-->
+		<!--									</div>-->
+		<!--									<div class="col-lg-6 col-12 ps-5">-->
+		<!--										<label class="fs-6 fw-semibold mb-2">-->
+		<!--											Absents allowed-->
+		<!--											<i class="fas fa-exclamation-circle ms-2 fs-7"-->
+		<!--											   data-bs-toggle="tooltip"-->
+		<!--											   title="X number of allowed Absents per month that days salary will not be deducted"></i>-->
+		<!--										</label>-->
+		<!--										<div class="d-flex flex-column text-center bg-light-primary rounded">-->
+		<!--											<div class="d-flex align-items-start justify-content-center mb-7">-->
+		<!--												<span class="fw-bold fs-4 mt-1 me-2">Allows:</span>-->
+		<!--												<span class="fw-bold fs-3x"-->
+		<!--												      id="pb_emp_ac_absent_slider_label"></span>-->
+		<!--												<span class="ms-2 fw-semibold fs-2x">Days</span>-->
+		<!--											</div>-->
+		<!--											<div id="pb_emp_ac_absent_slider_bar"-->
+		<!--											     class="noUi-sm bg-gray-400"></div>-->
+		<!--											<input value=""-->
+		<!--											       type="text"-->
+		<!--											       title=""-->
+		<!--											       name="allow_absents"-->
+		<!--											       hidden-->
+		<!--											       id="allow_absents">-->
+		<!--										</div>-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--						<div data-kt-stepper-element="content">-->
+		<!--							<div class="w-100">-->
+		<!--								<div class="pb-10 pb-lg-15">-->
+		<!--									<h2 class="fw-bold text-dark">Employees Details</h2>-->
+		<!--								</div>-->
+		<!--								<div id="pb_employ_add_form_repeater">-->
+		<!--									<div class="form-group fv-row">-->
+		<!--										<div data-repeater-list="pb_employ_add_rows">-->
+		<!--											<div data-repeater-item>-->
+		<!--												<div class="form-group mb-3 border-bottom border-2">-->
+		<!--													<div class="row">-->
+		<!--														<div class="col-lg-6 col-12 mb-5">-->
+		<!--															<input title=""-->
+		<!--															       type="text"-->
+		<!--															       class="form-control form-control-solid"-->
+		<!--															       name="account_name"-->
+		<!--															       placeholder="Person Name" />-->
+		<!--														</div>-->
+		<!--														<div class="col-lg-6 col-12 mb-5">-->
+		<!--															<input title=""-->
+		<!--															       type="number"-->
+		<!--															       maxlength="10"-->
+		<!--															       class="form-control form-control-solid"-->
+		<!--															       data-pb-control="length"-->
+		<!--															       name="mobile_number"-->
+		<!--															       placeholder="Mobile Number" />-->
+		<!--														</div>-->
+		<!--														<div class="col-lg-5 col-12 mb-5">-->
+		<!--															<input title=""-->
+		<!--															       type="text"-->
+		<!--															       class="form-control form-control-solid inr_mask_round"-->
+		<!--															       name="nett_salary"-->
+		<!--															       placeholder="Monthly Salary" />-->
+		<!--														</div>-->
+		<!--														<div class="col-lg-5 col-12 mb-5">-->
+		<!--															<input title=""-->
+		<!--															       type="text"-->
+		<!--															       class="form-control form-control-solid inr_mask_round"-->
+		<!--															       name="due_salary"-->
+		<!--															       placeholder="Due Salary" />-->
+		<!--														</div>-->
+		<!--														<div class="col-md-2">-->
+		<!--															<a href="javascript:"-->
+		<!--															   data-repeater-delete-->
+		<!--															   class="btn btn-sm btn-light-danger mt-3">-->
+		<!--																<i class="bi bi-node-minus-fill fs-3"></i>-->
+		<!--															</a>-->
+		<!--														</div>-->
+		<!--													</div>-->
+		<!--												</div>-->
+		<!--											</div>-->
+		<!--										</div>-->
+		<!--									</div>-->
+		<!--									<div class="form-group">-->
+		<!--										<a href="javascript:"-->
+		<!--										   data-repeater-create-->
+		<!--										   class="btn btn-sm btn-light-primary">-->
+		<!--											<i class="bi bi-node-plus-fill"></i>Add-->
+		<!--										</a>-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--						<div data-kt-stepper-element="content">-->
+		<!--							<div class="w-100">-->
+		<!--								<div class="pb-10 pb-lg-15">-->
+		<!--									<h2 class="fw-bold text-dark">Payroll Configuration</h2>-->
+		<!--									<div class="text-muted fw-semibold fs-6">If you need more info about payroll, please check out-->
+		<!--										<a href="#"-->
+		<!--										   class="text-danger fw-bold">Video</a>-->
+		<!--									                                         .-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--								<div class="d-flex flex-column mb-7 fv-row">-->
+		<!--									<label class="required fs-6 fw-semibold form-label mb-2">Payroll Absence Rule</label>-->
+		<!--									<select name="absent_rule"-->
+		<!--									        class="form-select form-select-solid"-->
+		<!--									        data-dom-control="select2"-->
+		<!--									        data-placeholder="Absent Rule"-->
+		<!--									        data-hide-search="true">-->
+		<!--										<option></option>-->
+		<!--										<option selected-->
+		<!--										        value="0">No Rule, Deduct if employee cross allowed absents-->
+		<!--										</option>-->
+		<!--										<option value="1"-->
+		<!--										        disabled>Rule - A, Deduct for all if crossed allowed-->
+		<!--										</option>-->
+		<!--										<option value="2"-->
+		<!--										        disabled>Rule - B, Deduct if absents are continue-->
+		<!--										</option>-->
+		<!--										<option value="3"-->
+		<!--										        disabled>Rule - C, Waved off, if the gap is 6+ Days-->
+		<!--										</option>-->
+		<!--										<option value="4"-->
+		<!--										        disabled>Rule - D, Waved off, if the gap is 14+ Days-->
+		<!--										</option>-->
+		<!--									</select>-->
+		<!--								</div>-->
+		<!--								<div class="row mb-10">-->
+		<!--									<div class="col-md-6 fv-row">-->
+		<!--										<label class="fs-6 fw-semibold mb-2">Absent Deduction</label>-->
+		<!--										<select name="add_absents"-->
+		<!--										        title=""-->
+		<!--										        class="form-select form-select-solid"-->
+		<!--										        data-dom-control="select2"-->
+		<!--										        data-placeholder="Absent in Payroll"-->
+		<!--										        data-hide-search="true">-->
+		<!--											<option></option>-->
+		<!--											<option value="0">Do NOT Deduct Absent Charges</option>-->
+		<!--											<option value="1">Deduct Absent Charges from Salary</option>-->
+		<!--										</select>-->
+		<!--									</div>-->
+		<!--									<div class="col-md-6 fv-row">-->
+		<!--										<label class="fs-6 fw-semibold mb-2">CollDiff Deduction</label>-->
+		<!--										<select name="add_colldif"-->
+		<!--										        title=""-->
+		<!--										        class="form-select form-select-solid"-->
+		<!--										        data-dom-control="select2"-->
+		<!--										        data-placeholder="CollDiff in Payroll"-->
+		<!--										        data-hide-search="true">-->
+		<!--											<option></option>-->
+		<!--											<option value="0">Do NOT Deduct Collection Difference from Salary</option>-->
+		<!--											<option value="1">Deduct Shift Collection Difference Amount from Salary</option>-->
+		<!--										</select>-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--								<div class="d-flex flex-stack">-->
+		<!--									<div class="me-5">-->
+		<!--										<label class="fs-6 fw-semibold form-label">Notify Employee on Salary Payroll Creation?</label>-->
+		<!--										<div class="fs-7 fw-semibold text-muted">A payroll summary SMS will be delivered to employee.</div>-->
+		<!--									</div>-->
+		<!--									<label class="form-check form-switch form-check-custom form-check-solid">-->
+		<!--										<input class="form-check-input"-->
+		<!--										       type="checkbox"-->
+		<!--										       value="1"-->
+		<!--										       checked="checked" />-->
+		<!--										<span class="form-check-label fw-semibold text-muted">Enable</span>-->
+		<!--									</label>-->
+		<!--								</div>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--						<div data-kt-stepper-element="content">-->
+		<!--							<div class="w-100">-->
+		<!--								<div class="pb-8 pb-lg-10">-->
+		<!--									<h2 class="fw-bold text-dark">Your Are Done!</h2>-->
+		<!--									<div class="text-muted fw-semibold fs-6">If you need more info, please-->
+		<!--										<a href="../../demo2/dist/authentication/layouts/corporate/sign-in.html"-->
+		<!--										   class="link-primary fw-bold">Sign In</a>-->
+		<!--									                                         .-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--								<div class="mb-0">-->
+		<!--									<div class="fs-6 text-gray-600 mb-5">Writing headlines for blog posts is as much an art as it is a science and probably warrants its own post, but for all advise is with what works for your great & amazing audience.</div>-->
+		<!--									<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">-->
+		<!--										<span class="svg-icon svg-icon-2tx svg-icon-warning me-4">-->
+		<!--											<svg width="24"-->
+		<!--											     height="24"-->
+		<!--											     viewBox="0 0 24 24"-->
+		<!--											     fill="none"-->
+		<!--											     xmlns="http://www.w3.org/2000/svg">-->
+		<!--												<rect opacity="0.3"-->
+		<!--												      x="2"-->
+		<!--												      y="2"-->
+		<!--												      width="20"-->
+		<!--												      height="20"-->
+		<!--												      rx="10"-->
+		<!--												      fill="currentColor" />-->
+		<!--												<rect x="11"-->
+		<!--												      y="14"-->
+		<!--												      width="7"-->
+		<!--												      height="2"-->
+		<!--												      rx="1"-->
+		<!--												      transform="rotate(-90 11 14)"-->
+		<!--												      fill="currentColor" />-->
+		<!--												<rect x="11"-->
+		<!--												      y="17"-->
+		<!--												      width="2"-->
+		<!--												      height="2"-->
+		<!--												      rx="1"-->
+		<!--												      transform="rotate(-90 11 17)"-->
+		<!--												      fill="currentColor" />-->
+		<!--											</svg>-->
+		<!--										</span>-->
+		<!--										<div class="d-flex flex-stack flex-grow-1">-->
+		<!--											<div class="fw-semibold">-->
+		<!--												<h4 class="text-gray-900 fw-bold">We need your attention!</h4>-->
+		<!--												<div class="fs-6 text-gray-700">To start using great tools, please,-->
+		<!--													<a href="../../demo2/dist/utilities/wizards/vertical.html"-->
+		<!--													   class="fw-bold">Create Team Platform</a>-->
+		<!--												</div>-->
+		<!--											</div>-->
+		<!--										</div>-->
+		<!--									</div>-->
+		<!--								</div>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--						<div class="d-flex flex-stack pt-15">-->
+		<!--							<div class="mr-2">-->
+		<!--								<button type="button"-->
+		<!--								        class="btn btn-lg btn-light-primary me-3"-->
+		<!--								        data-kt-stepper-action="previous">-->
+		<!--									<span class="svg-icon svg-icon-4 me-1">-->
+		<!--										<svg width="24"-->
+		<!--										     height="24"-->
+		<!--										     viewBox="0 0 24 24"-->
+		<!--										     fill="none"-->
+		<!--										     xmlns="http://www.w3.org/2000/svg">-->
+		<!--											<rect opacity="0.5"-->
+		<!--											      x="6"-->
+		<!--											      y="11"-->
+		<!--											      width="13"-->
+		<!--											      height="2"-->
+		<!--											      rx="1"-->
+		<!--											      fill="currentColor" />-->
+		<!--											<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z"-->
+		<!--											      fill="currentColor" />-->
+		<!--										</svg>-->
+		<!--									</span>-->
+		<!--								</button>-->
+		<!--							</div>-->
+		<!--							<div>-->
+		<!--								<button type="button"-->
+		<!--								        class="btn btn-lg btn-primary me-3"-->
+		<!--								        data-kt-stepper-action="submit">-->
+		<!--									<span class="indicator-label">Submit-->
+		<!--										<span class="svg-icon svg-icon-3 ms-2 me-0">-->
+		<!--											<svg width="24"-->
+		<!--											     height="24"-->
+		<!--											     viewBox="0 0 24 24"-->
+		<!--											     fill="none"-->
+		<!--											     xmlns="http://www.w3.org/2000/svg">-->
+		<!--												<rect opacity="0.5"-->
+		<!--												      x="18"-->
+		<!--												      y="13"-->
+		<!--												      width="13"-->
+		<!--												      height="2"-->
+		<!--												      rx="1"-->
+		<!--												      transform="rotate(-180 18 13)"-->
+		<!--												      fill="currentColor" />-->
+		<!--												<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"-->
+		<!--												      fill="currentColor" />-->
+		<!--											</svg>-->
+		<!--										</span>-->
+		<!--									</span>-->
+		<!--									<span class="indicator-progress">Please wait...-->
+		<!--										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>-->
+		<!--									</span>-->
+		<!--								</button>-->
+		<!--								<button type="button"-->
+		<!--								        class="btn btn-lg btn-primary"-->
+		<!--								        data-kt-stepper-action="next">Continue-->
+		<!--									<span class="svg-icon svg-icon-4 ms-1 me-0">-->
+		<!--										<svg width="24"-->
+		<!--										     height="24"-->
+		<!--										     viewBox="0 0 24 24"-->
+		<!--										     fill="none"-->
+		<!--										     xmlns="http://www.w3.org/2000/svg">-->
+		<!--											<rect opacity="0.5"-->
+		<!--											      x="18"-->
+		<!--											      y="13"-->
+		<!--											      width="13"-->
+		<!--											      height="2"-->
+		<!--											      rx="1"-->
+		<!--											      transform="rotate(-180 18 13)"-->
+		<!--											      fill="currentColor" />-->
+		<!--											<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"-->
+		<!--											      fill="currentColor" />-->
+		<!--										</svg>-->
+		<!--									</span>-->
+		<!--								</button>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--					</form>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--	<div id="modal__direct">-->
+		<!--		<div class="modal fade"-->
+		<!--		     tabindex="-1"-->
+		<!--		     id="pb_emp_list_all">-->
+		<!--			<div class="modal-dialog modal-dialog-scrollable">-->
+		<!--				<div class="modal-content">-->
+		<!--					<div class="modal-header">-->
+		<!--						<h3 class="modal-title">All Active Employees</h3>-->
+		<!--						<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"-->
+		<!--						     data-bs-dismiss="modal"-->
+		<!--						     aria-label="Close">-->
+		<!--							<i class="bi bi-x-lg fs-2"></i>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--					<div class="modal-body">-->
+		<!--						<div class="hover-scroll mh-400px">-->
+		<!--							<div class="table-responsive">-->
+		<!--								<table class="table table-rounded table-striped border gy-4 gs-4">-->
+		<!--									<thead>-->
+		<!--									<tr class="fw-semibold fs-5 text-gray-800 border-bottom border-gray-200 text-uppercase">-->
+		<!--										<th>Name</th>-->
+		<!--										<th>Type</th>-->
+		<!--										<th>Key</th>-->
+		<!--										<th>Action</th>-->
+		<!--									</tr>-->
+		<!--									</thead>-->
+		<!--									<tbody>-->
+		<!--									<tr>-->
+		<!--										<td>Tiger Nixon</td>-->
+		<!--										<td>System Architect</td>-->
+		<!--										<td>Edinburgh</td>-->
+		<!--										<td>61</td>-->
+		<!--									</tr>-->
+		<!--									<tr>-->
+		<!--										<td>Garrett Winters</td>-->
+		<!--										<td>Accountant</td>-->
+		<!--										<td>Tokyo</td>-->
+		<!--										<td>63</td>-->
+		<!--									</tr>-->
+		<!--									</tbody>-->
+		<!--								</table>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div class="modal fade"-->
+		<!--		     tabindex="-1"-->
+		<!--		     id="pb_emp_list_deactive">-->
+		<!--			<div class="modal-dialog modal-dialog-scrollable">-->
+		<!--				<div class="modal-content">-->
+		<!--					<div class="modal-header">-->
+		<!--						<h3 class="modal-title text-danger">Deactivate Employees</h3>-->
+		<!--						<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"-->
+		<!--						     data-bs-dismiss="modal"-->
+		<!--						     aria-label="Close">-->
+		<!--							<i class="bi bi-x-lg fs-2"></i>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--					<div class="modal-body">-->
+		<!--						<div class="hover-scroll mh-400px">-->
+		<!--							<div class="table-responsive">-->
+		<!--								<table class="table table-rounded table-striped border gy-4 gs-4">-->
+		<!--									<thead>-->
+		<!--									<tr class="fw-semibold fs-5 text-gray-800 border-bottom border-gray-200 text-uppercase">-->
+		<!--										<th>Date</th>-->
+		<!--										<th>Type</th>-->
+		<!--										<th>Amount</th>-->
+		<!--										<th>Status</th>-->
+		<!--									</tr>-->
+		<!--									</thead>-->
+		<!--									<tbody>-->
+		<!--									<tr>-->
+		<!--										<td>Tiger Nixon</td>-->
+		<!--										<td>System Architect</td>-->
+		<!--										<td>Edinburgh</td>-->
+		<!--										<td>61</td>-->
+		<!--									</tr>-->
+		<!--									<tr>-->
+		<!--										<td>Garrett Winters</td>-->
+		<!--										<td>Accountant</td>-->
+		<!--										<td>Tokyo</td>-->
+		<!--										<td>63</td>-->
+		<!--									</tr>-->
+		<!--									</tbody>-->
+		<!--								</table>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+	</div>
+</div>
+<div data-pb-layout="stepper"
+     data-e-welcome="form"
+     class="d-none">
+	<div id="form__stepper">
+		<div id="new-employee"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<!--@@stepper-->
+					<div id="new-employee-stepper"
+					     data-pb-step="4"
+					     class="stepper stepper-pills">
+						<div class="stepper-nav flex-center flex-wrap mb-10">
+							<div class="stepper-item mx-8 my-4 current"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">1</span>
+									</div>
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 1 </h3>
+										
+										<div class="stepper-desc">
+											Type
+										</div>
+									</div>
+								</div>
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">2</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 2 </h3>
+										
+										<div class="stepper-desc">
+											Details
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">3</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 3 </h3>
+										
+										<div class="stepper-desc">
+											Payroll
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">4</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 4 </h3>
+										
+										<div class="stepper-desc">
+											Completed
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+						</div>
+						<form class="mx-auto mw-600px w-100 pt-15 pb-10"
+						      novalidate="novalidate"
+						      method="post"
+						      id="new-employee-form">
+							<div id="type"
+							     data-pb-index="1"
+							     class="flex-column current"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold d-flex align-items-center text-dark">Account Type
+											<i class="fas fa-exclamation-circle ms-2 fs-7"
+											   data-bs-toggle="tooltip"
+											   title="Billing is issued based on your selected account type"></i></h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info, please check out
+											<a href="#"
+											   class="link-danger fw-bold">Video</a>
+										                                         .
+										</div>
+									</div>
+									<div class="fv-row row">
+										<div class="col-lg-6 col-12 mb-7">
+											<div class="row">
+												<div class="col-12 mb-7">
+													<label class="form-label required">Employee Job Role</label>
+													<select name="role_id"
+													        data-pb-source="roles"
+													        class="form-select form-select-solid"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-tack="direct"
+													        data-pb-placeholder="Select Job Role"
+													        data-pb-search="0"
+													        title="Select Job Role">
+														<option></option>
+													</select>
+												</div>
+												<div class="col-12">
+													<label class="form-label mt-3">
+														<span class="required">Joining Date</span>
+														<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   title="Joining Date"></i>
+													</label>
+													<input required
+													       type="text"
+													       name="join_date"
+													       class="form-control form-control-solid"
+													       data-pb-control="date"
+													       data-pb-method="human"
+													       placeholder="Joining Date"
+													       title="What is the Joining Date" />
+													<span class="fw-normal text-muted">payroll will be automatically disabled before joining month.</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6 col-12 ps-5">
+											<label class="fs-6 fw-semibold mb-2">
+												Absents allowed
+												<i class="fas fa-exclamation-circle ms-2 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="X number of allowed Absents per month that days salary will not be deducted"></i>
+											</label>
+											<div class="d-flex flex-column text-center bg-light-primary rounded">
+												<div class="d-flex align-items-start justify-content-center mb-7">
+													<span class="fw-bold fs-4 mt-1 me-2">Allows:</span>
+													<span class="fw-bold fs-3x"
+													      id="pb_emp_ac_absent_slider_label"></span>
+													<span class="ms-2 fw-semibold fs-2x">Days</span>
+												</div>
+												<div id="pb_emp_ac_absent_slider_bar"
+												     class="noUi-sm bg-gray-400"></div>
+												<input value=""
+												       type="text"
+												       title=""
+												       name="allow_absents"
+												       hidden
+												       id="allow_absents">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="details"
+							     data-pb-index="2"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold text-dark">Employees Details</h2>
+									</div>
+									<div id="pb_employ_add_form_repeater">
+										<div class="form-group fv-row">
+											<div data-repeater-list="pb_employ_add_rows">
+												<div data-repeater-item>
+													<div class="form-group mb-3 border-bottom border-2">
+														<div class="row">
+															<div class="col-lg-6 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid"
+																       name="account_name"
+																       placeholder="Person Name" />
+															</div>
+															<div class="col-lg-6 col-12 mb-5">
+																<input title=""
+																       type="number"
+																       maxlength="10"
+																       class="form-control form-control-solid"
+																       data-pb-control="length"
+																       name="mobile_number"
+																       placeholder="Mobile Number" />
+															</div>
+															<div class="col-lg-5 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid inr_mask_round"
+																       name="nett_salary"
+																       placeholder="Monthly Salary" />
+															</div>
+															<div class="col-lg-5 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid inr_mask_round"
+																       name="due_salary"
+																       placeholder="Due Salary" />
+															</div>
+															<div class="col-md-2">
+																<a href="javascript:"
+																   data-repeater-delete
+																   class="btn btn-sm btn-light-danger mt-3">
+																	<i class="bi bi-node-minus-fill fs-3"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<a href="javascript:"
+											   data-repeater-create
+											   class="btn btn-sm btn-light-primary">
+												<i class="bi bi-node-plus-fill"></i>Add
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="payroll"
+							     data-pb-index="3"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold text-dark">Payroll Configuration</h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info about payroll, please check out
+											<a href="#"
+											   class="text-danger fw-bold">Video</a>
+										                                         .
+										</div>
+									</div>
+									<div class="d-flex flex-column mb-7 fv-row">
+										<label class="required fs-6 fw-semibold form-label mb-2">Payroll Absence Rule</label>
+										<select name="absent_rule"
+										        data-pb-source="absent_rule"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Absent Rule"
+										        data-hide-search="true"> </select>
+									</div>
+									<div class="row mb-10">
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">Absent Deduction</label>
+											<select name="add_absents"
+											        data-pb-source="add_absents"
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Absent in Payroll"
+											        data-hide-search="true">
+											
+											</select>
+										</div>
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">CollDiff Deduction</label>
+											<select name="add_colldif"
+											        data-pb-source="add_colldif"
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="CollDiff in Payroll"
+											        data-hide-search="true">
+											
+											</select>
+										</div>
+									</div>
+									<div class="d-flex flex-stack">
+										<div class="me-5">
+											<label class="fs-6 fw-semibold form-label">Notify Employee on Salary Payroll Creation?</label>
+											<div class="fs-7 fw-semibold text-muted">A payroll summary SMS will be delivered to employee.</div>
+										</div>
+										<label class="form-check form-switch form-check-custom form-check-solid">
+											<input class="form-check-input"
+											       type="checkbox"
+											       value="1"
+											       checked="checked" />
+											<span class="form-check-label fw-semibold text-muted">Enable</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div id="completed"
+							     data-pb-index="4"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-8 pb-lg-10">
+										<h2 class="fw-bold text-dark">Your Are Done!</h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info, please
+											<a href="../../demo2/dist/authentication/layouts/corporate/sign-in.html"
+											   class="link-primary fw-bold">Sign In</a>
+										                                         .
+										</div>
+									</div>
+									<div class="mb-0">
+										<div class="fs-6 text-gray-600 mb-5">Writing headlines for blog posts is as much an art as it is a science and probably warrants its own post, but for all advise is with what works for your great & amazing audience.</div>
+										<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
+											<span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+												<svg width="24"
+												     height="24"
+												     viewBox="0 0 24 24"
+												     fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<rect opacity="0.3"
+													      x="2"
+													      y="2"
+													      width="20"
+													      height="20"
+													      rx="10"
+													      fill="currentColor" />
+													<rect x="11"
+													      y="14"
+													      width="7"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-90 11 14)"
+													      fill="currentColor" />
+													<rect x="11"
+													      y="17"
+													      width="2"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-90 11 17)"
+													      fill="currentColor" />
+												</svg>
+											</span>
+											<div class="d-flex flex-stack flex-grow-1">
+												<div class="fw-semibold">
+													<h4 class="text-gray-900 fw-bold">We need your attention!</h4>
+													<div class="fs-6 text-gray-700">To start using great tools, please,
+														<a href="../../demo2/dist/utilities/wizards/vertical.html"
+														   class="fw-bold">Create Team Platform</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex flex-stack pt-15">
+								<div class="mr-2">
+									<button type="button"
+									        name="load"
+									        value="type"
+									        data-step-action="previous"
+									        data-e-origin="new-employee"
+									        class="btn btn-light btn-active-light-primary d-none"
+									        data-kt-stepper-action="previous">
+										<span class="svg-icon svg-icon-4 me-1">
+											<svg width="24"
+											     height="24"
+											     viewBox="0 0 24 24"
+											     fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5"
+												      x="6"
+												      y="11"
+												      width="13"
+												      height="2"
+												      rx="1"
+												      fill="currentColor" />
+												<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z"
+												      fill="currentColor" />
+											</svg>
+										</span>
+										Back
+									</button>
+								</div>
+								<div>
+									<button type="button"
+									        name="action"
+									        value="finish"
+									        data-e-origin="new-employee"
+									        data-step-action="finish"
+									        data-kt-indicator=""
+									        class="btn btn-lg btn-primary d-none"
+									        data-kt-stepper-action="submit">
+										<span class="indicator-label">Submit
+											<span class="svg-icon svg-icon-3 ms-2 me-0">
+												<svg width="24"
+												     height="24"
+												     viewBox="0 0 24 24"
+												     fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<rect opacity="0.5"
+													      x="18"
+													      y="13"
+													      width="13"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-180 18 13)"
+													      fill="currentColor" />
+													<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+													      fill="currentColor" />
+												</svg>
+											</span>
+										</span>
+										<span class="indicator-progress">Please wait...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+									</button>
+									<button type="button"
+									        name="load"
+									        value="details"
+									        data-step-action="next"
+									        data-e-origin="new-employee"
+									        class="btn btn-primary"
+									        id="continue_btn"
+									        data-kt-stepper-action="next">Continue
+										<span class="svg-icon svg-icon-4 ms-1 me-0">
+											<svg width="24"
+											     height="24"
+											     viewBox="0 0 24 24"
+											     fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5"
+												      x="18"
+												      y="13"
+												      width="13"
+												      height="2"
+												      rx="1"
+												      transform="rotate(-180 18 13)"
+												      fill="currentColor" />
+												<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+												      fill="currentColor" />
+											</svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="edit-employee"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<!--@@stepper-->
+					<div id="edit-employee-stepper"
+					     data-pb-step="5"
+					     class="stepper stepper-pills">
+						<div class="stepper-nav flex-center flex-wrap mb-10">
+							<div class="stepper-item mx-8 my-4 current"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">1</span>
+									</div>
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 1 </h3>
+										
+										<div class="stepper-desc">
+											Select Employee
+										</div>
+									</div>
+								</div>
+								<div class="stepper-line h-40px"></div>
+							</div>
+							<div class="stepper-item mx-8 my-4 current"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">2</span>
+									</div>
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 2 </h3>
+										
+										<div class="stepper-desc">
+											Type
+										</div>
+									</div>
+								</div>
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">3</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 3 </h3>
+										
+										<div class="stepper-desc">
+											Details
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">4</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 4 </h3>
+										
+										<div class="stepper-desc">
+											Payroll
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">5</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 5 </h3>
+										
+										<div class="stepper-desc">
+											Completed
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+						</div>
+						<form class="mx-auto mw-600px w-100 pt-15 pb-10"
+						      novalidate="novalidate"
+						      method="post"
+						      id="edit-employee-form">
+							<div id="employeeList"
+							     data-pb-index="1"
+							     class="flex-column current"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold d-flex align-items-center text-dark">Edit Employee Details
+											<i class="fas fa-exclamation-circle ms-2 fs-7"
+											   data-bs-toggle="tooltip"
+											   title="Billing is issued based on your selected account type"></i></h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info, please check out
+											<a href="#"
+											   class="link-danger fw-bold">Video</a>
+										                                         .
+										</div>
+									</div>
+									<div class="fv-row row">
+										<div class="col-lg-6 col-12 mb-7">
+											<div class="row">
+												<div class="col-12 mb-7">
+													<label class="form-label required">Select Employee</label>
+													<select name="employee_id"
+													        data-pb-source="employee"
+													        class="form-select form-select-solid"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-tack="direct"
+													        data-pb-placeholder="Select Employee"
+													        data-pb-search="0"
+													        title="Select Employee"> </select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="employeeType"
+							     data-pb-index="2"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold d-flex align-items-center text-dark">Account Type
+											<i class="fas fa-exclamation-circle ms-2 fs-7"
+											   data-bs-toggle="tooltip"
+											   title="Billing is issued based on your selected account type"></i></h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info, please check out
+											<a href="#"
+											   class="link-danger fw-bold">Video</a>
+										                                         .
+										</div>
+									</div>
+									<div class="fv-row row">
+										<div class="col-lg-6 col-12 mb-7">
+											<div class="row">
+												<div class="col-12 mb-7">
+													<label class="form-label required">Employee Job Role</label>
+													<select name="role_id"
+													        data-pb-source="roles"
+													        class="form-select form-select-solid"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-tack="direct"
+													        data-pb-placeholder="Select Job Role"
+													        data-pb-search="0"
+													        title="Select Job Role">
+														<option></option>
+													</select>
+												</div>
+												<div class="col-12">
+													<label class="form-label mt-3">
+														<span class="required">Joining Date</span>
+														<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   title="Joining Date"></i>
+													</label>
+													<input required
+													       type="text"
+													       name="join_date"
+													       class="form-control form-control-solid"
+													       data-pb-control="date"
+													       data-pb-method="human"
+													       placeholder="Joining Date"
+													       title="What is the Joining Date" />
+													<span class="fw-normal text-muted">payroll will be automatically disabled before joining month.</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6 col-12 ps-5">
+											<label class="fs-6 fw-semibold mb-2">
+												Absents allowed
+												<i class="fas fa-exclamation-circle ms-2 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="X number of allowed Absents per month that days salary will not be deducted"></i>
+											</label>
+											<div class="d-flex flex-column text-center bg-light-primary rounded">
+												<div class="d-flex align-items-start justify-content-center mb-7">
+													<span class="fw-bold fs-4 mt-1 me-2">Allows:</span>
+													<span class="fw-bold fs-3x"
+													      id="pb_emp_ac_absent_slider_label_edit"></span>
+													<span class="ms-2 fw-semibold fs-2x">Days</span>
+												</div>
+												<div id="pb_emp_ac_absent_slider_bar_edit"
+												     class="noUi-sm bg-gray-400"></div>
+												<input value=""
+												       type="text"
+												       title=""
+												       name="allow_absents"
+												       hidden
+												       id="allow_absents_edit">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="employeeDetails"
+							     data-pb-index="3"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold text-dark">Employees Details</h2>
+									</div>
+									<div id="pb_employ_add_form_repeater_edit">
+										<div class="form-group fv-row">
+											<div data-repeater-list="pb_employ_add_rows">
+												<div data-repeater-item>
+													<div class="form-group mb-3 border-bottom border-2">
+														<div class="row">
+															<div class="col-lg-6 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid"
+																       name="account_name"
+																       placeholder="Person Name" />
+															</div>
+															<div class="col-lg-6 col-12 mb-5">
+																<input title=""
+																       type="number"
+																       maxlength="10"
+																       class="form-control form-control-solid"
+																       data-pb-control="length"
+																       name="mobile_number"
+																       placeholder="Mobile Number" />
+															</div>
+															<div class="col-lg-5 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid inr_mask_round"
+																       name="nett_salary"
+																       placeholder="Monthly Salary" />
+															</div>
+															<div class="col-lg-5 col-12 mb-5">
+																<input title=""
+																       type="text"
+																       class="form-control form-control-solid inr_mask_round"
+																       name="due_salary"
+																       placeholder="Due Salary" />
+															</div>
+															<div class="col-md-2">
+																<a href="javascript:"
+																   data-repeater-delete
+																   class="btn btn-sm btn-light-danger mt-3">
+																	<i class="bi bi-node-minus-fill fs-3"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<a href="javascript:"
+											   data-repeater-create
+											   class="btn btn-sm btn-light-primary">
+												<i class="bi bi-node-plus-fill"></i>Add
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="employeePayroll"
+							     data-pb-index="4"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-10 pb-lg-15">
+										<h2 class="fw-bold text-dark">Payroll Configuration</h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info about payroll, please check out
+											<a href="#"
+											   class="text-danger fw-bold">Video</a>
+										                                         .
+										</div>
+									</div>
+									<div class="d-flex flex-column mb-7 fv-row">
+										<label class="required fs-6 fw-semibold form-label mb-2">Payroll Absence Rule</label>
+										<select name="absent_rule"
+										        data-pb-source="absent_rule"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Absent Rule"
+										        data-hide-search="true"> </select>
+									</div>
+									<div class="row mb-10">
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">Absent Deduction</label>
+											<select name="add_absents"
+											        data-pb-source="add_absents"
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Absent in Payroll"
+											        data-hide-search="true">
+											
+											</select>
+										</div>
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">CollDiff Deduction</label>
+											<select name="add_colldif"
+											        data-pb-source="add_colldif"
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="CollDiff in Payroll"
+											        data-hide-search="true">
+											
+											</select>
+										</div>
+									</div>
+									<div class="d-flex flex-stack">
+										<div class="me-5">
+											<label class="fs-6 fw-semibold form-label">Notify Employee on Salary Payroll Creation?</label>
+											<div class="fs-7 fw-semibold text-muted">A payroll summary SMS will be delivered to employee.</div>
+										</div>
+										<label class="form-check form-switch form-check-custom form-check-solid">
+											<input class="form-check-input"
+											       type="checkbox"
+											       value="1"
+											       checked="checked" />
+											<span class="form-check-label fw-semibold text-muted">Enable</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div id="employeeCompleted"
+							     data-pb-index="5"
+							     class="flex-column"
+							     data-kt-stepper-element="content">
+								<div class="w-100">
+									<div class="pb-8 pb-lg-10">
+										<h2 class="fw-bold text-dark">Your Are Done!</h2>
+										<div class="text-muted fw-semibold fs-6">If you need more info, please
+											<a href="../../demo2/dist/authentication/layouts/corporate/sign-in.html"
+											   class="link-primary fw-bold">Sign In</a>
+										                                         .
+										</div>
+									</div>
+									<div class="mb-0">
+										<div class="fs-6 text-gray-600 mb-5">Writing headlines for blog posts is as much an art as it is a science and probably warrants its own post, but for all advise is with what works for your great & amazing audience.</div>
+										<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
+											<span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+												<svg width="24"
+												     height="24"
+												     viewBox="0 0 24 24"
+												     fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<rect opacity="0.3"
+													      x="2"
+													      y="2"
+													      width="20"
+													      height="20"
+													      rx="10"
+													      fill="currentColor" />
+													<rect x="11"
+													      y="14"
+													      width="7"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-90 11 14)"
+													      fill="currentColor" />
+													<rect x="11"
+													      y="17"
+													      width="2"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-90 11 17)"
+													      fill="currentColor" />
+												</svg>
+											</span>
+											<div class="d-flex flex-stack flex-grow-1">
+												<div class="fw-semibold">
+													<h4 class="text-gray-900 fw-bold">We need your attention!</h4>
+													<div class="fs-6 text-gray-700">To start using great tools, please,
+														<a href="../../demo2/dist/utilities/wizards/vertical.html"
+														   class="fw-bold">Create Team Platform</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex flex-stack pt-15">
+								<div class="mr-2">
+									<button type="button"
+									        name="load"
+									        value="employeeList"
+									        data-step-action="previous"
+									        data-e-origin="edit-employee"
+									        class="btn btn-light btn-active-light-primary d-none"
+									        data-kt-stepper-action="previous">
+										<span class="svg-icon svg-icon-4 me-1">
+											<svg width="24"
+											     height="24"
+											     viewBox="0 0 24 24"
+											     fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5"
+												      x="6"
+												      y="11"
+												      width="13"
+												      height="2"
+												      rx="1"
+												      fill="currentColor" />
+												<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z"
+												      fill="currentColor" />
+											</svg>
+										</span>
+										Back
+									</button>
+								</div>
+								<div>
+									<button type="button"
+									        name="action"
+									        value="finish"
+									        data-e-origin="edit-employee"
+									        data-step-action="finish"
+									        data-kt-indicator=""
+									        class="btn btn-lg btn-primary d-none"
+									        data-kt-stepper-action="submit">
+										<span class="indicator-label">Submit
+											<span class="svg-icon svg-icon-3 ms-2 me-0">
+												<svg width="24"
+												     height="24"
+												     viewBox="0 0 24 24"
+												     fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<rect opacity="0.5"
+													      x="18"
+													      y="13"
+													      width="13"
+													      height="2"
+													      rx="1"
+													      transform="rotate(-180 18 13)"
+													      fill="currentColor" />
+													<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+													      fill="currentColor" />
+												</svg>
+											</span>
+										</span>
+										<span class="indicator-progress">Please wait...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+									</button>
+									<button type="button"
+									        name="load"
+									        value="employeeType"
+									        data-step-action="next"
+									        data-e-origin="edit-employee"
+									        class="btn btn-primary"
+									        id="continue_Button"
+									        data-kt-stepper-action="next">Continue
+										<span class="svg-icon svg-icon-4 ms-1 me-0">
+											<svg width="24"
+											     height="24"
+											     viewBox="0 0 24 24"
+											     fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5"
+												      x="18"
+												      y="13"
+												      width="13"
+												      height="2"
+												      rx="1"
+												      transform="rotate(-180 18 13)"
+												      fill="currentColor" />
+												<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+												      fill="currentColor" />
+											</svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

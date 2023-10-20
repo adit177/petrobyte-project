@@ -1,0 +1,248 @@
+<div data-pb-layout="sample"
+     data-layout="parent">
+	
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		<div id="common"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">common</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="common"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="common-range"
+				      data-pb-control="">
+					<div class="row">
+						<div class="col-6 mb-7">
+							<label class="form-label">simple</label>
+							<input type="text"
+							       readonly
+							       data-pb-control="range"
+							       data-pb-method="simple"
+							       name="simple"
+							       placeholder=""
+							       class="form-control form-control-solid"
+							       title="" />
+						</div>
+						<div class="col-6 mb-7">
+							<label class="form-label">dropdown</label>
+							<input type="text"
+							       readonly
+							       data-pb-control="range"
+							       data-pb-method="dropdown"
+							       name="dropdown"
+							       placeholder=""
+							       class="form-control form-control-solid"
+							       title="" />
+						</div>
+						<div class="col-6 mb-7">
+							<label class="form-label">advance</label>
+							<input type="text"
+							       readonly
+							       data-pb-control="range"
+							       data-pb-method="advance"
+							       name="advance"
+							       placeholder=""
+							       class="form-control form-control-solid"
+							       title="" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="tax"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">tax</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="tax"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6 mb-7">
+						<label class="form-label">daily</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="date"
+						       name="daily"
+						       class="form-control form-control"
+						       title="" />
+					</div>
+					<div class="col-6 mb-7">
+						<label class="form-label">monthly</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="month"
+						       name="monthly"
+						       class="form-control form-control"
+						       title="" />
+					</div>
+					<div class="col-6 mb-7">
+						<label class="form-label">quarterly</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="quarter"
+						       name="quarterly"
+						       class="form-control form-control"
+						       title="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">report</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="report"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6 mb-7">
+						<label class="form-label">mixed</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="mixed"
+						       name="mixed"
+						       placeholder=""
+						       class="form-control form-control-solid"
+						       title="" />
+					</div>
+					<div class="col-6 mb-7">
+						<label class="form-label">ndays</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="ndays"
+						       name="ndays"
+						       placeholder=""
+						       class="form-control form-control-solid"
+						       title="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fiscal"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">fiscal</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="fiscal"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6 mb-7">
+						<label class="form-label">fiscal</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="fiscal"
+						       name="fiscal"
+						       placeholder="placeholder"
+						       class="form-control form-control-solid"
+						       title="" />
+					</div>
+					<div class="col-6 mb-7">
+						<label class="form-label">fiscal_1</label>
+						<input type="text"
+						       readonly
+						       data-pb-control="range"
+						       data-pb-method="fiscal_1"
+						       name="fiscal_1"
+						       placeholder=""
+						       class="form-control form-control-solid"
+						       title="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<div class="btn-group">
+					<button form="common-range"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="common"></button>
+				</div>
+			</div>
+			<div class="card-footer">
+				<span class="text-danger fs-5 fw-semibold"></span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-dom-control <br> data-pb-control</td>
+							<td></td>
+							<td>range</td>
+							<td><code>data-pb-control="range"</code> or <code>data-pb-control="range"</code></td>
+						</tr>
+						<tr>
+							<td>data-pb-method</td>
+							<td></td>
+							<td>simple/ dropdown/ advance/ date/ month/ quarter/ mixed/ ndays/ fiscal</td>
+							<td><code>data-pb-method="simple"</code></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

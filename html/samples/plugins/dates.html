@@ -1,0 +1,295 @@
+<div data-pb-layout="sample"
+     data-e-welcome="ground"
+     data-layout="parent">
+	
+	
+	<div id="ground__sample"
+	     class="row zone g-7">
+		
+		<div id="simple"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Simple</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="simple"
+					        class="btn btn-sm btn-light-dark">
+						Load
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="simple-date"
+				      data-pb-control="plugin">
+					<div class="row fv-row">
+						<div class="col-lg-4 col-12 mb-7">
+							<label class="form-label">simple</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="simple"
+							       name="date_simple"
+							       class="form-control form-control-solid"
+							       placeholder="simple"
+							       title="simple" />
+						</div>
+						<div class="col-lg-4 col-12 mb-7">
+							<label class="form-label">human (default use)</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="human"
+							       name="date_human"
+							       class="form-control form-control-solid"
+							       placeholder="human"
+							       title="simple" />
+						</div>
+						<div class="col-lg-4 col-12 mb-7">
+							<label class="form-label">people</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="people"
+							       name="date_people"
+							       class="form-control form-control-solid"
+							       placeholder="people"
+							       title="simple" />
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<span>these inputs inside the form and it has attribute <code>data-pb-control</code> that will stop</span>
+			</div>
+		</div>
+		
+		<div id="advance"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Advance</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="advance"
+					        class="btn btn-sm btn-light-dark">
+						Load
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="advance-date">
+					<div class="row fv-row">
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">advance</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="advance"
+							       name="date_adv"
+							       class="form-control form-control-solid"
+							       placeholder="advance"
+							       title="" />
+						</div>
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">multiple</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="multiple"
+							       name="date_multiple"
+							       class="form-control form-control-solid"
+							       placeholder="multiple"
+							       title="" />
+						</div>
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">range</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="range"
+							       name="date_range"
+							       class="form-control form-control-solid"
+							       placeholder="range"
+							       title="" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="enable"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Enable</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="enable"
+					        class="btn btn-sm btn-light-dark">
+						Load
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="enable-date"
+				      data-pb-control="combo">
+					<div class="row fv-row">
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">enable - dates</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="enable"
+							       data-pb-type="array"
+							       name="date_disable_1"
+							       class="form-control form-control-solid"
+							       placeholder="enable"
+							       title="" />
+						</div>
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">enable - range</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="enable"
+							       data-pb-type="range"
+							       name="date_enable_2"
+							       class="form-control form-control-solid"
+							       placeholder="enable"
+							       title="" />
+						</div>
+						<div class="col-12 col-lg-4 mb-7">
+							<label class="form-label">enable - live</label>
+							<input type="text"
+							       data-pb-control="date"
+							       data-pb-method="enable"
+							       data-pb-type="live"
+							       name="date_enable_3"
+							       class="form-control form-control-solid"
+							       placeholder="enable"
+							       title="" />
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<span class="fs-5">this has data-pb-control="combo" so it required the load button hit to enable this.</span>
+			</div>
+		</div>
+		
+		<div id="disable"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Disable</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="disable"
+					        class="btn btn-sm btn-light-dark">
+						Load
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row fv-row">
+					<div class="col-12 col-lg-4 mb-7">
+						<label class="form-label">disable - dates</label>
+						<input type="text"
+						       data-pb-control="date"
+						       data-pb-method="disable"
+						       data-pb-type="array"
+						       name="date_disable_1"
+						       class="form-control form-control-solid"
+						       placeholder="disabled"
+						       title="" />
+					</div>
+					<div class="col-12 col-lg-4 mb-7">
+						<label class="form-label">enable - range</label>
+						<input type="text"
+						       data-pb-control="date"
+						       data-pb-method="disable"
+						       data-pb-type="range"
+						       name="date_disable_2"
+						       class="form-control form-control-solid"
+						       placeholder="disabled"
+						       title="" />
+					</div>
+					<div class="col-12 col-lg-4 mb-7">
+						<label class="form-label">enable - live</label>
+						<input type="text"
+						       data-pb-control="date"
+						       data-pb-method="disable"
+						       data-pb-type="live"
+						       name="date_disable_3"
+						       class="form-control form-control-solid"
+						       placeholder="disabled"
+						       title="" />
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<p class="text-danger fs-5">These date inputs are directly initiated by page load, because they are not in any form.</p>
+			</div>
+		</div>
+		
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<div class="btn-group">
+					<button form="simple-date"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="simple"></button>
+					<button form="advance-date"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="advance"></button>
+					<button form="enable-date"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="enable"></button>
+				</div>
+			</div>
+			<div class="card-footer">
+				<span class="text-danger fs-5 fw-semibold">these are the button of above defined form, this is required to create a connected button if the form is there.</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-xxx-control</td>
+							<td></td>
+							<td></td>
+							<td>data-pb-control="date" or data-pb-control="date"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-method</td>
+							<td>to select the method</td>
+							<td>simple, ...</td>
+							<td>data-pb-method="simple / range / multi / z"</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
