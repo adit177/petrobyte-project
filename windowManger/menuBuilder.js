@@ -16,7 +16,7 @@ const {createConfigWindow} = require("./configWindow");
 const {createmanageLicenses} = require("./manageLicenses");
 const {createmanageSubscription} = require("./manageSubscription");
 const {createShortCutWindow} = require("../GlobalKeyManager/ShortCutKeyWindow");
-// const{createSettingWindow} = require("./settingWindow");
+const{createSettingWindow} = require("./settingWindow");
 // const {createSetLockWindow} =require("./setLockWindow");
 const {createUnlockWindow} = require("./unLockWindow");
 const {
@@ -85,6 +85,7 @@ let pin = null;
      });
 
      newWindow.loadFile("index.html");  // Replace this with the path to your home page
+
      windows.push(newWindow);
 
      newWindow.on("closed", () => {
@@ -149,7 +150,7 @@ function menuTemplate(mainWindow) {
                   } else {
                       console.log('No window is currently focused.');
                   }
-                createSettingWindow()
+                createSettingWindow();
               }
 
           },
@@ -174,7 +175,16 @@ function menuTemplate(mainWindow) {
         },
         {
           label: "Open Downloads",
+            accelerator: 'CmdOrCtrl+D',
           click() {
+              const focusedWindow = BrowserWindow.getFocusedWindow();
+
+              if (focusedWindow) {
+                  focusedWindow.close()
+                  console.log('Currently focused window:', focusedWindow.getTitle());
+              } else {
+                  console.log('No window is currently focused.');
+              }
             createDownloadsWindow()
           }
         },
@@ -260,8 +270,10 @@ function menuTemplate(mainWindow) {
           {
               label: "Zoom-in",
               click: () => {
-                  const factor = mainWindow.webContents.getZoomFactor();
-                  mainWindow.webContents.setZoomFactor(factor + 0.1);
+                  let focusedWindow = BrowserWindow.getFocusedWindow();
+
+                  const factor = focusedWindow.webContents.getZoomFactor();
+                  focusedWindow.webContents.setZoomFactor(factor + 0.1);
               }
           },
           {
@@ -364,7 +376,16 @@ function menuTemplate(mainWindow) {
       submenu: [
         {
           label: "New Window (Home)",
+            accelerator: "CmdOrCtrl+1",
           click: () => {
+              const focusedWindow = BrowserWindow.getFocusedWindow();
+
+              if (focusedWindow) {
+                  focusedWindow.close()
+                  console.log('Currently focused window:', focusedWindow.getTitle());
+              } else {
+                  console.log('No window is currently focused.');
+              }
             newHomePageTab();
           },
         },
