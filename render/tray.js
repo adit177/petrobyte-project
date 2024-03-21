@@ -1,48 +1,47 @@
-// tray.js
-const { app,Tray, Menu, BrowserWindow} = require('electron');
+
+const { app, Tray, Menu, BrowserWindow } = require('electron');
 const path = require('path');
-const {createSettingWindow} = require("../windowManger/SettingWindow");
-const {createSetLockWindow} = require("../windowManger/setLockWindow");
-const {createUnlockWindow} = require("../windowManger/unLockWindow");
-const {isLocked,pin} = require("../windowManger/menuBuilder");
-const {createmanageLicenses} = require("../windowManger/manageLicenses");
-const {createmanageSubscription} = require("../windowManger/manageSubscription");
+const { createSettingWindow } = require("../windowManger/SettingWindow");
+const { createSetLockWindow } = require("../windowManger/setLockWindow");
+const { createUnlockWindow } = require("../windowManger/unLockWindow");
+const { isLocked, pin } = require("../windowManger/menuBuilder");
+const { createmanageLicenses } = require("../windowManger/manageLicenses");
+const { createmanageSubscription } = require("../windowManger/manageSubscription");
+
+function areAllWindowsMinimized() {
+    const windows = BrowserWindow.getAllWindows();
+    return windows.every(window => window.isMinimized());
+}
+
 function createTray() {
     // Create a tray icon
     const tray = new Tray(path.join(__dirname, 'icon.png'));
 
     // Set a tooltip (label) for the tray icon
     tray.setToolTip('PetroByte');
-    let focusedWindow;
 
-    // Create a context menu for the tray icon
-    const contextMenu = Menu.buildFromTemplate([
-        { label: 'Minimize', type: 'normal', click: () => {
-                const focusedWindow = BrowserWindow.getFocusedWindow();
-                focusedWindow.minimize()
-        }},
-        { label: 'Application', type: 'normal', click: () => console.log('Item 2 clicked') },
+    function updateContextMenu() {
+        const template = [
+            {
+                label: areAllWindowsMinimized() ? 'Show' : 'Hide',
+                type: 'normal',
+                click: () => {
+                    const windows = BrowserWindow.getAllWindows();
+                    if (areAllWindowsMinimized()) {
+                        windows.forEach(win => win.restore());
+                    } else {
+                        windows.forEach(win => win.minimize());
+                    }
+                }
+            },
+
+            { label: 'Application', type: 'normal', click: () => console.log('Item 2 clicked') },
         { type: 'separator' },
-        { label: 'Licenses', type: 'normal', click: () =>  {
-        const focusedWindow = BrowserWindow.getFocusedWindow();
-
-        if (focusedWindow) {
-            focusedWindow.close()
-            console.log('Currently focused window:', focusedWindow.getTitle());
-        } else {
-            console.log('No window is currently focused.');
-        }
+        { label: 'Licenses', type: 'normal', click: () => {
         createmanageLicenses()
     }, },
         { label: 'Subscriptions', type: 'normal', click: () => {
-                const focusedWindow = BrowserWindow.getFocusedWindow();
 
-                if (focusedWindow) {
-                    focusedWindow.close()
-                    console.log('Currently focused window:', focusedWindow.getTitle());
-                } else {
-                    console.log('No window is currently focused.');
-                }
                 createmanageSubscription()
             }, },
         { type: 'separator' },
@@ -77,14 +76,6 @@ function createTray() {
 
         { label: 'Setting', type: 'normal', click: () =>
             {
-                // const focusedWindow = BrowserWindow.getFocusedWindow();
-
-                if (focusedWindow) {
-                    focusedWindow.close()
-                    console.log('Currently focused window:', focusedWindow.getTitle());
-                } else {
-                    console.log('No window is currently focused.');
-                }
                 createSettingWindow()
             }
              },
@@ -94,15 +85,25 @@ function createTray() {
         { type: 'separator' },
 
         { label: 'Quit App', type: 'normal', click: () => app.quit() },
-    ]);
+        ];
 
-    // Set the context menu for the tray icon
-    tray.setContextMenu(contextMenu);
+        const contextMenu = Menu.buildFromTemplate(template);
+        tray.setContextMenu(contextMenu);
+    }
 
-    // Show the context menu when the tray icon is clicked
+    // Initialize the tray menu
+    updateContextMenu();
+
+    // Update context menu whenever a window is minimized or restored
+    BrowserWindow.getAllWindows().forEach(win => {
+        win.on('minimize', updateContextMenu);
+        win.on('restore', updateContextMenu);
+    });
+
+    // Event when tray icon is clicked
     tray.on('click', () => {
-         focusedWindow = BrowserWindow.getFocusedWindow();
-         console.log(focusedWindow);
+        const focusedWindow = BrowserWindow.getFocusedWindow();
+        console.log(focusedWindow);
         tray.popUpContextMenu();
     });
 

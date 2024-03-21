@@ -1,47 +1,90 @@
-const {
-        ipcRenderer,
-        shell
-      } = require("electron");
+const { shell } = require('electron');
+document.addEventListener("DOMContentLoaded", function() {
+    //for date of the each box
 
-// Function to add a new download item to the table
-function addDownloadItem(filename, status) {
-  const downloadTable = document.getElementById("downloadTable").getElementsByTagName("tbody")[0];
-  const newRow = downloadTable.insertRow();
-  newRow.innerHTML = `<td>${filename}</td><td>${status}</td><td><button class="openButton">Open</button><button class="removeButton">Remove</button></td>`;
-}
+    const downloadBoxes = document.querySelectorAll(".download-box");
 
-// Function to clear all download items
+    downloadBoxes.forEach(function(box) {
+        const dateHeader = box.querySelector(".download-date");
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' });
+        dateHeader.textContent =  formattedDate;
+    });
+    // for the size of the each download item
+    const downloadItems = document.querySelectorAll(".d-flex");
+
+    downloadItems.forEach(function(item) {
+        const size = item.getAttribute("data-size");
+        const sizeElement = item.querySelector(".file-size");
+        sizeElement.textContent = "Size: " + size;
+    });
+    // for clear downloads button
+    document.getElementById('clearDownloads').addEventListener('click', clearAllDownloads);
+
+// for show default download location button
+    document.getElementById('showDownloadLocation').addEventListener('click', function() {
+        // Define your default download location here
+        const defaultDownloadLocation = 'D:\\';
+
+        // Open the default download location in the file manager
+        shell.openPath(defaultDownloadLocation);
+    });
+    function onDeleteClick(downloadItem) {
+        // Remove the download item from the DOM
+        downloadItem.remove();
+
+        // Get the parent container of the download item, which should contain all items for that date
+        const dateContainer = downloadItem.closest('.date-container');
+
+        // Check if there are any remaining download items in the date container
+        const remainingItems = dateContainer.querySelectorAll('.d-flex');
+
+        if (remainingItems.length === 0) {
+            // If there are no remaining download items, remove the date container
+            dateContainer.remove();
+        }
+    }
+
+// Function to delete a specific download item
+    function deleteDownloadItem(event) {
+        console.log(event.target.closest('.download-date'));
+        const downloadItem = event.target.closest('.d-flex'); // Find the closest parent with the class '.d-flex'
+        if (downloadItem) {
+            downloadItem.remove()
+            onDeleteClick(downloadItem);
+
+
+            // Remove the download item from the DOM
+        }
+    }
+
+// Add event listener to each delete button
+    document.querySelectorAll('.btn-dark').forEach(button => {
+        button.addEventListener('click', deleteDownloadItem);
+    });
+
+
+
+    document.getElementById('item1').addEventListener('click', function() {
+        const filePath = '"D:\\admit card.pdf"';  // Replace with the actual path
+
+        shell.openPath(filePath);
+    });
+});
+
+
+// Function to clear all downloads
 function clearAllDownloads() {
-  const downloadTable = document.getElementById("downloadTable").getElementsByTagName("tbody")[0];
-  downloadTable.innerHTML = ""; // Clear all rows
+    const downloadsSection = document.getElementById('downloadsContainer');
+    // if (!downloadsSection) {
+    //     console.error('downloadsContainer element not found!');
+    //     return;
+    // }
+    while (downloadsSection.firstChild) {
+        downloadsSection.removeChild(downloadsSection.firstChild);
+    }
 }
 
-// Function to open the download directory
-function openDownloadDirectory() {
-  // Implement logic to open the download directory using Electron's shell module
-  // For example:
-  shell.openPath("/path/to/download/directory");
-}
 
-// Handle the "Clear All" button click
-document.getElementById("clearAllButton").addEventListener("click", () => {
-  // Send an IPC message to the main process to clear all downloads
-  ipcRenderer.send("clear-all-downloads");
-});
 
-// Handle the "Open Download Directory" button click
-document.getElementById("openDownloadDirectoryButton").addEventListener("click", () => {
-  // Open the download directory
-  openDownloadDirectory();
-});
 
-// Listen for IPC messages from the main process
-ipcRenderer.on("add-download-item", (event, filename, status) => {
-  // Add a new download item to the table
-  addDownloadItem(filename, status);
-});
-
-ipcRenderer.on("clear-all-downloads", () => {
-  // Clear all download items from the table
-  clearAllDownloads();
-});

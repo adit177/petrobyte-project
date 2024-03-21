@@ -5,11 +5,16 @@ const {
         shell,
         ipcMain,
         menu: Menu, ipcRenderer,
+    browserWindow,
+    session,
+    remote
       } = require("electron");
 const fs = require("fs");
+const path = require("path");
 const {mainWindow} = require("../main");
-
-let activeWindow = null;
+// const {session} = require("electron");
+let activeWindow = require("../main");
+console.log(activeWindow.title);
 // const {createLockWindow} =require("./lockWindow");
 // const {createRegistrationWindow} =require("./registrationWindow");
 const {createConfigWindow} = require("./configWindow");
@@ -17,14 +22,18 @@ const {createmanageLicenses} = require("./manageLicenses");
 const {createmanageSubscription} = require("./manageSubscription");
 const {createShortCutWindow} = require("../GlobalKeyManager/ShortCutKeyWindow");
 const{createSettingWindow} = require("./settingWindow");
+const{createBookmarkWindow} = require("./bookmarkWindow");
+const{createFindinpageWindow} = require("./findinpageWindow");
 // const {createSetLockWindow} =require("./setLockWindow");
 const {createUnlockWindow} = require("./unLockWindow");
 const {
         setLockWindow,
         createSetLockWindow
       } = require("./setLockWindow");
+const{creategotopageWindow}=require("./gotopageWindow");
 const {createDownloadsWindow} = require("./downloadWindow");
 const {createReviewWindow} = require("./ReviewWindow");
+const{bookmarkWindow} = require("./bookmarkWindow");
 let isLocked = false;
 let pin = null;
 
@@ -32,31 +41,57 @@ let pin = null;
 
 
 
+const bookmarksFilePath = path.join(app.getPath('userData'), 'bookmarks.json');
 
- // function goBack() {
- //     if (activeWindow !== mainWindow) {
- //         activeWindow.close();
- //         mainWindow.focus();
- //     } else{
- //
- //         if (activeWindow && activeWindow.webContents.canGoBack()) {
- //             activeWindow.webContents.goBack();
- //         }
- //     }
- // }
- // function goForward() {
- //     if (activeWindow !== mainWindow) {
- //         //if you want go forward define it.
- //         activeWindow.close();
- //         mainWindow.focus();
- //     }
- //     else{
- //
- //         if (activeWindow && activeWindow.webContents.canGoForward()) {
- //             activeWindow.webContents.goForward();
- //         }
- //     }
- // }
+// Function to save bookmarks to local file
+function saveBookmark(url, title) {
+    let bookmarks = [];
+    if (fs.existsSync(bookmarksFilePath)) {
+        bookmarks = JSON.parse(fs.readFileSync(bookmarksFilePath, 'utf8'));
+    }
+
+    // Check if the URL is already in the bookmarks
+    if (bookmarks.some(bookmark => bookmark.url === url)) {
+        console.log('This page is already bookmarked.');
+        return;
+    }
+
+    bookmarks.push({ url, title });
+    fs.writeFileSync(bookmarksFilePath, JSON.stringify(bookmarks));
+    console.log('Bookmark saved.');
+    if(bookmarkWindow)
+    {
+        bookmarkWindow.reload();
+    }
+
+}
+
+ function goBack(window) {
+     activeWindow=browserWindow.getFocusedWindow();
+     console.log("aas",activeWindow.title);
+     if (activeWindow !== mainWindow) {
+         activeWindow.close();
+         mainWindow.focus();
+     } else{
+
+         if (activeWindow && activeWindow.webContents.canGoBack()) {
+             activeWindow.webContents.goBack();
+         }
+     }
+ }
+ function goForward() {
+     if (activeWindow !== mainWindow) {
+         //if you want go forward define it.
+         activeWindow.close();
+         mainWindow.focus();
+     }
+     else{
+
+         if (activeWindow && activeWindow.webContents.canGoForward()) {
+             activeWindow.webContents.goForward();
+         }
+     }
+ }
 
  // function loadHomePage() {
  //     if (activeWindow) {
@@ -86,14 +121,15 @@ let pin = null;
 
      newWindow.loadFile("index.html");  // Replace this with the path to your home page
 
-     windows.push(newWindow);
+     // windows.push(newWindow);
 
-     newWindow.on("closed", () => {
-         const index = windows.indexOf(newWindow);
-         if (index > -1) {
-             windows.splice(index, 1);
-         }
-     });
+     // newWindow.on("closed", () => {
+     //     const index = windows.indexOf(newWindow);
+     //     if (index > -1) {
+     //         windows.splice(index, 1);
+     //     }
+     // });
+
  }
 
  function duplicateCurrentTab(window) {
@@ -142,14 +178,7 @@ function menuTemplate(mainWindow) {
           {
             label: 'Setting',
               click: () => {
-                  const focusedWindow = BrowserWindow.getFocusedWindow();
 
-                  if (focusedWindow) {
-                      focusedWindow.close()
-                      console.log('Currently focused window:', focusedWindow.getTitle());
-                  } else {
-                      console.log('No window is currently focused.');
-                  }
                 createSettingWindow();
               }
 
@@ -157,34 +186,43 @@ function menuTemplate(mainWindow) {
           {
             label: 'Configuration',
             click: () => {
-                const focusedWindow = BrowserWindow.getFocusedWindow();
 
-                if (focusedWindow) {
-                    focusedWindow.close()
-                    console.log('Currently focused window:', focusedWindow.getTitle());
-                } else {
-                    console.log('No window is currently focused.');
-                }
               createConfigWindow()
 
             },
           },
           {type: 'separator'},
+          {
+              label:"Add Bookmark",
+              click: () => {
+                  const title = document.title; // The title of the current page
+                  const url = window.location.href; // The URL of the current page
+                  console.log(url, title);
+
+                  const focusedWindow = BrowserWindow.getFocusedWindow();
+                  if (focusedWindow) {
+
+                      const url = focusedWindow.webContents.getURL();
+                      const title = focusedWindow.webContents.getTitle();
+                      console.log(url, title)
+                      saveBookmark(url, title);
+                  } else {
+                      dialog.showErrorBox('Error', 'No active window found.');
+                  }
+              }
+          },
         {
           label: "Open Bookmarks",
+            click: () => {
+
+                createBookmarkWindow()
+            }
         },
         {
           label: "Open Downloads",
             accelerator: 'CmdOrCtrl+D',
           click() {
-              const focusedWindow = BrowserWindow.getFocusedWindow();
 
-              if (focusedWindow) {
-                  focusedWindow.close()
-                  console.log('Currently focused window:', focusedWindow.getTitle());
-              } else {
-                  console.log('No window is currently focused.');
-              }
             createDownloadsWindow()
           }
         },
@@ -239,14 +277,14 @@ function menuTemplate(mainWindow) {
           label: "Go to Page",
           // This would require an external library and an appropriate handler. Placeholder here.
           click: () => {
-            console.log("Awesome search clicked");
+            creategotopageWindow();
           }
         },
         {
           label      : "Find In Page",
-          accelerator: "CmdOrCtrl+F",
+          // accelerator: "CmdOrCtrl+F",
           click      : () => {
-            mainWindow.webContents.send('show-find-box');
+            createFindinpageWindow();
           }
         },
         {type: 'separator'},
@@ -254,8 +292,10 @@ function menuTemplate(mainWindow) {
           label      : "Reload",
           accelerator: 'CmdOrCtrl+R',
           click      : () => {
-            let focusedWindow = BrowserWindow.getFocusedWindow();
-            if (focusedWindow) focusedWindow.reload();
+            // let focusedWindow = BrowserWindow.getFocusedWindow();
+            // if (focusedWindow) focusedWindow.webContents.reload();
+
+
           }
         },
         {
@@ -263,6 +303,7 @@ function menuTemplate(mainWindow) {
           accelerator: 'CmdOrCtrl+Shift+R',
           click      : () => {
             let focusedWindow = BrowserWindow.getFocusedWindow();
+            console.log(focusedWindow)
             if (focusedWindow) focusedWindow.webContents.reloadIgnoringCache();
           }
         },
@@ -378,22 +419,21 @@ function menuTemplate(mainWindow) {
           label: "New Window (Home)",
             accelerator: "CmdOrCtrl+1",
           click: () => {
-              const focusedWindow = BrowserWindow.getFocusedWindow();
 
-              if (focusedWindow) {
-                  focusedWindow.close()
-                  console.log('Currently focused window:', focusedWindow.getTitle());
-              } else {
-                  console.log('No window is currently focused.');
-              }
             newHomePageTab();
           },
         },
         {
           label: "Duplicate Window (Current Page)",
-          click: (menuItem, currentWindow) => {
-            duplicateCurrentTab(currentWindow);
-          },
+          // click: (menuItem, currentWindow) => {
+          //   duplicateCurrentTab(currentWindow);
+          // },
+            click:()=>{
+                const focusedWindow = BrowserWindow.getFocusedWindow();
+                duplicateCurrentTab(focusedWindow);
+
+                },
+
         },
         {
           type: 'separator',
@@ -401,28 +441,14 @@ function menuTemplate(mainWindow) {
           {
               label: "Manage Licence",
               click: () => {
-                  const focusedWindow = BrowserWindow.getFocusedWindow();
 
-                  if (focusedWindow) {
-                      focusedWindow.close()
-                      console.log('Currently focused window:', focusedWindow.getTitle());
-                  } else {
-                      console.log('No window is currently focused.');
-                  }
                   createmanageLicenses()
               },
           },
         {
           label: "Manage Subscription",
             click: () => {
-                const focusedWindow = BrowserWindow.getFocusedWindow();
 
-                if (focusedWindow) {
-                    focusedWindow.close()
-                    console.log('Currently focused window:', focusedWindow.getTitle());
-                } else {
-                    console.log('No window is currently focused.');
-                }
                 createmanageSubscription()
             },
         },
@@ -438,6 +464,15 @@ function menuTemplate(mainWindow) {
         },
           {
                 label: "Minimize Window",
+              click: () => {    const focusedWindow = BrowserWindow.getFocusedWindow();
+
+                  if (focusedWindow) {
+                      focusedWindow.minimize()
+                      console.log('Currently focused window:', focusedWindow.getTitle());
+                  } else {
+                      console.log('No window is currently focused.');
+                  }
+              }
           },
           {
             label      : "Close This Window",
@@ -473,7 +508,15 @@ function menuTemplate(mainWindow) {
         {
           label: "Home",
           click: () => {
-            loadHomePage();
+              const focusedWindow = BrowserWindow.getFocusedWindow();
+
+              if (focusedWindow) {
+                  focusedWindow.close()
+                  console.log('Currently focused window:', focusedWindow.getTitle());
+              } else {
+                  console.log('No window is currently focused.');
+              }
+              newHomePageTab();
           }
         },
         {
@@ -482,7 +525,9 @@ function menuTemplate(mainWindow) {
         {
           label: "Clear Caches",
           click: () => {
-            clearCache();
+              session.defaultSession.clearCache().then(() => {
+                  console.log('Cache cleared!');
+              });
           }
         },
         {

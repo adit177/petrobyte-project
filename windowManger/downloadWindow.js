@@ -23,16 +23,9 @@ function createDownloadsWindow() {
   downloadsWindow.loadFile("pages/downloadWindow.html");
 
   // Open the DevTools for debugging (you can remove this in production)
-  // downloadsWindow.webContents.openDevTools()
+  downloadsWindow.webContents.openDevTools()
 
-  // Listen for IPC messages from the renderer process
-  ipcMain.on("open-download-directory", () => {
-    // Replace "downloadFolderPath" with the actual path to your download folder
-    const downloadFolderPath = "/path/to/your/download/folder";
 
-    // Open the download folder using the default file manager
-    shell.openPath(downloadFolderPath);
-  });
 
 
   downloadsWindow.on("closed", () => {

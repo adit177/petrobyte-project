@@ -8,7 +8,7 @@ const {
         clipboard,
         globalShortcut
       } = require("electron");
-
+const path = require("path");
 const fs = require('fs');
 let windows = []
 let mainWindow;
@@ -26,11 +26,14 @@ const {
       } = require("./windowManger/unLockWindow");
 const {setLockWindow} = require("./windowManger/setLockWindow");
 const {downloadsWindow} = require("./windowManger/downloadWindow");
+const{bookmarksWindow} = require("./windowManger/bookmarkWindow");
 let activeWindow = mainWindow;
 const createTray = require('./render/tray');
 
 
+const { initialize } = require('@electron/remote/main');
 
+initialize();
 
 function setActiveWindow(awindow) {
     activeWindow = awindow;
@@ -44,14 +47,18 @@ function createWindow() {
     webPreferences: {
       nodeIntegration : true,
       contextIsolation: false,
+        preload: path.join(__dirname, 'preload.js')
     },
   });
+
+
 
     if(isdev){
         mainWindow.webContents.openDevTools();
     }
   mainWindow.loadFile("index.html");
   setActiveWindow(mainWindow);
+  console.log(activeWindow.title);
 
   //mainWindow.webContents.openDevTools();
 
@@ -118,13 +125,10 @@ ipcMain.on("open-download-directory", () => {
 });
 app.on('ready', () => {
   createWindow();
-});
-app.on('ready', () => {
-    // Create the tray
     const tray = createTray();
 
-    // Additional main application logic here
 });
+
 ipcMain.on('close-current-window', () => {
     // Close the current window
     const currentWindow = BrowserWindow.getFocusedWindow();
@@ -156,15 +160,28 @@ ipcMain.on('quit-app', () => {
     // Quit the application
     app.quit();
 });
-// ipcMain.on('open-main-window', () => {
-//     // Open the main window when the correct passcode is entered
-//     mainWindow.show();
-// });
-
-
-app.on("window-all-closed", function () {
-  if (process.platform !== "darwin") app.quit();
+// Function to save a bookmark to a local JSON file
+//
+ipcMain.on('get-user-data-path', (event) => {
+    event.returnValue = app.getPath('userData');
 });
+
+// IPC Listeners
+
+
+
+
+app.on('window-all-closed', () => {
+
+    if (process.platform !== 'darwin') {
+        // Do not quit the application.
+        // If you want to allow macOS windows to behave like other platforms, remove this check.
+    }
+});
+
+
+
+
 
 app.on("activate", function () {
   if (mainWindow === null) createWindow();

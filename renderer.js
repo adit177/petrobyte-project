@@ -1,4 +1,7 @@
 const {ipcRenderer} = require('electron');
+const { BrowserWindow } = require('@electron/remote');
+
+const win = BrowserWindow.getFocusedWindow();
 
 ipcRenderer.on('change-theme', (event, theme) => {
   if (theme === 'light') {
@@ -12,6 +15,36 @@ ipcRenderer.on('change-theme', (event, theme) => {
 });
 
 //find renderer(text)
+// searchBox.js
+
+
+
+// Toggle the search box
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key === 'f') {
+    const searchBox = document.getElementById('searchBox');
+    searchBox.style.display = searchBox.style.display === 'none' ? 'block' : 'none';
+    if (searchBox.style.display === 'block') {
+      document.getElementById('find-input').focus();
+    }
+  }
+});
+
+// Use "Find in Page" when typing
+document.getElementById('find-input').addEventListener('input', (e) => {
+  const searchText = e.target.value;
+  if (searchText) {
+    win.webContents.findInPage(searchText);
+  } else {
+    win.webContents.stopFindInPage('clearSelection');
+  }
+});
+
+// Close the search box
+document.getElementById('close-search').addEventListener('click', () => {
+  document.getElementById('searchBox').style.display = 'none';
+  win.webContents.stopFindInPage('clearSelection');
+});
 
 
 function findText() {

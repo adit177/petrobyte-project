@@ -23,26 +23,9 @@ function createSetLockWindow() {
   });
   console.log(activeWindow)
   if(isdev){  setLockWindow.webContents.openDevTools();}
-  // if (1) {
-  //   // If locked, ask for the PIN
-  //   console.log("set")
-  //   createUnlockWindow();
-  // }
-  // else {
-  //   // If unlocked, lock the app
-  //   console.log(unset);
-  //   isLocked = true;
-  //   mainWindow.hide();
-  // }
+
   setLockWindow.loadFile('pages/setLockWindow.html');
 
-  // ipcMain.on('passcode-set', (event, data) => {
-  //   // Access data like data.isSetpasscode and data.Pin here
-  //   console.log('isSetpasscode:', data.isSetpasscode);
-  //   console.log('Pin:', data.Pin);
-  // });
-
-  // ...
 
   setLockWindow.on('closed', () => {
     setLockWindow = null;
