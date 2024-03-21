@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Dialog</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+
+<div class="container mt-5">
+    <!-- Header with the title -->
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h1>Go-to Page</h1>
+        </div>
+    </div>
+    <!-- Search Dialog Box -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <input type="text" id="search-input" class="form-control" placeholder="Search..." aria-label="Search">
+            <!-- Suggestions panel with shadow using Bootstrap's shadow utility -->
+            <div id="suggestions-panel" class="suggestions-panel shadow mt-2 p-0"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Including Bootstrap's JavaScript components (optional) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="../render/go-topageRenderer.js"></script>
+</body>
+</html>

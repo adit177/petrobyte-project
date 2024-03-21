@@ -1,0 +1,694 @@
+<div data-e-welcome="tabs"
+     data-pb-layout="tabs"
+     data-layout="parent">
+	<div id="tabs__tabs"
+	     class="zone d-none card shadow-sm">
+		<div class="card-body">
+			<div class="d-flex flex-column flex-md-row">
+				<div id="control__tabs"
+				     class="sub-zone">
+					<ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6 min-w-md-250px">
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="customer"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-customer"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 ki-outline ki-row-horizontal"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Customers</span>
+											</span>
+										</span>
+										<span class="fs-6">all credit bill of a customer</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="month"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-month"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Month</span>
+											</span>
+										</span>
+										<span class="fs-6">all credit bills of a Month</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="status"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-status"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-truck-front text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Status</span>
+											</span>
+										</span>
+										<span class="fs-6">All bills by Status</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="action__tabs"
+				     class="sub-zone flex-row-fluid">
+					<div id="intro"
+					     class="d-block">
+						<div id="states"
+						     class="d-none">
+							<table>
+								<tr>
+									<td>Created</td>
+									<td>Paid</td>
+									<td>Due</td>
+									<td>OverDue</td>
+								</tr>
+								<tr>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+							</table>
+						</div>
+						<div id="learning">
+							<div class="card">
+								<div class="card-body d-flex flex-column flex-center">
+									<div class="mb-2">
+										<p class="text-center">
+											<i class="fs-5x text-warning las la-life-ring"></i>
+										</p>
+										<h1 class="fw-semibold text-gray-800 text-center lh-lg">
+											Know about Billing Bucket<br>
+											<span class="fw-bolder">Be Self Export ?</span>
+										</h1>
+									</div>
+									<div class="text-center mt-10 mb-1">
+										<a class="btn btn-light-danger me-2"
+										   data-bs-target="#kt_modal_create_app"
+										   data-bs-toggle="modal">
+											<i class="lab la-youtube fs-2x"></i>
+											Youtube Video
+										</a>
+										<a class="btn btn-light-warning"
+										   href="javascript:">
+											<i class="las la-walking fs-2x"></i>
+											Quick Process
+										</a>
+										<div>
+											<button type="button"
+											        name="action"
+											        value="hide_intro"
+											        class="btn btn-link">
+												Do not show this Again !!!
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content">
+						<div class="tab-pane fade"
+						     id="tab-customer"
+						     role="tabpanel">
+							<form id="form-customer">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Customers [Billing Enabled]</label>
+												<select required
+												        name="customer_id"
+												        data-pb-source="customers"
+												        data-pb-control="select"
+												        data-pb-method="account"
+												        data-pb-tack="ledger"
+												        data-pb-placeholder="Select Customer Account"
+												        title="Customer Account"
+												        class="form-select form-select-solid"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        form="form-customer"
+														        name="report"
+														        value="customer"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Bills
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_direct_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_customer">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_customer">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       placeholder="Select Date Range"
+													       data-pb-control="range"
+													       data-pb-method="defined"
+													       class="form-control form-control-solid"
+													       title="" />
+												</div>
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+													<div class="nav-group nav-group-fluid">
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="-1"
+															       checked />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="1" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="0" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-month"
+						     role="tabpanel">
+							<form id="form-month">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Activated Months</label>
+												<select required
+												        name="month_id"
+												        data-pb-source="months"
+												        data-pb-control="select"
+												        data-pb-method="account"
+												        data-pb-tack="ledger"
+												        data-pb-placeholder="Select Month"
+												        class="form-select form-select-solid"
+												        title="Customer Group"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        form="form-month"
+														        name="report"
+														        value="month"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Bills
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_group_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_month">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_month">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Select Customers</label>
+													<select name="customer_ids[]"
+													        multiple="multiple"
+													        data-pb-control="select"
+													        data-pb-source="live_customers"
+													        data-pb-method="simple"
+													        data-pb-teck="direct"
+													        data-pb-placeholder="Select Customers"
+													        data-pb-search="0"
+													        class="form-select form-select-solid"
+													        title=""> </select>
+												</div>
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+													<div class="nav-group nav-group-fluid">
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="-1"
+															       checked />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="1" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">Paid</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="receipt_status"
+															       value="0" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-danger fw-bold px-4">Due</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-status"
+						     role="tabpanel">
+							<form id="form-status">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Statuses of Bills</label>
+												<select required
+												        name="status_id"
+												        data-pb-source="statuses"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="account"
+												        data-pb-tack="ledger"
+												        data-pb-placeholder="Select Bill Status"
+												        title="Bills Status"> </select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        form="form-status"
+														        name="report"
+														        value="status"
+														        data-form-submit
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Bills
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_vehicle_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_status">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_status">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Customers</label>
+													<select name="category_ids[]"
+													        multiple="multiple"
+													        data-pb-control="select"
+													        data-pb-method="simple"
+													        data-pb-source="enabled_customers"
+													        data-pb-placeholder="Select Customers"
+													        class="form-select form-select-solid"
+													        title=""> </select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="result__tabs"
+	     class="zone">
+		<div id="report-customer"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-customer">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-primary ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-header-customer">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-danger ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-customer">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-customer"
+					     class="collapse d-print-none">
+						// insert customer-export
+					</div>
+					<div id="table-header-customer"
+					     class="collapse">
+						// insert customer-header
+					</div>
+					<div id="table-filters-customer"
+					     class="collapse d-print-none">
+						// insert customer-filters
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr>
+								<th class="min-w-125px">Bill No.</th>
+								<th class="min-w-150px">Customer Account</th>
+								<th class="min-w-150px">Date And Period</th>
+								<th class="min-w-125px">Slips</th>
+								<th class="min-w-125px">Bill Value</th>
+								<th class="min-w-125px">Discount</th>
+								<th class="min-w-125px">Amount</th>
+								<th class="min-w-125px">Received</th>
+								<th class="min-w-125px">Status</th>
+								<th class="text-end min-w-70px">Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-month"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-month">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-primary ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-header-month">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-danger ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-month">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-month"
+					     class="collapse d-print-none">
+						// insert month-export
+					</div>
+					<div id="table-header-month"
+					     aria-description="header of the report - account detail"
+					     class="collapse">
+						// insert month-header
+					</div>
+					<div id="table-filters-month"
+					     class="collapse d-print-none">
+						// insert month-filters
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr>
+								<th class="min-w-125px">Bill No.</th>
+								<th class="min-w-150px">Customer Account</th>
+								<th class="min-w-150px">Date And Period</th>
+								<th class="min-w-125px">Slips</th>
+								<th class="min-w-125px">Bill Value</th>
+								<th class="min-w-125px">Discount</th>
+								<th class="min-w-125px">Amount</th>
+								<th class="min-w-125px">Received</th>
+								<th class="min-w-125px">Status</th>
+								<th class="text-end min-w-70px">Actions</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-status"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Back</span>
+						</button>
+						<h3 data-pb-update="name">Customers Sales Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-status">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-primary ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-header-status">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm fw-semibold btn-light-danger ms-3 hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-status">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-status"
+					     class="collapse d-print-none">
+						// insert status-export
+					</div>
+					<div id="table-header-status"
+					     aria-description="header of the report - account detail"
+					     class="collapse">
+						// insert status-header
+					</div>
+					<div id="table-filters-status"
+					     class="collapse d-print-none">
+						// insert status-filters
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Customer
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Date
+								</th>
+								<th data-index="2">Voucher</th>
+								<th data-index="3">Bill</th>
+								<th data-index="4">Slip</th>
+								<th data-index="5">Item</th>
+								<th data-index="6">Rate</th>
+								<th data-index="7">Quantity</th>
+								<th data-index="8">Amount</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__tabs"
+	     class="zone d-none">
+		<div data-pb-template="month">
+			<div class="card">
+				<div class="card-body p-0">
+					<div class="border border-hover-primary p-7 rounded">
+						<div class="d-flex flex-center">
+							<h1>$$@month@$$</h1>
+						</div>
+						<div class="d-flex flex-column flex-center">
+							<div class="fw-bold text-black-400 mb-6 mF"
+							     data-cs-format="g">$$@month_year@$$
+							</div>
+						</div>
+						<div class="d-flex flex-center flex-wrap">
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700">$$@bills@$$</div>
+								<div class="fw-semibold text-gray-400">Total Bills</div>
+							</div>
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700">$$@paid@$$</div>
+								<div class="fw-semibold text-gray-400">Paid</div>
+							</div>
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700">$$@unpaid@$$</div>
+								<div class="fw-semibold text-gray-400">Unpaid</div>
+							</div>
+						</div>
+						<div class="d-flex flex-center">
+							<button type="button"
+							        name="card"
+							        value="month"
+							        data-pb-value="$$@month_no@$$"
+							        data-pb-target="month"
+							        class="btn btn-sm btn-light-primary hover-scale w-75">View Bills
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="customer">
+			<div class="cards">
+				<div class="border border-hover-primary border-opacity-50 p-7 rounded bg-white">
+					<div class="d-flex flex-center">
+						<div class="symbol symbol-65px symbol-circle mb-5">
+							<img class="rc_image"
+							     data-pb-source="$$@avatar@$$"
+							     data-cs-path="media"
+							     alt="image"
+							     src="" />
+							<div class="bg-success position-absolute border border-4 border-body h-15px w-15px rounded-circle translate-middle start-100 top-100 ms-n3 mt-n3"></div>
+						</div>
+					</div>
+					<div class="d-flex flex-column flex-center">
+						<div class="fs-4 text-gray-800 text-hover-primary fw-bold mb-0">$$@name@$$
+						</div>
+						
+						<div class="fw-semibold text-gray-400 mb-6">$$@cate_id@$$
+						</div>
+					</div>
+					<div class="d-flex flex-center flex-wrap">
+						<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+							<div class="fs-6 fw-bold text-gray-700 rc_currency"
+							     data-cs-round="0">$$@bills@$$
+							</div>
+							<div class="fw-semibold text-gray-400">Total Bills</div>
+						</div>
+						<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+							<div class="fs-6 fw-bold text-gray-700 rc_currency"
+							     data-cs-round="0">$$@paid@$$
+							</div>
+							<div class="fw-semibold text-gray-400">Paid</div>
+						</div>
+						<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+							<div class="fs-6 fw-bold text-gray-700 rc_currency"
+							     data-cs-round="0">$$@unpaid@$$
+							</div>
+							<div class="fw-semibold text-gray-400">unpaid</div>
+						</div>
+					</div>
+					<div class="d-flex flex-center">
+						<button type="button"
+						        name="card"
+						        value="customer"
+						        data-pb-value="$$@id@$$"
+						        data-pb-target="customer"
+						        class="btn btn-sm btn-light-primary hover-scale w-75">View Bills
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

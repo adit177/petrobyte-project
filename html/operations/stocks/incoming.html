@@ -1,0 +1,726 @@
+<div data-pb-layout="buttons"
+     data-e-welcome="controls"
+     data-layout="parent"
+     class="layout">
+	<div id="controls__buttons"
+	     class="row zone">
+		<div id="menu__buttons"
+		     class="sub-zone col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-12">
+			<div class="card">
+				<form id="change-action"
+				      autocomplete="off"
+				      data-pb-control="combo"
+				      data-pb-method="simple"
+				      class="form-group">
+					<div class="card-header pt-1">
+						<div class="card-title w-50">
+							<h2>
+								<input type="text"
+								       name="work-date"
+								       data-pb-control="date"
+								       data-pb-method="custom"
+								       class="form-control form-control-transparent p-0 fs-2"
+								       placeholder="Work Date"
+								       title="" />
+							</h2>
+						</div>
+						<div class="card-toolbar">
+							// redirect
+						</div>
+					</div>
+				</form>
+				<div class="card-body pt-5">
+					<div class="d-flex flex-column gap-5"
+					     id="menuList">
+						<menu-list data-menu-key="totalSales"
+						           data-menu-event="totalSales"
+						           data-menu-text="Total Sales: "></menu-list>
+						<div class="separator separator-dashed"></div>
+						<menu-list data-menu-key="fuel"
+						           data-menu-event="fuel"
+						           data-menu-text="Fuel"
+						           data-menu-tooltip="asdf"></menu-list>
+						<menu-list data-menu-key="oil"
+						           data-menu-event="oil"
+						           data-menu-text="Oil"></menu-list>
+						<menu-list data-menu-key="servicing"
+						           data-menu-event="servicing"
+						           data-menu-text="Servicing"></menu-list>
+						<menu-list data-menu-key="other"
+						           data-menu-event="other"
+						           data-menu-text="Other"></menu-list>
+						
+						<div class="separator separator-dashed"></div>
+						<div data-pb-key="stockVoucher"
+						     class="d-flex flex-stack">
+							<a href="javascript:"
+							   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Stock Voucher</a>
+							<div data-pb-reserve
+							     class="fs-4 badge badge-light-primary"
+							     data-bs-toggle="tooltip"
+							     title="Total Entry Created">0
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-flex btn-light-primary px-6 w-100"
+					        name="card"
+					        value="search"
+					        type="button"
+					        data-e-recall="">
+						<i class="fs-3x lab la-searchengin"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Search Entry</span>
+							<span class="fs-7">for View, Edit or Delete</span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="buttons__buttons"
+		     class="sub-zone col-xxl-8 col-xl-7 col-lg-6 col-md-6 col-12">
+			<div class="row">
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Simple Input"
+					             data-card-icon="bi bi-cash-stack">
+						<btn data-btn-value="simple"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="simple"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Advance  Input"
+					             data-card-icon="bi bi-cash-stack">
+						<btn data-btn-value="advance"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="advance"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="forms__buttons"
+	     class="zone">
+		<div id="simple-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-simple"
+					      class="form"
+					      data-pb-control="repeater"
+					      data-pb-method="simple"
+					      data-e-recall=""
+					      data-form-sno="1"
+					      method="post"
+					      autocomplete="off">
+					
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-simple"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-nature="post"
+							        data-e-value="simple-input"
+							        type="button">Reset
+							</button>
+							<button form="form-simple"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="simple-input"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save Simple Input</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="advance-form"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-advance"
+					      class="form-group"
+					      data-pb-control="repeater"
+					      data-pb-method="advance"
+					      data-e-recall=""
+					      data-form-sno="2"
+					      method="post"
+					      autocomplete="off">
+					</form>
+					<div class="align-items-end">
+						<button class="btn btn-primary">Overview</button>
+					</div>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-advance"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-value="advance"
+							        data-e-nature="post"
+							        type="button">Reset
+							</button>
+							<button form="form-advance"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="advance-input"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save advance input</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="tables__buttons">
+		<div id="simple-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Stock Input Entry - Simple</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light go_back hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+						       id="table-simple-input"></table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="advance-table"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Stock Input Entry - Advance</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light go_back hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="table-advance-input">
+							<tbody class="text-gray-600 fw-semibold fs-5"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--todo : please check and insert templates of modal buttons and also card buttons-->
+	<div id="modals__buttons">
+		<div id="advance-modal"
+		     class="modal fade d-none">
+			<div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<ul data-pb-append="advance-modal-bar"
+						    data-pb-key="tanks_info"
+						    class="nav nav-tabs nav-line-tabs nav-line-tabs-2x flex-nowrap text-nowrap">
+							//insert list item template
+						</ul>
+					</div>
+					<div class="modal-body">
+						<div class="tab-content"
+						     data-pb-append="advance-modal-tab"
+						     data-pb-key="tanks">
+							/// insert template.
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button"
+						        name="button"
+						        value="dismiss"
+						        class="btn btn-light"
+						        data-bs-dismiss="modal">Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__buttons"
+	     class="d-none">
+		<div aria-description="forms"
+		     class="d-none">
+			
+			<div data-pb-template="form-simple">
+				<div class="form-group">
+					<div>
+						<div class="row fv-row">
+							<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+								<label class="form-label">
+									<span class="required">Date</span>
+								</label>
+								<input type="date"
+								       name="date"
+								       required
+								       class="form-control form-control-solid form-control-md"
+								       data-pb-control="date"
+								       data-pb-method="human"
+								       placeholder="Date"
+								       title="Date" />
+							</div>
+							<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+								<label class="form-label">
+									<span class="required">Truck No.</span>
+								</label>
+								<input type="text"
+								       required
+								       name="truck_no"
+								       data-pb-control="mask"
+								       data-pb-method="vehicleNumber"
+								       class="form-control form-control-solid"
+								       placeholder="Truck No."
+								       title="Truck No." />
+							</div>
+							<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+								<label class="form-label">
+									<span class="required">Serial No.</span>
+								</label>
+								
+								<input type="text"
+								       required
+								       name="serial_no"
+								       class="form-control form-control-solid"
+								       placeholder="Serial No."
+								       title="Serial No." />
+							</div>
+						</div>
+						<div class="">
+							<div data-repeater-list="simple_input_inner"
+							     class="mb-0 main-repeater">
+								<div data-repeater-item>
+									<div class="row fv-row">
+										<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+											
+											<select name="items_id"
+											        data-pb-source="items"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-e-listen="change"
+											        data-e-name="change"
+											        data-e-value="items"
+											        data-pb-placeholder="Select Item"
+											        title="Select Item">
+												<option></option>
+											
+											</select>
+										</div>
+										<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+											
+											<select name="tank_id"
+											        data-pb-source="tanks"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-catch="tanks_list"
+											        data-pb-placeholder="Select Tank"
+											        title="Select Tank">
+												<option></option>
+											
+											</select>
+										</div>
+										<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+											<input type="text"
+											       name="quantity"
+											       required
+											       class="form-control form-control-solid inr_mask_round text-end"
+											       data-pb-control="mask"
+											       data-pb-method="volume"
+											       placeholder="Input Quantity"
+											       title="Input Quantity" />
+										</div>
+										<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+											<input type="text"
+											       name="shortage"
+											       class="form-control form-control-solid "
+											       data-pb-control="mask"
+											       data-pb-method="volume"
+											       placeholder="Shortage"
+											       title="Shortage" />
+										</div>
+										<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+											<a href="javascript:"
+											   data-repeater-delete
+											   class="btn btn-sm btn-light-danger mt-3">
+												<i class="bi bi-node-minus-fill"></i>
+												Delete Row
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="">
+								<a href="javascript:"
+								   data-repeater-create="inner"
+								   class="btn btn-sm btn-light-primary">
+									<i class="bi bi-node-plus-fill"></i>Add Row
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-pb-template="form-advance">
+				<div class="form-group">
+					<div class="row fv-row">
+						<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Date</span>
+							</label>
+							<input type="text"
+							       name="date"
+							       required
+							       data-pb-control="date"
+							       data-pb-method="human"
+							       placeholder="Date"
+							       title="Date"
+							       class="form-control form-control-solid form-control-md" />
+						</div>
+						<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Truck No.</span>
+							</label>
+							<input type="text"
+							       name="truck_no"
+							       data-pb-control="mask"
+							       data-pb-method="vehicleNumber"
+							       class="form-control form-control-solid"
+							       placeholder="Truck No."
+							       title="Truck No." />
+						</div>
+						<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+							<label class="form-label">
+								<span class="required">Invoice No.</span>
+							</label>
+							<input type="text"
+							       name="invoice_no"
+							       class="form-control form-control-solid"
+							       placeholder="Invoice No."
+							       title="Invoice No." />
+						</div>
+					</div>
+					<div data-repeater-list="input_items">
+						<div data-repeater-item>
+							<div class="row fv-row">
+								<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+									<select name="tank_id"
+									        required
+									        data-e-name="load"
+									        data-e-value="tank"
+									        data-pb-source="tanks_info"
+									        data-pb-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="direct"
+									        data-pb-search="0"
+									        data-e-listen="change"
+									        data-pb-placeholder="Select Item"
+									        title="Select Item"
+									        class="form-select form-select-solid"> </select>
+								</div>
+								<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+									<input type="text"
+									       name="quantity"
+									       required
+									       class="form-control form-control-solid"
+									       data-pb-control="mask"
+									       data-pb-method="volume"
+									       data-pb-catch="inputQuantity"
+									       placeholder="Input Quantity"
+									       title="Input Quantity" />
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-17">
+									<div class="input-group mb-7-">
+										<input type="text"
+										       name="openingDip"
+										       class="form-control form-control-solid"
+										       required
+										       data-pb-control="mask"
+										       data-pb-method="volume"
+										       data-pb-catch="opening_dip"
+										       placeholder="Opening Dip"
+										       title="Enter The Opening Dip" />
+										
+										<!--id="vat_on_dc_main"-->
+										<button disabled
+										        type="button"
+										        data-e-name="load"
+										        data-e-value="dip"
+										        value="dip"
+										        data-pb-catch="openingDip"
+										        class="input-group-text border-0">
+											<!--@imhere-->
+											<i class="fs-2 bi bi-calculator"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-6'>Calculate amount of <br> fuel in tank <br> before unloading</span>"></i>
+										</button>
+									</div>
+									<div class="input-group mb-7-">
+										<input type="text"
+										       name="closingDip"
+										       class="form-control form-control-solid"
+										       required
+										       data-pb-control="mask"
+										       data-pb-method="volume"
+										       data-pb-catch="closing_dip"
+										       placeholder="Closing Dip"
+										       title="Enter The Closing Dip" />
+										
+										<!--id="vat_on_dc_main"-->
+										<button disabled
+										        type="button"
+										        data-e-name="load"
+										        data-e-value="dip"
+										        value="dip"
+										        data-pb-catch="closingDip"
+										        class="input-group-text border-0">
+											<!--@imhere-->
+											<i class="fs-2 bi bi-calculator"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-6'>Calculate amount of <br> fuel in tank <br> after unloading</span>"></i>
+										</button>
+									</div>
+								
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7"
+								     id="nozzleSale">
+									<div class="input-group mb-7-">
+										<!--nozzle_sale-->
+										<input type="text"
+										       name="quantitySale"
+										       required
+										       class="form-control form-control-solid text-end"
+										       data-pb-control="mask"
+										       data-pb-method="volume"
+										       data-pb-catch="nozzle_sale"
+										       placeholder="Nozzle sale"
+										       title="Nozzle Sale" />
+										<button disabled
+										        type="button"
+										        data-e-name="modal"
+										        value="advance"
+										        data-pb-catch="tank"
+										        data-e-recall=""
+										        class="input-group-text border-0">
+											<i class="fs-2 bi bi-calculator"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="<span class='fs-6'>Calculate amount of <br> fuel sold form <br> tank while unloading</span>"></i>
+										</button>
+									</div>
+									<div class="input-group mb-7-">
+										<button disabled
+										        type="button"
+										        data-pb-catch="calcNozzleSale"
+										        data-e-name="calculate"
+										        value="calculateNozzlesSale"
+										        class="input-group-text border-0">Fetch Nozzle Sale
+										</button>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+									<div class="input-group">
+										<input type="text"
+										       name="vacantQty"
+										       class="form-control form-control-solid"
+										       data-pb-control="mask"
+										       data-pb-method="volume"
+										       data-pb-catch="vacantQty"
+										       placeholder="Vacant QTY"
+										       title="Enter Vacant QTY" />
+										<button disabled
+										        type="button"
+										        data-e-name="calculate"
+										        value="totalReceivedCalc"
+										        data-pb-catch="calctotalReceived"
+										        class="input-group-text border-0">
+											<i class="fs-2 bi bi-calculator"
+											   data-bs-toggle="tooltip"
+											   data-bs-html="true"
+											   title="Calculate totalQuantity and shortage of input received"></i>
+										</button>
+									</div>
+									<br>
+									<input type="text"
+									       name="shortage"
+									       class="form-control form-control-solid text-end"
+									       data-pb-control="mask"
+									       data-pb-method="volume"
+									       data-pb-catch="shortage"
+									       placeholder="Shortage"
+									       title="Enter Shortage" />
+								</div>
+								<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+									<a href="javascript:"
+									   data-repeater-delete
+									   class="btn btn-sm btn-light-danger mt-3">
+										<i class="bi bi-node-minus-fill"></i>
+										Delete Row
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ps-20">
+						<a type="button"
+						   data-e-type="anchor"
+						   data-repeater-create=""
+						   class="btn btn-sm btn-light-primary">
+							<i class="bi bi-node-plus-fill"></i>Add Row
+						</a>
+					</div>
+				
+				</div>
+			</div>
+		
+		</div>
+		<div data-pb-template="advance-modal-bar">
+			<li class="nav-item">
+				<button class="nav-link btn btn-active-light-primary btn-color-gray-600 btn-active-color-primary border border-2 rounded-bottom-0 fw-bold fs-5"
+				        type="button"
+				        role="tab"
+				        data-bs-toggle="tab"
+				        value="$$@tank_id@$$"
+				        name="button"
+				        href="#tank_$$@tank_id@$$_nozzles">$$@tank_name@$$
+				</button>
+			</li>
+		</div>
+		<div data-pb-template="advance-modal-tab">
+			<div class="tab-pane fade"
+			     id="tank_$$@tank_id@$$_nozzles"
+			     data-pb-append="advance-modal-body"
+			     data-pb-key="$$@tank_id@$$"
+			     
+			     role="tabpanel">
+				// insert nozzle input template here
+			</div>
+		</div>
+		<div data-pb-template="advance-modal-body">
+			<div class="text-gray-700 fw-semibold fs-5 fv-row mb-5">
+				<div class="row fv-row">
+					<div class="col">
+						<input type="text"
+						       name="charge"
+						       class="form-control form-control-solid text-end amount1"
+						       value="$$@tank_name@$$"
+						       disabled />
+					</div>
+					<div class="col">
+						<input type="text"
+						       name="charge"
+						       class="form-control form-control-solid text-end amount1"
+						       value="$$@nozzle_name@$$"
+						       disabled />
+					</div>
+					<div class="col">
+						<input type="number"
+						       name="charge"
+						       data-e-listen="input"
+						       data-e-type="amend"
+						       data-e-value="opening"
+						       data-pb-catch="opening"
+						       class="form-control form-control-solid text-end amount1"
+						       id="opening"
+						       placeholder="Opening" />
+					
+					</div>
+					<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-2 col-12">
+						<input type="number"
+						       name="charge"
+						       data-e-listen="input"
+						       data-e-type="amend"
+						       data-e-value="closing"
+						       data-pb-catch="closing"
+						       class="form-control form-control-solid text-end amount1"
+						       id="closing"
+						       placeholder="Closing" />
+					</div>
+					<div class="col-1">
+						<button type="button"
+						        value="advance"
+						        name="minus"
+						        class="btn btn-primary">=>
+						</button>
+					</div>
+					<div class="col">
+						<input type="number"
+						       readonly
+						       name="charge"
+						       data-e-value="$$@tank_name@$$"
+						       data-pb-catch="soldQuantity"
+						       class="form-control form-control-solid text-end amount1"
+						       id="soldQuantity"
+						       placeholder="Sold Quantity" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,898 @@
+import {get_action, get_callEl, get_passedEl} from "../../../base/global.js";
+import pb from "../../../base/structure.js";
+import {rdR, kws, exT} from "../../../base/const.js";
+import {atr} from "../../../base/attributes.js";
+import {$R_table_obj, $R_form_obj, $R_common_obj} from "../../../base/render.js";
+import {_reportLE, _tabLE} from "../../../base/elements.js";
+import AjaxPB from "../../../base/ajax.js";
+import extend from "../../../extend/extend.js";
+import {getStateData} from "../../../bucket/state.js";
+
+
+const host = {
+  server: 'https://9d0f471e-1577-48ff-8802-95b4084dc031.mock.pstmn.io',
+  local : 'http://localhost:4360',
+};
+// Shared variables
+let combineData = {};
+let StateData, formData, redData;
+let formEle, tableEle, filterEle;
+let tableObject = [];
+
+
+// Private functions
+
+/**
+ * this will be used for show page's base-0 data.
+ */
+
+
+const pageOpen = (data) => {
+  /**
+   * this data save into variables.
+   * it will be called when create form initiated.
+   * @param data
+   * @private
+   */
+
+
+  const _process = (data) => {
+    console.log(data);
+    let _return = true;
+    _return &&= _process_save_page_state(data.data);
+
+    return _return;
+
+  }
+
+  const _process_save_page_state = (data) => {
+    const searchNavtab = _reportLE.navtab.querySelector("#search-navtab")
+    const form = searchNavtab.querySelector("form");
+    $R_form_obj.$global({employees: getStateData().employees}, form, rdR.form.method.simple);
+
+
+    StateData = data['pageState'];
+    console.log(StateData);
+    return true;
+  }
+
+  return _process(data);
+}
+/**
+ * preloaded data that will not change for this page
+ */
+
+const dataTablesInit = (eventValue) => {
+
+  let DT_options = {};
+  // create options
+  const end = PB_option_datatables.optionKeys();
+  end.forEach((i) => {
+    if ($R_table_obj.tableOptions[i]) {
+      DT_options[i] = PB_option_datatables.building(i, $R_table_obj.tableMethods[i], $R_table_obj.tableParams[i]);
+    }
+  })
+
+  let optionsObj = {};
+  Object.entries(DT_options).forEach(([key, value]) => {
+    optionsObj = {...optionsObj, ...value}
+  })
+
+  // console.log(optionsObj);
+
+  // Init datatable --- more info on datatables: https://datatables.net/manual/
+  tableObject[eventValue] = plg_dataTables.$_manual(tableEle, optionsObj, 'new');
+
+  // Re-init functions on every table re-draw -- more info: https://datatables.net/reference/event/draw
+  /*
+   tableObject[_RG_SAMP_A].on('draw', function () {
+   console.log('i am call at the time of re-inti.')
+   });
+   */
+}
+
+const _tableFormation = function (data, event, tableEle) {
+  // creating a profile for table.
+  if (!data) {
+    redData = $R_table_obj.$_zero(tableEle.querySelectorAll('thead>tr>th').length);
+    return true;
+  }
+
+  //    console.log(data);
+  redData = $R_table_obj.$_simple(data, event);
+
+  // have look into plain HTML table
+  //    console.log(redData);
+
+  tableEle.appendChild(redData)
+
+  // update table status
+  tableEle.setAttribute(atr.load.table, '1');
+
+  // apply common renders
+  $R_common_obj.$_call(tableEle);
+}
+
+
+const _table_filterEvents = (eventValue) => {
+  filterEle.querySelectorAll('select, input').forEach((value) => {
+
+    //let col = value.getAttribute('data-dt-column');
+
+    switch (value.name) {
+      case 'search':
+        const regex = value.getAttribute('data-dt-regex') === '1';
+        value.addEventListener('keyup', function (evt) {
+          tableObject[eventValue].search(evt.target.value, regex).draw();
+        })
+        break;
+
+      case 'select':
+        value.addEventListener('change', function (evt) {
+          var val = evt.target.value;
+          if (val === 'all') val = '';
+          tableObject[eventValue].column(evt.target.getAttribute('data-dt-column')).search(val).draw();
+        })
+        break;
+
+      case 'clear':
+        value.addEventListener('click', function (evt) {
+          const iid = evt.target.getAttribute('data-pb-instance');
+          console.log(iid);
+          const fp = plg_datePicker.$_get(kws.labels.instance, iid)
+          fp.clear();
+          $.fn.dataTable.ext.search.push(function () { return true});
+          tableObject[eventValue].draw();
+        })
+        break;
+
+      case 'date':
+        value.addEventListener('change', function (evt) {
+          let dates;
+          var val = evt.target.value;
+          if (!val.includes(' to ')) {
+            return;
+          }
+          else {
+            //dates = val.split(' to ');
+          }
+          dates = plg_datePicker.$_get(kws.labels.value)[0];
+          let min = moment(dates[0]).format('YYYY-MM-DD');
+          let max = moment(dates[1]).format('YYYY-MM-DD');
+          $.fn.dataTable.ext.search.push(
+            function (settings, data, dataIndex) {
+              let date = moment(data[evt.target.getAttribute('data-dt-column')]).format('YYYY-MM-DD');
+              //console.log(date);
+              //console.log(min, max);
+              return (min === null && max === null) ||
+                (min === null && date <= max) ||
+                (min <= date && max === null) ||
+                (min <= date && date <= max);
+            }
+          );
+          tableObject[eventValue].draw();
+        })
+        break;
+    }
+  })
+}
+/**
+ * load and append selects when user click on tab nav button.
+ * @param element
+ * @param event
+ * @returns {AjaxPB||boolean}
+ */
+const tabsTarget = function (element, event) {
+  if (element.hasAttribute(atr.load.form)) return true;
+
+  // tabsTarget functions
+
+  const tab_absents = function (data) {
+
+    console.log(data);
+    const combinedData = {
+      ...data,
+      group_by: {
+        "1": ["Date Wise", "Date Wise"],
+        "2": ["Employee Wise", "Employee Wise"]
+      },
+    }
+
+    $R_form_obj.$global(combinedData, element, rdR.form.method.simple);
+    //
+    element.setAttribute(atr.load.form, '1');
+    return true;
+  }
+
+  const tab_overtime = function (data) {
+
+    $R_form_obj.$global(data, element, rdR.form.method.simple);
+
+    element.setAttribute(atr.load.form, '1');
+    return true;
+  }
+
+  const tab_expenses = function (data) {
+
+    const combinedData = {
+      ...data,
+      group_by: {
+        "1": ["Date Wise", "Date Wise"],
+        "2": ["Employee Wise", "Employee Wise"]
+      },
+    }
+
+    $R_form_obj.$global(combinedData, element, rdR.form.method.simple);
+
+    element.setAttribute(atr.load.form, '1');
+    return true;
+  }
+
+  const tab_shortage = function (data) {
+
+    $R_form_obj.$global(data, element, rdR.form.method.simple);
+
+    element.setAttribute(atr.load.form, '1');
+    return true;
+  }
+
+  const tab_commission = function (data) {
+
+
+    $R_form_obj.$global(data, element, rdR.form.method.simple);
+
+    element.setAttribute(atr.load.form, '1');
+    return true;
+  }
+
+
+  const _process = (data) => {
+    let _return = true;
+
+    _return &&= _process_tab(data);
+
+    return _return;
+  }
+
+  const _process_tab = (data) => {
+    switch (event.value) {
+      case pb.rpt.employees.activity.p.absents:
+        return tab_absents(data);
+
+      case pb.rpt.employees.activity.p.overtime:
+        return tab_overtime(data);
+
+      case pb.rpt.employees.activity.p.expenses:
+        return tab_expenses(data);
+
+      case pb.rpt.employees.activity.p.shortage:
+        return tab_shortage(data);
+
+      case pb.rpt.employees.activity.p.commission:
+        return tab_commission(data);
+    }
+    return true;
+  }
+
+  return _process({employees: getStateData().employees});
+  //  const ajax = new AjaxPB();
+  //  const urlID = ajax.buildingURL([], {
+  //    act : event.value,
+  //    type: event.type,
+  //  }, 'local', 0);
+  //  ajax.callREQUEST({}, urlID, false, _process);
+  //
+  //  return ajax;
+}
+
+const reportsTarget = function (element, event) {
+
+  const report_absents = function (element, event) {
+    const _process = (data) => {
+      let _return = true;
+
+      _return &&= _process_key_value_match(data.data);
+      _return &&= _process_header_posting(data.data);
+      _return &&= _process_report_activity_absents(data.data);
+
+      return _return;
+    }
+
+    const _process_key_value_match = (data) => {
+      extend.foreign.$_table({...data, ...getStateData()}, [
+        ["table", "dates", "date_id", 0],
+        ["table", "employees", "employee_id", 1],
+      ])
+      console.log(data);
+      return true;
+    }
+    const _process_header_posting = (data) => {
+
+      let ac = data['account_detail'];
+      // render date
+      let range = ['from', 'to'];
+      let i = 0;
+
+      for (const dateRangeKey in ac.date_range) {
+        const value = $R_common_obj.$_return(
+          ac.date_range[dateRangeKey],
+          rdR.common.methods.date,
+          {}
+        );
+        range.splice(i, 1, value);
+        i++;
+      }
+      ac.date_range = range.join(' to ');
+      ac.closing_balance = $R_common_obj.$_return(
+        ac.closing_balance,
+        rdR.common.methods.currency,
+        {
+          sign: 1
+        }
+      );
+      const headKey = `table-header-${event.value}`;
+      // get template
+      const headerTemplate = _tabLE.template.querySelector(querySA(atr.core.template, headKey));
+
+      const header = element.querySelector(`#${headKey}`);
+      header.innerHTML = extend.append.$_single_on_innerHTML(headerTemplate, ac);
+
+      // update the name in heading
+      element.querySelector(querySA(atr.core.update, kws.attrVal.name))
+        .innerText = ac.name;
+
+      return true;
+    }
+
+    const _process_report_activity_absents = (data) => {
+
+
+      _tableFormation(data.table, event.value);
+
+      // dataTablesInit(event.value);
+
+      // _table_filterEvents(event.value);
+
+      return true;
+    }
+
+    // get target account id [customer id]
+    event.data = formData.employee_id;
+    // get data into passable variable.
+    let data = {};
+    data = {...formData};
+
+    const ajax = new AjaxPB();
+    const urlID = ajax.buildingURL([], {
+      act        : event.value,
+      type       : event.type,
+      employee_id: event.data,
+    }, 'local', 0);
+    ajax.callREQUEST(data, urlID, true, _process);
+
+    return ajax;
+  }
+
+  const report_overtime = function (element, event) {
+    const _process = (data) => {
+      let _return = true;
+
+      _return &&= _process_key_value_match(data.data);
+      _return &&= _process_header_posting(data.data);
+      _return &&= _process_report_activity_overtime(data.data);
+
+      return _return;
+    }
+
+    const _process_key_value_match = (data) => {
+      extend.foreign.$_table({...data, ...getStateData()}, [
+        ["table", "dates", "date_id", 0],
+        ["table", "employees", "employee_id", 1],
+      ])
+      console.log(data);
+      return true;
+    }
+    const _process_header_posting = (data) => {
+      let ac = data['account_detail'];
+      // render date
+      let range = ['from', 'to'];
+      let i = 0;
+
+      for (const dateRangeKey in ac.date_range) {
+        const value = $R_common_obj.$_return(
+          ac.date_range[dateRangeKey],
+          rdR.common.methods.date,
+          {}
+        );
+        range.splice(i, 1, value);
+        i++;
+      }
+      ac.date_range = range.join(' to ');
+      ac.closing_balance = $R_common_obj.$_return(
+        ac.closing_balance,
+        rdR.common.methods.currency,
+        {
+          sign: 1
+        }
+      );
+      const headKey = `table-header-${event.value}`;
+      // get template
+      const headerTemplate = _tabLE.template.querySelector(querySA(atr.core.template, headKey));
+
+      const header = element.querySelector(`#${headKey}`);
+      header.innerHTML = extend.append.$_single_on_innerHTML(headerTemplate, ac);
+
+      // update the name in heading
+      element.querySelector(querySA(atr.core.update, kws.attrVal.name))
+        .innerText = ac.name;
+
+      return true;
+    }
+
+    const _process_report_activity_overtime = (data) => {
+
+
+      _tableFormation(data.table, event.value);
+
+      // dataTablesInit(event.value);
+
+      // _table_filterEvents(event.value);
+
+      return true;
+    }
+
+    // get target account id [customer id]
+    event.data = formData.employee_id;
+    // get data into passable variable.
+    let data = {};
+    data = {...formData};
+
+    const ajax = new AjaxPB();
+    const urlID = ajax.buildingURL([], {
+      act        : event.value,
+      type       : event.type,
+      employee_id: event.data,
+    }, 'local', 0);
+    ajax.callREQUEST(data, urlID, true, _process);
+
+    return ajax;
+  }
+
+
+  const report_expenses = function (element, event) {
+    const _process = (data) => {
+      let _return = true;
+
+      _return &&= _process_key_value_match(data.data);
+      _return &&= _process_header_posting(data.data);
+      _return &&= _process_report_activity_expenses(data.data);
+
+      return _return;
+    }
+
+    const _process_key_value_match = (data) => {
+      extend.foreign.$_table({...data, ...getStateData()}, [
+        ["table", "dates", "date_id", 0],
+        ["table", "employees", "employee_id", 1],
+      ])
+      console.log(data);
+      return true;
+    }
+
+    const _process_header_posting = (data) => {
+      let ac = data['account_detail'];
+      // render date
+      let range = ['from', 'to'];
+      let i = 0;
+      console.log(ac.date_range);
+      for (const dateRangeKey in ac.date_range) {
+        const value = $R_common_obj.$_return(
+          ac.date_range[dateRangeKey],
+          rdR.common.methods.date,
+          {}
+        );
+        range.splice(i, 1, value);
+        i++;
+      }
+      ac.date_range = range.join(' to ');
+      ac.closing_balance = $R_common_obj.$_return(
+        ac.closing_balance,
+        rdR.common.methods.currency,
+        {
+          sign: 1
+        }
+      );
+      const headKey = `table-header-${event.value}`;
+      // get template
+      const headerTemplate = _tabLE.template.querySelector(querySA(atr.core.template, headKey));
+
+      const header = element.querySelector(`#${headKey}`);
+      header.innerHTML = extend.append.$_single_on_innerHTML(headerTemplate, ac);
+
+      // update the name in heading
+      element.querySelector(querySA(atr.core.update, kws.attrVal.name))
+        .innerText = ac.name;
+
+      return true;
+    }
+
+    const _process_report_activity_expenses = (data) => {
+
+
+      _tableFormation(data.table, event.value);
+
+      // dataTablesInit(event.value);
+
+      // _table_filterEvents(event.value);
+
+      return true;
+    }
+
+    // get target account id [customer id]
+    event.data = formData.employee_id;
+    // get data into passable variable.
+    let data = {};
+    data = {...formData};
+
+    const ajax = new AjaxPB();
+    const urlID = ajax.buildingURL([], {
+      act        : event.value,
+      type       : event.type,
+      employee_id: event.data,
+    }, 'local', 0);
+    ajax.callREQUEST(data, urlID, true, _process);
+
+    return ajax;
+  }
+
+  const report_shortage = function (element, event) {
+    const _process = (data) => {
+      let _return = true;
+
+      _return &&= _process_key_value_match(data.data);
+      _return &&= _process_header_posting(data.data);
+      _return &&= _process_report_activity_shortage(data.data);
+
+      return _return;
+    }
+
+    const _process_key_value_match = (data) => {
+      extend.foreign.$_table({...data, ...getStateData()}, [
+        ["table", "dates", "date_id", 0],
+        ["table", "shift_slots", "slot_id", 1],
+      ])
+      console.log(data);
+      return true;
+    }
+
+    const _process_header_posting = (data) => {
+      let ac = data['account_detail'];
+
+      // render date
+      let range = ['from', 'to'];
+      let i = 0;
+      console.log(ac.date_range);
+      for (const dateRangeKey in ac.date_range) {
+        const value = $R_common_obj.$_return(
+          ac.date_range[dateRangeKey],
+          rdR.common.methods.date,
+          {}
+        );
+        range.splice(i, 1, value);
+        i++;
+      }
+      ac.date_range = range.join(' to ');
+      ac.closing_balance = $R_common_obj.$_return(
+        ac.closing_balance,
+        rdR.common.methods.currency,
+        {
+          sign: 1
+        }
+      );
+      const headKey = `table-header-${event.value}`;
+      // get template
+      const headerTemplate = _tabLE.template.querySelector(querySA(atr.core.template, headKey));
+
+      const header = element.querySelector(`#${headKey}`);
+      header.innerHTML = extend.append.$_single_on_innerHTML(headerTemplate, ac);
+
+      // update the name in heading
+      element.querySelector(querySA(atr.core.update, kws.attrVal.name))
+        .innerText = ac.name;
+
+      return true;
+    }
+
+    const _process_report_activity_shortage = (data) => {
+
+
+      _tableFormation(data.table, event.value);
+
+      // dataTablesInit(event.value);
+
+      // _table_filterEvents(event.value);
+
+      return true;
+    }
+
+    // get target account id [customer id]
+    event.data = formData.employee_id;
+    // get data into passable variable.
+    let data = {};
+    data = {...formData};
+
+    const ajax = new AjaxPB();
+    const urlID = ajax.buildingURL([], {
+      act        : event.value,
+      type       : event.type,
+      employee_id: event.data,
+    }, 'local', 0);
+    ajax.callREQUEST(data, urlID, true, _process);
+
+    return ajax;
+  }
+
+  const report_commission = function (element, event) {
+    const _process = (data) => {
+      let _return = true;
+
+      _return &&= _process_key_value_match(data.data);
+      _return &&= _process_header_posting(data.data);
+      _return &&= _process_report_activity_commission(data.data);
+
+      return _return;
+    }
+
+    const _process_key_value_match = (data) => {
+      extend.foreign.$_table({...data, ...getStateData()}, [
+        ["table", "dates", "date_id", 0],
+        ["table", "employees", "employee_id", 1],
+      ])
+      console.log(data);
+      return true;
+    }
+    const _process_header_posting = (data) => {
+
+      let ac = data['account_detail'];
+
+      // render date
+      let range = ['from', 'to'];
+      let i = 0;
+      console.log(ac.date_range);
+      for (const dateRangeKey in ac.date_range) {
+        const value = $R_common_obj.$_return(
+          ac.date_range[dateRangeKey],
+          rdR.common.methods.date,
+          {}
+        );
+        range.splice(i, 1, value);
+        i++;
+      }
+      ac.date_range = range.join(' to ');
+      ac.closing_balance = $R_common_obj.$_return(
+        ac.closing_balance,
+        rdR.common.methods.currency,
+        {
+          sign: 1
+        }
+      );
+      const headKey = `table-header-${event.value}`;
+      // get template
+      const headerTemplate = _tabLE.template.querySelector(querySA(atr.core.template, headKey));
+
+      const header = element.querySelector(`#${headKey}`);
+      header.innerHTML = extend.append.$_single_on_innerHTML(headerTemplate, ac);
+
+      // update the name in heading
+      element.querySelector(querySA(atr.core.update, kws.attrVal.name))
+        .innerText = ac.name;
+
+      return true;
+    }
+
+    const _process_report_activity_commission = (data) => {
+
+
+      console.log(data);
+      _tableFormation(data.table, event.value);
+
+      // dataTablesInit(event.value);
+
+      // _table_filterEvents(event.value);
+
+      return true;
+    }
+
+    // get target account id [customer id]
+    event.data = formData.employee_id;
+    // get data into passable variable.
+    let data = {};
+    data = {...formData};
+
+    const ajax = new AjaxPB();
+    const urlID = ajax.buildingURL([], {
+      act        : event.value,
+      type       : event.type,
+      employee_id: event.data,
+    }, 'local', 0);
+    ajax.callREQUEST(data, urlID, true, _process);
+
+    return ajax;
+  }
+
+  // collect the form and send it to the server.
+
+  const common_exe = function () {
+    // form for parameters
+
+    formEle = _tabLE.action.querySelector('#form-' + event.value);
+    console.log(formEle);
+    //      formEle = _tabLE.action.querySelector('#form-' + event.value)
+    formData = extend.collect.$_form_step(formEle);
+
+    console.log(formData);
+    if (!formData) return false;
+    // table for data loading
+    tableEle = element.querySelector('table');
+    filterEle = element.querySelector('[' + atr.core.target + '="' + kws.value.filters + '"]');
+
+    // checking that table is loaded or not.
+
+    return true;
+  }
+
+  const exe = common_exe();
+  if (!exe) return false;
+
+  // checking that table is loaded or not.
+  if (tableEle.getAttribute(atr.load.table) === '1') return true;
+
+
+  switch (event.value) {
+    case pb.rpt.employees.activity.p.absents:
+      return report_absents(element, event);
+
+    case pb.rpt.employees.activity.p.overtime:
+      return report_overtime(element, event);
+
+    case pb.rpt.employees.activity.p.expenses:
+      return report_expenses(element, event);
+
+    case pb.rpt.employees.activity.p.shortage:
+      return report_shortage(element, event);
+
+    case pb.rpt.employees.activity.p.commission:
+      return report_commission(element, event);
+
+  }
+}
+/**
+ * it just transfers the request to tabsTarget.
+ * @param element
+ * @param event
+ * @returns {AjaxPB|boolean}
+ */
+const tablesTarget = function (element, event) {
+  return tabsTarget(element, event);
+}
+const backsTarget = function (element, event) {
+  // destroy the datatable
+  // tableObject[button.value].clear().destroy();
+  // tableObject[button.value].destroy();
+
+  // empty the table body.
+  const _tableEl = get_passedEl().querySelector('table');
+  _tableEl.setAttribute(atr.load.table, '0');
+  _tableEl.querySelector('tbody').remove();
+  return true;
+}
+
+
+const navtabsTarget = function (element, event) {
+  if (event.value === "search") {
+    _reportLE.navtab.querySelectorAll('[role="tabpanel"]').forEach((element) => {
+      element.removeAttribute(atr.load.tab);
+      const tbody = element.querySelector("tbody");
+      if (tbody) {
+        tbody.remove();
+      }
+    })
+    formData = null;
+    const searchEl = _reportLE.navtab.querySelector("#search-navtab");
+    const form = searchEl.querySelector("form");
+    extend.reset.$_simple_form(form);
+    return true;
+  }
+
+  if (element.getAttribute(atr.load.tab)) return true;
+
+  if (!formData) {
+    console.log("getting form data");
+    const searchEl = _reportLE.navtab.querySelector("#search-navtab");
+    const form = searchEl.querySelector("form");
+    formData = extend.collect.$_form_step(form);
+  }
+  if (!formData) return false;
+
+
+  const _process = (data) => {
+    let _return = true;
+
+    _return &&= _process_aa(data.data);
+
+    return _return;
+  }
+
+  const readyData = (data) => {
+    switch (event.value) {
+      case pb.rpt.employees.activity.p.absences:
+      case pb.rpt.employees.activity.p.overtime:
+      case pb.rpt.employees.activity.p.expenses:
+      case pb.rpt.employees.activity.p.commission:
+        extend.foreign.$_table({...data, ...getStateData()}, [
+          ["table", "dates", "date_id", 0],
+          ["table", "employees", "employee_id", 1],
+        ])
+        break;
+      case pb.rpt.employees.activity.p.collection:
+        extend.foreign.$_table({...data, ...getStateData()}, [
+          ["table", "dates", "date_id", 0],
+          ["table", "shift_slots", "slot_id", 1],
+        ])
+        break;
+    }
+  }
+
+  const _process_aa = (data) => {
+    readyData(data);
+
+
+    _tableFormation(data.table, pb.rpt.employees.activity.p[event.value],
+      element.querySelector("table"));
+
+    element.setAttribute(atr.load.tab, 1);
+    return true;
+  }
+
+
+  const ajax = new AjaxPB();
+  const urlID = ajax.buildingURL([], {
+    act : event.value,
+    type: event.type,
+  });
+  ajax.callREQUEST(formData, urlID, true, _process);
+
+
+  return true;
+
+  return true;
+
+}
+
+
+// Public methods
+
+
+export const REA_tabs = function (_event) {
+  return eleCheck() ? tabsTarget(get_callEl(), _event) : false;
+};
+
+export const REA_reports = function (_event) {
+  return eleCheck() ? reportsTarget(get_callEl(), _event) : false;
+};
+export const REA_tables = function (_event) {
+  return eleCheck() ? tablesTarget(get_callEl(), _event) : false;
+};
+export const REA_backs = function (_event) {
+  return eleCheck() ? backsTarget(get_callEl(), _event) : false;
+};
+// fetching all upcoming required details
+export const REA_Requests = function (data) {
+  return pageOpen(data);
+};
+
+export const REA_navtabs = function (_event) {
+  return eleCheck() ? navtabsTarget(get_callEl(), _event) : false;
+
+}
+

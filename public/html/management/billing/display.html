@@ -1,0 +1,385 @@
+<div data-pb-layout="wizards"
+     data-e-welcome="home"
+     data-layout="parent">
+	
+	<div id="vista__wizards"
+	     class="zone d-none d-flex flex-column flex-lg-row">
+		<div id="search__wizards"
+		     class="sub-zone w-100 w-lg-300px w-xxl-325px mb-8 mb-lg-0 me-lg-9 me-5">
+			<div class="card">
+				<form id="filter">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-12 col-sm-6 col-md-4 col-lg-12">
+								<div class="mb-5">
+									<label class="form-label">Customers</label>
+									<select name="customer_ids[]"
+									        class="form-select form-select-solid"
+									        data-pb-control="select"
+									        data-pb-source="customers"
+									        data-pb-method="account"
+									        data-pb-tack="group"
+									        data-pb-placeholder="Select Customers"
+									        multiple="multiple"
+									        title="Select the Customers"> </select>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-4 col-lg-12">
+								<div class="mb-5">
+									<label class="form-label">Month</label>
+									<input type="text"
+									       name="month"
+									       data-pb-control="date"
+									       data-pb-method="month"
+									       class="form-control form-control-solid"
+									       placeholder="Select Month"
+									       title="Select Month" />
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-4 col-lg-12">
+								<div class="mb-5">
+									<label class="form-label">Invoice</label>
+									<select name="invoice_ids[]"
+									        class="form-select form-select-solid"
+									        data-pb-control="select"
+									        data-pb-source="invoices"
+									        data-pb-method="simple"
+									        data-pb-tack="subtext"
+									        data-pb-allow-clear="false"
+									        data-pb-placeholder="Select Invoice"
+									        multiple="multiple"
+									        title="Select the Invoice"> </select>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-6 col-lg-12">
+								<div class="mb-5">
+									<label class="fs-6 form-label fw-bold text-dark">Payment Status</label>
+									<div class="nav-group nav-group-fluid">
+										<label>
+											<input type="radio"
+											       class="btn-check"
+											       name="payment_status"
+											       value="all" />
+											<span class="btn btn-sm btn-color-gray-700 btn-active btn-active-dark fw-bold px-4">Both</span>
+										</label>
+										<label>
+											<input type="radio"
+											       class="btn-check"
+											       name="payment_status"
+											       value="paid" />
+											<span class="btn btn-sm btn-color-gray-700 btn-active btn-active-success fw-bold px-4">Paid</span>
+										</label>
+										<label>
+											<input type="radio"
+											       class="btn-check"
+											       name="payment_status"
+											       value="unpaid" />
+											<span class="btn btn-sm btn-color-gray-700 btn-active btn-active-danger fw-bold px-4">UnPaid</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-6 col-lg-12">
+								<div class="mb-0">
+									<label class="fs-6 form-label fw-bold text-dark">Invoice Type</label>
+									<div class="nav-group nav-group-fluid">
+										<label>
+											<input type="radio"
+											       class="btn-check"
+											       name="invoice_type"
+											       value="bill_of_supply" />
+											<span class="btn btn-sm btn-active-info fw-bold px-4">Bill of Supply</span>
+										</label>
+										<label>
+											<input type="radio"
+											       class="btn-check"
+											       name="invoice_type"
+											       value="tax_invoice" />
+											<span class="btn btn-sm btn-active-success fw-bold px-4">TAX Invoice</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer">
+						<div class="d-flex align-items-center justify-content-end">
+							<button type="reset"
+							        name="action"
+							        value="reset"
+							        data-e-nature="post"
+							        class="btn btn-active-light-primary btn-color-gray-800 me-3">Reset
+							</button>
+							<button type="button"
+							        name="action"
+							        value="result"
+							        data-e-recall
+							        data-e-nature="post"
+							        data-form-submit=""
+							        class="btn btn-primary">Search
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="result__wizards"
+		     class="sub-zone flex-lg-row-fluid">
+			<div class="card card-flush">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-row-bordered table-row-dashed gy-2 align-middle fs-5">
+							<thead class="fs-5 text-gray-400 text-uppercase">
+							<tr>
+								<th class="min-w-100px">Date</th>
+								<th class="min-w-100px">Invoice Number</th>
+								<th class="min-w-200px">Customer Name</th>
+								<th class="min-w-100px">Amount</th>
+								<th class="min-w-100px">Status</th>
+								<th class="min-w-75px text-end">Action</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="present__wizards"
+	     class="zone d-none">
+		<div id="display__wizards"></div>
+		<div id="design__wizards">
+			<div data-pb-key="design_1"></div>
+			<div data-pb-key="design_2"></div>
+		</div>
+		<div class="card shadow-sm">
+			<div class="card-header d-print-none">
+				<div class="card-title my-0">
+					<button type="button"
+					        data-e-nature="back"
+					        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+						<i class="bi fs-2 bi-arrow-left-circle"></i>
+						<span class="d-none d-sm-inline">Back</span>
+					</button>
+					<h3 data-pb-update="name">#Invoice -
+						<span></span>
+					</h3>
+				</div>
+				<div class="card-toolbar my-0">
+					<a class="btn btn-sm fw-semibold btn-light-danger hover-elevate-down">
+						<i class="bi fs-2 bi-file-pdf"></i>
+						<span class="d-none d-sm-inline">PDF</span>
+					</a>
+					<a class="btn btn-sm fw-semibold btn-light-dark ms-3 hover-elevate-down">
+						<i class="bi fs-2 bi-printer"></i>
+						<span class="d-none d-sm-inline">Print</span>
+					</a>
+					<a class="btn btn-sm fw-semibold btn-light-success ms-3 hover-elevate-down">
+						<i class="bi fs-2 bi-whatsapp"></i>
+						<span class="d-none d-sm-inline">WhatsApp</span>
+					</a>
+					<a class="btn btn-sm fw-semibold btn-light-primary ms-3 hover-elevate-down">
+						<i class="bi fs-2 bi-envelope"></i>
+						<span class="d-none d-sm-inline">Email</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header py-10">
+				<div data-pb-append="header"></div>
+			</div>
+			
+			<div class="card-body py-20">
+				
+				<div class="separator separator my-7 border-gray-500"></div>
+				<div class="d-flex">
+					<div data-pb-append="customer"></div>
+					<div data-pb-append="invoice"></div>
+				</div>
+				<div class="separator separator my-7 border-gray-500"></div>
+				<div data-pb-append="detail_invoice"></div>
+				<div class="d-flex">
+					<div data-pb-append="summary"></div>
+					<div data-pb-append="final"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="templates__wizards"
+	     class="d-none">
+		<div data-pb-template="header">
+			<h2 class="text text-center">BILL OF SUPPLY</h2>
+			<div class="d-flex">
+				<div class="w-15 m-4">
+					<img class="rc_image"
+					     data-pb-source="$$@icon@$$"
+					     data-cs-path="media"
+					     src=""
+					     alt="icon">
+				</div>
+				<div class="d-flex flex-column mx-7">
+					<span class="m-3">$$@name@$$</span>
+					<div class="m-3">
+						<span class="">A Authorised RO Address Of
+						</span>
+						<span class="m-3">$$@company@$$</span>
+					</div>
+					<div class="m-3">
+						<span class="m-3">Ro Address:</span>
+						<span class="m-3">$$@address@$$</span>
+					</div>
+				</div>
+				<div class="d-flex flex-column mx-9">
+					<div>
+						<span>Contact Details:</span>
+						<div class="d-flex flex-column">
+							<span class="m-3">$$@phone@$$</span>
+							<span class="m-3">$$@email@$$</span>
+						</div>
+					</div>
+					<div>
+						<span class="m-3">GSTIN:</span>
+						<span class="m-3">$$@gstin@$$</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="customer"
+		     class="d-flex flex-column">
+			<div>
+				<span class="m-3">Invoice To:</span>
+				<span class="m-3">$$@invoice_to@$$</span>
+			</div>
+			<div>
+				<span class="m-3">Address:</span>
+				<span class="m-3">$$@address@$$</span>
+			</div>
+			<div>
+				<span class="m-3">Mobile:</span>
+				<span class="m-3">$$@phone@$$</span>
+			</div>
+			<div>
+				<span class="m-3">GSTIN:</span>
+				<span class="m-3">$$@gstin@$$</span>
+			</div>
+		</div>
+		<div data-pb-template="invoice"
+		     class="d-flex flex-column">
+			
+			<div>
+				<span class="m-3">Invoice Number:</span>
+				<span class="m-3">$$@invoice_no@$$</span>
+			</div>
+			<div>
+				<span class="m-3">Invoice Date:</span>
+				<span class="m-3">$$@invoice_date@$$</span>
+			</div>
+			<div class="d-flex">
+				<span class="m-3">Billing Period:</span>
+				<div class="flex-end m-3">
+					<span class="">Invoice ID-</span>
+					<span class="">$$@invoice_id@$$</span>
+				</div>
+			</div>
+			<div class="d-flex">
+				<div>
+					<span class="m-3">From:</span>
+					<span class="m-3">$$@from@$$</span>
+				</div>
+				<div>
+					<span class="m-3">To:</span>
+					<span class="m-3">$$@to@$$</span>
+				</div>
+			</div>
+		
+		</div>
+		<div data-pb-template="detail_invoice">
+			<h4 class="text text-center">Detail OF Invoice</h4>
+			<div class="table-responsive">
+				<table class="table align-middle table-row-dashed gy-1 gs-7 text-gray-700 fs-5 bg-white rounded"
+				       data-load-table="false">
+					<thead>
+					<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+						<th nowrap=""
+						    class="min-w-125px">S.No
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Date
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Product
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Bill
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Slip
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Vehicle
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Quantity
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Rate
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Amount
+						</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div data-pb-template="summary">
+			<div class="table-responsive">
+				<table class="table align-middle table-row-dashed gy-1 gs-7 text-gray-700 fs-5 bg-white rounded"
+				       data-load-table="false">
+					<thead>
+					<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+						<th nowrap=""
+						    class="min-w-125px">Product
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Quantity
+						</th>
+						<th nowrap=""
+						    class="min-w-125px">Amount
+						</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div data-pb-template="final"
+		     class="float-end">
+			<div class="m-3">
+				<span class="m-3">Sub Total Amount</span>
+				<span class="m-3 float-end">$$@total_amount@$$</span>
+			</div>
+			<div class="m-3">
+				<span class="m-3">Cash Discount</span>
+				<span class="float-end m-3">$$@cash_discount@$$</span>
+			</div>
+			<div class="m-3">
+				<span class="m-3">TCS Amount</span>
+				<span class="float-end m-3">$$@tcs_amount@$$</span>
+			</div>
+			<div class="m-3">
+				<span class="m-3">Round Off(+/-)</span>
+				<span class="float-end m-3">$$@round_off@$$</span>
+			</div>
+			<div class="m-3">
+				<span class="m-3">Total Bill Amount</span>
+				<span class="float-end m-3 rc_currency"
+				      data-cs-currency="1"
+				      data-cs-round="0">$$@total_bill_amount@$$
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

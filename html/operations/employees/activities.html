@@ -1,0 +1,1565 @@
+<div data-pb-layout="buttons"
+     data-e-welcome="controls"
+     data-layout="parent"
+     class="layout">
+	<div id="controls__buttons"
+	     class="row zone">
+		<div id="menu__buttons"
+		     class="sub-zone col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-12">
+			<div class="card">
+				<form id="change-action"
+				      autocomplete="off"
+				      data-pb-control="combo"
+				      data-pb-method="simple"
+				      class="form-group">
+					<div class="card-header pt-1">
+						<div class="card-title w-50">
+							<h2>
+								<input type="text"
+								       name="work-date"
+								       data-pb-control="date"
+								       data-pb-method="month"
+								       data-date-format="dt_fmonth"
+								       class="form-control form-control-transparent p-0 fs-2"
+								       placeholder="Work Date"
+								       title="" />
+							</h2>
+						</div>
+						<div class="card-toolbar">
+							//redirect
+						</div>
+					</div>
+				</form>
+				<div class="card-body pt-5">
+					<div class="d-flex flex-column gap-5"
+					     id="menuList">
+						<menu-list data-menu-key="activities"
+						           data-menu-event="activities"
+						           data-menu-text="Total Activities: "></menu-list>
+						<div class="separator separator-dashed"></div>
+						<menu-list data-menu-key="duty-absent"
+						           data-menu-event="duty-absent"
+						           data-menu-text="Duty-absent"
+						           data-menu-tooltip="asdf"></menu-list>
+						<menu-list data-menu-key="self-expense"
+						           data-menu-event="self-expense"
+						           data-menu-text="Self-expense"
+						           data-menu-tooltip="asdf"></menu-list>
+						<menu-list data-menu-key="overtime"
+						           data-menu-event="overtime"
+						           data-menu-text="OverTime"
+						           data-menu-tooltip="asdf"></menu-list>
+						<menu-list data-menu-key="collection-short"
+						           data-menu-event="collection-short"
+						           data-menu-text="Collection-short"
+						           data-menu-tooltip="asdf"></menu-list>
+						<menu-list data-menu-key="sales-commission"
+						           data-menu-event="sales-commission"
+						           data-menu-text="Sales commission"
+						           data-menu-tooltip="asdf"></menu-list>
+						<div class="separator separator-dashed"></div>
+						<div data-pb-key="activityReport"
+						     class="d-flex flex-stack">
+							<a href="javascript:"
+							   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Full Activity Report</a>
+							<div data-pb-reserve
+							     class="fs-4 badge badge-light-primary"
+							     data-bs-toggle="tooltip"
+							     title="Total Entry Created">0
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button type="button"
+					        name="card"
+					        value="search"
+					        data-e-recall=""
+					        class="btn btn-flex btn-light-info px-6 mb-6 w-100">
+						<i class="fs-3x lab la-searchengin"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Search Entry</span>
+							<span class="fs-7">Employee Activities</span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="buttons__buttons"
+		     class="sub-zone col-xxl-8 col-xl-7 col-lg-6 col-md-6 col-12">
+			<div class="row">
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Absents"
+					             data-card-icon="bi bi-cash-stack">
+						<btn data-btn-value="absent"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="absent"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="OverTime"
+					             data-card-icon="bi bi-cash-stack">
+						<btn data-btn-value="overtime"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="overtime"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+				<div class="col-xl-6 col-lg-12 col-md-12">
+					<card-button data-card-title="Self Expenses"
+					             data-card-icon="bi bi-cash-stack">
+						<btn data-btn-value="expense"
+						     data-btn-name="form"
+						     data-btn-icon="bi bi-plus-lg">Create
+						</btn>
+						<btn data-btn-value="expense"
+						     data-btn-name="table"
+						     data-btn-icon="">Overview
+						</btn>
+					</card-button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="forms__buttons"
+	     class="zone">
+		<div id="absent-form"
+		     class="d-none sub-zone">
+			<div class="card shadow-sm">
+				<div class="card-body py-5">
+					<form id="form-absent"
+					      class="form"
+					      data-pb-control="repeater"
+					      data-pb-method="advance"
+					      data-form-sno="1"
+					      method="post"
+					      autocomplete="off">
+						<div class="form-group">
+							<div class="main-repeater"
+							     data-repeater-list="repeater_form_list">
+								<div data-repeater-item>
+									<div class="row fv-row">
+										<div class="col mb-7">
+											<!--<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">-->
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-week"></i>
+												<span class="required">Absent Dates</span>
+												<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+												   data-bs-toggle="tooltip"
+												   data-bs-html="true"
+												   title="<span class='fs-6'>Multiple dates can be selected</span>"></i>
+											</label>
+											<input type="text"
+											       name="dates"
+											       required
+											       class="form-control form-control-solid"
+											       data-pb-control="date"
+											       data-pb-method="multiple"
+											       data-pb-placeholder="Select Absent Date(s)"
+											       title="When staff was Absent ??" />
+										</div>
+										<div class="col mb-7">
+											<!--<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">-->
+											
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-people"></i>
+												<span class="required">Employee Names</span>
+												<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+												   data-bs-toggle="tooltip"
+												   data-bs-html="true"
+												   title="<span class='fs-6'>Multiple employee can be selected</span>"></i>
+											</label>
+											<select name="employee"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Select Staff Account(s)"
+											        title="Who is Absent ??">
+												<option></option>
+											
+											</select>
+										</div>
+										<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-sliders"></i>
+												<span class="required">Absent Value</span>
+											</label>
+											<div class="mt-7 mb-0 bg-light-danger"
+											     data-pb-control="slider"
+											     data-pb-value="Deduction">
+												<span hidden
+												      data-pb-call></span>
+												<input type="text"
+												       name="abs"
+												       class="form-range"
+												       hidden
+												       title="" />
+											</div>
+										</div>
+										<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-bell"></i>
+												<span>Notification</span>
+											</label>
+											<div class="btn-group w-100"
+											     data-pb-buttons="true">
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="sms" />
+													<i class="bi bi-chat-left-text text-primary fs-2"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="wa" />
+													<i class="bi bi-whatsapp fs-2 text-success"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="mail" />
+													<i class="bi bi-envelope-paper fs-2 text-danger"></i>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+											<a href="javascript:"
+											   data-repeater-delete
+											   class="btn btn-sm btn-light-danger w-100">
+												<i class="fs-3 fa-solid fa-circle-minus"></i>
+												Delete Block
+											</a>
+										</div>
+										<div data-pb-append="separate"
+										     class="col-12"></div>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+						<div class="mt-0">
+							<a href="javascript:"
+							   data-repeater-create="outer"
+							   class="btn btn-sm btn-light-primary">
+								<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-absent"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-nature="post"
+							        data-e-value="absent"
+							        type="button">Reset
+							</button>
+							<button form="form-absent"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="absent"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save Absent</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="overtime-form"
+		     class="d-none sub-zone">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<form class="form"
+					      id="form-overtime"
+					      data-pb-control="repeater"
+					      data-pb-method="advance"
+					      data-form-sno="2"
+					      method="post"
+					      autocomplete="off">
+						<div class="form-group">
+							<div class="main-repeater"
+							     data-repeater-list="repeater_form_list">
+								<div data-repeater-item>
+									<div class="row fv-row">
+										<!--<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">-->
+										<div class="col mb-7">
+											
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-week"></i>
+												<span class="required">Overtime Dates</span>
+												<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+												   data-bs-toggle="tooltip"
+												   data-bs-html="true"
+												   title="<span class='fs-6'>Multiple dates can be selected</span>"></i>
+											</label>
+											<input type="text"
+											       name="dates"
+											       required
+											       class="form-control form-control-solid "
+											       data-pb-control="date"
+											       data-pb-method="multiple"
+											       data-pb-placeholder="Select OverTime Date(s)"
+											       title="When staff did Overtime ??" />
+										</div>
+										<div class="col mb-7">
+											<!--<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">-->
+											
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-people"></i>
+												<span class="required">Employee Names</span>
+												<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+												   data-bs-toggle="tooltip"
+												   data-bs-html="true"
+												   title="<span class='fs-6'>Multiple employee can be selected</span>"></i>
+											</label>
+											<select name="employee"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Select Staff Account(s)"
+											        title="Who did Overtime ??">
+												<option></option>
+											
+											</select>
+										</div>
+										<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+											<!--<div class="col mb-7">-->
+											
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-sliders"></i>
+												<span class="required">OverTime Value</span>
+											</label>
+											<div class="mt-7 mb-0 bg-light-success"
+											     data-pb-control="slider"
+											     data-pb-value="Addition">
+												<span hidden
+												      data-pb-call></span>
+												<input type="text"
+												       name="ot"
+												       class="form-range"
+												       hidden
+												       title="" />
+											</div>
+										</div>
+										<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-bell"></i>
+												<span class="required">Notification</span>
+											</label>
+											<div class="btn-group w-100"
+											     data-pb-buttons="true">
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="sms" />
+													<i class="bi bi-chat-left-text text-primary fs-2"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="wa" />
+													<i class="bi bi-whatsapp fs-2 text-success"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="mail" />
+													<i class="bi bi-envelope-paper fs-2 text-danger"></i>
+												</label>
+											</div>
+										</div>
+										<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7 float-xxl-end">
+											
+											<a href="javascript:"
+											   data-repeater-delete
+											   class="btn btn-sm btn-light-danger w-100">
+												<i class="fs-3 fa-solid fa-circle-minus"></i>
+												Delete Block
+											</a>
+										</div>
+									
+									</div>
+									
+									<div class="col-12"
+									     data-pb-append="separate"></div>
+								</div>
+							</div>
+						</div>
+						<div class="mt-0">
+							<a href="javascript:"
+							   data-repeater-create="outer"
+							   class="btn btn-sm btn-light-primary">
+								<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-overtime"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-value="overtime"
+							        data-e-nature="post"
+							        type="button">Reset
+							</button>
+							<button form="form-overtime"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="overtime"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save Overtime</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="expense-form"
+		     class="d-none sub-zone">
+			<div class="card shadow-sm">
+				
+				<div class="card-body">
+					<form id="form-expense"
+					      data-pb-control="repeater"
+					      data-pb-method="nested"
+					      data-form-sno="2"
+					      method="post"
+					      class="form"
+					      autocomplete="off">
+						<div class="form-group">
+							<div class="main-repeater"
+							     data-repeater-list="self_expense">
+								<div data-repeater-item>
+									<div class="row fv-row">
+										<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-journal-bookmark"></i>
+												<span class="required">Expense Paid Though Account</span>
+											</label>
+											<select name="cash_ac"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="account"
+											        data-pb-tack="amount"
+											        data-pb-placeholder="Select Cash Account"
+											        title="Select Cash Account">
+											
+											</select>
+										</div>
+										<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+											<label class="form-label">
+												<i class="fs-2 me-1 text-gray-700 bi bi-bell"></i>
+												<span class="required">Notification</span>
+											</label>
+											<div class="btn-group w-100"
+											     data-pb-buttons="true">
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="sms" />
+													<i class="bi bi-chat-left-text text-primary fs-2"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="wa" />
+													<i class="bi bi-whatsapp fs-2 text-success"></i>
+												</label>
+												<label class="fw-semibold fs-primary btn btn-outline btn-color-muted btn-active-light-dark">
+													<input class="btn-check"
+													       type="radio"
+													       name="notify"
+													       value="mail" />
+													<i class="bi bi-envelope-paper fs-2 text-danger"></i>
+												</label>
+											</div>
+										</div>
+									
+									</div>
+									<div class="inner-repeater">
+										<div data-repeater-list="self_expense_inner"
+										     class="mb-0">
+											<div data-repeater-item>
+												<div class="row fv-row">
+													<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+														<select name="employee"
+														        required
+														        class="form-select form-select-solid"
+														        data-pb-control="select"
+														        data-pb-method="simple"
+														        data-pb-tack="direct"
+														        data-pb-placeholder="Select Employee Name"
+														        title="Select Employee Name">
+															<option></option>
+														</select>
+													</div>
+													<div class="col-xxl-2 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+														<!--<label class="form-label required">Date of Expense</label>-->
+														<input type="text"
+														       name="date"
+														       required
+														       class="form-control form-control-solid"
+														       data-pb-control="date"
+														       data-pb-method="human"
+														       placeholder="Expense Date"
+														       title="When Expense Occurred ??" />
+													</div>
+													<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+														<!--<label class="form-label required">Expense Amount</label>-->
+														<input type="text"
+														       name="amount"
+														       required
+														       class="form-control form-control-solid inr_mask_50 text-end"
+														       placeholder="Expense Amount"
+														       title="How much Expense Amount ??" />
+													</div>
+													<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+														<!--<label class="form-label">Expense Note</label>-->
+														<input type="text"
+														       name="note"
+														       required
+														       data-control="tagify"
+														       data-pb-method="select"
+														       data-pb-source="remote"
+														       data-pb-target="tgAbcdNote_sel"
+														       data-tag-force="1"
+														       data-tag-list="1"
+														       data-tag-items="5"
+														       class="form-control form-control-solid"
+														       placeholder="Note on Expense"
+														       title="Any comment on the Expense ??" />
+														<span id="tgAbcdNote_sel"
+														      data-tag-source
+														      class="d-none">a|b|c|d|asdf|rq34|hfdh|23423|fasdf
+														</span>
+													</div>
+													
+													<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+														<a href="javascript:"
+														   data-repeater-delete
+														   class="btn btn-sm rounded-3 btn-light-danger w-100">
+															<i class="fs-3 fa-solid fa-minus"></i>
+															Delete
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<a href="javascript:"
+											   data-repeater-create="inner"
+											   class="btn rounded-3 btn-sm btn-light-primary">
+												<i class="fs-3 fa-solid fa-plus"></i>Add Row
+											</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+											<a href="javascript:"
+											   data-repeater-delete
+											   class="btn btn-sm btn-light-danger w-100">
+												<i class="fs-3 fa-solid fa-circle-minus"></i>
+												Delete Block
+											</a>
+										</div>
+									</div>
+									<div class="col-12"
+									     data-pb-append="separate"></div>
+								</div>
+							</div>
+						</div>
+						<div class="mt-0">
+							<a href="javascript:"
+							   data-repeater-create="outer"
+							   class="btn btn-sm btn-light-primary">
+								<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-5">
+					<div class="d-flex flex-stack">
+						<div class="align-items-start">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">
+								Discard (Back to Home)
+							</button>
+						</div>
+						<div class="align-items-end">
+							<button form="form-expense"
+							        class="btn btn-light-info btn-active-info mx-3"
+							        name="action"
+							        value="reset"
+							        data-e-value="self-expense"
+							        data-e-nature="post"
+							        type="button">Reset
+							</button>
+							<button form="form-expense"
+							        class="btn btn-primary"
+							        data-form-submit
+							        name="action"
+							        value="save"
+							        data-e-value="self-expense"
+							        data-e-nature="post"
+							        type="button">
+								<span class="indicator-label">Save Self Expense</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="tables__buttons"
+	     class="d-none zone">
+		<div class="sub-zone d-none"
+		     id="absent-table">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Employee Absents Table</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark goBack hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left"></i>
+							Go Back
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th>#</th>
+								<th class="min-w-100px">Employee Name</th>
+								<th class="min-w-100px">Working Role</th>
+								<th class="min-w-100px">Absents Taken</th>
+								<th class="min-w-100px">Absents Charge</th>
+							</tr>
+							</thead>
+							<tbody class="text-gray-800 fw-semibold fs-5">
+							<tr>
+								<td>EID: #1</td>
+								<td>Rakesh Kumar</td>
+								<td>SalesMan</td>
+								<td>345</td>
+								<td>
+									<span class="fw-bold fs-5 rc_currency"
+									      data-cs-round="2"
+									      data-cs-currency="1"
+									      data-cs-postfix="/-">5345
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="4"
+								    class="pe-xxl-20 pe-xl-15 pe-lg-10 pe-10">
+									<div class="table-responsive">
+										<table class="table table-rounded table-hover border border-gray-300 align-middle table-row-dashed gy-3 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-7 text-gray-500 text-uppercase">
+												<td>Date</td>
+												<td>Absent</td>
+												<td>Charge</td>
+												<td>Status</td>
+												<td>Action</td>
+											</tr>
+											</thead>
+											<tbody class="text-gray-600 fw-semibold fs-5">
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-success fs-5">Locked</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="423"
+													        data-pb-action="delAbsent"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="433"
+													        data-pb-action="delAbsent"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>EID: #2</td>
+								<td>Lokesh Kumar</td>
+								<td>Manager</td>
+								<td>2</td>
+								<td>
+									<span class="fw-bold fs-5 rc_currency"
+									      data-cs-round="2"
+									      data-cs-currency="1"
+									      data-cs-postfix="/-">5345
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="4"
+								    class="pe-xxl-20 pe-xl-15 pe-lg-10 pe-10">
+									<div class="table-responsive">
+										<table class="table table-rounded table-hover border border-gray-300 align-middle table-row-dashed gy-3 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-7 text-gray-500 text-uppercase">
+												<td>Date</td>
+												<td>Absent</td>
+												<td>Charge</td>
+												<td>Status</td>
+												<td>Action</td>
+											</tr>
+											</thead>
+											<tbody class="text-gray-600 fw-semibold fs-5">
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-success fs-5">Locked</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="112"
+													        data-pb-action="delAbsent"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="312"
+													        data-pb-action="delAbsent"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none sub-zone"
+		     id="overtime-table">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Employee Overtime Table</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark goBack hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left"></i>
+							Go Back
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th>#</th>
+								<th class="min-w-100px">Employee Name</th>
+								<th class="min-w-100px">Working Role</th>
+								<th class="min-w-100px">OverTime did</th>
+								<th class="min-w-100px">OverTime Amount</th>
+							</tr>
+							</thead>
+							<tbody class="text-gray-800 fw-semibold fs-5">
+							<tr>
+								<td>EID: #1</td>
+								<td>Rakesh Kumar</td>
+								<td>SalesMan</td>
+								<td>2</td>
+								<td>
+									<span class="fw-bold fs-5 rc_currency"
+									      data-cs-round="2"
+									      data-cs-currency="1"
+									      data-cs-postfix="/-">5345
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="4"
+								    class="pe-xxl-20 pe-xl-15 pe-lg-10 pe-10">
+									<div class="table-responsive">
+										<table class="table table-rounded table-hover border border-gray-300 align-middle table-row-dashed gy-3 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-7 text-gray-500 text-uppercase">
+												<td>Date</td>
+												<td>Overtime</td>
+												<td>Amount</td>
+												<td>Status</td>
+												<td>Action</td>
+											</tr>
+											</thead>
+											<tbody class="text-gray-600 fw-semibold fs-5">
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-success fs-5">Locked</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="423"
+													        data-pb-action="delOvertime"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="433"
+													        data-pb-action="delOvertime"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>EID: #2</td>
+								<td>Lokesh Kumar</td>
+								<td>Manager</td>
+								<td>2</td>
+								<td>
+									<span class="fw-bold fs-5 rc_currency"
+									      data-cs-round="2"
+									      data-cs-currency="1"
+									      data-cs-postfix="/-">5345
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="4"
+								    class="pe-xxl-20 pe-xl-15 pe-lg-10 pe-10">
+									<div class="table-responsive">
+										<table class="table table-rounded table-hover border border-gray-300 align-middle table-row-dashed gy-3 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-7 text-gray-500 text-uppercase">
+												<td>Date</td>
+												<td>Overtime</td>
+												<td>Amount</td>
+												<td>Status</td>
+												<td>Action</td>
+											</tr>
+											</thead>
+											<tbody class="text-gray-600 fw-semibold fs-5">
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-success fs-5">Locked</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="112"
+													        data-pb-action="delOvertime"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>50% of basic</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="312"
+													        data-pb-action="delOvertime"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none sub-zone"
+		     id="self-expense-table">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<h3 class="card-title">Employee Expenses Table</h3>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark goBack hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left"></i>
+							Go Back
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th>#</th>
+								<th class="min-w-100px">Employee Name</th>
+								<th class="min-w-100px">Working Role</th>
+								<th class="min-w-100px">No. of Expenses</th>
+								<th class="min-w-100px">Expense Value</th>
+							</tr>
+							</thead>
+							<tbody class="text-gray-800 fw-semibold fs-5">
+							<tr>
+								<td>EID: #1</td>
+								<td>Rakesh Kumar</td>
+								<td>SalesMan</td>
+								<td>3</td>
+								<td>
+									<span class="fw-bold fs-5 rc_currency"
+									      data-cs-round="2"
+									      data-cs-currency="1"
+									      data-cs-postfix="/-">5345
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="4"
+								    class="pe-xxl-20 pe-xl-15 pe-lg-10 pe-10">
+									<div class="table-responsive">
+										<table class="table table-rounded table-hover border border-gray-300 align-middle table-row-dashed gy-3 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-7 text-gray-500 text-uppercase">
+												<td class="min-w-100px">Date</td>
+												<td class="min-w-100px">Account</td>
+												<td>Amount</td>
+												<td class="min-w-150px">Note</td>
+												<td>Status</td>
+												<td>Action</td>
+											</tr>
+											</thead>
+											<tbody class="text-gray-600 fw-semibold fs-5">
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>
+													<span class="fw-bold fs-5">Cash</span>
+												</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>Mobile Recharge</td>
+												<td>
+													<span class="fw-semibold badge badge-light-success fs-5">Locked</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="rc_date"
+													      data-cs-format="b">2022-10-01
+													</span>
+												</td>
+												<td>
+													<span class="fw-bold fs-5">Staff Fuel Account</span>
+												</td>
+												<td>
+													<span class="rc_currency text-gray-700"
+													      data-cs-round="0"
+													      data-cs-currency="1">23454
+													</span>
+												</td>
+												<td>Petrol in Bike</td>
+												<td>
+													<span class="fw-semibold badge badge-light-info fs-5">Open</span>
+												</td>
+												<td>
+													<button type="button"
+													        value="423"
+													        data-pb-action="delExpense"
+													        class="btn btn-sm py-1 btn-light-danger">
+														<i class="fs-2 me-1 bi bi-dash-circle-dotted"></i>
+														Delete
+													</button>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cards__buttons"
+	     class="zone">
+		<div id="search-card"
+		     class="d-none sub-zone">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<div class="mb-10">
+						<form id="search-entry"
+						      data-pb-control="dom"
+						      class="form-group">
+							<div class="form-group row fv-row">
+								<div class="col-3">
+									<button type="button"
+									        data-e-nature="back"
+									        class="btn btn-flex btn-secondary px-6 py-3 w-100">
+										<i class="fs-2x me-1 bi bi-arrow-left-circle"></i>
+										<span class="d-flex flex-column align-items-start ms-2">
+											<span class="fs-3 fw-bold">Back</span>
+											<span class="fs-7">Home</span>
+										</span>
+									</button>
+								</div>
+								<div class="col-6">
+									<div class="accordion"
+									     id="accordion-search">
+										<div class="accordion-item">
+											<h2 id="accordion-search_item_a"
+											    class="accordion-header">
+												<a class="accordion-button fs-4 fw-semibold collapsed py-7"
+												   type="button"
+												   data-e-type="anchor"
+												   data-bs-toggle="collapse"
+												   data-bs-target="#accordion-search_item_a_body"
+												   aria-expanded="true"
+												   aria-controls="accordion-search_item_a_body">
+													Select Search Parameters </a>
+											</h2>
+											<div id="accordion-search_item_a_body"
+											     class="accordion-collapse collapse"
+											     aria-labelledby="accordion-search_item_a"
+											     data-bs-parent="#accordion-search">
+												<div class="accordion-body">
+													<div class="row">
+														<div class="col-12 mb-7">
+															<label class="form-label required">Select Employee Name</label>
+															
+															<select name="employee"
+															        
+															        required
+															        class="form-select form-select-solid"
+															        data-pb-control="select"
+															        data-pb-method="simple"
+															        data-pb-tack="subtext"
+															        data-pb-source="employees"
+															        data-pb-placeholder="Select Staff Account(s)"
+															        title="Who is Absent ??">
+																<option></option>
+															</select>
+														</div>
+														<div class="col-12 mb-7">
+															<label class="form-label">Select Month</label>
+															<input type="text"
+															       name="month"
+															       data-pb-control="date"
+															       data-pb-method="month"
+															       class="form-control form-control-solid"
+															       placeholder="Select Date or Range"
+															       title="Select Date Range" />
+														</div>
+													
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<button type="button"
+									        form="search-entry"
+									        name="load"
+									        value="search"
+									        data-form-submit
+									        data-e-nature="post"
+									        data-e-recall=""
+									        class="btn btn-flex btn-primary px-6 py-3 w-100">
+										<i class="fs-2x me-1 bi bi-arrow-right-circle"></i>
+										<span class="d-flex flex-column align-items-start ms-2">
+											<span class="fs-3 fw-bold">Load</span>
+											<span class="fs-7">Transactions</span>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="separator separator-content border-dark opacity-75 mt-10 mb-5">
+						<span class="fw-semibold text-dark w-200px">Matched Entries</span>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-0">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th nowrap=""
+								    class="min-w-125px text-center">Date
+								</th>
+								<th nowrap=""
+								    class="min-w-150px text-center">Employee Name
+								</th>
+								<th nowrap=""
+								    class="min-w-125px text-center">Type
+								</th>
+								
+								<th nowrap=""
+								    class="min-w-125px text-center">Amount
+								</th>
+								<th nowrap=""
+								    class="min-w-125px text-center">Note
+								</th>
+								<th nowrap=""
+								    class="min-w-150px text-center">Action
+								</th>
+							</tr>
+							</thead>
+							<!--<tbody class="text-gray-600 fw-semibold fs-5">-->
+							<!--<tr>-->
+							<!--	<td nowrap="">-->
+							<!--		<div class="d-flex flex-column">-->
+							<!--			<span class="text-dark rc_date">2023-02-23</span>-->
+							<!--			<span class="fw-normal fs-6 text-end rc_gap">2023-02-23-->
+							<!--			</span>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td nowrap="">-->
+							<!--		<div class="d-flex flex-column me-n7 pe-7">-->
+							<!--			<span>Banking</span>-->
+							<!--			<span class="fs-7">Intra Transfer</span>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td>-->
+							<!--		<div class="d-flex flex-column">-->
+							<!--			<div class="text-start">-->
+							<!--				<span class="fw-normal text-dark me-2">(DR)</span>-->
+							<!--				<span>ICICI Bank Account</span>-->
+							<!--			</div>-->
+							<!--			<div class="text-end">-->
+							<!--				<span>CASH in Hand</span>-->
+							<!--				<span class="fw-normal text-dark ms-2">(CR)</span>-->
+							<!--			</div>-->
+							<!--		</div>-->
+							<!--	</td>-->
+							<!--	<td class="rc_currency fs-3"-->
+							<!--	    data-cs-currency="1">56801-->
+							<!--	</td>-->
+							<!--	<td class="w-250px">-->
+							<!--		<div class="d-flex flex-row mb-2">-->
+							<!--			<button type="button"-->
+							<!--			        name="card"-->
+							<!--			        value="view"-->
+							<!--			        data-pb-origin="transaction-search"-->
+							<!--			        data-pb-value="12"-->
+							<!--			        class="btn btn-sm py-1 btn-light-primary w-50 me-2"><i class="las fs-2 la-eye me-2"></i>View-->
+							<!--			</button>-->
+							<!--			<button type="button"-->
+							<!--			        name="card"-->
+							<!--			        value="edit"-->
+							<!--			        data-pb-origin="transaction-search"-->
+							<!--			        data-pb-value="2"-->
+							<!--			        class="btn btn-sm py-1 btn-light-info w-50"><i class="las fs-2 la-edit me-2"></i>Edit-->
+							<!--			</button>-->
+							<!--		</div>-->
+							<!--		<button type="button"-->
+							<!--		        class="btn btn-sm py-1 btn-active-light-danger w-100"-->
+							<!--		        name="card"-->
+							<!--		        value="delete"-->
+							<!--		        data-pb-origin="transaction-search"-->
+							<!--		        data-pb-value="2"><i class="las fs-2 la-trash me-2"></i>Delete Entry-->
+							<!--		</button>-->
+							<!--	</td>-->
+							<!--</tr>-->
+							
+							<!--</tbody>-->
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div id="modals__buttons"
+	     class="zone">
+		<div id="employees-modal"
+		     class="sub-zone">
+			<modal class="d-none"
+			       data-modal-full
+			       data-modal-scroll>
+				<modal-header data-modal-title="Modal_title"
+				              data-modal-close></modal-header>
+				<modal-body>
+					<div id="modal-total-activities"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Type</td>
+								<td>Amount</td>
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="modal-duty-absent"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Deduction</td>
+								
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="modal-overtime"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Overtime Value</td>
+								
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="modal-self-expense"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Expense Amount</td>
+								
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="modal-sales-commission"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Type</td>
+								<td>Amount</td>
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="modal-collection-short"
+					     class="d-none">
+						<table class="table table-bordered table-responsive">
+							<thead>
+							<tr>
+								<td>Date</td>
+								<td>Employee Name</td>
+								<td>Type</td>
+								<td>Amount</td>
+								<td>Note</td>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</modal-body>
+				<modal-footer data-modal-dismiss></modal-footer>
+			</modal>
+		</div>
+	</div>
+</div>

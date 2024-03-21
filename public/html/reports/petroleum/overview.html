@@ -1,0 +1,951 @@
+<div data-e-welcome="tabs"
+     data-pb-layout="tabs"
+     data-layout="parent">
+	<div id="tabs__tabs"
+	     class="zone d-none card shadow-sm">
+		<div class="card-body">
+			<div class="d-flex flex-column flex-md-row">
+				<div id="control__tabs"
+				     class="sub-zone">
+					<ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6 min-w-md-250px">
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="basic_overview"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-basic_overview"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-list-columns-reverse text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Basic Overview</span>
+											</span>
+										</span>
+										<span class="fs-6">stock information</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="storage"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-storage"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Storage</span>
+											</span>
+										</span>
+										<span class="fs-6">Stock Place</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="incoming"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-incoming"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-truck-front text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Incoming</span>
+											</span>
+										</span>
+										<span class="fs-6">stock inputs</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-5">
+							<button type="button"
+							        name="tab"
+							        value="shortage"
+							        data-e-nature="get"
+							        data-bs-toggle="tab"
+							        href="#tab-shortage"
+							        class="nav-link w-100 btn btn-flex btn-text-primary btn-active-light-primary border border-gray-200 border-2">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-list-columns-reverse text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Shortage</span>
+											</span>
+										</span>
+										<span class="fs-6">Stock Loss</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="action__tabs"
+				     class="sub-zone flex-row-fluid">
+					<div id="intro"
+					     class="d-block">
+						<div id="states"
+						     class="d-none">
+							// few cards and their details
+						</div>
+						<div id="learning">
+							<div class="card">
+								<div class="card-body d-flex flex-column flex-center">
+									<div class="mb-2">
+										<p class="text-center">
+											<i class="fs-5x text-warning las la-life-ring"></i>
+										</p>
+										<h1 class="fw-semibold text-gray-800 text-center lh-lg">
+											Know about Sales Report<br>
+											<span class="fw-bolder">Be Self Export ?</span>
+										</h1>
+									</div>
+									<div class="text-center mt-10 mb-1">
+										<a class="btn btn-light-danger me-2"
+										   data-bs-target="#kt_modal_create_app"
+										   data-bs-toggle="modal">
+											<i class="lab la-youtube fs-2x"></i>
+											Youtube Video
+										</a>
+										<a class="btn btn-light-warning"
+										   href="javascript:">
+											<i class="las la-walking fs-2x"></i>
+											Quick Process
+										</a>
+										<div>
+											<button type="button"
+											        name="action"
+											        value="hide_intro"
+											        class="btn btn-link">
+												Do not show this Again !!!
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content">
+						<div class="tab-pane fade"
+						     id="tab-basic_overview"
+						     role="tabpanel">
+							<form id="form-basic_overview">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Categories</label>
+												<select required
+												        multiple="multiple"
+												        name="category_id"
+												        data-pb-source="categories"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Category"
+												        data-pb-search="0"
+												        title="Category Name"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-basic_overview"
+														        value="basic_overview"
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_basic_overview_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv-sf-basic_overview">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv-sf-basic_overview"></div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div id="tab-storage"
+						     class="tab-pane fade"
+						     role="tabpanel">
+							<form id="form-storage">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">List of All Categories</label>
+												<select name="category_id"
+												        data-pb-source="categories"
+												        class="form-select form-select-solid"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-placeholder="Select Category"
+												        data-pb-search="0"
+												        title="Category Name"></select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-storage"
+														        value="storage"
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv-sf-storage">Advanced </a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv-sf-storage">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8">
+												<div class="col-12 col-lg-6">
+													<label class="fs-6 form-label fw-bold text-dark">Status</label>
+													<div class="nav-group nav-group-fluid">
+														<label>
+															<input checked
+															       type="radio"
+															       class="btn-check"
+															       name="status"
+															       value="0" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">In Use</span>
+														</label>
+														<label>
+															<input type="radio"
+															       class="btn-check"
+															       name="status"
+															       value="1" />
+															<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">closed</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div id="tab-incoming"
+						     class="tab-pane fade"
+						     role="tabpanel">
+							<form id="form-incoming">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">Date Range</label>
+												<input type="text"
+												       data-pb-control="range"
+												       data-pb-method="defined"
+												       name="date_range"
+												       class="form-control form-control"
+												       placeholder="simple"
+												       title="simple" />
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-incoming"
+														        value="incoming"
+														        data-e-nature="hybrid"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv-sf-incoming">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv-sf-incoming">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Status</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="status"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">matched</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="status"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">unmatched</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-shortage"
+						     role="tabpanel">
+							<form id="form-shortage">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">Date Range</label>
+												<input type="text"
+												       data-pb-control="range"
+												       data-pb-method="defined"
+												       name="date_range"
+												       class="form-control form-control"
+												       placeholder="simple"
+												       title="simple" />
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-shortage"
+														        value="shortage"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_shortage_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv-sf-shortage">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv-sf-shortage">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<div class="row g-8">
+														<div class="col-12 col-lg-6">
+															<label class="fs-6 form-label fw-bold text-dark">Type</label>
+															<div class="nav-group nav-group-fluid">
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="type"
+																	       value="0" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">loss</span>
+																</label>
+																<label>
+																	<input type="radio"
+																	       class="btn-check"
+																	       name="type"
+																	       value="1" />
+																	<span class="btn btn-sm btn-color-muted btn-active btn-active-success fw-bold px-4">shortage</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="result__tabs"
+	     class="zone">
+		<div id="report-basic_overview"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Back</span>
+						</button>
+						<h3 data-pb-update="name">Basic Overview Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-basic-overview">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-basic_overview">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-basic_overview">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-basic-overview"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-basic_overview">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-basic_overview">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Cost
+								</th>
+								<th data-index="2">Rate</th>
+								<th data-index="3">Quantity</th>
+								<th data-index="4">Amount</th>
+								<th data-index="5">Status</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-storage"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Go Back</span>
+						</button>
+						<h3 data-pb-update="name">Storage Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-storage">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-storage">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-storage">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-storage"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-storage">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-storage">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="group"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Store
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Category
+								</th>
+								<th data-index="2">Description</th>
+								<th data-index="3">Type</th>
+								<th data-index="4">Maintainer</th>
+								<th data-index="5">Status</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-incoming"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Go Back</span>
+						</button>
+						<h3 data-pb-update="name">Incoming Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-incoming">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-incoming">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-incoming">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-incoming"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-incoming">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-incoming">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Date
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Invoice
+								</th>
+								<th data-index="2">Lorry</th>
+								<th data-index="3">Shift</th>
+								<th data-index="4">Status</th>
+								<th data-index="5">Action</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="report-shortage"
+		     class="d-none">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<button type="button"
+						        data-e-nature="back"
+						        
+						        class="btn btn-sm btn-light-dark btn-text-dark hover-scale me-3">
+							<i class="bi fs-2 bi-arrow-left-circle"></i>
+							<span>Go Back</span>
+						</button>
+						<h3 data-pb-update="name">Shortage Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm fw-semibold btn-light-success hover-elevate-down"
+						   data-bs-toggle="collapse"
+						   href="#table-export-shortage">
+							<i class="bi fs-2 bi-download"></i>
+							<span>Export</span>
+						</a>
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-shortage">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-shortage">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div id="table-export-shortage"
+					     class="collapse d-print-none">
+						<div class="row mb-3"
+						     data-pb-target="export">
+							// buttons for export
+						</div>
+					</div>
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-shortage">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-shortage">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="search"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm"
+								       placeholder="search"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Fuel Item</label>
+								<select name="select"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-tack="direct"
+								        data-pb-search="0"
+								        data-pb-placeholder="Select Item"
+								        data-dt-column="1"
+								        class="form-select form-select-sm"
+								        aria-label="Item Name">
+									<option></option>
+									<option value="diesel">Diesel</option>
+									<option value="mak">MAK</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title="" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0"
+								    class="min-w-100px">Date
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Item
+								</th>
+								<th data-index="2">Store</th>
+								<th data-index="3">Quantity</th>
+								<th data-index="4">Type</th>
+								<th data-index="5">Status</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__tabs"
+	     class="d-none">
+		<p class="mb-1">Simple Summary Table</p>
+		<p class="mb-1">Basic Shift Sales</p>
+		<p class="mb-1">Complete Shift Detail</p>
+		<p class="mb-1">Complete Shift Detail</p>
+	</div>
+</div>

@@ -1,0 +1,460 @@
+<div data-e-welcome="intro"
+     data-pb-layout="listing"
+     data-layout="parent">
+	
+	<div id="action__listing"
+	     class="zone">
+		<div class="card">
+			<div class="card-body py-3">
+				<div class="d-flex flex-wrap flex-stack">
+					<div class="d-flex flex-wrap align-items-center my-1"
+					     id="active_customers">
+						<h3 class="fw-semibold text-gray-700 me-5 my-1">
+							Products:
+							<span class="text-gray-900 fw-bold">0</span>
+						</h3>
+					</div>
+					<div class="d-flex flex-wrap my-1">
+						<ul class="nav nav-pills mb-2 mb-sm-0">
+							<li class="nav-item m-0">
+								<button type="button"
+								        name="navtab"
+								        value="cards"
+								        data-bs-toggle="tab"
+								        data-e-nature="get"
+								        data-e-recall
+								        href="#cards"
+								        class="btn btn-light-primary btn-active-primary py-2 me-3">
+									<i class="fs-1 las la-id-card"></i>
+									Cards
+								</button>
+							</li>
+							<li class="nav-item m-0">
+								<button type="button"
+								        name="navtab"
+								        value="table"
+								        data-bs-toggle="tab"
+								        data-e-nature="get"
+								        href="#table"
+								        class="btn btn-light-info btn-active-primary py-2">
+									<i class="fs-1 ki-outline ki-file-sheet"></i>
+									Table
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="form__listing"
+	     class="zone d-none"></div>
+	<div id="tabs__listing"
+	     class="zone mt-7">
+		<div id="cards__listing"
+		     class="sub-zone d-none">
+			<div class="card mb-7">
+				<div class="card-body py-3">
+					<form class="form"
+					      type="post"
+					      autocomplete="off">
+						<div class="d-flex flex-column flex-sm-row align-items-center">
+							<div class="position-relative w-100 w-sm-50 me-3">
+								<span class="position-absolute top-50 translate-middle ms-8">
+									<i class="bi bi-search fs-4"></i>
+								</span>
+								<input data-pb-control="tagify"
+								       data-pb-method="select"
+								       data-pb-channel="remote"
+								       data-pb-target="select_bucket"
+								       data-pb-source="products"
+								       data-tag-force="0"
+								       data-tag-list="1"
+								       data-tag-items="4"
+								       type="text"
+								       name="search"
+								       title=""
+								       data-pb-catch="search_value"
+								       placeholder="Search Account"
+								       class="form-control form-control-solid form-control-sm ps-15" />
+								<span data-tag-source="select_bucket"
+								      class="d-none tagify_tags"></span>
+							</div>
+							<div class="d-flex align-items-center w-100 w-sm-50 mt-3 mt-sm-0">
+								<button type="button"
+								        data-e-nature="post"
+								        value="search"
+								        name="action"
+								        class="btn btn-sm btn-light-primary me-3 w-50">Search
+								</button>
+								<a class="btn btn-sm btn-outline btn-outline-primary w-50"
+								   data-bs-toggle="collapse"
+								   data-pb-catch="advance"
+								   href="#customer_adv_search_form">Advance</a>
+								<button type="button"
+								        value="close"
+								        name="action"
+								        data-e-nature="post"
+								        data-pb-catch="close"
+								        class="btn btn-sm btn-light-primary ms-3 text-nowrap d-none">
+									<i class="ki-outline ki-cross-circle fs-3"></i> Close
+								</button>
+							</div>
+						</div>
+						<div class="collapse"
+						     id="customer_adv_search_form">
+							<div class="separator separator-content my-10 border-gray-700">
+								<span class="w-250px w-md-200px">Advance Search Options</span>
+							</div>
+							<div class="row g-8 mb-7">
+								<div class="col-xxl-6">
+									<div class="row g-8">
+										<div class="col-lg-6">
+											<label class="fs-6 form-label fw-bold text-dark">Category</label>
+											<select class="form-select form-select-solid"
+											        data-pb-source="category_type"
+											        name="account_type"
+											        data-dom-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Customer Type"
+											        data-hide-search="true"> </select>'
+										</div>
+										<div class="col-lg-6">
+											<label class="fs-6 form-label fw-bold text-dark">Store</label>
+											<select class="form-select form-select-solid"
+											        data-pb-source="store"
+											        name="store_name"
+											        data-dom-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Customer Type"
+											        data-hide-search="true"> </select>'
+										</div>
+										<div class="col-lg-6">
+											<label class="fs-6 form-label fw-bold text-dark">Stock Status</label>
+											<div class="nav-group nav-group-fluid">
+												<label>
+													<input type="radio"
+													       class="btn-check"
+													       name="type"
+													       value="0"
+													       checked="checked" />
+													<span class="btn btn-sm btn-color-muted btn-active btn-active-light-dark fw-bold px-4">Available
+														<span>
+												</label>
+												<label>
+													<input type="radio"
+													       class="btn-check"
+													       name="type"
+													       value="1" />
+													<span class="btn btn-sm btn-color-muted btn-active btn-active-light-danger fw-bold px-4">Almost Sold Out</span>
+												</label>
+												<label>
+													<input type="radio"
+													       class="btn-check"
+													       name="type"
+													       value="-1" />
+													<span class="btn btn-sm btn-color-muted btn-active btn-active-light-success fw-bold px-4">Out of Stock</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row g-8">
+								<div class="offset-xxl-3 offset-lg-1 col-xxl-6 col-lg-10">
+									<button type="button"
+									        name="action"
+									        value="advance"
+									        data-e-nature="post"
+									        class="btn btn-flex btn-light-info px-6 w-100 text-center">
+										<i class="fs-2x me-1 bi bi-arrow-clockwise"></i>
+										<span class="d-flex flex-column align-items-start ms-2">
+											<span class="fs-3 fw-bold">View New List</span>
+											<span class="fs-7">Apply Advance Options to Product List</span>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div data-pb-control="cards"
+			     data-pb-target="cards"
+			     data-pb-size="25"
+			     class="mb-7">
+				<div data-pb-target="search">
+				
+				</div>
+				<div data-pb-target="load">
+					<div data-pb-paging="0"
+					     data-pb-target="box"
+					     class="d-none">
+						<div class="row g-6">
+							// add cards here
+						</div>
+					</div>
+				</div>
+				<div data-pb-target="footer">
+					<div class="d-flex flex-stack flex-wrap pt-10"
+					     id="footer">
+						<div data-pb-control="counting"
+						     class="fs-6 fw-semibold text-gray-700">
+							Showing
+							<span>x</span>
+							to
+							<span>y</span>
+							of
+							<span>z</span>
+							entries
+						</div>
+						<div data-pb-control="size"
+						     id="cards_per_page"
+						     class="my-0 ms-3 w-150px">
+							<select title=""
+							        data-e-name="alter"
+							        data-e-value="cards_per_page"
+							        data-e-nature="option"
+							        name="cards_per_page"
+							        data-pb-source="cards_per_page"
+							        data-dom-control="select"
+							        data-pb-method="simple"
+							        data-pb-search="0"
+							        data-e-listen="change"
+							        data-pb-tack="direct"
+							        data-pb-placeholder="Cards Per Page"
+							        class="form-select form-select-sm"></select>
+						</div>
+						<ul data-pb-control="paging"
+						    class="pagination">
+							<li class="page-item previous">
+								<button type="button"
+								        value="--"
+								        data-pb-catch="prev"
+								        name="paging"
+								        data-e-nature="option"
+								        class="page-link">
+									<i class="previous"></i>
+								</button>
+							</li>
+							<li class="page-item active"
+							    data-pb-catch="page">
+								<button type="button"
+								        value="1"
+								        name="paging"
+								        data-e-nature="option"
+								        class="page-link">1
+								</button>
+							</li>
+							<li class="page-item next">
+								<button type="button"
+								        value="++"
+								        data-pb-catch="next"
+								        name="paging"
+								        data-e-nature="option"
+								        class="page-link">
+									<i class="next"></i>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="table__listing"
+		     class="sub-zone d-none">
+			<div class="card card-flush">
+				<div class="card-header align-items-center gap-2 gap-md-5">
+					<div class="card-title">
+						<div class="d-flex align-items-center position-relative my-1">
+							<span class="svg-icon svg-icon-1 position-absolute ms-4">
+								<i class="bi bi-search fs-2"></i>
+							</span>
+							<input type="text"
+							       data-kt-employe-table-filter="search"
+							       class="form-control form-control-solid w-250px ps-14"
+							       placeholder="Search Customer" />
+						</div>
+					</div>
+					<div class="card-toolbar flex-row-fluid justify-content-end gap-3">
+						<div class="input-group w-250px">
+							<input class="form-control form-control-solid rounded rounded-end-0"
+							       placeholder="Search Last Payroll"
+							       id="kt_employ_last_payroll" />
+							<button class="btn btn-icon btn-light"
+							        id="kt_employ_last_payroll_clear">
+								<i class="bi bi-x fs-2"></i>
+							</button>
+						</div>
+						<div class="w-100 mw-150px">
+							<select class="form-select form-select-solid"
+							        data-dom-control="select2"
+							        data-hide-search="true"
+							        data-placeholder="Items Name"
+							        data-kt-employe-table-filter="status">
+								<option></option>
+								<option value="">None</option>
+								<option value="diesel">Diesel</option>
+								<option value="mak">MAK</option>
+							</select>
+						</div>
+						<a href=""
+						   class="btn btn-primary"><i class="bi bi-person-plus-fill fs-2 me-2"></i>Add Customer
+						</a>
+					</div>
+				</div>
+				<div class="card-body pt-0">
+					<div class="table-responsive">
+						<table id="products_table"
+						       class="table table-row-bordered table-row-dashed gy-4 align-middle fw-bold"
+						       data-load-table="0">
+							<thead class="fs-7 text-gray-500 text-uppercase">
+							<tr>
+								<th class="min-w-200px">Item</th>
+								<th class="min-w-200px">Stock with Status</th>
+								<th class="min-w-125px">Category</th>
+								<th class="min-w-75px">Monthly Sale</th>
+								<th class="min-w-125px">Gross Profit</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="intro__listing"
+	     class="zone d-none mt-0">
+		<div class="row mb-7">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body d-flex justify-content-between align-items-start flex-column">
+						<i class="text-primary ki-outline fs-2x ki-user"></i>
+						<div class="d-flex flex-column my-3">
+							<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">12</span>
+							<div class="m-0">
+								<span class="fw-semibold fs-4 text-gray-600">Total Product List</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body d-flex justify-content-between align-items-start flex-column">
+						<i class="text-primary ki-outline fs-2x ki-user-square"></i>
+						<div class="d-flex flex-column my-3">
+							<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">$1459.69</span>
+							<div class="m-0">
+								<span class="fw-semibold fs-4 text-gray-600">Monthly Sales</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body d-flex justify-content-between align-items-start flex-column">
+						<i class="text-primary ki-outline fs-2x ki-dollar"></i>
+						<div class="d-flex flex-column my-3">
+							<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">$ 22,023.26</span>
+							<div class="m-0">
+								<span class="fw-semibold fs-4 text-gray-600">Gross Profit</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-body d-flex flex-column flex-center">
+				<div class="mb-2">
+					<p class="text-center">
+						<i class="fs-5x text-gray-700 las la-chalkboard-teacher"></i>
+					</p>
+					<h1 class="fw-semibold text-gray-700 text-center lh-lg">
+						Know about Product Listing<br>
+						<span class="fw-bold text-gray-900">Become Expert in
+							<span class="text-primary">Just 2 minutes</span>
+						                                    ?
+						</span>
+					</h1>
+				</div>
+				<div class="text-center mt-10 mb-1">
+					<a class="btn btn-light-danger fw-bold me-2"
+					   data-bs-target="#kt_modal_create_app"
+					   data-bs-toggle="modal">
+						<i class="lab la-youtube fs-2x"></i>
+						Youtube Video
+					</a>
+					<a class="btn btn-light-warning fw-bold"
+					   href="javascript:">
+						<i class="las la-walking fs-2x"></i>
+						Quick Process
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__listing"
+	     class="d-none">
+		<div data-pb-template="cards"
+		     class="row g-6 g-xl-9">
+			<div class="col-xxl-4 col-xl-6 col-12">
+				<div class="cards">
+					<div class="border border-hover-primary border-opacity-50 p-7 rounded bg-white">
+						<div class="d-flex flex-center">
+							<div class="symbol symbol-65px symbol-circle mb-5">
+								<img class="rc_image"
+								     data-pb-source="$$@avatar@$$"
+								     data-cs-path="media"
+								     alt="image"
+								     src="" />
+								<div class="bg-success position-absolute border border-4 border-body h-15px w-15px rounded-circle translate-middle start-100 top-100 ms-n3 mt-n3"></div>
+							</div>
+						</div>
+						<div class="d-flex flex-column flex-center">
+							<div class="fs-4 text-gray-800 text-hover-primary fw-bold mb-0">$$@name@$$
+							</div>
+							
+							<div class="fw-semibold text-gray-400 mb-6">$$@cate_id@$$
+							</div>
+						</div>
+						<div class="d-flex flex-center flex-wrap">
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700 rc_currency"
+								     data-cs-round="0">$$@bills@$$
+								</div>
+								<div class="fw-semibold text-gray-400">Total Bills</div>
+							</div>
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700 rc_currency"
+								     data-cs-round="0">$$@paid@$$
+								</div>
+								<div class="fw-semibold text-gray-400">Paid</div>
+							</div>
+							<div class="border border-gray-300 border-dashed rounded min-w-80px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700 rc_currency"
+								     data-cs-round="0">$$@unpaid@$$
+								</div>
+								<div class="fw-semibold text-gray-400">unpaid</div>
+							</div>
+						</div>
+						<div class="d-flex flex-center">
+							<button type="button"
+							        name="card"
+							        value="customer"
+							        data-pb-value="$$@id@$$"
+							        data-pb-target="customer"
+							        class="btn btn-sm btn-light-primary hover-scale w-75">View Bills
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

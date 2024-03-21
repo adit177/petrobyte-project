@@ -1,0 +1,834 @@
+<div data-e-welcome="navbar"
+     data-pb-layout="reports"
+     data-layout="parent">
+	<div class="row">
+		<div id="nav__reports">
+			<div id="navbar__reports"
+			     class="d-none">
+				<div class="card shadow-sm mb-7">
+					<div class="card-body py-3 px-7">
+						<div class="d-grid">
+							<!--nav-tabs nav-line-tabs nav-line-tabs-2x-->
+							<ul class="nav flex-nowrap text-nowrap row">
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="search"
+									        class="w-100 nav-link btn btn-active-light-dark btn-color-gray-700 btn-active-color-dark border border-active-dark fw-bold fs-5 active"
+									        href="#tab_search">Search
+									</button>
+								</li>
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="activities"
+									        class="w-100 nav-link btn btn-active-light-primary btn-color-gray-600 btn-active-color-primary border border-active-primary fw-bold fs-5"
+									        href="#tab_activities">Activities
+									</button>
+								</li>
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="salary"
+									        class="w-100 nav-link btn btn-active-light-info btn-color-gray-600 btn-active-color-info border border-active-info fw-bold fs-5"
+									        
+									        href="#tab_salary"> Salary
+									</button>
+								</li>
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="commission"
+									        class="w-100 nav-link btn btn-active-light-success btn-color-gray-600 btn-active-color-success border border-active-success fw-bold fs-5"
+									        data-bs-toggle="tab"
+									        href="#tab_commission"> Commission
+									</button>
+								</li>
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="credits"
+									        class="w-100 nav-link btn btn-active-light-success btn-color-gray-600 btn-active-color-success border border-active-success fw-bold fs-5"
+									        href="#tab_credits">Credits
+									</button>
+								</li>
+								<li class="nav-item col px-5">
+									<button type="button"
+									        name="navtab"
+									        value="collection"
+									        class="w-100 nav-link btn btn-active-light-success btn-color-gray-600 btn-active-color-success border border-active-success fw-bold fs-5"
+									        data-bs-toggle="tab"
+									        href="#tab_collection"> Collection
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="navtab__reports">
+				<div class="tab-content">
+					
+					<div id="search-navtab"
+					     class="tab-pane fade active show"
+					     role="tabpanel">
+						
+						<div class="card shadow-m">
+							<div class="card-header">
+								<div class="card-title">
+									<h3>Select Employee to get Reports</h3>
+								</div>
+								<div class="card-toolbar">
+									<a id="adv_register_link"
+									   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+									   data-bs-toggle="collapse"
+									   href="#adv_combined">Advanced</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<form id="form">
+									<div class="collapse"
+									     id="adv_combined">
+										<div class="row g-8 mb-8">
+											<div class="col-12 col-md-7 col-xl-8">
+												<label class="fs-6 form-label fw-bold text-dark">Date Range for Report</label>
+												<input type="text"
+												       name="dates"
+												       class="form-control form-control-solid"
+												       placeholder="Select Date Range"
+												       title=""
+												       data-pb-control="range"
+												       data-pb-method="defined" />
+											</div>
+											<div class="col-12 col-md-5 col-xl-4">
+												<label class="fs-6 form-label fw-bold text-dark">Activity Status</label>
+												<div class="nav-group nav-group-fluid">
+													<label>
+														<input type="radio"
+														       class="btn-check"
+														       name="activity_status"
+														       value="all"
+														       checked />
+														<span class="btn btn-sm btn-color-muted btn-active btn-active-primary fw-bold px-4">All</span>
+													</label>
+													<label>
+														<input type="radio"
+														       class="btn-check"
+														       name="activity_status"
+														       value="lock" />
+														<span class="btn btn-sm btn-color-muted btn-active btn-active-dark fw-bold px-4">Lock</span>
+													</label>
+													<label>
+														<input type="radio"
+														       class="btn-check"
+														       name="activity_status"
+														       value="open" />
+														<span class="btn btn-sm btn-color-muted btn-active btn-active-dark fw-bold px-4">Open</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									
+									
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<label class="fs-6 form-label fw-bold text-dark">List of Employees</label>
+											<select required
+											        name="employee_id"
+											        data-pb-source="employees"
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Select Account"
+											        data-pb-search="1"
+											        title="Employee Account"></select>
+										</div>
+										<div class="col-6">
+											<button type="button"
+											        name="navtab"
+											        value="activities"
+											        class="btn btn-flex btn-light-primary px-6 w-100"
+											        form="form">
+												<i class="fs-3x las la-file-invoice"></i>
+												<span class="d-flex flex-column align-items-start ms-2">
+													<span class="fs-3 fw-bold">Load Reports</span>
+													<span class="fs-7 fw-normal">Get Reports of activities, salary, commission, credits and collection</span>
+												</span>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+					<div id="activities-navtab"
+					     class="tab-pane fade"
+					     role="tabpanel">
+						<div class="card shadow-sm">
+							<div class="card-header d-print-none">
+								<div class="card-title">
+									<h3 data-pb-update="name">Employee Activities Report</h3>
+								</div>
+								<div class="card-toolbar">
+									<a class="btn btn-sm btn-light-primary me-3"
+									   data-bs-toggle="collapse"
+									   href="#table-header-activities">
+										<i class="bi fs-2 bi-card-heading"></i>
+										<span>Header</span>
+									</a>
+									<a class="btn btn-sm btn-light-danger me-3"
+									   data-bs-toggle="collapse"
+									   href="#table-filters-activities">
+										<i class="bi fs-2 bi-filter-square"></i>
+										<span>Filters</span>
+									</a>
+								</div>
+							</div>
+							<div class="card-body py-0">
+								<div aria-description="header of the report - account detail"
+								     class="collapse"
+								     id="table-header-activities">
+									// insert header
+								</div>
+								<div class="collapse d-print-none"
+								     id="table-filters-activities">
+									<div class="row mb-3"
+									     data-pb-target="filters">
+										<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+											<label class="form-label">Search</label>
+											<input type="search"
+											       name="global"
+											       data-dt-regex="1"
+											       class="form-control form-control-sm table-input"
+											       placeholder="search"
+											       data-pb-catch="combined-activities-table"
+											       data-col-index="-1"
+											       data-filter-event="text"
+											       title="" />
+										</div>
+										<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+											<label class="form-label">Date</label>
+											<div class="input-group">
+												<input type="text"
+												       name="date"
+												       data-dt-column="0"
+												       data-pb-catch="combined-activities-table"
+												       data-filter-event="date-range"
+												       data-col-index="0"
+												       class="form-control form-select-sm table-input"
+												       data-pb-control="date"
+												       data-pb-method="range"
+												       placeholder="Select Date"
+												       title="" />
+												<input type="button"
+												       name="clear"
+												       data-pb-target="1"
+												       class="btn btn-sm btn-icon btn-light"
+												       value="X">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table id="combined-activities-table"
+									       class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+										<thead>
+										<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+											<th data-index="0"
+											    class="min-w-100px">Date
+											</th>
+											<th data-index="1"
+											    class="min-w-100px">Activity
+											</th>
+											<th data-index="2">Amount</th>
+											<th data-index="3">Note</th>
+											<th data-index="4">Status</th>
+										</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="card-footer py-5 px-15">
+								<div class="row">
+									<div class="col-6">
+										<button type="button"
+										        name="navtab"
+										        value="search"
+										        class="btn btn-sm btn-outline btn-outline-dark">
+											<i class="bi bi-caret-left-fill p-0"></i>
+											Go To Search
+										</button>
+									</div>
+									<div class="col-6 text-end">
+										<button type="button"
+										        name="navtab"
+										        value="salary"
+										        class="btn btn-sm btn-outline btn-outline-info">
+											Salary
+											<i class="bi bi-caret-right-fill p-0"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="salary-navtab"
+					     class="tab-pane fade"
+					     role="tabpanel">
+						<div id="report-salary">
+							<div class="card shadow-sm">
+								<div class="card-header d-print-none">
+									<div class="card-title">
+										<h3 data-pb-update="name">Customers Sales Report</h3>
+									</div>
+									<div class="card-toolbar">
+										<a class="btn btn-sm btn-light-primary me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-header-salary">
+											<i class="bi fs-2 bi-card-heading"></i>
+											<span>Header</span>
+										</a>
+										<a class="btn btn-sm btn-light-danger me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-filters-salary">
+											<i class="bi fs-2 bi-filter-square"></i>
+											<span>Filters</span>
+										</a>
+									
+									</div>
+								</div>
+								<div class="card-body py-0">
+									<div aria-description="header of the report - account detail"
+									     class="collapse"
+									     id="table-header-salary">
+										// insert header
+									</div>
+									<div class="collapse d-print-none"
+									     id="table-filters-salary">
+										<div class="row mb-3"
+										     data-pb-target="filters">
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Fuel Item</label>
+												<select name="select"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-search="0"
+												        data-pb-placeholder="Select Item"
+												        data-dt-column="1"
+												        class="form-select form-select-sm"
+												        aria-label="Item Name">
+													<option></option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">xxxxx</label>
+												<input type="text"
+												       name=""
+												       class="form-control  form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       class="form-control form-select-sm"
+													       data-pb-control="date"
+													       data-pb-method="range"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">yyyy</label>
+												<input type="text"
+												       name=""
+												       class="form-control form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+												<th data-index="0"
+												    class="min-w-100px">Date
+												</th>
+												<th data-index="1"
+												    class="min-w-100px">Voucher
+												</th>
+												<th data-index="2">Paid Through</th>
+												<th data-index="3">Amount</th>
+												<th data-index="4">Description</th>
+												<th data-index="5">Note</th>
+											</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer py-5 px-15">
+									<div class="row">
+										<div class="col-6">
+											<button type="button"
+											        name="navtab"
+											        value="activities"
+											        class="btn btn-sm btn-outline btn-outline-dark">
+												<i class="bi bi-caret-left-fill p-0"></i>
+												Activities
+											</button>
+										</div>
+										<div class="col-6 text-end">
+											<button type="button"
+											        name="navtab"
+											        value="commission"
+											        class="btn btn-sm btn-outline btn-outline-info">
+												Commission
+												<i class="bi bi-caret-right-fill p-0"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="commission-navtab"
+					     class="tab-pane fade"
+					     role="tabpanel">
+						<div id="report-commission">
+							<div class="card shadow-sm">
+								<div class="card-header d-print-none">
+									<div class="card-title">
+										<h3 data-pb-update="name">Customers Sales Report</h3>
+									</div>
+									<div class="card-toolbar">
+										<a class="btn btn-sm btn-light-primary me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-header-commission">
+											<i class="bi fs-2 bi-card-heading"></i>
+											<span>Header</span>
+										</a>
+										<a class="btn btn-sm btn-light-danger me-3"
+										   id="table_filters_expenses_link"
+										   data-bs-toggle="collapse"
+										   href="#table-filters-commission">
+											<i class="bi fs-2 bi-filter-square"></i>
+											<span>Filters</span>
+										</a>
+									</div>
+								</div>
+								<div class="card-body py-0">
+									<div aria-description="header of the report - account detail"
+									     class="collapse"
+									     id="table-header-commission">
+										// inser header
+									</div>
+									<div class="collapse d-print-none"
+									     id="table-filters-commission">
+										<div class="row mb-3"
+										     data-pb-target="filters">
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Fuel Item</label>
+												<select name="select"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-search="0"
+												        data-pb-placeholder="Select Item"
+												        data-dt-column="1"
+												        class="form-select form-select-sm"
+												        aria-label="Item Name">
+													<option></option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">xxxxx</label>
+												<input type="text"
+												       name=""
+												       class="form-control  form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       class="form-control form-select-sm"
+													       data-pb-control="date"
+													       data-pb-method="range"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">yyyy</label>
+												<input type="text"
+												       name=""
+												       class="form-control form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+												<th data-index="0">Item Name</th>
+												<th data-index="1"
+												    class="min-w-100px">Quantity
+												</th>
+												<th data-index="2"
+												    class="min-w-100px">Rate (per unit)
+												</th>
+												<th data-index="3">Commission Amount</th>
+												<th data-index="4">Status</th>
+											</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer py-5 px-15">
+									<div class="row">
+										<div class="col-6">
+											<button type="button"
+											        name="navtab"
+											        value="salary"
+											        class="btn btn-sm btn-outline btn-outline-dark">
+												<i class="bi bi-caret-left-fill p-0"></i>
+												Salary
+											</button>
+										</div>
+										<div class="col-6 text-end">
+											<button type="button"
+											        name="navtab"
+											        value="credits"
+											        class="btn btn-sm btn-outline btn-outline-info">
+												Credits
+												<i class="bi bi-caret-right-fill p-0"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="credits-navtab"
+					     class="tab-pane fade"
+					     role="tabpanel">
+						<div id="report-credit_sale">
+							<div class="card shadow-sm">
+								<div class="card-header d-print-none">
+									<div class="card-title">
+										<h3 data-pb-update="name">Customers Sales Report</h3>
+									</div>
+									<div class="card-toolbar">
+										<a class="btn btn-sm btn-light-primary me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-header-credit_sale">
+											<i class="bi fs-2 bi-card-heading"></i>
+											<span>Header</span>
+										</a>
+										<a class="btn btn-sm btn-light-danger me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-filters-credit_sale">
+											<i class="bi fs-2 bi-filter-square"></i>
+											<span>Filters</span>
+										</a>
+									</div>
+								</div>
+								<div class="card-body py-0">
+									<div aria-description="header of the report - account detail"
+									     class="collapse"
+									     id="table-header-credit_sale">
+										// insert header
+									</div>
+									<div class="collapse d-print-none"
+									     id="table-filters-credit_sale">
+										<div class="row mb-3"
+										     data-pb-target="filters">
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Fuel Item</label>
+												<select name="select"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-search="0"
+												        data-pb-placeholder="Select Item"
+												        data-dt-column="1"
+												        class="form-select form-select-sm"
+												        aria-label="Item Name">
+													<option></option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">xxxxx</label>
+												<input type="text"
+												       name=""
+												       class="form-control  form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       class="form-control form-select-sm"
+													       data-pb-control="date"
+													       data-pb-method="range"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">yyyy</label>
+												<input type="text"
+												       name=""
+												       class="form-control form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+												<th data-index="0"
+												    class="min-w-100px">Date
+												</th>
+												<th data-index="1">Customer</th>
+												<th data-index="2">Item</th>
+												<th data-index="3">Vehicle</th>
+												<th data-index="4">Quantity</th>
+												<th data-index="5">Amount</th>
+											</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer py-5 px-15">
+									<div class="row">
+										<div class="col-6">
+											<button type="button"
+											        name="navtab"
+											        value="commission"
+											        class="btn btn-sm btn-outline btn-outline-dark">
+												<i class="bi bi-caret-left-fill p-0"></i>
+												Commission
+											</button>
+										</div>
+										<div class="col-6 text-end">
+											<button type="button"
+											        name="navtab"
+											        value="collection"
+											        class="btn btn-sm btn-outline btn-outline-info">
+												Collection
+												<i class="bi bi-caret-right-fill p-0"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="collection-navtab"
+					     class="tab-pane fade"
+					     role="tabpanel">
+						<div id="report-shift_collection">
+							<div class="card shadow-sm">
+								<div class="card-header d-print-none">
+									<div class="card-title">
+										<h3 data-pb-update="name">Customers Sales Report</h3>
+									</div>
+									<div class="card-toolbar">
+										<a class="btn btn-sm btn-light-primary me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-header-shift_collection">
+											<i class="bi fs-2 bi-card-heading"></i>
+											<span>Header</span>
+										</a>
+										<a class="btn btn-sm btn-light-danger me-3"
+										   data-bs-toggle="collapse"
+										   href="#table-filters-shift_collection">
+											<i class="bi fs-2 bi-filter-square"></i>
+											<span>Filters</span>
+										</a>
+									</div>
+								</div>
+								<div class="card-body py-0">
+									<div aria-description="header of the report - account detail"
+									     class="collapse"
+									     id="table-header-shift_collection">
+										// insert header
+									</div>
+									<div class="collapse d-print-none"
+									     id="table-filters-shift_collection">
+										<div class="row mb-3"
+										     data-pb-target="filters">
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Fuel Item</label>
+												<select name="select"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-tack="direct"
+												        data-pb-search="0"
+												        data-pb-placeholder="Select Item"
+												        data-dt-column="1"
+												        class="form-select form-select-sm"
+												        aria-label="Item Name">
+													<option></option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">xxxxx</label>
+												<input type="text"
+												       name=""
+												       class="form-control  form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       class="form-control form-select-sm"
+													       data-pb-control="date"
+													       data-pb-method="range"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+												<label class="form-label">yyyy</label>
+												<input type="text"
+												       name=""
+												       class="form-control form-select-sm"
+												       placeholder=""
+												       title="" />
+											</div>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+											<thead>
+											<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+												<th data-index="0"
+												    class="min-w-100px">Date
+												</th>
+												<th data-index="1">Shift Id</th>
+												<th data-index="2">Feed Amount</th>
+												<th data-index="3">Cash</th>
+												<th data-index="4">Online</th>
+												<th data-index="5">Credit</th>
+												<th data-index="6">Difference</th>
+											</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer py-5 px-15">
+									<div class="row">
+										<div class="col-6">
+											<button type="button"
+											        name="navtab"
+											        value="credits"
+											        class="btn btn-sm btn-outline btn-outline-dark">
+												<i class="bi bi-caret-left-fill p-0"></i>
+												Credits
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

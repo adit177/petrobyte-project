@@ -1,0 +1,570 @@
+<div data-e-welcome="tabs"
+     data-pb-layout="tabs"
+     data-layout="parent">
+	
+	<div id="tabs__tabs"
+	     class="card shadow-m">
+		<div class="card-body">
+			<div class="d-flex flex-column flex-md-row">
+				<div id="control__tabs">
+					<ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6 min-w-md-250px">
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button type="button"
+							        name="tab"
+							        value="wave"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-wave"
+							        data-pb-target="0">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-file-person text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Wave</span>
+											</span>
+										</span>
+										<span class="fs-6">description</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li class="nav-item w-100 me-0 mb-md-5">
+							<button type="button"
+							        name="tab"
+							        value="interest"
+							        class="nav-link w-100 btn btn-flex btn-active-light-primary border border-primary border-opacity-50 border-dashed border-1 "
+							        data-bs-toggle="tab"
+							        href="#tab-interest"
+							        data-pb-target="1">
+								<span class="d-flex">
+									<span class="flex-column text-start">
+										<span class="d-flex flex-row mb-3">
+											<i class="fs-2x me-2 bi bi-layers text-active-primary"></i>
+											<span class="d-flex flex-column align-items-start">
+												<span class="fs-3 fw-bold">Interest</span>
+											</span>
+										</span>
+										<span class="fs-6">Entry Wise Interest</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="action__tabs"
+				     class="flex-row-fluid">
+					<div class=""
+					     id="intro">
+						<div id="learning">
+							<div class="card">
+								<div class="card-body d-flex flex-column flex-center">
+									<div class="mb-2">
+										<p class="text-center">
+											<i class="fs-5x text-warning las la-life-ring"></i>
+										</p>
+										<h1 class="fw-semibold text-gray-800 text-center lh-lg">
+											Know about Summary Report<br>
+											<span class="fw-bolder">Be Self Export ?</span>
+										</h1>
+									</div>
+									<div class="text-center mt-10 mb-1">
+										<a class="btn btn-light-danger me-2"
+										   data-bs-target="#kt_modal_create_app"
+										   data-bs-toggle="modal">
+											<i class="lab la-youtube fs-2x"></i>
+											Youtube Video
+										</a>
+										<a class="btn btn-light-warning"
+										   href="javascript:">
+											<i class="las la-walking fs-2x"></i>
+											Quick Process
+										</a>
+										<div>
+											<button type="button"
+											        name="action"
+											        value="hide_intro"
+											        class="btn btn-link">
+												Do not show this Again !!!
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="states"
+						     class="d-none">
+							// few cards and their details
+						</div>
+					</div>
+					<div class="tab-content"
+					     id="variant">
+						<div class="tab-pane fade"
+						     id="tab-wave"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-wave"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">Select Ledger Account</label>
+												<select title=""
+												        required
+												        name="ledger_id"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-source="ledgers"
+												        data-pb-placeholder="Select Ledger Account"
+												        data-pb-search="0"
+												        class="form-select form-select-solid">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-wave"
+														        value="wave"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_wave_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_wave">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_wave">
+											<div class="separator separator-dashed mt-9 mb-6"></div>
+											<div class="row g-8 mb-8">
+												<div class="col-12">
+													<label class="fs-6 form-label fw-bold text-dark">Custom Date Range</label>
+													<input type="text"
+													       name="dates"
+													       class="form-control form-control-solid"
+													       placeholder="Select Date Range"
+													       title=""
+													       data-pb-control="range"
+													       data-pb-method="defined" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade"
+						     id="tab-interest"
+						     role="tabpanel">
+							<form action="#"
+							      id="form-interest"
+							      method="post">
+								<div class="card border border-1 border-primary border-opacity-25">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">Select Ledger Account</label>
+												<select title=""
+												        required
+												        name="ledger_id"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-source="ledgers"
+												        data-pb-placeholder="Select Ledger Account"
+												        data-pb-search="0"
+												        class="form-select form-select-solid">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-12 mb-7">
+												<label class="fs-6 form-label fw-bold text-dark">Select Month
+												</label>
+												<select title=""
+												        required
+												        name="month_id"
+												        data-pb-control="select"
+												        data-pb-method="simple"
+												        data-pb-source="months"
+												        data-pb-placeholder="Select Month"
+												        data-pb-search="0"
+												        class="form-select form-select-solid">
+													<option value=""></option>
+												</select>
+											
+											</div>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-6">
+														<button type="button"
+														        data-form-submit
+														        name="report"
+														        form="form-interest"
+														        value="interest"
+														        class="btn btn-primary hover-elevate-up w-100">Load Report
+														</button>
+													</div>
+													<div class="col-6">
+														<a id="adv_sf_interest_link"
+														   class="btn btn-light-primary hover-elevate-down btn-active-light-primary w-100"
+														   data-bs-toggle="collapse"
+														   href="#adv_filter_interest">Advanced</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="collapse"
+										     id="adv_filter_interest"></div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="result__tabs"
+	     class="d-none">
+		<div class="d-none"
+		     id="report-wave">
+			<div class="card shadow-sm"
+			     id="report-wave-card">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-update="name">Accounts Wave Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-wave">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_wave_link"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-wave">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="tab"
+						        data-e-value="wave"
+						        data-e-origin="report"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-wave">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-wave">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Status</label>
+								<select title=""
+								        name="status"
+								        id="wave-table-status-select"
+								        data-pb-source="statuses"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-placeholder="Select Status"
+								        data-pb-search="0"
+								        data-col-index="10"
+								        data-pb-catch="variant-wave-table"
+								        data-filter-event="select"
+								        data-pb-allow-clear="true"
+								        class="form-select form-select-sm form-select-solid table-input">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm table-input"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title=""
+									       data-col-index="3"
+									       data-pb-catch="variant-quick-table"
+									       data-filter-event="date-range" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4"
+						       id="variant-wave-table">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th data-index="0">Date
+								</th>
+								<th data-index="1"
+								    data-voucher-type="1">Sales
+								</th>
+								<th data-index="2"
+								    data-voucher-type="3">Receipts
+								</th>
+								<th data-index="3"
+								    data-voucher-type="4">Payments
+								</th>
+								<th data-index="4">Gross Amount</th>
+								<th data-index="5">Opening
+								</th>
+								<th data-index="6">Sub Total</th>
+								<th data-index="7"
+								    data-voucher-type="5">Net Deposit
+								</th>
+								<th data-index="8">Closing
+								</th>
+								<th data-index="9">Closing 2</th>
+								<th data-index="10">Status</th>
+								<th data-index="12">Action</th>
+							</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-none"
+		     id="report-interest">
+			<div class="card shadow-sm">
+				<div class="card-header d-print-none">
+					<div class="card-title">
+						<h3 data-pb-update="name">Accounts Wave Report</h3>
+					</div>
+					<div class="card-toolbar">
+						<a class="btn btn-sm btn-light-primary me-3"
+						   data-bs-toggle="collapse"
+						   href="#table-header-interest">
+							<i class="bi fs-2 bi-card-heading"></i>
+							<span>Header</span>
+						</a>
+						<a class="btn btn-sm btn-light-danger me-3"
+						   id="table_filters_interest_link"
+						   data-bs-toggle="collapse"
+						   href="#table-filters-interest">
+							<i class="bi fs-2 bi-filter-square"></i>
+							<span>Filters</span>
+						</a>
+						<button type="button"
+						        value="tab"
+						        data-e-value="interest"
+						        data-e-origin="report"
+						        name="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body py-0">
+					<div aria-description="header of the report - account detail"
+					     class="collapse"
+					     id="table-header-interest">
+						// insert header
+					</div>
+					<div class="collapse d-print-none"
+					     id="table-filters-interest">
+						<div class="row mb-3"
+						     data-pb-target="filters">
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Search</label>
+								<input type="search"
+								       name="global"
+								       data-dt-regex="1"
+								       class="form-control form-control-sm table-input"
+								       placeholder="search"
+								       data-pb-catch="summary-quick-table"
+								       data-col-index="-1"
+								       data-filter-event="text"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Status</label>
+								<select title=""
+								        name="status"
+								        data-pb-source="statuses"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-placeholder="Select Status"
+								        data-pb-search="0"
+								        data-col-index="1"
+								        data-pb-catch="summary-quick-table"
+								        data-filter-event="select"
+								        data-pb-allow-clear="true"
+								        class="form-select form-select-sm form-select-solid table-input">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">xxxxx</label>
+								<input type="text"
+								       name=""
+								       class="form-control  form-select-sm"
+								       placeholder=""
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">Date</label>
+								<div class="input-group">
+									<input type="text"
+									       name="date"
+									       data-dt-column="0"
+									       class="form-control form-select-sm table-input"
+									       data-pb-control="date"
+									       data-pb-method="range"
+									       placeholder="Select Date"
+									       title=""
+									       data-col-index="3"
+									       data-pb-catch="summary-quick-table"
+									       data-filter-event="date-range" />
+									<input type="button"
+									       name="clear"
+									       data-pb-target="1"
+									       class="btn btn-sm btn-icon btn-light"
+									       value="X">
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       data-col-index="3"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<label class="form-label">yyyy</label>
+								<input type="text"
+								       name=""
+								       class="form-control form-select-sm"
+								       placeholder=""
+								       data-col-index="3"
+								       title="" />
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xxl mt-3">
+								<button class="summary-quick-table-export-button"
+								        data-export-method="excel">Excel
+								</button>
+								<button class="summary-quick-table-export-button"
+								        data-export-method="pdf">Pdf
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4"
+						       id="variant-interest-table">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th></th>
+								<th data-index="0"
+								    class="min-w-200px">Date
+								</th>
+								<th data-index="1"
+								    class="min-w-100px">Particulars
+								</th>
+								<th data-index="2">Debited</th>
+								<th data-index="3"
+								    class="min-w-150px">Credited
+								</th>
+								<th data-index="4">Closing</th>
+								<th data-index="5"
+								    class="min-w-100px">Days
+								</th>
+								<th data-index="6">Interest</th>
+							</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade show active"
+		     tabindex="-1"
+		     id="summary-modal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Transaction Summary</h3>
+						
+						<!--begin::Close-->
+						<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+						     data-bs-dismiss="modal"
+						     aria-label="Close">
+							<i class="ki-duotone ki-cross fs-1">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
+						<!--end::Close-->
+					</div>
+					
+					<div class="modal-body">
+						
+						
+						<div class="table-responsive">
+							<table class="table align-middle text-gray-600 fs-5 fw-semibold table-row-dashed gy-2 gs-4">
+								<thead>
+								<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+									<th data-index="0">Ledger Id
+									</th>
+									<th data-index="1">Transaction Type
+									</th>
+									<th data-index="2">Amount
+									</th>
+									<th data-index="3">Memo
+									</th>
+								</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					
+					
+					</div>
+					
+					<div class="modal-footer">
+						<button class="btn btn-light"
+						        data-bs-dismiss="modal">Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+</div>

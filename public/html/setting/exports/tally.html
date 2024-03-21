@@ -1,0 +1,329 @@
+<div data-pb-layout="stepper"
+     data-e-welcome="form"
+     data-layout="parent">
+	
+	<div id="form__stepper">
+		<div id="tally-export">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<!--@@stepper-->
+					<div id="tally-export-stepper"
+					     data-pb-step="4"
+					     class="stepper stepper-pills">
+						<div class="stepper-nav flex-center flex-wrap mb-10">
+							<div class="stepper-item mx-8 my-4 current"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">1</span>
+									</div>
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 1 </h3>
+										
+										<div class="stepper-desc">
+											What to export
+										</div>
+									</div>
+								</div>
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">2</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 2 </h3>
+										
+										<div class="stepper-desc">
+											Data Segment
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">3</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 3 </h3>
+										
+										<div class="stepper-desc">
+											OTP Verification
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+							
+							<div class="stepper-item mx-8 my-4"
+							     data-kt-stepper-element="nav">
+								<div class="stepper-wrapper d-flex align-items-center">
+									<div class="stepper-icon w-40px h-40px">
+										<i class="stepper-check fas fa-check"></i>
+										<span class="stepper-number">4</span>
+									</div>
+									
+									<div class="stepper-label">
+										<h3 class="stepper-title">
+											Step 4 </h3>
+										
+										<div class="stepper-desc">
+											Final Export
+										</div>
+									</div>
+								</div>
+								
+								<div class="stepper-line h-40px"></div>
+							</div>
+						</div>
+						
+						<form class="form w-lg-500px mx-auto"
+						      novalidate="novalidate"
+						      id="tally-export-form">
+							<div class="mb-5">
+								<div id="params"
+								     data-pb-index="1"
+								     class="flex-column current"
+								     data-kt-stepper-element="content">
+									<div class="fv-row mb-10">
+										<label class="form-label">Date Range for Export</label>
+										<input type="text"
+										       data-pb-control="range"
+										       data-pb-method="defined"
+										       name="date_range"
+										       class="form-control form-control-solid"
+										       placeholder=""
+										       title="" />
+									</div>
+									<div class="fv-row mb-10">
+										<label class="form-label">Export Type</label>
+										<input type="radio"
+										       class="btn-check"
+										       name="export_type"
+										       id="master"
+										       value="1" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       data-kt-button="true"
+										       for="master">
+											<i class="ki-outline ki-setting-2 fs-4x me-4"></i>
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Masters</span>
+												<span class="text-muted fw-semibold fs-6">
+													Masters means all the data related to the company, ledgers, groups, stock items, etc.
+												</span>
+											</span>
+										</label>
+										<input type="radio"
+										       class="btn-check"
+										       name="export_type"
+										       value="2"
+										       id="vouchers" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center"
+										       data-kt-button="true"
+										       for="vouchers">
+											<i class="ki-outline ki-files-tablet fs-4x me-4"></i>
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Vouchers</span>
+												<span class="text-muted fw-semibold fs-6">
+													Vouchers means all the data related to the transactions, sales, purchases, receipts, payments, etc.
+												</span>
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div id="select"
+								     data-pb-index="2"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									<div class="fv-row mb-10">
+										<label class="form-label">Data Segment</label>
+										<select name="data_segment_key"
+										        data-pb-source="data_segments"
+										        class="form-select form-select-solid"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Select Types"
+										        data-pb-search="0"
+										        title="Select Types">
+											<option></option>
+										</select>
+									</div>
+								</div>
+								
+								<div id="verify"
+								     data-pb-index="3"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									
+									<div class="fv-row mb-10">
+										<img alt=""
+										     class="mh-25px"
+										     src="../../assets/media/avatars/300-10.jpg" />
+									</div>
+									<div class="fv-row mb-10">
+										<h1 class="text-dark mb-3">Two Step Verification</h1>
+										<div class="text-muted fw-semibold fs-5 mb-5">Enter the verification code we sent to</div>
+										<div class="fw-bold text-dark fs-3">******7859</div>
+									</div>
+									<div class="fv-row mb-10">
+										<div class="fw-bold text-start text-dark fs-6 mb-1 ms-1">Type your 6 digit security code</div>
+										<div class="d-flex flex-wrap flex-stack">
+											<input type="text"
+											       name="code_1"
+											       data-inputmask="'mask': '9', 'placeholder': ''"
+											       maxlength="1"
+											       class="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2 otp_input"
+											       value="" />
+											<input type="text"
+											       name="code_2"
+											       data-inputmask="'mask': '9', 'placeholder': ''"
+											       maxlength="1"
+											       class="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2 otp_input"
+											       value="" />
+											<input type="text"
+											       name="code_3"
+											       data-inputmask="'mask': '9', 'placeholder': ''"
+											       maxlength="1"
+											       class="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2 otp_input"
+											       value="" />
+											<input type="text"
+											       name="code_4"
+											       data-inputmask="'mask': '9', 'placeholder': ''"
+											       maxlength="1"
+											       class="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2 otp_input"
+											       value="" />
+										</div>
+									</div>
+									<div class="fv-row mb-10">
+										<div class="text-center fw-semibold fs-5">
+											<span class="text-muted me-1">Didn’t get the code ?</span>
+											<button type="button"
+											        name="action"
+											        value="resend"
+											        data-e-origin="tally-export"
+											        class="link-primary fs-5 me-1">Resend
+											</button>
+											<span class="text-muted me-1">or</span>
+											<button type="button"
+											        name="action"
+											        value="call"
+											        class="link-primary fs-5">Call Us
+											</button>
+										</div>
+									</div>
+								
+								</div>
+								
+								<div id="export"
+								     data-pb-index="4"
+								     class="flex-column"
+								     data-kt-stepper-element="content">
+									<div class="fv-row mb-10">
+										<input type="radio"
+										       class="btn-check"
+										       name="export_mode"
+										       value="1"
+										       id="kt_radio_buttons_2_option_1" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-5"
+										       for="kt_radio_buttons_2_option_1">
+											<i class="ki-outline ki-cloud-download fs-4x me-4"></i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Download Zip</span>
+												<span class="text-muted fw-semibold fs-6">
+													It will render the data live and download it as a zip file.
+												</span>
+											</span>
+										</label>
+										
+										<input type="radio"
+										       class="btn-check"
+										       name="export_mode"
+										       value="2"
+										       id="kt_radio_buttons_2_option_2" />
+										<label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center"
+										       for="kt_radio_buttons_2_option_2">
+											<i class="ki-outline ki-cloud fs-4x me-4"></i>
+											
+											<span class="d-block fw-semibold text-start">
+												<span class="text-dark fw-bold d-block fs-3">Send to Email</span>
+												<span class="text-muted fw-semibold fs-6">
+													It will prepare your data, we will email you when it is ready to download.
+												</span>
+											</span>
+										</label>
+									</div>
+								
+								
+								</div>
+							</div>
+							
+							<div class="d-flex flex-stack">
+								<div class="me-2">
+									<button type="button"
+									        name="load"
+									        value="params"
+									        data-step-action="previous"
+									        data-e-origin="tally-export"
+									        class="btn btn-light btn-active-light-primary d-none">
+										Back
+									</button>
+								</div>
+								
+								<div>
+									<button type="button"
+									        name="load"
+									        value="select"
+									        data-step-action="next"
+									        data-e-origin="tally-export"
+									        class="btn btn-primary"
+									        id="continue_btn">
+										Continue
+									</button>
+									<button type="button"
+									        name="action"
+									        value="finish"
+									        data-e-origin="tally-export"
+									        data-step-action="finish"
+									        data-kt-indicator=""
+									        class="btn btn-primary d-none">
+										<span class="indicator-label">
+											Submit
+										</span>
+										<span class="indicator-progress">
+											Downloading...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__stepper"
+	     class="d-none">
+		// hold templates here.
+	</div>
+</div>

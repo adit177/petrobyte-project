@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Page One",
+    "path": "/path/to/page-one.html",
+    "keywords": ["first", "beginning", "start"]
+  },
+  {
+    "name": "Page Two",
+    "path": "/path/to/page-two.html",
+    "keywords": ["second", "next"]
+  },
+  {
+    "name": "Page Three",
+    "path": "/path/to/page-three.html",
+    "keywords": ["third", "last"]
+  },
+    {
+        "name": "Page Four",
+        "path": "/path/to/page-four.html",
+        "keywords": ["fourth", "final"]
+    }
+
+]

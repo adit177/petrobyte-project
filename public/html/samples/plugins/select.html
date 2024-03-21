@@ -1,0 +1,449 @@
+<div data-pb-layout="sample"
+     data-layout="parent"
+     data-e-welcome="ground">
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		
+		<div id="simple"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Simple</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="simple"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="simple-select">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">direct</label>
+							<select name="direct"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="simple"
+							        data-pb-tack="direct"
+							        data-pb-placeholder="Custom placeholder"
+							        data-pb-search="0"
+							        title="this is cool">
+								<option></option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">withID</label>
+							<select name="withid"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="simple"
+							        data-pb-tack="withid"
+							        data-pb-placeholder="placeholder is here"
+							        data-pb-allow-clear="false"
+							        title="this is cool">
+								<option></option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">subtext</label>
+							<select name="subtext"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="simple"
+							        data-pb-tack="subtext"
+							        data-pb-placeholder="placeholder is here"
+							        title="this is cool">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="accounts"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Accounts</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="accounts"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="accounts-select">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">amount</label>
+							<select name="amount"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="amount"
+							        data-pb-placeholder="Select Your Account"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">group</label>
+							<select name="group"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="group"
+							        data-pb-placeholder="Select Your Account"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">ledger</label>
+							<select name="ledger"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="account"
+							        data-pb-tack="ledger"
+							        data-pb-placeholder="Select Your Account"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="person"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Person (avatar)</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="person"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="person-select">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">inline</label>
+							<select name="inline"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="image"
+							        data-pb-tack="inline"
+							        data-pb-placeholder="Select Account"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">rich</label>
+							<select name="rich"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="image"
+							        data-pb-tack="rich"
+							        data-pb-placeholder="Select Employee"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="custom"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Custom</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="custom"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="custom-select">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">table</label>
+							<select name="table"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="custom"
+							        data-pb-tack="table"
+							        data-pb-placeholder="this is placeholder"
+							        title="">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div id="text"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Text</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="text"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">col</label>
+						<select name="col"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="col"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">end</label>
+						<select name="end"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="end"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">row</label>
+						<select name="row"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="row"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">dual</label>
+						<select name="dual"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="dual"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">menu</label>
+						<select name="menu"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="menu"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+					<div class="col-12 col-md-4 mb-7">
+						<label class="form-label">grid</label>
+						<select name="grid"
+						        class="form-select form-select-solid"
+						        data-pb-control="select"
+						        data-pb-method="text"
+						        data-pb-tack="grid"
+						        data-pb-placeholder="this is placeholder"
+						        title="">
+							<option></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<p class="text-danger fs-5 fw-semibold">NOTE: here the select has been initiated by page load finish Promise. i did not write any code to enable the plugin into these selects,</p>
+				<p class="text-dark fs-5">outside the form, select will automatically initiated.</p>
+			</div>
+		</div>
+		
+		<div id="tag"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Tag</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="tag"
+					        class="btn btn-sm btn-light-dark">
+						Load Options
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="tag-select">
+					<div class="row">
+						<div class="col-12 col-md-4 mb-7">
+							<label class="form-label">single</label>
+							<select name="single"
+							        data-pb-source="single"
+							        class="form-select form-select-solid"
+							        data-pb-control="select"
+							        data-pb-method="tag"
+							        data-pb-tack="single"
+							        data-pb-placeholder="this is placeholder"
+							        data-pb-search="1"
+							        title="this is cool">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<div class="btn-group">
+					<button form="simple-select"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="simple"></button>
+					<button form="accounts-select"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="accounts"></button>
+					<button form="person-select"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="person"></button>
+					<button form="custom-select"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="custom"></button>
+					<button form="tag-select"
+					        data-form-submit=""
+					        type="button"
+					        name="action"
+					        class="btn btn-light-info"
+					        value="tag"></button>
+				</div>
+			</div>
+			<div class="card-footer">
+				<span class="text-danger fs-5 fw-semibold">these are the button of above defined form, this is required to create a connected button if the form is there.</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row zone mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">data-dom-method</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-method</td>
+							<td>to select the method</td>
+							<td>simple, ...</td>
+							<td>data-pb-method="simple / x / y / z"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-tack</td>
+							<td>to choose the drop style in method</td>
+							<td>get from ...</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-placeholder</td>
+							<td>to add placeholder</td>
+							<td></td>
+							<td>data-pb-placeholder="Custom placeholder"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-search</td>
+							<td>to show or hide search</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-allow-clear</td>
+							<td>to give option for clear or no clear</td>
+							<td></td>
+							<td>data-pb-allow-clear="false"</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

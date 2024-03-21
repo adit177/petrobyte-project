@@ -1,0 +1,569 @@
+<div data-e-welcome="navbar"
+     data-pb-layout="direct"
+     data-layout="parent">
+	
+	
+	<div id="visits__direct">
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Nozzle Wise Summary</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="nozzle_wise_summary_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Nozzle</th>
+							<th>Opening</th>
+							<th>Closing</th>
+							<th>Gross</th>
+							<th>Testing</th>
+							<th>Nett Sale</th>
+							<th>Cumulative</th>
+						</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Tank Wise Summary</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="tank_wise_summary_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Item</th>
+							<th>Tank</th>
+							<th>Opening</th>
+							<th>Receipts</th>
+							<th>Closing</th>
+							<th>DIP Sale</th>
+							<th>Variation</th>
+							<th>Cum Sale</th>
+							<th>Cum Vary</th>
+						</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Petroleum Fuel Inventory</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="petroleum_fuel_inventory_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th rowspan="2">Item</th>
+							<th>Opening</th>
+							<th colspan="2"
+							    class="text-center">Purchased
+							</th>
+							<th colspan="2"
+							    class="text-center">Sold
+							</th>
+							<th colspan="2"
+							    class="text-center">Loss
+							</th>
+							<th>Closing</th>
+						</tr>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Volume</th>
+							<th>Volume</th>
+							<th>Amount</th>
+							<th>Volume</th>
+							<th>Amount</th>
+							<th>Volume</th>
+							<th>Amount</th>
+							<th>Volume</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<td colspan="5"
+							    class="text-center">
+								Total Fuel Sale
+							</td>
+							<td colspan="5"
+							    class="text-center total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2">
+								Total
+							</td>
+						</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Lubricant Inventory</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="lubricant_inventory_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th rowspan="2">Lubricant Name</th>
+							<th>Opening</th>
+							<th colspan="2"
+							    class="text-center">Purchased
+							</th>
+							<th colspan="2"
+							    class="text-center">Sold
+							</th>
+							<th>Closing</th>
+						</tr>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>O Vol</th>
+							<th>P Vol</th>
+							<th>P Amt</th>
+							<th>S Vol</th>
+							<th>S Amt</th>
+							<th>C Vol</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<td colspan="5"
+							    class="text-center">
+								Total Lubricant Sale
+							</td>
+							<td colspan="1"
+							    class="text-center total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2">
+								> Total
+							</td>
+						</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		<div class="d-flex gap-4 wrapper">
+			<div class="card shadow-sm mb-5">
+				<div class="card-header">
+					<h3 class="card-title">Fuel Sale Collection</h3>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="fuel_sale_collection_table">
+							<thead>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<th>Account</th>
+								<th>Amount</th>
+							</tr>
+							</thead>
+							<tfoot>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<td colspan="1"
+								    class="text-center">
+									Total Of Fuel
+								</td>
+								<td colspan="1"
+								    class="text-center total rc_currency fs-3"
+								    data-cs-sign="INR"
+								    data-cs-round="2">
+									Total
+								</td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			<div class="card shadow-sm mb-5">
+				<div class="card-header">
+					<h3 class="card-title">Lube Collection</h3>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="lube_collection_table">
+							<thead>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<th>Account</th>
+								<th>Amount</th>
+							</tr>
+							</thead>
+							<tfoot>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<td colspan="1"
+								    class="text-center">
+									Total of Lube
+								</td>
+								<td colspan="1"
+								    class="text-center total rc_currency fs-3"
+								    data-cs-sign="INR"
+								    data-cs-round="2">
+									Total
+								</td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			<div class="card shadow-sm mb-5">
+				<div class="card-header">
+					<h3 class="card-title">Nozzle Sales Summary</h3>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="nozzle_sales_summary_table">
+							<thead>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<th>Method</th>
+								<th>Amount</th>
+							</tr>
+							</thead>
+							<tfoot>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<td colspan="1"
+								    class="text-center">
+									Sale Of Totiliser
+								</td>
+								<td colspan="1"
+								    class="text-center total rc_currency fs-3"
+								    data-cs-sign="INR"
+								    data-cs-round="2">
+									Total
+								</td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
+			
+			</div>
+		
+		</div>
+		
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Cash Flow Accounts</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="cash_flow_accounts_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Account Name</th>
+							<th>Open</th>
+							<th>Sale (+)</th>
+							<th>Receipt (+)</th>
+							<th>Payment (+)</th>
+							<th>Subtotal</th>
+							<th>Debited (in)</th>
+							<th>Credited (out)</th>
+							<th>Closing</th>
+							<th>Book</th>
+						</tr>
+						
+						</thead>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Customers Summary</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="customers_summary_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Customers Category</th>
+							<th>Opening</th>
+							<th>Sales</th>
+							<th>Receipts</th>
+							<th>Payments</th>
+							<th>Others</th>
+							<th>Closing</th>
+							<th>TS</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<td>Total Credit Sale</td>
+							<td class="opening_total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2"></td>
+							<td class="sales_total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2"></td>
+							<td class="receipts_total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2"></td>
+							<td colspan="2">Total OustStanding</td>
+							<td class="outstanding_total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2"></td>
+						</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Credit Sales</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="credit_sales_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Customer Account</th>
+							<th>Times</th>
+							<th>Item</th>
+							<th>Rate</th>
+							<th>Quantity</th>
+							<th>Amount</th>
+							<th>Received</th>
+						</tr>
+						
+						</thead>
+						<tfoot>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<td colspan="4"
+							    class="text-center">
+								Total
+							</td>
+							<td colspan="1"
+							    class="text-center total rc_currency fs-3"
+							    data-cs-sign="INR"
+							    data-cs-round="2">
+								Total
+							</td>
+						</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		<div class="d-flex gap-4 wrapper">
+			<div class="card shadow-sm mb-5">
+				<div class="card-header">
+					<h3 class="card-title">Receipt Vouchers</h3>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="receipt_vouchers_table">
+							<thead>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<th>Received From</th>
+								<th>Received Into</th>
+								<th>Amount</th>
+							</tr>
+							</thead>
+							<tfoot>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<td colspan="2"
+								    class="text-center">
+									Total Of Receipts
+								</td>
+								<td colspan="2"
+								    class="text-center total rc_currency fs-3"
+								    data-cs-sign="INR"
+								    data-cs-round="2"></td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			<div class="card shadow-sm mb-5">
+				<div class="card-header">
+					<h3 class="card-title">Payment Vouchers</h3>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-3 gs-4"
+						       id="payment_vouchers_table">
+							<thead>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<th>Paid To</th>
+								<th>Paid From</th>
+								<th>Amount</th>
+							</tr>
+							</thead>
+							<tfoot>
+							<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+								<td colspan="2"
+								    class="text-center">
+									Total Of Payments
+								</td>
+								<td colspan="2"
+								    class="text-center total rc_currency fs-3"
+								    data-cs-sign="INR"
+								    data-cs-round="2"></td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
+			
+			</div>
+		</div>
+		
+		<div class="mb-5">
+			<h3 class="text-center mb-5">Journal Vouchers</h3>
+			<div class="d-flex gap-4 wrapper">
+				<div class="card shadow-sm mb-5">
+					<div class="card-header">
+						<h2 class="card-title">Debited Accounts</h2>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table align-middle table-row-dashed gy-3 gs-4"
+							       id="debited_accounts_table">
+								<thead>
+								<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+									<th>Ledger Account</th>
+									<th>Amount</th>
+									<th>Descript</th>
+								</tr>
+								</thead>
+								<tfoot>
+								<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+									<td colspan="1"
+									    class="text-center">
+										Total of dr
+									</td>
+									<td colspan="1"
+									    class="text-center total rc_currency fs-3"
+									    data-cs-sign="INR"
+									    data-cs-round="2">
+										Total
+									</td>
+								</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				
+				
+				</div>
+				<div class="card shadow-sm mb-5">
+					<div class="card-header">
+						<h2 class="card-title">Credited Accounts</h2>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table align-middle table-row-dashed gy-3 gs-4"
+							       id="credited_accounts_table">
+								<thead>
+								<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+									<th>Ledger Account</th>
+									<th>Amount</th>
+									<th>Descript</th>
+								</tr>
+								</thead>
+								<tfoot>
+								<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+									<td colspan="1"
+									    class="text-center">
+										Total of cr
+									</td>
+									<td colspan="1"
+									    class="text-center total rc_currency fs-3"
+									    data-cs-sign="INR"
+									    data-cs-round="2">
+										Total
+									</td>
+								</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				
+				
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="card shadow-sm mb-5">
+			<div class="card-header">
+				<h3 class="card-title">Contra (Settlements, Deposits & Withdraws)</h3>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table align-middle table-row-dashed gy-3 gs-4"
+					       id="contra_table">
+						<thead>
+						<tr class="text-center fw-semibold fs-6 text-muted text-uppercase">
+							<th>Type</th>
+							<th>Transfer From [-]</th>
+							<th>Transfer To [+]</th>
+							<th>Amount</th>
+							<th>Description</th>
+						</tr>
+						
+						</thead>
+					</table>
+				</div>
+			</div>
+		
+		
+		</div>
+	
+	</div>
+
+
+</div>

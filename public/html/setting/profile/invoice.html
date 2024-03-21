@@ -1,0 +1,189 @@
+<div data-e-welcome="direct"
+     data-pb-layout="direct"
+     data-layout="parent">
+	<div class="row">
+		<div class="card">
+			<div class="card-body p-lg-20">
+				<div class="d-flex flex-column flex-xl-row">
+					<div class="flex-lg-row-fluid me-xl-18 mb-10 mb-xl-0">
+						<div class="mt-n1">
+							<div class="d-flex flex-stack pb-10">
+								<a href="#">
+									<img alt="Logo"
+									     class="w-50px"
+									     src="../../assets/media/logos/petrobyte-diamond.svg" />
+								</a>
+								<a href="#"
+								   onclick="window.print()"
+								   class="btn btn-sm btn-light-danger"><i class="fa-solid fa-print"></i>Print
+								</a>
+							</div>
+							<div class="m-0">
+								<div class="fw-bold fs-3 text-gray-800 mb-8">Invoice #
+									<span>$$@invoice_number@$$</span>
+								</div>
+								<div class="row g-5 mb-8">
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Issue Date:</div>
+										<div class="fw-bold fs-6 text-gray-800">$$@issue_date@$$</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Due Date:</div>
+										<div class="fw-bold fs-6 text-gray-800 d-flex align-items-center flex-wrap">
+											<span class="pe-2">$$@due_date@$$</span>
+											<span class="fs-7 text-danger d-flex align-items-center">
+												<span class="bullet bullet-dot bg-danger me-2"></span>
+												Due in
+												<span>$$@due_days@$$</span>
+												days
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="row g-5 mb-8">
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Buyer GSTIN</div>
+										<div class="fw-bold fs-6 text-gray-800">$$@buyer_gst@$$</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Supplier GSTIN:</div>
+										<div class="fw-bold fs-6 text-gray-800">$$@supplier_gst@$$</div>
+									</div>
+								</div>
+								<div class="row g-5 mb-12">
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Issue For:</div>
+										<div class="fw-bold fs-6 text-gray-800">$$@station_name@$$</div>
+										<div class="fw-semibold fs-7 text-gray-600">Address of the fuel station <br />$$@station_address@$$
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="fw-semibold fs-7 text-gray-600 mb-1">Issued By:</div>
+										<div class="fw-bold fs-6 text-gray-800">$$@company_name@$$</div>
+										<div class="fw-semibold fs-7 text-gray-600">9858 South 53rd Ave. <br />$$@company_name@$$
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1">
+									<div class="table-responsive border-bottom mb-9">
+										<table class="table mb-3">
+											<thead>
+											<tr class="border-bottom fs-6 fw-bold text-muted">
+												<th class="min-w-175px pb-2">Description</th>
+												<th class="min-w-70px text-end pb-2">Hours</th>
+												<th class="min-w-80px text-end pb-2">Rate</th>
+												<th class="min-w-100px text-end pb-2">Amount</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr class="fw-bold text-gray-700 fs-5 text-end">
+												<td class="d-flex align-items-center pt-6">
+													<i class="fa fa-genderless text-danger fs-2 me-2"></i>Creative Design
+												</td>
+												<td class="pt-6">80</td>
+												<td class="pt-6">$40.00</td>
+												<td class="pt-6 text-dark fw-bolder">$3200.00</td>
+											</tr>
+											<tr class="fw-bold text-gray-700 fs-5 text-end">
+												<td class="d-flex align-items-center">
+													<i class="fa fa-genderless text-success fs-2 me-2"></i>Logo Design
+												</td>
+												<td>120</td>
+												<td>$40.00</td>
+												<td class="fs-5 text-dark fw-bolder">$4800.00</td>
+											</tr>
+											<tr class="fw-bold text-gray-700 fs-5 text-end">
+												<td class="d-flex align-items-center">
+													<i class="fa fa-genderless text-primary fs-2 me-2"></i>Web Development
+												</td>
+												<td>210</td>
+												<td>$60.00</td>
+												<td class="fs-5 text-dark fw-bolder">$12600.00</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="d-flex justify-content-end">
+										<div class="mw-300px">
+											<div class="d-flex flex-stack mb-3">
+												<div class="fw-semibold pe-10 text-gray-600 fs-7">Subtotal:</div>
+												<div class="text-end fw-bold fs-6 text-gray-800">$$@subtotal@$$</div>
+											</div>
+											<div class="d-flex flex-stack mb-3">
+												<div class="fw-semibold pe-10 text-gray-600 fs-7">GST
+													<span>$$@gst_percent@$$</span>
+												</div>
+												<div class="text-end fw-bold fs-6 text-gray-800">$$@gst_amount@$$</div>
+											</div>
+											<div class="d-flex flex-stack mb-3">
+												<div class="fw-semibold pe-10 text-gray-600 fs-7">Subtotal + GST</div>
+												<div class="text-end fw-bold fs-6 text-gray-800">$$@with_gst@$$</div>
+											</div>
+											<div class="d-flex flex-stack">
+												<div class="fw-semibold pe-10 text-gray-600 fs-7">Total</div>
+												<div class="text-end fw-bold fs-6 text-gray-800">$$@total@$$</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="m-0">
+						<div class="d-print-none border border-dashed border-gray-300 card-rounded h-lg-100 min-w-md-350px p-9 bg-lighten">
+							<div class="mb-8">
+								<span class="badge badge-light-success me-2"
+								      data-pb-control="paid">PAID
+								</span>
+								<span class="badge badge-light-danger"
+								      data-pb-control="due">DUE
+								</span>
+							</div>
+							<h6 class="mb-8 fw-bolder text-gray-600 text-hover-primary">PAYMENT DETAILS</h6>
+							<div class="mb-6">
+								<div class="fw-semibold text-gray-600 fs-7">Payer Email:</div>
+								<div class="fw-bold text-gray-800 fs-6">$$@email@$$</div>
+							</div>
+							<div class="mb-6">
+								<div class="fw-semibold text-gray-600 fs-7">Billing Account ID:</div>
+								<div class="fw-bold text-gray-800 fs-6">$$@account_id@$$</div>
+							</div>
+							<div class="mb-15">
+								<div class="fw-semibold text-gray-600 fs-7">Payment Term:</div>
+								<div class="fw-bold fs-6 text-gray-800 d-flex align-items-center">$$@payment_days@$$ days
+									<span class="fs-7 text-danger d-flex align-items-center">
+										<span class="bullet bullet-dot bg-danger mx-2"></span>
+										Due in $$@payment_due_days@$$ days
+									</span>
+								</div>
+							</div>
+							<h6 class="mb-8 fw-bolder text-gray-600 text-hover-primary">SUBSCRIPTION OVERVIEW</h6>
+							<div class="mb-6">
+								<div class="fw-semibold text-gray-600 fs-7">Subscription Name</div>
+								<div class="fw-bold fs-6 text-gray-800">
+									$$@subscription_name@$$<br>
+									<a href="#"
+									   class="link-primary ps-0 fs-7">View Subscriptions</a>
+								</div>
+							</div>
+							<div class="mb-6">
+								<div class="fw-semibold text-gray-600 fs-7">Renewal Date:</div>
+								<div class="fw-bold text-gray-800 fs-6">$$@renew_date@$$</div>
+							</div>
+							<div class="m-0">
+								<div class="fw-semibold text-gray-600 fs-7">Expires on:</div>
+								<div class="fw-bold fs-6 text-gray-800 d-flex align-items-center">
+									<span>$$@expire_date@$$</span>
+									<span class="fs-7 text-success d-flex align-items-center">
+										<span class="bullet bullet-dot bg-success mx-2"></span>
+										$$@remaining_days@$$ Days remaining
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

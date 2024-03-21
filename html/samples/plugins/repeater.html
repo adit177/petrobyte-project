@@ -1,0 +1,543 @@
+<div data-pb-layout="sample"
+     data-layout="parent"
+     data-e-welcome="ground">
+	
+	<div id="ground__sample"
+	     class="zone row g-7">
+		<!--simple-->
+		<div id="simple"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Simple</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        name="stack"
+					        value="simple"
+					        data-e-nature="option"
+					        class="btn btn-sm btn-light-dark">
+						Enable Repeater
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="form-repeater-simple"
+				      data-pb-control="repeater"
+				      data-pb-method="simple"
+				      data-form-sno="1"
+				      data-form-valid=""
+				      class="form border border-2 rounded-1 p-5">
+					<div class="form-group row mb-7">
+						<div class="col-6">
+							<label class="form-label">Fixed Input - 1:</label>
+							<input type="email"
+							       class="form-control mb-2 mb-md-0"
+							       placeholder="Enter full name" />
+						</div>
+						<div class="col-6">
+							<label class="form-label">Fixed input- 2:</label>
+							<input type="email"
+							       class="form-control mb-2 mb-md-0"
+							       placeholder="Enter contact number" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div data-repeater-list="fr_simple">
+							<div data-repeater-item>
+								<div class="form-group row mb-7">
+									<div class="col-md-3">
+										<label class="form-label">Name:</label>
+										<input type="email"
+										       class="form-control mb-2 mb-md-0"
+										       placeholder="Enter full name" />
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Number:</label>
+										<input type="email"
+										       class="form-control mb-2 mb-md-0"
+										       placeholder="Enter contact number" />
+									</div>
+									<div class="col-md-4">
+										<button type="button"
+										        data-e-nature="ignore"
+										        data-repeater-delete
+										        class="btn btn-sm btn-light-danger mt-3 mt-md-8">
+											<i class="la la-trash-o"></i>Delete
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group mt-5">
+						<button type="button"
+						        data-e-nature="ignore"
+						        data-repeater-create
+						        class="btn btn-sm btn-light-primary">
+							<i class="la la-plus"></i>Add
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<button type="button"
+				        form="form-repeater-simple"
+				        data-e-nature="post"
+				        data-e-value="simple"
+				        data-form-submit=""
+				        name="action"
+				        value="save"
+				        class="btn btn-light-info">Submit Form
+				</button>
+				<button type="button"
+				        form="form-repeater-simple"
+				        data-e-nature="post"
+				        data-e-value="simple"
+				        name="action"
+				        value="reset"
+				        class="btn btn-light-dark">Reset Form
+				</button>
+			</div>
+		</div>
+		<!--nested-->
+		<div id="nested"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Nested</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        name="stack"
+					        value="nested"
+					        data-e-nature="option"
+					        class="btn btn-sm btn-light-dark">
+						Enable Repeater
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="form-repeater-nested"
+				      data-pb-control="repeater"
+				      data-pb-method="nested"
+				      data-form-valid=""
+				      data-form-sno="2"
+				      data-repeater-slideup
+				      class="form">
+					<div class="form-group border border-1 rounded-1 bg-light-danger">
+						<div class="row fv-row mb-7">
+							<div class="col-6">
+								<label class="form-label">Fixed Input - 1:</label>
+								<input type="email"
+								       name="fixed_input_1"
+								       class="form-control mb-2 mb-md-0"
+								       placeholder="Enter full name"
+								       title="" />
+							</div>
+							<div class="col-6">
+								<label class="form-label">Fixed input- 2:</label>
+								<input type="email"
+								       name="fixed_input_2"
+								       class="form-control mb-2 mb-md-0"
+								       placeholder="Enter contact number"
+								       title="" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group bg-light-dark">
+						<div data-repeater-list="fr_nested_head"
+						     class="main-repeater mb-0">
+							<div data-repeater-item>
+								<div class="row fv-row mb-5">
+									<div class="col-md-3">
+										<label class="form-label">Name:</label>
+										<input type="text"
+										       name="name"
+										       class="form-control mb-2 mb-md-0"
+										       placeholder="Enter full name"
+										       title="" />
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Address:</label>
+										<input type="text"
+										       name="address"
+										       class="form-control mb-2 mb-md-0"
+										       placeholder="Enter full name"
+										       title="" />
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">College:</label>
+										<input type="text"
+										       name="college"
+										       class="form-control mb-2 mb-md-0"
+										       placeholder="Enter full name"
+										       title="" />
+									</div>
+									<div class="col-md-2">
+										<div class="form-check form-check-custom form-check-solid mt-2 mt-md-11">
+											<input class="form-check-input"
+											       name="primary"
+											       type="checkbox"
+											       value=""
+											       title="" />
+											Primary
+										</div>
+									</div>
+								</div>
+								<div class="inner-repeater border border-2 rounded-1 bg-light-success mx-10 p-5">
+									<div data-repeater-list="fr_nested_child">
+										<div data-repeater-item>
+											<div class="row fv-row mb-5">
+												<div class="col-4">
+													<label class="form-label">Number:</label>
+													<input type="email"
+													       name="number"
+													       class="form-control"
+													       placeholder="Enter contact number"
+													       title="" />
+												</div>
+												<div class="col-5">
+													<label class="form-label">Sales Amount</label>
+													<input type="text"
+													       name="amount"
+													       class="form-control"
+													       placeholder="Sales Amount"
+													       title="Sales Amount" />
+												</div>
+												<div class="col-3">
+													<label class="form-label">delete button</label>
+													<button type="button"
+													        data-repeater-delete
+													        data-e-nature="ignore"
+													        class="btn btn-light-danger">
+														Delete Row
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<button type="button"
+										        data-e-nature="ignore"
+										        data-repeater-create="inner"
+										        class="btn btn-sm btn-light-primary">
+											<i class="la la-plus"></i> Add Row
+										</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="offset-8 col-4">
+										<button type="button"
+										        data-e-nature="ignore"
+										        data-repeater-delete
+										        class="btn btn-sm btn-light-danger mt-3 mt-md-9">
+											<i class="la la-trash-o fs-3"></i>Delete Block
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-0">
+						<button type="button"
+						        data-e-nature="ignore"
+						        data-repeater-create="outer"
+						        class="btn btn-light-primary">
+							<i class="la la-plus"></i>Add Block
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<button type="button"
+				        form="form-repeater-nested"
+				        name="action"
+				        value="save"
+				        data-e-value="nested"
+				        data-e-nature="post"
+				        data-form-submit=""
+				        class="btn btn-primary">
+					<span class="indicator-label">Submit</span>
+					<span class="indicator-progress">Please wait...
+						<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+					</span>
+				</button>
+				<button type="button"
+				        form="form-repeater-nested"
+				        data-e-nature="post"
+				        data-e-value="nested"
+				        name="action"
+				        value="reset"
+				        class="btn btn-light me-3">Reset
+				</button>
+			</div>
+		</div>
+		<!--advance-->
+		<div id="advance"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">Advance</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        name="stack"
+					        value="advance"
+					        data-e-nature="option"
+					        class="btn btn-sm btn-light-dark">
+						Enable Repeater
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="form-repeater-advance"
+				      data-pb-control="repeater"
+				      data-pb-method="advance"
+				      data-form-sno="3"
+				      data-form-valid=""
+				      class="">
+					<div class="form-group row mb-7 bg-light-dark">
+						<div class="col-6">
+							<label class="form-label">Fixed Input - 1:</label>
+							<input class="form-control mb-2 mb-md-0"
+							       placeholder="Enter full name"
+							       type="email" />
+						</div>
+						<div class="col-6">
+							<label class="form-label">Fixed input- 2:</label>
+							<input class="form-control mb-2 mb-md-0"
+							       placeholder="Enter contact number"
+							       type="email" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="main-repeater"
+						     data-repeater-list="outer_repeater">
+							<div data-repeater-item>
+								<div class="form-group row mb-5">
+									<div class="col-md-3">
+										<label class="form-label">Select Options:</label>
+										<select class="form-select"
+										        data-pb-control="select"
+										        data-pb-method="simple"
+										        data-pb-placeholder="Select an option"
+										        data-pb-tack="direct">
+											<option></option>
+											<option data-sel-tackle="1"
+											        value="1">Option 1
+											</option>
+											<option data-sel-tackle="1"
+											        value="2">Option 2
+											</option>
+											<option data-sel-tackle="1"
+											        value="3">Option 3
+											</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Datepicker:</label>
+										<input class="form-control"
+										       data-pb-control="date"
+										       data-pb-method="simple"
+										       placeholder="Pick a date" />
+									</div>
+									<div class="col-md-2">
+										<button class="btn btn-sm btn-light-danger mt-3 mt-md-9"
+										        data-e-nature="ignore"
+										        data-repeater-delete
+										        type="button">
+											<i class="la la-trash-o fs-3"></i>Delete
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-light-primary"
+						        data-e-nature="ignore"
+						        data-repeater-create
+						        type="button">
+							<i class="la la-plus"></i>Add
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<button type="button"
+				        form="form-repeater-advance"
+				        data-form-submit=""
+				        name="action"
+				        value="save"
+				        data-e-nature="post"
+				        data-e-value="advance"
+				        class="btn btn-primary">
+					<span class="indicator-label">Submit form</span>
+					<span class="indicator-progress">Please wait...
+						<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+					</span>
+				</button>
+				<button type="button"
+				        form="form-repeater-advance"
+				        name="action"
+				        value="reset"
+				        data-e-nature="post"
+				        data-e-value="advance"
+				        class="btn btn-light me-3">Reset form
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="docx__sample"
+	     class="row mt-20">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="fs-5">
+					<ol>
+						<li>every form has unique ID attribute.</li>
+						<li>add <code>fv-row</code> class to the the <code> class="row"</code> incase you have added required to the input or select.</li>
+					</ol>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td nowrap="">id</td>
+							<td></td>
+							<td>foo-boo-form</td>
+							<td>id="this_is_unique_in_the_page"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-dom-control</td>
+							<td>init the form repeater at the page load.</td>
+							<td>repeater</td>
+							<td>data-dom-control="repeater"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-control</td>
+							<td></td>
+							<td>repeater</td>
+							<td>data-pb-control="repeater"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-pb-method</td>
+							<td>to select the method</td>
+							<td>simple / nested / advance</td>
+							<td>data-pb-method="simple"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-repeater-list</td>
+							<td>a <b>key</b> to store inner values of the form</td>
+							<td>any_key</td>
+							<td>data-repeater-list="fr_nested_head"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-repeater-item</td>
+							<td>inner html element of the element that has this attribute will be repeated.</td>
+							<td></td>
+							<td>data-repeater-item</td>
+						</tr>
+						<tr>
+							<td class="text-center fw-bold"
+							    colspan="4">Submit Button
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="">form</td>
+							<td>to connect this button to the form.</td>
+							<td>id_of_the_form</td>
+							<td>form="unique_id_of_form"</td>
+						</tr>
+						<tr>
+							<td>data-e-nature</td>
+							<td>to make this internal action</td>
+							<td>post</td>
+							<td>data-e-nature="post"</td>
+						</tr>
+						<tr>
+							<td>data-form-submit</td>
+							<td>to make this button as a submit button of the form so it will check the validation of form inputs.</td>
+							<td>""</td>
+							<td>data-form-submit=""</td>
+						</tr>
+						<tr>
+							<td>data-form-value</td>
+							<td>event data if required.</td>
+							<td>"any_data"</td>
+							<td>data-form-value="12"</td>
+						</tr>
+						<tr>
+							<td class="text-center fw-bold"
+							    colspan="4">ADD Button
+							</td>
+						</tr>
+						<tr>
+							<td>data-repeater-create</td>
+							<td>to enable this to add row for plugin</td>
+							<td>""</td>
+							<td>data-repeater-create=""</td>
+						</tr>
+						<tr>
+							<td>data-e-nature</td>
+							<td>to ignore by our framework</td>
+							<td>ignore</td>
+							<td>data-e-nature="ignore"</td>
+						</tr>
+						<tr>
+							<td class="text-center fw-bold"
+							    colspan="4">REMOVE Button
+							</td>
+						</tr>
+						<tr>
+							<td>data-repeater-delete</td>
+							<td>to enable this to remove row for plugin</td>
+							<td>""</td>
+							<td>data-repeater-delete</td>
+						</tr>
+						<tr>
+							<td>data-e-nature"</td>
+							<td>to ignore by our framework</td>
+							<td>ignore</td>
+							<td>data-e-nature="ignore"</td>
+						</tr>
+						<tr>
+							<td class="text-center fw-bold"
+							    colspan="4">other required things
+							</td>
+						</tr>
+						<tr>
+							<td nowrap="">class="inner-repeater"</td>
+							<td>only for nested to catch the inner element for repeater.</td>
+							<td>inner-repeater</td>
+							<td>class="inner-repeater"</td>
+						</tr>
+						<tr>
+							<td nowrap="">data-repeater-slideup</td>
+							<td>confirm from user before remove the row</td>
+							<td>""</td>
+							<td>data-repeater-slideup=""</td>
+						</tr>
+						<tr>
+							<td>class="main-repeater"</td>
+							<td>add this to the main outter repeater.</td>
+							<td>""</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>class="no-repeater"</td>
+							<td>add this to the div other than the repeater div.</td>
+							<td>""</td>
+							<td>no-repeater</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,727 @@
+<div data-pb-layout="stepper"
+     data-layout="parent">
+	<div id="form__stepper">
+		
+		<div id="gstthreeb-stepper"
+		     class="stepper stepper-pills">
+			
+			<div class="card shadow-m">
+				<div class="card-body">
+					<div class="stepper-nav flex-center flex-wrap mb-10">
+						<div class="stepper-item mx-8 my-4 current"
+						     data-kt-stepper-element="nav"
+						     data-kt-stepper-action="step">
+							<div class="stepper-wrapper d-flex align-items-center">
+								<div class="stepper-icon w-40px h-40px">
+									<i class="stepper-check fas fa-check"></i>
+									<span class="stepper-number">1</span>
+								</div>
+								<div class="stepper-label">
+									<h3 class="stepper-title">
+										Step 1 </h3>
+									
+									<div class="stepper-desc">
+										Push To GSTIN
+									</div>
+								</div>
+							</div>
+							<div class="stepper-line h-40px"></div>
+						</div>
+						
+						<div class="stepper-item mx-8 my-4"
+						     data-kt-stepper-element="nav"
+						     data-kt-stepper-action="step">
+							<div class="stepper-wrapper d-flex align-items-center">
+								<div class="stepper-icon w-40px h-40px">
+									<i class="stepper-check fas fa-check"></i>
+									<span class="stepper-number">2</span>
+								</div>
+								
+								<div class="stepper-label">
+									<h3 class="stepper-title">
+										Step 2 </h3>
+									
+									<div class="stepper-desc">
+										Submit For Approval
+									</div>
+								</div>
+							</div>
+							
+							<div class="stepper-line h-40px"></div>
+						</div>
+						
+						<div class="stepper-item mx-8 my-4"
+						     data-kt-stepper-element="nav"
+						     data-kt-stepper-action="step">
+							<div class="stepper-wrapper d-flex align-items-center">
+								<div class="stepper-icon w-40px h-40px">
+									<i class="stepper-check fas fa-check"></i>
+									<span class="stepper-number">3</span>
+								</div>
+								
+								<div class="stepper-label">
+									<h3 class="stepper-title">
+										Step 3 </h3>
+									
+									<div class="stepper-desc">
+										GST Payment
+									</div>
+								</div>
+							</div>
+							
+							<div class="stepper-line h-40px"></div>
+						</div>
+						
+						<div class="stepper-item mx-8 my-4"
+						     data-kt-stepper-element="nav"
+						     data-kt-stepper-action="step">
+							<div class="stepper-wrapper d-flex align-items-center">
+								<div class="stepper-icon w-40px h-40px">
+									<i class="stepper-check fas fa-check"></i>
+									<span class="stepper-number">4</span>
+								</div>
+								
+								<div class="stepper-label">
+									<h3 class="stepper-title">
+										Step 4 </h3>
+									
+									<div class="stepper-desc">
+										Filing
+									</div>
+								</div>
+							</div>
+							
+							<div class="stepper-line h-40px"></div>
+						</div>
+					</div>
+					
+					<div id="gstthreeb-tabs">
+						<div class="mb-5">
+							<div id="push"
+							     data-pb-index="1"
+							     class="flex-column current"
+							     data-kt-stepper-element="content">
+								
+								<div class="card shadow-m mb-5">
+									
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table gstr-3b-user">
+												<tbody>
+												<tr>
+													<td>GSTIN</td>
+													<td id="gstin_no">08AAICB328SDCSDC</td>
+												</tr>
+												<tr>
+													<td>GST Username</td>
+													<td id="gst_user_name">Kunal Goyal</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+								<div class="card shadow-m mb-5">
+									<div class="card-header">
+										<h4 class="card-title">3.1 Details of Outward Supplies and inward supplies liable to reverse charge</h4>
+									</div>
+									<div class="card-body">
+										
+										<div class="table-responsive">
+											<table class="table gastr-3b-report">
+												<thead>
+												<tr class="text-end fw-bold fs-7 text-muted text-uppercase">
+													<td class="text-center">Nature of Supply</td>
+													<td class="text-right">Taxable Value</td>
+													<td class="text-right">Integrated Tax</td>
+													<td class="text-right">Central Tax</td>
+													<td class="text-right">State/UT Tax</td>
+													<td class="text-right">Cess</td>
+												</tr>
+												</thead>
+												<tbody id="outward_supplies">
+												<tr class="cursor-pointer taxable_outward_supplies"
+												    data-ember-action=""
+												    data-ember-action-557="557">
+													<td>(a) Outward taxable supplies (other than zero rated, nil rated and exempted)</td>
+													<td class="text-right taxable_amount btn-link">₹100.00</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount">₹9.00</td>
+													<td class="text-right sgst_amount">₹9.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer zero_rated_outward_supplies"
+												    data-ember-action=""
+												    data-ember-action-558="558">
+													<td>(b) Outward taxable supplies (zero rated)</td>
+													<td class="text-right taxable_amount btn-link">₹0.00</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount gstr3b-null"></td>
+													<td class="text-right sgst_amount gstr3b-null"></td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer other_outward_supplies"
+												    data-ember-action=""
+												    data-ember-action-559="559">
+													<td>(c) Other outward supplies (Nil rated, exempted)</td>
+													<td class="text-right taxable_amount btn-link">₹0.00</td>
+													<td class="text-center igst_amount gstr3b-null"></td>
+													<td class="text-center cgst_amount gstr3b-null"></td>
+													<td class="text-center sgst_amount gstr3b-null"></td>
+													<td class="text-center cess_amount gstr3b-null"></td>
+												</tr>
+												<tr class="cursor-pointer inward_supplies"
+												    data-ember-action=""
+												    data-ember-action-560="560">
+													<td>(d) Inward supplies (liable to reverse charge)</td>
+													<td class="text-right taxable_amount btn-link">₹0.00</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount">₹0.00</td>
+													<td class="text-right sgst_amount">₹0.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer non_gst_outward_supplies"
+												    data-ember-action=""
+												    data-ember-action-561="561">
+													<td>(e) Non-GST outward supplies</td>
+													<td class="text-right taxable_amount btn-link">₹0.00</td>
+													<td class="text-center igst_amount gstr3b-null"></td>
+													<td class="text-center cgst_amount gstr3b-null"></td>
+													<td class="text-center sgst_amount gstr3b-null"></td>
+													<td class="text-center cess_amount gstr3b-null"></td>
+												</tr>
+												<tr class="total">
+													<td class="bold">Total Value</td>
+													<td class="text-right taxable_amount">₹100.00</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount">₹9.00</td>
+													<td class="text-right sgst_amount">₹9.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									
+									</div>
+								</div>
+								
+								<div class="card shadow-m mb-5">
+									<div class="card-header">
+										<h4 class="card-title">3.1.1 Details of supplies notified under sub-section (5) of section 9 of the Central Goods and Services Tax Act</h4>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table gstr-3b-report">
+												<thead>
+												<tr class="text-muted">
+													<td class="text-center">Description</td>
+													<td class="text-right">Taxable Value</td>
+													<td class="text-right">Integrated Tax</td>
+													<td class="text-right">Central Tax</td>
+													<td class="text-right">State/UT Tax</td>
+													<td class="text-right">Cess</td>
+												</tr>
+												</thead>
+												<tbody id="rcm_ecommerce_supplies">
+												<tr class="text-muted gstr3b-disabled-row">
+													<td>(i)
+														<span class="text-semibold"> Taxable supplies on which electronic commerce operator pays tax under Sub-section (5) of Section 9</span>
+														<br>[To be furnished by the electronic commerce operator]
+													</td>
+													<td class="text-right">0</td>
+													<td class="text-right">0</td>
+													<td class="text-right">0</td>
+													<td class="text-right">0</td>
+													<td class="text-right">0</td>
+												</tr>
+												<tr class="cursor-pointer rcm_supplies_through_ecommerce"
+												    data-ember-action=""
+												    data-ember-action-562="562">
+													<td>(ii)
+														<span class="text-semibold"> Taxable supplies made by the registered person through electronic commerce operator, on which electronic commerce operator is required to pay tax under Sub-section (5) of Section 9</span>
+														<br>[To be furnished by the registered person making supplies through electronic commerce operator]
+													</td>
+													<td class="text-right btn-link taxable_amount">₹0.00</td>
+													<td class="gstr3b-null"
+													    colspan="4"></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="card shadow-m mb-5">
+									<div class="card-header">
+										<h4 class="card-title">3.2 Of the supplies shown in 3.1 (a) above, details of inter-State supplies made to unregistered persons, composition taxable persons and UIN holders</h4>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table gstr-3b-report">
+												<thead>
+												<tr class="text-muted"
+												    style="background:#e3edff; color:black; ">
+													<td style="width:250px; "></td>
+													<td class="text-center">Place of supply</td>
+													<td class="text-right">Taxable Value</td>
+													<td class="text-right">Integrated Tax</td>
+												</tr>
+												</thead>
+												<tbody>
+												<tr class="text-muted gstr3-subheading">
+													<td colspan="4 ">Supplies made to Unregistered Persons</td>
+												</tr>
+												<tr style="pointer-events:none;">
+													<td class="text-right">&nbsp;</td>
+													<td class="text-center">&nbsp;</td>
+													<td class="text-right">&nbsp;</td>
+													<td class="text-right">&nbsp;</td>
+												</tr>
+												<tr class="text-muted gstr3-subheading">
+													<td colspan="4 ">Supplies made to Composition Taxable Persons</td>
+												</tr>
+												<tr style="pointer-events:none;">
+													<td class="text-right">&nbsp;</td>
+													<td class="text-center">&nbsp;</td>
+													<td class="text-right">&nbsp;</td>
+													<td class="text-right">&nbsp;</td>
+												</tr>
+												<tr class="text-muted gstr3-subheading">
+													<td colspan="4 ">Supplies made to UIN holders</td>
+												</tr>
+												<tr>
+													<td class="text-muted text-center"
+													    colspan="4 "> - - - - Not Supported - - - -
+													</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="card shadow-m mb-5">
+									<div class="card-header">
+										<h4 class="card-title">4. Eligible ITC</h4>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table gstr-3b-report">
+												<thead>
+												<tr class="text-muted">
+													<td>Details</td>
+													<td class="text-right">Integrated Tax</td>
+													<td class="text-right">Central Tax</td>
+													<td class="text-right">State/UT Tax</td>
+													<td class="text-right">Cess</td>
+												</tr>
+												</thead>
+												<tbody id="itc_eligible_inward_supplies">
+												<tr>
+													<td colspan="5 ">(A) ITC Available (whether in full or part)</td>
+												</tr>
+												<tr class="cursor-pointer import_of_goods"
+												    data-ember-action=""
+												    data-ember-action-563="563">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(1) Import of Goods</td>
+													<td class="text-right btn-link igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount gstr3b-null"></td>
+													<td class="text-right sgst_amount gstr3b-null"></td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer import_of_services"
+												    data-ember-action=""
+												    data-ember-action-564="564">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(2) Import of Services</td>
+													<td class="text-right btn-link igst_amount">₹0.00</td>
+													<td class="text-center cgst_amount gstr3b-null"></td>
+													<td class="text-center sgst_amount gstr3b-null"></td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer inward_supplies"
+												    data-ember-action=""
+												    data-ember-action-565="565">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(3) Inward supplies (liable to reverse charge)</td>
+													<td class="text-right btn-link igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount">₹0.00</td>
+													<td class="text-right sgst_amount">₹0.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="inward_supplies_from_isd">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(4) Inward supplies from ISD</td>
+													<td class="text-right btn-link igst_amount gstr3b-null"></td>
+													<td class="text-right cgst_amount gstr3b-null"></td>
+													<td class="text-right sgst_amount gstr3b-null"></td>
+													<td class="text-right cess_amount gstr3b-null"></td>
+												</tr>
+												<tr class="cursor-pointer available_itc_details other_inward_supplies"
+												    data-ember-action=""
+												    data-ember-action-566="566">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp; (5) All other ITC &nbsp;
+														<button class="btn btn-xs btn-primary pull-right"
+														        type="button"
+														        name="modal"
+														        value="other">Adjust ITC
+														</button>
+													</td>
+													<td class="text-right btn-link">
+														<span class="igst_amount">₹6,634.14</span>
+														<div class="f11 text-muted actual_igst_amount">Actual value: ₹534.14</div>
+													</td>
+													<td class="text-right">
+														<span class="cgst_amount">₹0.45</span> <!---->
+														
+														<div class="f11 text-muted actual_cgst_amount">Actual value: ₹534.14</div>
+													</td>
+													<td class="text-right">
+														<span class="sgst_amount">₹0.45</span> <!---->
+														<div class="f11 text-muted actual_sgst_amount">Actual value: ₹534.14</div>
+													</td>
+													<td class="text-right">
+														<span class="cess_amount">₹0.00</span> <!---->
+														<div class="f11 text-muted actual_cess_amount">Actual value: ₹534.14</div>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="5 ">(B) ITC Reversed &nbsp;
+														<button class="btn btn-xs btn-link text-dashed-underline"
+														        type="button"
+														        name="modal"
+														        value="reverse">
+															<svg version="1.1"
+															     id="Layer_1"
+															     xmlns="http://www.w3.org/2000/svg"
+															     x="0"
+															     y="0"
+															     viewBox="0 0 512 512"
+															     xml:space="preserve"
+															     class="icon icon-xs text-middle"><path d="M469.6 42.4C420.9-6.2 382.3-.2 378.1.7l-4.8 1L42.1 332.8c-3.4 3.4-5.8 7.8-6.8 12.5L1.3 506c-.6 2.8 1.9 5.3 4.7 4.7l160.7-34.1c4.7-1 9.1-3.4 12.5-6.8l331.2-331.2.9-4.9c.9-4.1 6.7-42.8-41.7-91.3zM43.2 464l20.2-95.2c.5-2.3 2.8-3.7 5.1-3 12.4 3.9 29.7 12 46.3 28.6 17.1 17.1 26 35.8 30.5 49.2.8 2.3-.6 4.7-3 5.2l-94.4 20c-2.8.6-5.3-1.9-4.7-4.8zm135.6-39.4c-2 2-5.4 1.3-6.5-1.3-6.5-15.6-17.1-34.3-34.6-51.8C121.2 355 104 345 89.4 339c-2.6-1.1-3.3-4.5-1.3-6.5l150.8-150.8 95.5-95.5c1-1 2.3-1.4 3.7-1.1 11.8 2.5 34.1 9.9 55.1 30.9 21.4 21.4 29.9 45.4 33.2 58.2.3 1.4 0 2.8-1 3.8l-95.1 95.1-151.5 151.5zm278.4-278.4c-2 2-5.4 1.3-6.5-1.3-6.5-15.6-17.1-34.3-34.6-51.8-16.5-16.5-33.7-26.5-48.3-32.5-2.6-1.1-3.3-4.5-1.3-6.5L387 33.7c.9-.9 2-1.3 3.2-1.2 9.8 1 30.3 6.6 56.5 32.8 26.2 26.2 31.8 46.8 32.8 56.5.1 1.2-.3 2.4-1.2 3.2l-21.1 21.2z"></path></svg>
+															Edit
+														</button> <!----></td>
+												</tr>
+												<tr class="itc_reversal_rule">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(1) As per rules 42 &amp; 43 of CGST Rules</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right  cgst_amount">₹0.00</td>
+													<td class="text-right sgst_amount">₹0.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="itc_reversal_others">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(2) Others</td>
+													<td class="text-right igst_amount">₹0.00</td>
+													<td class="text-right cgst_amount">₹0.00</td>
+													<td class="text-right sgst_amount">₹0.00</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr class="net_itc_available">
+													<td>(C) Net ITC Available (A)-(B)</td>
+													<td class="text-right igst_amount">₹6,634.14</td>
+													<td class="text-right cgst_amount">₹0.45</td>
+													<td class="text-right sgst_amount">₹0.45</td>
+													<td class="text-right cess_amount">₹0.00</td>
+												</tr>
+												<tr>
+													<td colspan="5 ">(D) Ineligible ITC</td>
+												</tr>
+												<tr class="cursor-pointer ineligible_inward_supplies"
+												    data-ember-action=""
+												    data-ember-action-569="569">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(1) As per section 17(5)</td>
+													<td class="igst_amount text-right btn-link">₹0.00</td>
+													<td class="sgst_amount text-right">₹0.00</td>
+													<td class="cgst_amount text-right">₹0.00</td>
+													<td class="cess_amount text-right">₹0.00</td>
+												</tr>
+												<tr class="cursor-pointer ineligible_inward_supplies_others"
+												    data-ember-action=""
+												    data-ember-action-570="570">
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;(2) Others</td>
+													<td class="igst_amount text-right btn-link">₹0.00</td>
+													<td class="sgst_amount text-right">₹0.00</td>
+													<td class="cgst_amount text-right">₹0.00</td>
+													<td class="cess_amount text-right">₹0.00</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="card shadow-m">
+									<div class="card-header">
+										<h4 class="card-title">5. Values of exempt, nil-rated and non-GST inward supplies</h4>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table gstr-3b-report">
+												<thead>
+												<tr class="text-muted"
+												    style="color:black; background-color:#ffeee3; ">
+													<td class="text-left">Nature of Supply</td>
+													<td class="text-right">Inter-State Supplies</td>
+													<td class="text-right">Intra-State Supplies</td>
+												</tr>
+												</thead>
+												<tbody id="itc_not_eligible_inward_supplies">
+												<tr class="composition">
+													<td class="text-left">Composition Scheme, Exempted, Nil Rated</td>
+													<td class="text-right btn-link inter_state"
+													    data-ember-action=""
+													    data-ember-action-627="627">₹0.00
+													</td>
+													<td class="text-right btn-link intra_state"
+													    data-ember-action=""
+													    data-ember-action-628="628">₹0.00
+													</td>
+												</tr>
+												<tr class="non_gst">
+													<td class="text-left">Non-GST supply</td>
+													<td class="text-right btn-link inter_state"
+													    data-ember-action=""
+													    data-ember-action-629="629">₹0.00
+													</td>
+													<td class="text-right btn-link intra_state"
+													    data-ember-action=""
+													    data-ember-action-630="630">₹0.00
+													</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+	
+	<div id="modal__stepper">
+		<div class="modal fade"
+		     tabindex="-1"
+		     id="other_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Adjust All Other Itc</h3>
+						
+						<!--begin::Close-->
+						<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+						     data-bs-dismiss="modal"
+						     aria-label="Close">
+							<i class="ki-duotone ki-cross fs-1">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
+						<!--end::Close-->
+					</div>
+					
+					<div class="modal-body">
+						<div class="alert alert-warning font-small">
+							<ul class="pl-4">
+								<li>As per the amendments made to Sub-rule (4) of Rule 36 of CGST Rules, 2017, the ITC availed by a taxpayer on the bills that the vendor hasn’t uploaded to the GST Portal, cannot exceed 5% of the ITC available for this period(calculated based on the bills that have been uploaded). <a href="https://www.zoho.com/in/books/kb/gst/itc-amendment.html"
+								                                                                                                                                                                                                                                                                                              target="_blank"
+								                                                                                                                                                                                                                                                                                              rel="noopener noreferrer">Learn More.</a></li>
+								<li>The ITC can be updated here anytime before you file your returns. The amount adjusted will be pushed to the GST portal or can be exported as JSON from the GST Filing tab as well.</li>
+							</ul>
+						</div>
+						
+						<h4>(A) ITC Available</h4>            <br>
+						
+						<form id="other_itc_form"
+						      action="#"
+						      method="POST">
+							
+							<table class="summary-itemtable gstr3b-detail"
+							       border="0">
+								<thead>
+								<tr>
+									<th class="text-muted summary-itemtable-header">Details</th>
+									<th class="text-center summary-itemtable-header">Integrated Tax</th>
+									<th class="text-center summary-itemtable-header">Central Tax</th>
+									<th class="text-center summary-itemtable-header">State/UT Tax</th>
+									<th class="text-center summary-itemtable-header">Cess</th>
+								</tr>
+								</thead>
+								<tbody class="summary-item-body">
+								<tr>
+									<td class="summary-item-row">(5) All other ITC</td>
+									<td class="text-right summary-item-row">
+										<input id="ember736"
+										       name="igst_amount"
+										       type="number"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="text">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember737"
+										       name="cgst_amount"
+										       type="number"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="text">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember738"
+										       name="sgst_amount"
+										       type="number"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="text">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember739"
+										       name="cess_amount"
+										       type="number"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="text">
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						
+						</form>
+					</div>
+					
+					<div class="modal-footer">
+						<button class="btn btn-light"
+						        data-bs-dismiss="modal">Close
+						</button>
+						<button type="button"
+						        form="other_itc_form"
+						        name="action"
+						        value="update_available_itc"
+						        class="btn btn-primary">Save changes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade"
+		     tabindex="-1"
+		     id="reverse_modal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Edit ITC Reversed</h3>
+						
+						<!--begin::Close-->
+						<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+						     data-bs-dismiss="modal"
+						     aria-label="Close">
+							<i class="ki-duotone ki-cross fs-1">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
+						<!--end::Close-->
+					</div>
+					
+					<div class="modal-body">
+						<h4>4. Eligible ITC - (B) ITC Reversed</h4>            <br>
+						
+						
+						<form id="reverse_itc_form">
+							<table class="summary-itemtable gstr3b-detail"
+							       border="0">
+								<thead>
+								<tr>
+									<th class="text-muted summary-itemtable-header">Details</th>
+									<th class="text-center summary-itemtable-header">Integrated Tax</th>
+									<th class="text-center summary-itemtable-header">Central Tax</th>
+									<th class="text-center summary-itemtable-header">State/UT Tax</th>
+									<th class="text-center summary-itemtable-header">Cess</th>
+								</tr>
+								</thead>
+								<tbody class="summary-item-body">
+								<tr>
+									<td class="summary-item-row">Amount in terms of Rules 42 &amp; 43 of CGST Rules - Input Tax Credit Reversal</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1184"
+										       name="rule_igst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1185"
+										       name="rule_cgst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1186"
+										       name="rule_sgst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1187"
+										       name="rule_cess_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+								</tr>
+								<tr>
+									<td class="summary-item-row">Amount of any other Input Tax Credit Reversal</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1188"
+										       name="others_igst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1189"
+										       name="others_cgst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1190"
+										       name="others_sgst_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+									<td class="text-right summary-item-row">
+										<input id="ember1191"
+										       name="others_cess_amount"
+										       class="ember-text-field text-right ember-view form-control text-right"
+										       type="number">
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</form>
+					
+					
+					</div>
+					
+					<div class="modal-footer">
+						<button class="btn btn-light"
+						        data-bs-dismiss="modal">Close
+						</button>
+						<button type="button"
+						        form="reverse_itc_form"
+						        name="action"
+						        value="update_reverse_itc"
+						        class="btn btn-primary">Save changes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+</div>

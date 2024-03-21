@@ -1,0 +1,2699 @@
+<div data-e-welcome="search"
+     data-pb-layout="panels"
+     data-layout="parent">
+	
+	<div id="search__panels"
+	     data-pb-key="customer_search_handler"
+	     class="zone">
+		<div class="card">
+			<div class="card-body">
+				<div class="card-px text-center pt-15 pb-15">
+					<h2 class="fs-2x fw-bold mb-0">Search customer</h2>
+					<p class="text-gray-500 fs-3 fw-semibold py-7">To View the Detail Profile</p>
+					<div class="row scroll-y mx-5 mx-xl-18 pt-0 pb-15">
+						<div class="offset-xxl-1 offset-xl-0 col-xxl-10 col-xl-12 bg-light rounded rounded-lg p-5">
+							<div id="customer_search_handler"
+							     data-kt-search-layout="inline">
+								<form data-kt-search-element="form"
+								      class="w-100 position-relative mb-5"
+								      autocomplete="off">
+									<input type="hidden" />
+									<span class="svg-icon svg-icon-2 svg-icon-lg-1 svg-icon-gray-500 position-absolute top-50 start-0 ms-5 translate-middle-y">
+										<i class="bi bi-search fs-2"></i>
+									</span>
+									<input type="text"
+									       form="customer_search"
+									       class="form-control form-control-lg- px-15"
+									       name="search"
+									       value=""
+									       placeholder="Search by Account Name, alias, mobile or email..."
+									       data-kt-search-element="input"
+									       autocomplete="off" />
+									<span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5"
+									      data-kt-search-element="spinner">
+										<span class="spinner-border h-15px w-15px align-middle text-muted"></span>
+									</span>
+									<span class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 me-5 d-none"
+									      data-kt-search-element="clear">
+										<i class="fs-2 me-1 bi bi-x-lg"></i>
+									</span>
+								</form>
+								<div class="py-5">
+									<form id="customer_search">
+										<div data-kt-search-element="suggestions"
+										     class="">
+											<h3 class="fw-semibold mb-5 bg-white p-3 rounded-pill">Recently Viewed Accounts</h3>
+											<div class="mh-375px scroll-y me-n7 pe-7">
+												<div class="row row-cols-2">
+													<!-- list of suggestions-->
+												</div>
+											</div>
+										</div>
+										<div data-kt-search-element="results"
+										     class="d-none">
+											<div class="mh-375px scroll-y me-n7 pe-7 pt-3"
+											     data-pb-control="search_result">
+												<div class="row">
+													<!--  all accounts will be appended here  -->
+												</div>
+											</div>
+											<!--	radio button for navbar -->
+											<div class="btn-group mt-10 w-100"
+											     data-kt-buttons="true"
+											     data-kt-buttons-target="[data-kt-button]">
+												<label class="fw-semibold fs-5 btn btn-outline btn-white btn-active-light-primary"
+												       data-kt-button="true">
+													<input class="btn-check"
+													       type="radio"
+													       name="tab"
+													       value="overview" />
+													Overview
+												</label>
+												<label class="fw-semibold fs-5 btn btn-outline btn-white btn-active-light-primary"
+												       data-kt-button="true">
+													<input class="btn-check"
+													       type="radio"
+													       name="tab"
+													       value="profits" />
+													Profits
+												</label>
+												<label class="fw-semibold fs-5 btn btn-outline btn-white btn-active-light-primary"
+												       data-kt-button="true">
+													<input class="btn-check"
+													       type="radio"
+													       name="tab"
+													       value="charts" />
+													Charts
+												</label>
+												<label class="fw-semibold fs-5 btn btn-outline btn-white btn-active-light-primary"
+												       data-kt-button="true">
+													<input class="btn-check"
+													       type="radio"
+													       name="tab"
+													       value="vehicles" />
+													Vehicles
+												</label>
+												<label class="fw-semibold fs-5 btn btn-outline btn-white btn-active-light-primary"
+												       data-kt-button="true">
+													<input class="btn-check"
+													       type="radio"
+													       name="tab"
+													       value="interest" />
+													Interest
+												</label>
+											</div>
+											
+											<div class="d-flex flex-center mt-15">
+												<button type="reset"
+												        class="btn btn-active-light me-3">Cancel
+												</button>
+												<button type="button"
+												        name="load"
+												        value="outcome"
+												        data-e-origin="search"
+												        class="btn btn-primary">Go To customer Profile
+												</button>
+											</div>
+										</div>
+										<div data-kt-search-element="empty"
+										     class="text-center d-none">
+											<div class="fw-semibold py-10 bg-white rounded-2">
+												<i class="bi bi-exclamation-triangle fs-1 fs-3x text-danger"></i>
+												<div class="text-danger fs-3 mb-2 pt-4">No users found</div>
+												<div class="text-muted fs-6">Try to search by Party Name or Mobile number</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="outcome__panels"
+	     class="zone d-none">
+		<div class="d-flex flex-column flex-xl-row">
+			<div id="aside__panels"
+			     class="sub-zone flex-column flex-lg-row-auto w-100 w-xl-350px mb-10">
+				<div class="card shadow-sm mb-5 mb-xl-8">
+					<div class="card-header">
+						<h3 class="card-title">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+								<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+								<span>Go Back</span>
+							</button>
+						</h3>
+						<div class="card-toolbar">
+							<a href="#"
+							   class="btn btn-light-primary btn-sm ps-7"
+							   data-kt-menu-trigger="click"
+							   data-kt-menu-attach="parent"
+							   data-kt-menu-placement="bottom-end">Options
+								<i class="bi bi-caret-down fs-2"></i>
+							</a>
+							<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold py-4 w-250px fs-6"
+							     data-kt-menu="true">
+								<div class="menu-item px-5">
+									<div class="menu-content text-muted pb-2 px-5 fs-7 text-uppercase">Payments</div>
+								</div>
+								<div class="menu-item px-5">
+									<a href="#"
+									   class="menu-link flex-stack  px-5">Create invoice
+										<i class="fas fa-exclamation-circle ms-2 fs-7"
+										   data-bs-toggle="tooltip"
+										   title="It will redirect you to Billing page"></i>
+									</a>
+								</div>
+								<div class="menu-item px-5">
+									<a href="#"
+									   class="menu-link flex-stack px-5">Create payments
+										<i class="fas fa-exclamation-circle ms-2 fs-7"
+										   data-bs-toggle="tooltip"
+										   title="It will redirect you to Customer Payments Page"></i>
+									</a>
+								</div>
+								<div class="separator my-3"></div>
+								<div class="menu-item px-5">
+									<div class="menu-content text-muted pb-2 px-5 fs-7 text-uppercase">Account</div>
+								</div>
+								<div class="menu-item px-5"
+								     data-kt-menu-trigger="hover"
+								     data-kt-menu-placement="right-start">
+									<a href="#"
+									   class="menu-link px-5">
+										<span class="menu-title">Reports</span>
+										<span class="menu-arrow"></span>
+									</a>
+									<div class="menu-sub menu-sub-dropdown w-200px py-4">
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-5">Sale Report</a>
+										</div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-5">Ledger Register</a>
+										</div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-5">Transaction Report</a>
+										</div>
+										<div class="separator my-2"></div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-5">Vehicle Report</a>
+										</div>
+									</div>
+								</div>
+								<div class="menu-item px-5">
+									<a href="#"
+									   class="menu-link text-danger px-5">Delete customer</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-pb-append="customer_menu"
+					     class="card-body pt-15">
+						// append the customer menu here
+					</div>
+				</div>
+				<div id="account_config"
+				     class="card mb-5 mb-xl-8">
+					<form id="account_config_form"
+					      data-form-sno="2"
+					      data-valid-form>
+						<div class="card-header border-0">
+							<div class="card-title">
+								<h3 class="fw-bold m-0">Account Configuration</h3>
+							</div>
+						</div>
+						<div class="separator separator-dashed"></div>
+						<div class="card-body pt-2">
+							<div class="py-2">
+								<div class="d-flex flex-stack">
+									<div class="d-flex">
+										<div class="d-flex flex-column">
+											<span class="fs-5 text-dark text-hover-primary fw-bold">Credit Sale Over Limit</span>
+											<div class="fs-7 fw-normal text-muted">Off, Credit entry can not be created by user and customer.</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end">
+										<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+											<input class="form-check-input"
+											       name="cr_sale_lim"
+											       type="checkbox"
+											       value="1"
+											       id="pb_cust_config_cr_over_limit" />
+											<span class="form-check-label fw-semibold text-muted"
+											      for="pb_cust_config_cr_over_limit"></span>
+										</label>
+									</div>
+								</div>
+								<div class="separator separator-dashed my-5"></div>
+								<div class="d-flex flex-stack">
+									<div class="d-flex">
+										<div class="d-flex flex-column">
+											<span class="fs-5 text-dark text-hover-primary fw-bold">Periodic Billing</span>
+											<div class="fs-7 fw-normal text-muted">if On, credit entries can be managed by recurring invoice, that help better</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end">
+										<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+											<input class="form-check-input"
+											       name="periodic_billing"
+											       type="checkbox"
+											       value="1"
+											       id="pb_cust_config_billing" />
+											<span class="form-check-label fw-semibold text-muted"
+											      for="pb_cust_config_billing"></span>
+										</label>
+									</div>
+								</div>
+								<div class="separator separator-dashed my-5"></div>
+								<div class="d-flex flex-stack">
+									<div class="d-flex">
+										<div class="d-flex flex-column">
+											<span class="fs-5 text-dark text-hover-primary fw-bold">Cash Given Option</span>
+											<div class="fs-7 fw-semibold text-muted">Customer can put cash value with order value on digital token.</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end">
+										<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+											<input class="form-check-input"
+											       name="cash_option"
+											       type="checkbox"
+											       value="1"
+											       id="pb_cust_config_cash" />
+											<span class="form-check-label fw-semibold text-muted"
+											      for="pb_cust_config_cash"></span>
+										</label>
+									</div>
+								</div>
+								<div class="separator separator-dashed my-5"></div>
+								<div class="d-flex flex-stack">
+									<div class="d-flex">
+										<div class="d-flex flex-column">
+											<span class="fs-5 text-dark text-hover-primary fw-bold">Receipt Method</span>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end">
+										<select name="cash_option_id"
+										        class="form-select form-select-solid"
+										        data-dom-control="select"
+										        data-pb-method="simple"
+										        data-pb-tack="direct"
+										        data-pb-placeholder="Cash Option"
+										        data-pb-search="1"
+										        title="Cash option">
+											<option value="1">Account Wise</option>
+											<option value="2">Entry Wise</option>
+											<option value="3">Bill Wise</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer border-0 d-flex justify-content-center pt-0">
+							<button data-form-submit
+							        form="account_config_form"
+							        type="button"
+							        name="action"
+							        value="account_config"
+							        class="btn btn-sm btn-light-primary">Save Changes
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="nav__panels"
+			     class="sub-zone flex-lg-row-fluid ms-lg-15- ms-xl-15">
+				<div id="navbar"
+				     class="card shadow-md mb-12 border border-2 border-gray-500 border-left-0 border-right-0 border-top-0">
+					<div class="card-body p-7">
+						<ul class="row nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold">
+							<li class="nav-item col">
+								<button type="button"
+								        name="navtab"
+								        value="overview"
+								        class="nav-link text-active-primary pb-4 w-100">Overview
+								</button>
+							</li>
+							<li class="nav-item col">
+								<button type="button"
+								        name="navtab"
+								        value="sales"
+								        class="nav-link text-active-primary pb-4 w-100">Sales
+								</button>
+							</li>
+							<li class="nav-item col">
+								<button type="button"
+								        name="navtab"
+								        value="purchases"
+								        class="nav-link text-active-primary pb-4 w-100"
+								        data-kt-countup-tabs="true">Purchases
+								</button>
+							</li>
+							<li class="nav-item col">
+								<button type="button"
+								        name="navtab"
+								        value="config"
+								        class="nav-link text-active-primary pb-4 w-100">Config
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="navtab"
+				     class="tab-content">
+					<div id="overview"
+					     class="tab-pane fade"
+					     role="tabpanel"
+					     data-load-tab="0">
+						<div class="card pt-4 mb-6 mb-xl-9"
+						     data-pb-control="credit_balance">
+							<div class="card-header border-0">
+								<div class="card-title">
+									<h2 class="fw-bold">Account Credit Balance</h2>
+								</div>
+								<div class="card-toolbar">
+									<button type="button"
+									        name="modal"
+									        value="alter_customer"
+									        class="btn btn-sm btn-flex btn-light-primary">
+										<i class="bi bi-pencil-fill fs-7"></i>Adjust Balance
+									</button>
+								</div>
+							</div>
+							<div class="card-body pt-0">
+								<div class="fw-bold fs-2">
+									<span class="rc_currency"
+									      data-cs-round="2"
+									      data-cs-sign="1">$$@amount@$$
+									</span>
+									<span class="text-muted fs-4 fw-semibold rc_string">$$@status@$$</span>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-6 mb-xl-9"
+						     data-pb-control="receipts_records">
+							<div class="card-header">
+								<div class="card-title">
+									<h2>Receipts Records</h2>
+								</div>
+								<div class="card-toolbar">
+									<div class="d-flex align-items-center position-relative my-1">
+										<span class="position-absolute ms-5">
+											<i class="bi bi-search fs-4"></i>
+										</span>
+										<input type="text"
+										       data-table-search="pb_tbl_c_receipts"
+										       class="form-control form-control-solid form-control-sm w-200px ps-15"
+										       placeholder="Search Receipts" />
+									</div>
+								</div>
+							</div>
+							<div class="card-body py-0">
+								<div class="table-responsive">
+									<table class="table align-middle table-row-dashed fs-5 fw-semibold gy-3"
+									       id="pb_tbl_c_receipts">
+										<thead class="text-uppercase fw-bold">
+										<tr class="text-start text-muted fs-6">
+											<th class="min-w-100px">Date</th>
+											<th class="min-w-200px">Account</th>
+											<th class="min-w-125px">Against</th>
+											<th class="min-w-150px">Received</th>
+											<th class="min-w-150px">Remaining</th>
+											<th class="text-end min-w-100px pe-4">Actions</th>
+										</tr>
+										</thead>
+										<tbody class="text-gray-600">
+										<tr>
+											<td>08 Aug 2022</td>
+											<td>
+												<span class="badge fs-5 badge-light-success">Cash</span>
+											</td>
+											<td>
+												<a href="#"
+												   class="text-gray-600 text-hover-primary mb-1">Invoice: 6245</a>
+											</td>
+											<td class="rc_currency"
+											    data-cs-round="2"
+											    data-cs-sign="1">52000
+											</td>
+											<td class="rc_currency"
+											    data-cs-round="2"
+											    data-cs-sign="1">345
+											</td>
+											<td class="pe-0 text-end">
+												<a href="#"
+												   class="btn btn-sm btn-light btn-active-light-primary"
+												   data-kt-menu-trigger="click"
+												   data-kt-menu-placement="bottom-end">Actions
+													<i class="bi bi-chevron-down"></i>
+												</a>
+												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
+												     data-kt-menu="true">
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3">View</a>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3"
+														   data-kt-customer-table-filter="delete_row">Edit</a>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3"
+														   data-kt-customer-table-filter="delete_row">Delete</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>23 Jun 2022</td>
+											<td>
+												<span class="badge fs-5 badge-light-success">Cash</span>
+											</td>
+											<td>
+												<a href="#"
+												   class="text-gray-600 text-hover-primary mb-1">Invoice: 6245</a>
+											</td>
+											<td class="rc_currency"
+											    data-cs-round="2"
+											    data-cs-sign="1">52000
+											</td>
+											<td class="rc_currency"
+											    data-cs-round="2"
+											    data-cs-sign="1">345
+											</td>
+											<td class="pe-0 text-end">
+												<a href="#"
+												   class="btn btn-sm btn-light btn-active-light-primary"
+												   data-kt-menu-trigger="click"
+												   data-kt-menu-placement="bottom-end">Actions
+													<i class="bi bi-chevron-down"></i>
+												</a>
+												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
+												     data-kt-menu="true">
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3">View</a>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3"
+														   data-kt-customer-table-filter="delete_row">Edit</a>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3"
+														   data-kt-customer-table-filter="delete_row">Delete</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="card pt-4 mb-6 mb-xl-9">
+							<div class="card-header border-0">
+								<div class="card-title">
+									<h2 class="fw-bold mb-0">OverDue Invoices</h2>
+								</div>
+								<div class="card-toolbar">
+									<a href="operations/transactions/customer.html"
+									   class="btn btn-sm btn-flex btn-light-danger"
+									   data-bs-toggle="tooltip"
+									   title="Customer Payments Page"> Record Receipt</a>
+								</div>
+							</div>
+							<div class="separator separator-dashed"></div>
+							<div id="kt_customer_view_payment_method"
+							     class="card-body pt-0"
+							     data-pb-control="due_invoices"></div>
+						</div>
+						<div class="card mb-6 mb-xl-9">
+							<div class="card-header">
+								<div class="card-title">
+									<h2>Paid Invoices</h2>
+								</div>
+								<div class="card-toolbar m-0">
+									<ul class="nav nav-stretch fs-5 fw-semibold nav-line-tabs nav-line-tabs-2x border-transparent"
+									    role="tablist">
+										<li class="nav-item"
+										    role="presentation">
+											<a class="nav-link text-active-primary active"
+											   data-bs-toggle="tab"
+											   role="tab"
+											   href="#pb_cust_invoices_1">2022</a>
+										</li>
+										<li class="nav-item"
+										    role="presentation">
+											<a class="nav-link text-active-primary ms-3"
+											   data-bs-toggle="tab"
+											   role="tab"
+											   href="#pb_cust_invoices_2">2021</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body py-0">
+								<div id="kt_referred_users_tab_content"
+								     class="tab-content">
+									<div id="pb_cust_invoices_1"
+									     class="py-0 tab-pane fade show active"
+									     role="tabpanel">
+										<div class="row mb-10 mt-5"
+										     data-pb-target="filter">
+											<div class="col">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm form-control-solid"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col">
+												<label class="form-label">Item select</label>
+												<select name="select"
+												        data-dt-column="1"
+												        class="form-select form-select-sm form-select-solid"
+												        aria-label="Item Name">
+													<option value="">None</option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col">
+											
+											</div>
+											<div class="col">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       data-pb-instance="1"
+													       class="form-control form-select-sm form-control-solid"
+													       data-dom-control="date"
+													       data-pb-method="range"
+													       data-pb-altFormat="c"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col">
+											
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table align-middle table-row-dashed fs-5 fw-semibold gy-3 pb_cust_invoices_paid">
+												<thead class="text-uppercase fw-bold">
+												<tr class="text-start text-muted fs-6">
+													<th class="min-w-100px">Invoice ID</th>
+													<th class="min-w-175px">Billing Period</th>
+													<th class="min-w-150px">Invoice Value</th>
+													<th class="min-w-150px">Invoice Amount</th>
+													<th class="min-w-75px">Status</th>
+													<th class="min-w-100px text-end pe-7">Actions</th>
+												</tr>
+												</thead>
+												<tbody class="fs-6 fw-semibold text-gray-600">
+												<tr>
+													<td>
+														<a href="#"
+														   class="text-gray-600 text-hover-primary">NGST-4235</a>
+													</td>
+													<td class="text-gray-700">12 Jun - 26 Jun 2021</td>
+													<td class="text-primary rc_currency">524534</td>
+													<td class="text-dark rc_currency fs-5"
+													    data-cs-round="0"
+													    data-cs-sign="1">523434
+													</td>
+													<td>
+														<span class="badge badge-light-success fs-6">Rec'd OnTime</span>
+													</td>
+													<td class="text-end">
+														<button class="btn btn-sm btn-icon btn-light btn-active-light-primary"
+														        title="Download Invoice"
+														        data-bs-toggle="tooltip"><i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+														<a href="#"
+														   class="btn btn-sm btn-light btn-active-light-primary"
+														   data-kt-menu-trigger="hover"
+														   data-kt-menu-placement="bottom-end"> Options</a>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Print</a>
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Send Email</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#"
+														   class="text-gray-600 text-hover-primary">NGST-5233</a>
+													</td>
+													<td class="text-gray-700">02 Aug - 26 Aug 2021</td>
+													<td class="text-primary rc_currency">12343</td>
+													<td class="text-dark rc_currency fs-5"
+													    data-cs-round="0"
+													    data-cs-sign="1">32123
+													</td>
+													<td>
+														<span class="badge badge-light-warning fs-6">Received Late</span>
+													</td>
+													<td class="text-end">
+														<button class="btn btn-sm btn-icon btn-light btn-active-light-primary"
+														        title="Download Invoice"
+														        data-bs-toggle="tooltip"><i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+														<a href="#"
+														   class="btn btn-sm btn-light btn-active-light-primary"
+														   data-kt-menu-trigger="hover"
+														   data-kt-menu-placement="bottom-end"> Options</a>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Print</a>
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Send Email</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#"
+														   class="text-gray-600 text-hover-primary">NGST-4235</a>
+													</td>
+													<td class="text-gray-700">12 Oct - 26 Nov 2021</td>
+													<td class="text-primary rc_currency">524534</td>
+													<td class="text-dark rc_currency fs-5"
+													    data-cs-round="0"
+													    data-cs-sign="1">523434
+													</td>
+													<td>
+														<span class="badge badge-light-danger fs-6">With Interest</span>
+													</td>
+													<td class="text-end">
+														<button class="btn btn-sm btn-icon btn-light btn-active-light-primary"
+														        title="Download Invoice"
+														        data-bs-toggle="tooltip"><i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+														<a href="#"
+														   class="btn btn-sm btn-light btn-active-light-primary"
+														   data-kt-menu-trigger="hover"
+														   data-kt-menu-placement="bottom-end"> Options</a>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Print</a>
+																<a href="#"
+																   class="menu-link px-3"
+																   data-kt-payment-mehtod-action="set_as_primary">Send Email</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div id="pb_cust_invoices_2"
+									     class="py-0 tab-pane fade"
+									     role="tabpanel">
+										<div class="row mb-10 mt-5"
+										     data-pb-target="filter">
+											<div class="col">
+												<label class="form-label">Search</label>
+												<input type="search"
+												       name="search"
+												       data-dt-regex="1"
+												       class="form-control form-control-sm form-control-solid"
+												       placeholder="search"
+												       title="" />
+											</div>
+											<div class="col">
+												<label class="form-label">Item select</label>
+												<select name="select"
+												        data-dt-column="1"
+												        class="form-select form-select-sm form-select-solid"
+												        aria-label="Item Name">
+													<option value="">None</option>
+													<option value="diesel">Diesel</option>
+													<option value="mak">MAK</option>
+												</select>
+											</div>
+											<div class="col">
+											
+											</div>
+											<div class="col">
+												<label class="form-label">Date</label>
+												<div class="input-group">
+													<input type="text"
+													       name="date"
+													       data-dt-column="0"
+													       data-pb-instance="1"
+													       class="form-control form-select-sm form-control-solid"
+													       data-dom-control="date"
+													       data-pb-method="range"
+													       data-pb-altFormat="c"
+													       placeholder="Select Date"
+													       title="" />
+													<input type="button"
+													       name="clear"
+													       data-pb-target="1"
+													       class="btn btn-sm btn-icon btn-light"
+													       value="X">
+												</div>
+											</div>
+											<div class="col">
+											
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table align-middle table-row-dashed fs-5 fw-semibold gy-3 pb_cust_invoices_paid">
+												<thead class="text-uppercase fw-bold">
+												<tr class="text-start text-muted fs-6">
+													<th class="min-w-100px">Invoice ID</th>
+													<th class="min-w-175px">Billing Period</th>
+													<th class="min-w-150px">Invoice Value</th>
+													<th class="min-w-150px">Invoice Amount</th>
+													<th class="min-w-75px">Status</th>
+													<th class="min-w-100px text-end pe-7">Actions</th>
+												</tr>
+												</thead>
+												<tbody class="fs-6 fw-semibold text-gray-600">
+												
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="sales"
+					     class="tab-pane fade"
+					     role="tabpanel"
+					     data-load-tab="0">
+						<div class="row flex">
+							<div data-pb-append="breif-overview-sales"></div>
+						</div>
+						
+						<div class="card card-flush overflow-hidden h-md-100 mb-6 mb-xl-9">
+							<div class="card-header py-5">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label fw-bold text-dark">Sales of the year</span>
+									<span class="text-gray-400 mt-1 fw-semibold fs-6">Day-wise sales value has plotted into the chart</span>
+								</h3>
+								<div class="card-toolbar">
+									<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+									        data-kt-menu-trigger="click"
+									        data-kt-menu-placement="bottom-end"
+									        data-kt-menu-overflow="true">
+										<i class="bi bi-menu-button-fill fs-2"></i>
+									</button>
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+									     data-kt-menu="true">
+										<div class="menu-item px-3">
+											<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+										</div>
+										<div class="separator mb-3 opacity-75"></div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-3">View Sales Report</a>
+										</div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-3">Vehicle Wise Report</a>
+										</div>
+										<div class="separator mt-3 opacity-75"></div>
+										<div class="menu-item px-3"
+										     data-kt-menu-trigger="hover"
+										     data-kt-menu-placement="right-start">
+											<a href="#"
+											   class="menu-link px-3">
+												<span class="menu-title">Other Reports</span>
+												<span class="menu-arrow"></span>
+											</a>
+											<div class="menu-sub menu-sub-dropdown w-175px py-4">
+												<div class="menu-item px-3">
+													<a href="#"
+													   class="menu-link px-3">Ledger Register</a>
+												</div>
+												<div class="menu-item px-3">
+													<a href="#"
+													   class="menu-link px-3">Transaction Book</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-12 col-xxl-12"
+							     data-pb-child="chart">
+								<div data-pb-chart="area"
+								     style="height: 400px"></div>
+							</div>
+						</div>
+						<div class="card mb-6 mb-xl-9"
+						     data-pb-control="sales_records">
+							<div class="card-header">
+								<div class="card-title">
+									<h2>Sales Records</h2>
+								</div>
+								<div class="card-toolbar">
+									<div class="d-flex align-items-center position-relative my-1">
+										<span class="position-absolute ms-5">
+											<i class="bi bi-search fs-4"></i>
+										</span>
+										<input type="text"
+										       data-table-search="pb_tbl_c_receipts"
+										       class="form-control form-control-solid form-control-sm w-200px ps-15"
+										       placeholder="Search Receipts" />
+									</div>
+								</div>
+							</div>
+							<div class="card-body py-0">
+								<div class="table-responsive">
+									<table class="table align-middle table-row-dashed fs-5 fw-semibold gy-3">
+										<thead class="text-uppercase fw-bold">
+										<tr class="text-start text-muted fs-6">
+											<th class="min-w-100px">Item</th>
+											<th class="min-w-200px">Month</th>
+											<th class="min-w-125px">SalesQty</th>
+											<th class="min-w-125px">Sales Amount</th>
+											<th class="min-w-150px">Gross Profit</th>
+											<th class="min-w-150px">% of Prev Month</th>
+										
+										</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+					<div id="purchases"
+					     class="tab-pane fade"
+					     role="tabpanel"
+					     data-load-tab="0">
+						<div class="row">
+							<div data-pb-append="breif-overview-purds"></div>
+						</div>
+						<div class="card card-flush overflow-hidden h-md-100 mb-6 mb-xl-9">
+							<div class="card-header py-5">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label fw-bold text-dark">Sales of the year</span>
+									<span class="text-gray-400 mt-1 fw-semibold fs-6">Day-wise sales value has plotted into the chart</span>
+								</h3>
+								<div class="card-toolbar">
+									<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+									        data-kt-menu-trigger="click"
+									        data-kt-menu-placement="bottom-end"
+									        data-kt-menu-overflow="true">
+										<i class="bi bi-menu-button-fill fs-2"></i>
+									</button>
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+									     data-kt-menu="true">
+										<div class="menu-item px-3">
+											<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+										</div>
+										<div class="separator mb-3 opacity-75"></div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-3">View Sales Report</a>
+										</div>
+										<div class="menu-item px-3">
+											<a href="#"
+											   class="menu-link px-3">Vehicle Wise Report</a>
+										</div>
+										<div class="separator mt-3 opacity-75"></div>
+										<div class="menu-item px-3"
+										     data-kt-menu-trigger="hover"
+										     data-kt-menu-placement="right-start">
+											<a href="#"
+											   class="menu-link px-3">
+												<span class="menu-title">Other Reports</span>
+												<span class="menu-arrow"></span>
+											</a>
+											<div class="menu-sub menu-sub-dropdown w-175px py-4">
+												<div class="menu-item px-3">
+													<a href="#"
+													   class="menu-link px-3">Ledger Register</a>
+												</div>
+												<div class="menu-item px-3">
+													<a href="#"
+													   class="menu-link px-3">Transaction Book</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-12 col-xxl-12"
+							     data-pb-child="chart">
+								<div data-pb-chart="area"
+								     style="height: 400px"></div>
+							</div>
+						</div>
+						<div class="card mb-6 mb-xl-9"
+						     data-pb-control="receipts_records">
+							<div class="card-header">
+								<div class="card-title">
+									<h2>Receipts Records</h2>
+								</div>
+								<div class="card-toolbar">
+									<div class="d-flex align-items-center position-relative my-1">
+										<span class="position-absolute ms-5">
+											<i class="bi bi-search fs-4"></i>
+										</span>
+										<input type="text"
+										       data-table-search="pb_tbl_c_receipts"
+										       class="form-control form-control-solid form-control-sm w-200px ps-15"
+										       placeholder="Search Receipts" />
+									</div>
+								</div>
+							</div>
+							<div class="card-body py-0">
+								<div class="table-responsive">
+									<table class="table align-middle table-row-dashed fs-5 fw-semibold gy-3"
+									       id="pb_tbl_c_receipts">
+										<thead class="text-uppercase fw-bold">
+										<tr class="text-start text-muted fs-6">
+											<th class="min-w-100px">Item</th>
+											<th class="min-w-200px">Month</th>
+											<th class="min-w-125px">Purchase Qyt</th>
+											<th class="min-w-150px">Purchase amount</th>
+											<th class="min-w-150px">Vat paid</th>
+											<th class="min-w-150px">shortage</th>
+										
+										</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="config"
+					     class="tab-pane fade"
+					     role="tabpanel"
+					     data-load-tab="0">
+						<div class="card">
+							<div class="card-header">
+								<div class="card-title">
+									<i class="fs-2x me-2 text-dark las la-user-plus"></i>
+									<h3 class="">Config</h3>
+								</div>
+								<div class="card-toolbar">
+									<button type="button"
+									        data-e-nature="back"
+									        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+										<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+										<span>Go Back</span>
+									</button>
+									<button type="button"
+									        name="action"
+									        value="save"
+									        data-e-nature="post"
+									        form="form-config-new"
+									        data-form-submit
+									        data-kt-indicator
+									        class="btn btn-primary hover-elevate-up">
+										<span class="indicator-label">Save Contact</span>
+										<span class="indicator-progress">Please wait...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="card-body pt-5">
+								<form class="form"
+								      data-form-valid=""
+								      data-form-sno="1"
+								      id="form-config-new"
+								      autocomplete="off">
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Item Name</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter the item's name."></i>
+											</label>
+											<input required
+											       type="text"
+											       class="form-control form-control-solid"
+											       name="item_name"
+											       placeholder=""
+											       title="Name of the Item" />
+										</div>
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Item Code</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Item code"></i>
+											</label>
+											<input required
+											       type="text"
+											       class="form-control form-control-solid"
+											       name="item_code"
+											       title="Item Code" />
+										</div>
+									</div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Item Group</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter a Secondary name of the Account"></i>
+											</label>
+											<select name="item_group"
+											        data-pb-source="categories"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Item Group"
+											        title="Item Group ?"> </select>
+										</div>
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Default Unit</span>
+											</label>
+											<select required
+											        class="form-select form-select-solid lh-1 py-4"
+											        name="default_unit"
+											        data-dom-control="select"
+											        data-pb-source="units"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Default Unit"
+											        title="Default Unit of Measurement?"> </select>
+										</div>
+									</div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="">Bulk Unit</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter the bulk unit"></i>
+											</label>
+											<select required
+											        class="form-select form-select-solid lh-1 py-4"
+											        name="bulk_unit"
+											        data-dom-control="select"
+											        data-pb-source="units"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Bulk Unit"
+											        title="Bulk Unit of Measurement?"> </select>
+										</div>
+										<div class="col-12 col-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="">Opening Stock</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter the contact's email."></i>
+											</label>
+											<input type="text"
+											       class="form-control form-control-solid"
+											       name="opening_stock"
+											       placeholder="458 ltrs."
+											       title="Opening Stocks" />
+										</div>
+									</div>
+									<div class="form-check m-5">
+										<input class="form-check-input"
+										       type="checkbox"
+										       value=""
+										       id="flexCheckDefault" />
+										<label class="form-check-label"
+										       for="flexCheckDefault">
+											M. Stock
+										</label>
+									</div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="">Opening Stock Date</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter the contact's email."></i>
+											</label>
+											<input required
+											       type="text"
+											       name="stock_date"
+											       class="form-control form-control-solid"
+											       data-dom-control="date"
+											       data-pb-method="human"
+											       placeholder="Opening Stock Date"
+											       title="What is the Date of Opening Stock ?" />
+										</div>
+										<div class="col-12 col-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="">Stock Selling Price</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter the contact's email."></i>
+											</label>
+											<input required
+											       type="text"
+											       name="stock_selling_price"
+											       class="form-control form-control-solid"
+											       placeholder="Stock Selling Price"
+											       title="What is the Stock Selling Price ?" />
+										</div>
+									</div>
+									<div class="separator border-3 my-10"></div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Tax</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter a Secondary name of the Account"></i>
+											</label>
+											<input required
+											       type="text"
+											       name="tax"
+											       class="form-control form-control-solid"
+											       placeholder="Stock Selling Price"
+											       title="What is the Stock Selling Price ?" />
+										</div>
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Tax Rate</span>
+											</label>
+											<input required
+											       type="text"
+											       name="tax_rate"
+											       class="form-control form-control-solid"
+											       placeholder="Tax Rate"
+											       title="What is the Tax Rate ?" />
+										</div>
+									</div>
+									<div class="separator border-3 my-10"></div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Supplier Account</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter a Secondary name of the Account"></i>
+											</label>
+											<select name="supplier_account"
+											        data-pb-source="supplier_account"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Supplier Account"
+											        title="Supplier Account ?"> </select>
+										</div>
+									</div>
+									<div class="separator border-3 my-10"></div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Default Income Account</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter a Secondary name of the Account"></i>
+											</label>
+											<select name="income_account"
+											        data-pb-source="income_account"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Income Group"
+											        title="Item Group ?"> </select>
+										</div>
+									</div>
+									<div class="separator border-3 my-10"></div>
+									<div class="fv-row row mb-0 mb-xl-4">
+										<div class="col-12 col-md-6">
+											<label class="fs-6 fw-semibold form-label mt-3">
+												<span class="required">Default Purchase Account</span>
+												<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+												   data-bs-toggle="tooltip"
+												   title="Enter a Secondary name of the Account"></i>
+											</label>
+											<select name="purchase_account"
+											        data-pb-source="purchase_account"
+											        required
+											        class="form-select form-select-solid"
+											        data-pb-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Item Group"
+											        title="Item Group ?"> </select>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header border-0"
+							     role="button"
+							     data-bs-toggle="collapse"
+							     data-bs-target="#kt_account_deactivate"
+							     aria-expanded="true"
+							     aria-controls="kt_account_deactivate">
+								<div class="card-title m-0">
+									<h3 class="fw-bold m-0">Deactivate Account</h3>
+								</div>
+							</div>
+							<div id="kt_account_settings_deactivate"
+							     class="collapse show">
+								<form id="pb_employee_ac_deactivate"
+								      class="form">
+									<div class="card-body border-top p-9">
+										<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6">
+											<i class="bi bi-exclamation-circle-fill fs-1 fs-2x text-warning me-4"></i>
+											<div class="d-flex flex-stack flex-grow-1">
+												<div class="fw-semibold">
+													<h4 class="text-gray-900 fw-bold">You Are Deactivating Your Employee Account</h4>
+													<div class="fs-6 text-gray-700">This action can not Revert, you can still view reports of the account but can not generate new.
+														<a class="fw-bold"
+														   href="#">Learn more</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<span hidden
+											      class="deactivate_values"
+											      title="remaining balance">13000
+											</span>
+											<span hidden
+											      class="deactivate_values"
+											      title="payroll_due">1
+											</span>
+											<span hidden
+											      class="deactivate_values"
+											      title="activities_due">1
+											</span>
+										</div>
+										<div class="form-check form-check-solid fv-row">
+											<input name="deactivate"
+											       class="form-check-input"
+											       type="checkbox"
+											       value=""
+											       id="deactivate" />
+											<label class="form-check-label fw-semibold ps-2 fs-6"
+											       for="deactivate">I confirm to selected employee account deactivation.
+											</label>
+										</div>
+									</div>
+									<div class="card-footer d-flex justify-content-end py-6 px-9">
+										<button id="pb_do_deactive_employee"
+										        type="submit"
+										        class="btn btn-danger fw-semibold">Deactivate Account
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="interest"
+					     class="tab-pane fade"
+					     role="tabpanel"
+					     data-load-tab="0">
+						<div data-pb-control="basic_interest"
+						     class="card mb-6 mb-xl-9">
+							<div class="card-header border-0">
+								<div class="card-title">
+									<h2>Basic Interest Table</h2>
+								</div>
+								<div class="card-toolbar">
+									<button type="button"
+									        id="cust_basic_int_table_load"
+									        class="btn btn-sm btn-light-primary">
+										Load Table
+									</button>
+								</div>
+							</div>
+							<div class="card-body py-0 d-none"
+							     id="cust_basic_int_table">
+								<div class="row mb-10 mt-5"
+								     data-pb-target="filter">
+									<div class="col">
+										<label class="form-label">Search</label>
+										<input type="search"
+										       name="search"
+										       data-dt-regex="1"
+										       class="form-control form-control-sm form-control-solid"
+										       placeholder="search"
+										       title="" />
+									</div>
+									<div class="col">
+										<label class="form-label">Item select</label>
+										<select name="select"
+										        data-dt-column="1"
+										        class="form-select form-select-sm form-select-solid"
+										        aria-label="Item Name">
+											<option value="">None</option>
+											<option value="diesel">Diesel</option>
+											<option value="mak">MAK</option>
+										</select>
+									</div>
+									<div class="col">
+									
+									</div>
+									<div class="col">
+										<label class="form-label">Date</label>
+										<div class="input-group">
+											<input type="text"
+											       name="date"
+											       data-dt-column="0"
+											       data-pb-instance="1"
+											       class="form-control form-select-sm form-control-solid"
+											       data-dom-control="date"
+											       data-pb-method="range"
+											       data-pb-altFormat="c"
+											       placeholder="Select Date"
+											       title="" />
+											<input type="button"
+											       name="clear"
+											       data-pb-target="1"
+											       class="btn btn-sm btn-icon btn-light"
+											       value="X">
+										</div>
+									</div>
+									<div class="col">
+									
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table align-middle table-hover table-row-dashed fw-semibold text-gray-600 fs-6 gy-3">
+										<thead>
+										<tr class="text-start text-gray-600 fw-bold fs-5 text-uppercase gs-0">
+											<th class="min-w-125px">Txn Date</th>
+											<th class="min-w-100px">Litre</th>
+											<th class="min-w-125px">Amount</th>
+											<th class="min-w-100px">Days</th>
+											<th class="min-w-150px">Margin</th>
+											<th class="min-w-125px">Interest</th>
+											<th class="min-w-150px text-end">Net Per Row</th>
+										</tr>
+										</thead>
+										<tbody class="fs-5">
+										<tr>
+											<td>13 Jun 2022</td>
+											<td class="in_num"
+											    data-cs-round="1">45245
+											</td>
+											<td class="rc_currency"
+											    data-cs-round="0">45245
+											</td>
+											<td>45 Days</td>
+											<td class="text-success rc_currency"
+											    data-cs-round="2">1354.21
+											</td>
+											<td class="text-danger rc_currency"
+											    data-cs-round="2">1354.21
+											</td>
+											<td class="text-end text-primary pe-0 rc_currency"
+											    data-cs-sign="1"
+											    data-cs-round="2">65000
+											</td>
+										</tr>
+										</tbody>
+										<tfoot>
+										<tr class="fw-semibold text-gray-700 fs-4">
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td>..</td>
+											<td class="rc_currency text-center"
+											    data-cs-sign="1">3452345
+											</td>
+										</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div data-pb-control="custom_interest"
+						     class="card mb-6 mb-xl-9">
+							<div class="card-header border-0">
+								<div class="card-title">
+									<h2>Custom Interest Table</h2>
+								</div>
+								<div class="card-toolbar">
+									<button type="button"
+									        id="pb_cust_custom_interest_open"
+									        class="btn btn-sm btn-light-primary">
+										Load Form
+									</button>
+								</div>
+							</div>
+							<div class="separator separator-dashed"></div>
+							<div class="card-body py-4">
+								<div class="form d-none"
+								     id="pb_cust_custom_interest">
+									<form id="pb_cust_custom_interest_form"
+									      class="form"
+									      action="#">
+										<div class="row fv-row mb-7">
+											<div class="col-7">
+												<label class="fs-6 fw-semibold form-label mb-2">
+													<span class="required">Offset Date</span>
+													<i class="fas fa-exclamation-circle ms-1 fs-7"
+													   data-bs-toggle="tooltip"
+													   title="A date, after entries that you do not want to consider"></i>
+												</label>
+												<input type="text"
+												       class="form-control dp_2"
+												       name="offset_date"
+												       value="" />
+											</div>
+											<div class="col-5">
+												<label class="required fs-6 fw-semibold form-label mb-2">
+													Method
+													<i class="fas fa-exclamation-circle ms-1 fs-7"
+													   data-bs-toggle="tooltip"
+													   title="asdf"></i>
+												</label>
+												<select class="form-select fw-bold"
+												        name="method"
+												        data-dom-control="select2"
+												        data-placeholder="Select an option"
+												        data-hide-search="true">
+													<option></option>
+													<option value="0">Up to Debit Balance</option>
+													<option value="1"
+													        disabled>For Last 30 Days
+													</option>
+												</select>
+											</div>
+										</div>
+										<div class="row fv-row mb-3">
+											<div class="col-7">
+												<label class="required fs-6 fw-semibold form-label mb-2">Interest Rate</label>
+												<div class="input-group">
+													<input type="text"
+													       class="form-control"
+													       placeholder="Int Rates"
+													       aria-label="Int Rates"
+													       aria-describedby="int_rate" />
+													<span class="input-group-text"
+													      id="interest_rate">% per year
+													</span>
+												</div>
+											</div>
+											<div class="col-5">
+												<label class="fs-6 fw-semibold form-label mb-2"
+												       id="pb_cust_custom_interest_cancel">Discard the form
+												</label>
+												<br>
+												<button type="submit"
+												        id="pb_cust_custom_interest_submit"
+												        class="btn btn-primary">
+													<span class="indicator-label">Submit for Load Table</span>
+													<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+													</span>
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="row mb-10 mt-5"
+								     data-pb-target="filter">
+									<div class="col">
+										<label class="form-label">Search</label>
+										<input type="search"
+										       name="search"
+										       data-dt-regex="1"
+										       class="form-control form-control-sm form-control-solid"
+										       placeholder="search"
+										       title="" />
+									</div>
+									<div class="col">
+										<label class="form-label">Item select</label>
+										<select name="select"
+										        data-dt-column="1"
+										        class="form-select form-select-sm form-select-solid"
+										        aria-label="Item Name">
+											<option value="">None</option>
+											<option value="diesel">Diesel</option>
+											<option value="mak">MAK</option>
+										</select>
+									</div>
+									<div class="col">
+									
+									</div>
+									<div class="col">
+										<label class="form-label">Date</label>
+										<div class="input-group">
+											<input type="text"
+											       name="date"
+											       data-dt-column="0"
+											       data-pb-instance="1"
+											       class="form-control form-select-sm form-control-solid"
+											       data-dom-control="date"
+											       data-pb-method="range"
+											       data-pb-altFormat="c"
+											       placeholder="Select Date"
+											       title="" />
+											<input type="button"
+											       name="clear"
+											       data-pb-target="1"
+											       class="btn btn-sm btn-icon btn-light"
+											       value="X">
+										</div>
+									</div>
+									<div class="col">
+									
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table align-middle table-hover table-row-dashed fw-semibold text-gray-600 fs-6 gy-3">
+										<thead>
+										<tr class="text-start text-gray-600 fw-bold fs-5 text-uppercase gs-0">
+											<th class="min-w-125px">Txn Date</th>
+											<th class="min-w-150px">Days Cleared</th>
+											<th class="min-w-150px">Amount</th>
+											<th class="min-w-125px">Interest</th>
+											<th class="min-w-125px text-end">Cumulative</th>
+										</tr>
+										</thead>
+										<tbody class="fs-5">
+										<tr>
+											<td>13 Jun 2022</td>
+											<td>45 Days</td>
+											<td class="rc_currency"
+											    data-cs-round="0">45245
+											</td>
+											<td class="text-danger rc_currency"
+											    data-cs-round="2">1354.21
+											</td>
+											<td class="text-end pe-0 rc_currency"
+											    data-cs-sign="1"
+											    data-cs-round="2">65000
+											</td>
+										</tr>
+										</tbody>
+										<tfoot>
+										<tr class="fw-semibold text-gray-700 fs-4">
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="rc_currency text-center"
+											    data-cs-sign="1">3452345
+											</td>
+										</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modal__panels"
+	     class="zone">
+		<div id="alter_customer"
+		     class="sub-zone modal fade"
+		     tabindex="-1"
+		     aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="fw-bold">Adjust Opening Balance</h2>
+						<div id="alter_customer_close"
+						     class="btn btn-icon btn-sm btn-active-icon-primary">
+							<i class="bi bi-x-lg fs-2"></i>
+						</div>
+					</div>
+					<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+						<div class="d-flex text-center mb-9">
+							<div class="w-50 border border-dashed border-gray-300 rounded mx-2 p-4">
+								<div class="fs-6 fw-semibold mb-2 text-muted">Current Balance</div>
+								<div data-pb-control="current_bal"
+								     class="fs-2 fw-bold rc_currency"
+								     data-cs-sign="1"
+								     data-cs-round="2"
+								     data-cs-custom="cur_bl">250000
+								</div>
+							</div>
+							<div class="w-50 border border-dashed border-gray-300 rounded mx-2 p-4">
+								<div class="fs-6 fw-semibold mb-2 text-muted">New Balance
+									<i class="fas fa-exclamation-circle ms-1 fs-7"
+									   data-bs-toggle="tooltip"
+									   title="Enter an amount to preview the new balance."></i></div>
+								<div class="fs-2 fw-bold"
+								     data-cs-custom="new_bl">--
+								</div>
+							</div>
+							<span class="d-none"
+							      data-cs-custom="old_ob">-50000
+							</span>
+						</div>
+						<form id="alter_customer_form"
+						      data-valid-form
+						      data-form-sno="3"
+						      class="form"
+						      action="#">
+							<div class="row fv-row mb-7">
+								<div class="col-7">
+									<label class="required fs-6 fw-semibold form-label mb-2">Correct Opening Balance</label>
+									<input id="cust_new_ob"
+									       type="text"
+									       class="form-control form-control-solid inr_mask"
+									       name="new_ob_amount"
+									       value="" />
+								</div>
+								<div class="col-5">
+									<label class="required fs-6 fw-semibold form-label mb-2">Adjustment type</label>
+									<select id="cust_nob_type"
+									        class="form-select form-select-solid fw-bold"
+									        name="adjustment">
+										<option value="">Select an option</option>
+										<option value="1">Outstanding (Debit)</option>
+										<option value="-1">Advance (Credit)</option>
+									</select>
+								</div>
+							</div>
+							<div class="fs-7 text-muted mb-15">Please note that this action will update the opening balance of the customer account and current balance will be affected by this action. Thank you.</div>
+							<div class="text-center">
+								<button type="reset"
+								        id="alter_customer_cancel"
+								        class="btn btn-light me-3">Discard
+								</button>
+								<button type="button"
+								        name="action"
+								        value="alter_customer"
+								        id="alter_customer_submit"
+								        form="alter_customer_form"
+								        data-e-nature="post"
+								        data-form-submit
+								        class="btn btn-primary">
+									<span class="indicator-label">Submit</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="edit_vehicles"
+		     class="sub-zone modal fade"
+		     tabindex="-1"
+		     aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="fw-bold">Edit Vehicles Details</h2>
+						<div id="edit_vehicles_close"
+						     data-bs-dismiss="modal"
+						     class="btn btn-icon btn-sm btn-active-icon-primary">
+							<i class="bi bi-x-lg fs-2"></i>
+						</div>
+					</div>
+					<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+						<form id="edit_vehicles_form"
+						      data-form-valid=""
+						      data-form-sno="4"
+						      class="form"
+						      action="#">
+							<div class="row fv-row mb-7">
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Select Vehicle</label>
+									<select name="select_vehicle"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="select_vehicle"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="subtext"
+									        data-pb-placeholder="Select Vehicle for Edit"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Select Vehicle"> </select>
+								</div>
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Vehicle Owner</label>
+									<select name="select_vehicle_owner"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="select_vehicle_owner"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="direct"
+									        data-pb-placeholder="Select Vehicle Owner"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Select Vehicle Owner"></select>
+								</div>
+							</div>
+							<div class="row fv-row mb-7">
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Vehicle Number</label>
+									<input type="text"
+									       title=""
+									       data-pb-control="mask"
+									       data-pb-method="vehicleNumber"
+									       class="form-control text-end form-control-solid mb-2 mb-md-0"
+									       placeholder="Vehicle number"
+									       name="vehicle_number" />
+								</div>
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Driver Name</label>
+									<input type="text"
+									       title="driver_name??"
+									       class="form-control text-end form-control-solid mb-2 mb-md-0 inr_mask"
+									       placeholder="Driver Name"
+									       name="driver_name" />
+								</div>
+							</div>
+							<div class="row fv-row mb-7">
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Driver Mobile No.</label>
+									<input type="text"
+									       title="mobile_number??"
+									       data-pb-control="mask"
+									       data-pb-method="mobileNumber"
+									       class="form-control text-end form-control-solid mb-2 mb-md-0 inr_mask"
+									       placeholder="driver_mobile_number"
+									       name="driver_mobile_number" />
+								</div>
+								<div class="col-3">
+									<label class="required fs-6 fw-semibold form-label mb-2">Vehicle Type</label>
+									<select name="select_vehicle_type"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="select_vehicle_type"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="direct"
+									        data-pb-placeholder="Select Vehicle type"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Select Vehicle type"></select>
+								</div>
+								<div class="col-3">
+									<label class="required fs-6 fw-semibold form-label mb-2">Vehicle Status</label>
+									<select name="select_vehicle_status"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="select_vehicle_status"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="direct"
+									        data-pb-placeholder="Select Vehicle Status"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Select Vehicle Status"></select>
+								</div>
+							</div>
+							<div class="text-center">
+								<button type="button"
+								        name="reset"
+								        value="edit_vehicles"
+								        form="edit_vehicles_form"
+								        id="edit_vehicles_cancel"
+								        data-e-nature="post"
+								        class="btn btn-light me-3">Reset
+								</button>
+								<button type="button"
+								        name="action"
+								        value="edit_vehicles"
+								        form="edit_vehicles_form"
+								        data-form-submit
+								        data-e-nature="post"
+								        class="btn btn-primary">
+									<span class="indicator-label">Submit</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="merge_vehicles"
+		     class="sub-zone modal fade"
+		     tabindex="-1"
+		     aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="fw-bold">Merge Vehicle Account</h2>
+						<div id="merge_vehicles_close"
+						     data-bs-dismiss="modal"
+						     class="btn btn-icon btn-sm btn-active-icon-primary">
+							<i class="bi bi-x-lg fs-2"></i>
+						</div>
+					</div>
+					<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+						
+						<form id="merge_vehicles_form"
+						      data-valid-form=""
+						      data-form-sno="5"
+						      class="form"
+						      action="#">
+							<div class="row fv-row mb-7">
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Select Main Vehicle</label>
+									<select name="primary_vehicle_account"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="primary_vehicle_account"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="subtext"
+									        data-pb-placeholder="Primary Vehicle Account"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Primary Vehicle Account"></select>
+								</div>
+								<div class="col-6">
+									<label class="required fs-6 fw-semibold form-label mb-2">Select Temporary Vehicle</label>
+									<select name="secondary_vehicle_account"
+									        class="form-select form-select-solid fw-bold"
+									        data-pb-source="secondary_vehicle_account"
+									        data-dom-control="select"
+									        data-pb-method="simple"
+									        data-pb-tack="subtext"
+									        data-pb-placeholder="Secondary Vehicle Account"
+									        data-pb-search="1"
+									        data-pb-allow-clear="false"
+									        title="Secondary Vehicle Account"></select>
+								</div>
+							</div>
+							<div class=" mb-7">
+								<div class="col-6 align-items-center mb-7">
+									<label class="required fs-6 fw-semibold form-label mb-2">Security Code</label>
+									<input type="text"
+									       title="security code"
+									       class="form-control text-end form-control-solid mb-2 mb-md-0 inr_mask"
+									       placeholder="Security Code (Modify)"
+									       name="security_code" />
+								</div>
+								<div class="form-check form-switch form-check-custom form-check-solid col-6 align-items-center mb-7">
+									<label class="form-check-label"
+									       for="flexSwitchChecked">
+										Do you want to delete Secondary Vehicle?
+									</label>
+									<input class="form-check-input"
+									       type="checkbox"
+									       value=""
+									       name="delete_secondary_vehicle_account"
+									       id="flexSwitchChecked"
+									       checked="checked" />
+								
+								</div>
+								<div class="form-check form-check-custom form-check-solid col-6 align-items-center mb-7">
+									<input class="form-check-input"
+									       type="checkbox"
+									       value="1"
+									       name="confirm_agree_on_merge"
+									       id="flexCheckChecked"
+									       checked="checked" />
+									<label class="form-check-label"
+									       for="flexCheckChecked">
+										Confirm that you agree for this merge
+									</label>
+								</div>
+							
+							</div>
+							<div class="fs-7 text-muted mb-15">You can not undo this process. Kindly recheck that you are doing to merge right accounts.
+							</div>
+							<div class="text-center">
+								<button type="button"
+								        name="reset"
+								        value="merge_vehicles"
+								        form="merge_vehicles_form"
+								        id="merge_vehicles_cancel"
+								        data-e-nature="post"
+								        class="btn btn-light me-3">Reset
+								</button>
+								<button type="button"
+								        name="action"
+								        value="merge_vehicles"
+								        form="merge_vehicles_form"
+								        data-e-nature="post"
+								        data-form-submit
+								        class="btn btn-primary">
+									<span class="indicator-label">Merge Vehicles</span>
+									<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+									</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="update_customer"
+		     class="sub-zone modal fade"
+		     tabindex="-1"
+		     aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<div class="modal-content">
+					<form class="form"
+					      action="#"
+					      data-form-sno="1"
+					      data-valid-form
+					      id="update_customer_form">
+						<div class="modal-header"
+						     id="update_customer_header">
+							<h2 class="fw-bold">Update Customer</h2>
+							<div id="update_customer_close"
+							     class="btn btn-icon btn-sm btn-active-icon-primary">
+								<i class="bi bi-x-lg fs-2"></i>
+							</div>
+						</div>
+						<div class="modal-body py-10 px-lg-17">
+							<div class="d-flex flex-column scroll-y me-n7 pe-7"
+							     id="update_customer_scroll"
+							     data-kt-scroll="true"
+							     data-kt-scroll-activate="{default: false, lg: true}"
+							     data-kt-scroll-max-height="auto"
+							     data-kt-scroll-dependencies="#update_customer_header"
+							     data-kt-scroll-wrappers="#update_customer_scroll"
+							     data-kt-scroll-offset="300px">
+								<div class="fw-bold fs-3 rotate collapsible mb-7"
+								     data-bs-toggle="collapse"
+								     href="#update_customer_user_info"
+								     role="button"
+								     aria-expanded="false"
+								     aria-controls="update_customer_user_info">User Information
+									<span class="ms-2 rotate-180">
+										<i class="bi bi-caret-down-fill"></i>
+									</span>
+								</div>
+								<div id="update_customer_user_info"
+								     class="collapse show">
+									<div class="row mb-7">
+										<div class="col-5">
+											<label class="fs-6 fw-semibold mb-2">
+												<span>Update Profile</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="Allowed file types: png, jpg, jpeg."></i>
+											</label>
+											<div class="mt-1">
+												<div class="image-input image-input-outline"
+												     data-kt-image-input="true"
+												     style="background-image: url('../../assets/media/avatars/300-12.jpg')">
+													<div class="image-input-wrapper w-125px h-125px"
+													     style="background-image: url(assets/media/avatars/300-13.jpg)"></div>
+													<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+													       data-kt-image-input-action="change"
+													       data-bs-toggle="tooltip"
+													       title="Change avatar">
+														<i class="bi bi-pencil-fill fs-7"></i>
+														<input type="file"
+														       name="avatar"
+														       accept=".png, .jpg, .jpeg" />
+														<input type="hidden"
+														       name="avatar_remove" />
+													</label>
+													<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+													      data-kt-image-input-action="cancel"
+													      data-bs-toggle="tooltip"
+													      title="Cancel avatar">
+														<i class="bi bi-x fs-2"></i>
+													</span>
+													<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+													      data-kt-image-input-action="remove"
+													      data-bs-toggle="tooltip"
+													      title="Remove avatar">
+														<i class="bi bi-x fs-2"></i>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-7">
+											<div class="mb-6">
+												<label class="fs-6 fw-semibold mb-2 required">Party Name</label>
+												<input type="text"
+												       class="form-control form-control-solid"
+												       placeholder=""
+												       name="name"
+												       value="" />
+											</div>
+											<div>
+												<label class="fs-6 fw-semibold mb-2">Account Code</label>
+												<input type="text"
+												       class="form-control form-control-solid"
+												       placeholder=""
+												       name="alias"
+												       value="" />
+											</div>
+										</div>
+									</div>
+									<div class="row fv-row mb-7">
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2 required">
+												<span>Mobile</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="Primary Mobile Number, It also can be used for Whatsapp"></i>
+											</label>
+											<input type="number"
+											       class="form-control form-control-solid"
+											       placeholder=""
+											       name="mobile"
+											       value="" />
+										</div>
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2">
+												<span>Email</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="Email address must be active"></i>
+											</label>
+											<input type="email"
+											       class="form-control form-control-solid"
+											       placeholder=""
+											       name="email"
+											       value="" />
+										</div>
+									</div>
+									<div class="row fv-row mb-10">
+										<div class="col-md-7">
+											<label class="fs-6 fw-semibold mb-2">
+												<span class="">Notification Preference</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7"
+												   data-bs-toggle="tooltip"
+												   title="Valid contact detail is required for sending notification"></i>
+											</label>
+											<div class="d-flex align-items-center pt-3">
+												<div class="form-check form-check-custom form-check-primary form-check-solid me-7">
+													<label class="form-check-label"
+													       for="sms_notify">
+														<input class="form-check-input"
+														       type="radio"
+														       name="notify_prefer"
+														       value="1"
+														       id="sms_notify" />
+														SMS
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-success form-check-solid me-7">
+													
+													<label class="form-check-label"
+													       for="wa_notify">
+														<input class="form-check-input"
+														       type="radio"
+														       name="notify_prefer"
+														       value="2"
+														       id="wa_notify" />
+														WhatsApp
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-danger form-check-solid">
+													<label class="form-check-label"
+													       for="mail_notify">
+														<input class="form-check-input"
+														       type="radio"
+														       name="notify_prefer"
+														       value="3"
+														       id="mail_notify" />
+														Email
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-5">
+											<label class="fs-6 fw-semibold mb-2">
+												<span class="">Periodic Billing</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7"
+												   data-bs-toggle="tooltip"
+												   title=""></i>
+											</label>
+											<div class="d-flex align-items-center pt-3">
+												<div class="form-check form-check-custom form-check-primary form-check-solid me-7">
+													<label class="form-check-label fw-semibold"
+													       for="cr_billing">
+														<input class="form-check-input"
+														       type="checkbox"
+														       value="1"
+														       name="cr_billing"
+														       id="cr_billing" />
+														Enable
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								
+								</div>
+								<div class="fw-bold fs-3 rotate collapsible collapsed mb-7"
+								     data-bs-toggle="collapse"
+								     href="#update_customer_billing_info"
+								     role="button"
+								     aria-expanded="false"
+								     aria-controls="update_customer_billing_info">Other Information
+									<span class="ms-2 rotate-180">
+										<i class="bi bi-caret-down-fill"></i>
+									</span>
+								</div>
+								<div id="update_customer_billing_info"
+								     class="collapse">
+									<div class="mb-7 fv-row row">
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2 required">Credit Amount Limit</label>
+											<input type="text"
+											       class="form-control form-control-solid rc_currency"
+											       data-cs-sign="1"
+											       data-cs-round="0"
+											       placeholder=""
+											       name="cr_limit_amount"
+											       value="" />
+										</div>
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2 required">Credit Days Limit</label>
+											<input type="number"
+											       max="120"
+											       class="form-control form-control-solid rc_currency"
+											       data-cs-sign="1"
+											       data-cs-round="0"
+											       placeholder=""
+											       name="cr_limit_days"
+											       value="" />
+										</div>
+									</div>
+									<div class="mb-7 fv-row row">
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2">GSTIN</label>
+											<input class="form-control form-control-solid"
+											       placeholder=""
+											       name="gstin"
+											       value="" />
+										</div>
+										<div class="col-6">
+											<label class="fs-6 fw-semibold mb-2">TIN</label>
+											<input class="form-control form-control-solid"
+											       placeholder=""
+											       name="tin"
+											       value="" />
+										</div>
+									</div>
+									<div class="d-flex flex-column mb-7 fv-row">
+										<label class="fs-6 fw-semibold mb-2">Address Line</label>
+										<input class="form-control form-control-solid"
+										       placeholder=""
+										       name="address" />
+									</div>
+									<div class="row g-9 mb-7">
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">Town / City</label>
+											<input class="form-control form-control-solid"
+											       placeholder=""
+											       name="city"
+											       value="Melbourne" />
+										</div>
+										<div class="col-12 col-md-4 mb-7">
+											<label class="form-label">District</label>
+											<select name="district_id"
+											        data-pb-source="district"
+											        class="form-select form-select-solid"
+											        data-dom-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Select District"
+											        data-pb-search="1"
+											        title="district">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="row g-9 mb-7">
+										<div class="col-12 col-md-4 mb-7">
+											<label class="form-label">Category</label>
+											<select name="category_id"
+											        data-pb-source="category"
+											        class="form-select form-select-solid"
+											        data-dom-control="select"
+											        data-pb-method="simple"
+											        data-pb-tack="direct"
+											        data-pb-placeholder="Select category"
+											        data-pb-search="1"
+											        title="category">
+												<option></option>
+											</select>
+										</div>
+										<div class="col-md-6 fv-row">
+											<label class="fs-6 fw-semibold mb-2">Postal Code (PIN)</label>
+											<input class="form-control form-control-solid"
+											       data-pb-control="length"
+											       placeholder=""
+											       maxlength="6"
+											       name="postcode"
+											       value="234543" />
+										</div>
+									</div>
+									<div class="fv-row mb-7">
+										<div class="d-flex flex-stack">
+											<div class="me-5">
+												<label class="fs-6 fw-semibold">Account Status?</label>
+												<div class="fs-7 fw-semibold text-muted">You can also activate the account later on...</div>
+											</div>
+											<label class="form-check form-switch form-check-custom form-check-solid">
+												
+												<label class="form-check-label fw-semibold text-gray-600"
+												       for="update_customer_billing">
+													<input class="form-check-input"
+													       name="billing"
+													       type="checkbox"
+													       value="1"
+													       id="update_customer_billing" />
+													Activate
+												</label>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer flex-center">
+							<button type="reset"
+							        id="update_customer_cancel"
+							        class="btn btn-light me-3">Discard
+							</button>
+							<button type="button"
+							        id="update_customer_submit"
+							        name="action"
+							        value="update_customer"
+							        data-form-submit
+							        data-e-nature="post"
+							        form="update_customer_form"
+							        class="btn btn-primary">
+								<span class="indicator-label">Submit</span>
+								<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="templates__panels">
+		<!--	add all search wale templates here.-->
+		<div data-pb-template="search"
+		     class="d-none">
+			<div class="col-12 col-xxl-6">
+				<label class="form-check-clip text-center w-100 hover-elevate-up mb-2"
+				       data-search
+				       data-user-info-1="$$@name@$$"
+				       data-user-info-2="$$@alias@$$"
+				       data-user-info-3="$$@mobile@$$"
+				       data-user-info-4="$$@email@$$">
+					<input class="btn-check"
+					       type="radio"
+					       value="$$@id@$$"
+					       name="customer_id" />
+					<div class="form-check-wrapper">
+						<div class="form-check-indicator"></div>
+						<div class="form-check-content bg-white rounded py-3 px-5">
+							<div class="d-flex flex-stack align-items-center">
+								<div class="d-flex flex-row">
+									<div class="symbol symbol-50px me-3">
+										<img src="../../assets/media/avatars/300-6.jpg" />
+										<!--<div class="symbol-label fs-2 fw-semibold text-success">A</div>-->
+									</div>
+									<div class="d-flex flex-column align-items-start">
+										<div>
+											<span class="fs-3 fw-bold text-gray-800 text-hover-dark">$$@name@$$</span>
+											<span title="alias">[$$@alias@$$]</span>
+										</div>
+										<div>
+											<p class="fw-semibold text-muted mb-0">$$@post_id@$$</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div>
+										some more info.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div data-pb-template="recent"
+		     class="d-none">
+			<div class="col-12 col-xxl-6">
+				<div class="form-group">
+					<button type="button"
+					        data-form-submit
+					        form="customer_search"
+					        name="load"
+					        value="outcome"
+					        data-e-value="$$@id@$$"
+					        data-e-origin="search"
+					        data-e-recall
+					        class="btn btn-white btn-active-light-dark w-100 mb-3">
+						<div class="d-flex flex-stack align-items-center">
+							<span class="d-flex flex-row">
+								<span class="symbol symbol-50px me-3">
+									<!--<img alt="Pic" src="../../assets/media/avatars/300-6.jpg" />-->
+									<div class="symbol-label fs-2 fw-semibold text-success">A</div>
+								</span>
+								<span class="fw-semibold d-flex flex-column align-items-start">
+									<span class="fs-4"
+									      title="name">$$@name@$$
+									</span>
+									<span>
+										<span class="badge fs-7 fw-normal badge-light"
+										      title="group">$$@post_id@$$
+										</span>
+									</span>
+								</span>
+							</span>
+							<span class="d-flex flex-column align-items-end">
+								<span class="fw-light text-gray-400 fs-7">Last Viewed:</span>
+								<span>
+									<span class="badge badge-light-success rc_date"
+									      data-cs-format="fd_fms_g">$$@last_view@$$
+									</span>
+								</span>
+							</span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="breif-overview-sales">
+			<div class="card col-md-4 d-none">
+				<div class="card-header border-0">
+					<div class="card-title">
+						<h2 class="fw-bold">$$@name@$$</h2>
+					</div>
+				</div>
+				<div class="card-body pt-0">
+					<div class="fw-bold fs-2">
+						<span class="rc_currency"
+						      data-cs-round="2"
+						      data-cs-sign="1">$$@amount@$$
+						</span>
+						<span class="text-muted fs-4 fw-semibold rc_string">$$@unit@$$</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="breif-overview-purds">
+			<div class="card col-md-4 d-none">
+				<div class="card-header border-0">
+					<div class="card-title">
+						<h2 class="fw-bold">$$@name@$$</h2>
+					</div>
+				</div>
+				<div class="card-body pt-0">
+					<div class="fw-bold fs-2">
+						<span class="rc_currency"
+						      data-cs-round="2"
+						      data-cs-sign="1">$$@amount@$$
+						</span>
+						<span class="text-muted fs-4 fw-semibold rc_string">$$@unit@$$</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="due_invoices"
+		     class="d-none">
+			<div class="py-0 "
+			     data-kt-customer-payment-method="row">
+				<div class="py-3 d-flex flex-stack flex-wrap">
+					<div class="d-flex align-items-center collapsible rotate collapsed"
+					     data-bs-toggle="collapse"
+					     href="#kt_customer_view_payment_method_2"
+					     role="button"
+					     aria-expanded="false"
+					     aria-controls="kt_customer_view_payment_method_2">
+						<div class="me-3 rotate-90">
+							<i class="bi bi-caret-right-fill"></i>
+						</div>
+						<div class="symbol symbol-2by3 symbol-40px">
+							<div class="symbol-label fs-2 fw-semibold bg-light-danger text-danger">$$@id@$$</div>
+						</div>
+						<div class="ms-4 me-3">
+							<div class="d-flex align-items-center">
+								<div class="text-gray-800 fs-4 fw-bold">$$@invoice_number@$$</div>
+								<div class="badge badge-light-danger ms-5 rc_string">$$@status@$$</div>
+							</div>
+							<div class="text-muted text-gray-600 fw-semibold rc_date"
+							     data-cs-format="fd_sms_fy_c">$$@create_date@$$
+							</div>
+							<span class="rc_gap fw-normal"
+							      data-cs-method="days">$$@create_date@$$
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex my-3 ms-9">
+					<a href="#"
+					   class="btn btn-icon btn-active-light-danger w-40px h-40px me-3"
+					   data-bs-toggle="tooltip"
+					   data-bs-trigger="hover"
+					   title="Delete Bill">
+						<i class="bi bi-file-earmark-x-fill fs-1"></i>
+					</a>
+					<a href="#"
+					   class="btn btn-icon btn-active-light-primary w-40px h-40px me-3"
+					   data-bs-toggle="tooltip"
+					   title="Send Due SMS"
+					   data-kt-customer-payment-method="delete">
+						<i class="bi bi-chat-left-quote-fill fs-1"></i>
+					</a>
+					<a href="#"
+					   class="btn btn-icon btn-active-light-primary w-40px h-40px"
+					   data-kt-menu-trigger="hover"
+					   data-kt-menu-placement="bottom-end">
+						<i class="bi bi-menu-button-fill fs-1"></i>
+					</a>
+					<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3 fs-6"
+					     data-kt-menu="true">
+						<div class="menu-item px-3">
+							<a href="#"
+							   class="menu-link px-3"
+							   data-kt-payment-mehtod-action="set_as_primary">Print Invoice</a>
+							<a href="#"
+							   class="menu-link px-3"
+							   data-kt-payment-mehtod-action="set_as_primary">Download</a>
+							<a href="#"
+							   class="menu-link px-3"
+							   data-kt-payment-mehtod-action="set_as_primary">Attach Email</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="kt_customer_view_payment_method_2"
+			     class="collapse show- fs-6 ps-10"
+			     data-bs-parent="#kt_customer_view_payment_method">
+				<div class="d-flex flex-wrap py-5">
+					<div class="flex-equal me-5 fs-5">
+						<table class="table table-flush fw-semibold gy-2">
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Date From</th>
+								<td class="text-gray-800 rc_date"
+								    data-cs-format="fo">$$@from_date@$$
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Date To</th>
+								<td class="text-gray-800 rc_date"
+								    data-cs-format="to">$$@to_date@$$
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Days</th>
+								<td class="text-gray-800 rc_gap"
+								    data-cs-method="days"
+								    data-cs-refdate="$$@to_date@$$">$$@from_date@$$
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Invoice Number</th>
+								<td class="text-gray-800">$$@invoice_number@$$</td>
+							</tr>
+						</table>
+					</div>
+					<div class="flex-equal fw-5">
+						<table class="table table-flush fw-semibold gy-2">
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Invoice Amount</th>
+								<td class="text-gray-800 rc_currency"
+								    data-cs-sign="1">$$@invoice_amount@$$
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Discount</th>
+								<td class="text-gray-800 rc_currency"
+								    data-cs-sign="1">$$@discount_amount@$$
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Received Amount</th>
+								<td class="text-gray-800">
+									<a href="#"
+									   class="text-gray-900 text-hover-primary rc_currency"
+									   data-cs-sign="1">$$@received_amount@$$</a>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-muted min-w-150px w-150px fw-semibold">Percentage of</th>
+								<td class="text-success fw-bold rc_percent"
+								    data-cs-mark="$$@invoice_amount@$$">$$@received_amount@$$
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="customer_menu"
+		     class="d-none">
+			<div class="d-flex flex-center flex-column mb-5">
+				<div class="symbol symbol-100px symbol-circle mb-7">
+					<img class="rc_image"
+					     data-pb-source="$$@avatar@$$"
+					     data-cs-path="media"
+					     alt="image" />
+				</div>
+				<a href="#"
+				   class="fs-3 text-gray-800 text-hover-primary fw-bold mb-1">$$@name@$$</a>
+				<div class="fs-5 fw-semibold text-muted mb-6">Category Name</div>
+				<div class="d-flex flex-wrap flex-center">
+					<div class="border border-gray-500 border-dashed rounded py-3 px-3 mb-3">
+						<div class="fs-4 fw-bold text-gray-700">
+							<span class="w-75px rc_currency"
+							      data-cs-round="0"
+							      data-cs-sign="1">$$@turn_over@$$
+							</span>
+						</div>
+						<div class="fw-semibold text-muted"
+						     data-bs-placement="bottom"
+						     data-bs-toggle="tooltip"
+						     title="Avg Monthly Turnover">TurnOver
+						</div>
+					</div>
+					<div class="border border-gray-500 border-dashed rounded py-3 px-3 mx-4 mb-3">
+						<div class="fs-4 fw-bold text-gray-700">
+							<span class="w-50px rc_currency"
+							      data-cs-round="0">$$@order_value@$$
+							</span>
+						</div>
+						<div class="fw-semibold text-muted"
+						     data-bs-placement="bottom"
+						     data-bs-toggle="tooltip"
+						     title="Avg Order Value">Order Value
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="d-flex flex-stack fs-4 py-3">
+				<div class="fw-bold rotate collapsible collapsed"
+				     data-bs-toggle="collapse"
+				     href="#kt_customer_view_details"
+				     role="button"
+				     aria-expanded="false"
+				     aria-controls="kt_customer_view_details">Details
+					<span class="ms-2 rotate-180">
+						<span class="svg-icon svg-icon-3">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</span>
+				</div>
+				<span data-bs-toggle="tooltip"
+				      data-bs-trigger="hover"
+				      title="Edit customer details">
+					<button type="button"
+					        name="modal"
+					        value="update_customer"
+					        class="btn btn-sm fw-semibold btn-light-primary">Edit
+					</button>
+				</span>
+			</div>
+			<div id="kt_customer_view_details"
+			     class="collapse">
+				<div class="py-5 fs-6">
+					<div class="badge badge-light-info d-inline rc_string">$$@user_type@$$</div>
+					<div class="fw-bold mt-5">TAX Detail
+						<span class="text-gray-500 fw-normal"> (GSTIN)</span>
+					</div>
+					<div class="text-gray-600 text-uppercase">$$@gstin@$$</div>
+					<div class="fw-bold mt-5">Contact Detail</div>
+					<div class="text-gray-600">
+						<a href="#"
+						   class="text-gray-600 text-hover-primary">+91 $$@mobile@$$</a>                                <br>
+						<a href="#"
+						   class="text-gray-600 text-hover-primary">$$@email@$$</a>
+					</div>
+					<div class="fw-bold mt-5">Billing Address</div>
+					<div class="text-gray-600">$$@landmark@$$, <br />city-$$@city@$$, District-$$@district@$$, PIN-$$@pincode@$$ <br />State-$$@state@$$</div>
+				</div>
+				<div class="fw-bold mt-5">Credit Limit &amp; Days</div>
+				<div class="text-gray-600">
+					<span class="rc_currency"
+					      data-cs-round="0"
+					      data-cs-sign="1">$$@credit_limit@$$
+					</span>
+					for $$@credit_days@$$ Days
+				</div>
+				<div class="fw-bold mt-5">Periodic Billing</div>
+				<div class="text-gray-600">$$@periodic_billing@$$</div>
+				<div class="fw-bold mt-5">Notification Preference</div>
+				<div class="text-gray-600 notify_m rc_string">$$@notification_preference@$$</div>
+			</div>
+		</div>
+	</div>
+
+</div>

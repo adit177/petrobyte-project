@@ -1,0 +1,1088 @@
+<div data-pb-layout="cards"
+     data-e-welcome="home"
+     data-layout="parent">
+	<div id="home__cards"
+	     class="zone row d-none">
+		<div id="menu__cards"
+		     class=" sub-zone col-lg-6 col-xl-4">
+			<div class="card card-flush">
+				<div class="card-header">
+					<div class="card-title">
+						<h2>Categories</h2>
+					</div>
+					<div class="card-toolbar"
+					     data-bs-toggle="tooltip"
+					     data-bs-placement="left"
+					     data-bs-html="true"
+					     title="<span class='fs-6'>Home page of Gateways</span>">
+						<button type="button"
+						        name="open"
+						        class="btn btn-outline btn-outline-dashed btn-outline-dark btn-active-light-primary py-2 ps-3 pe-2">
+							<i class="fs-2x la la-home"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body pt-5">
+					<div class="d-flex flex-column gap-5 scroll mh-400px"
+					     id="menuList">
+						<div class="d-flex d-none flex-stack"
+						     data-pb-template="menuList">
+							<a href="javascript:"
+							   class="fs-5 fw-semibold text-gray-800">name</a>
+							<div class="badge fs-4 fw-normal">number</div>
+						</div>
+					</div>
+					<div class="separator my-7"></div>
+					<button type="button"
+					        data-e-nature="get"
+					        name="card"
+					        value="new"
+					        class="btn btn-flex btn-light-primary px-6 w-100 mb-7">
+						<i class="fs-3x me-1 la la-user-plus"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Add Gateway</span>
+							<span class="fs-7">Business Gateways</span>
+						</span>
+					</button>
+					<button type="button"
+					        data-e-nature="get"
+					        name="card"
+					        value="cate"
+					        class="btn btn-flex btn-light-info px-6 w-100">
+						<i class="fs-3x me-1 las la-user-tag"></i>
+						<span class="d-flex flex-column align-items-start ms-2">
+							<span class="fs-3 fw-bold">Add Category</span>
+							<span class="fs-7">Business Gateways</span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="start__cards"
+		     class="sub-zone col-lg-6 col-xl-8">
+			<div class="card card-flush h-lg-100"
+			     id="kt_gateways_main">
+				<div class="card-body p-0">
+					<div class="card-px text-center py-20 my-10">
+						<h2 class="fs-2x fw-bold mb-10">Welcome to the Business Gateways</h2>
+						<p class="text-gray-500 fs-4 fw-semibold mb-10">Manage All your Gateways and their transactions.</p>
+						<button type="button"
+						        name="card"
+						        value="list"
+						        data-e-nature="get"
+						        data-e-recall
+						        class="btn btn-primary hover-scale">Show All Gateways
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="boards__cards"
+	     class="zone">
+		
+		<div id="new__cards"
+		     class="sub-zone d-none">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">
+						<i class="fs-2x me-2 text-dark las la-user-plus"></i>
+						<h3 class="">Add Gateway</h3>
+					</div>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        name="card"
+						        value="cate"
+						        data-e-origin="new"
+						        class="btn btn-icon btn-sm btn-light-info hover-elevate-up"><i class="fs-1 las la-user-tag"></i></button>
+					</div>
+				</div>
+				<div class="card-body pt-5">
+					<form class="form"
+					      data-form-valid=""
+					      data-form-sno="1"
+					      id="form-gateway-new"
+					      autocomplete="off">
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Gateway Name</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title="Enter the Gateway's name."></i>
+								</label>
+								<input required
+								       type="text"
+								       class="form-control form-control-solid"
+								       name="gateway_name"
+								       placeholder="Name of the Gateway"
+								       title="Name of the Gateway" />
+							</div>
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Terminal ID</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title="Enter the Terminal ID"></i>
+								</label>
+								<input required
+								       type="text"
+								       class="form-control form-control-solid"
+								       name="terminal_id"
+								       placeholder="Name of the Terminal ID"
+								       title="Name of the Terminal ID" />
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Gateway Category</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="category"
+								        data-pb-control="select"
+								        data-pb-method="text"
+								        data-pb-source="categories"
+								        data-pb-tack="col"
+								        data-placeholder="Select Gateway Category"
+								        title=""> </select>
+							</div>
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Connect Account</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="connect_account_id"
+								        data-pb-source="connect_account"
+								        data-pb-control="select"
+								        data-pb-method="text"
+								        data-pb-tack="col"
+								        data-placeholder="Select Account"
+								        title=""> </select>
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 rol-cols-md-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="form-label mt-3">
+									<span class="required">Settlement Charges</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title=""></i>
+								</label>
+								<input type="text"
+								       name="settlement_charges"
+								       required
+								       class="form-control form-control-solid text-end"
+								       data-pb-control="mask"
+								       data-pb-method="amount"
+								       placeholder="Settlement Charges"
+								       title="Settlement Charges" />
+							</div>
+							<div class="col">
+								<label class="form-label mt-3">
+									<span class="required">Unsettled Amount</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title=""></i>
+								</label>
+								<input required
+								       type="text"
+								       name="unsettled_amount"
+								       class="form-control form-control-solid text-end"
+								       data-pb-control="mask"
+								       data-pb-method="amount"
+								       placeholder="Unsettled Amount"
+								       title="Unsettled Amount" />
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Settlement Cycle</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="cycle_id"
+								        data-pb-source="cycle"
+								        data-pb-control="select"
+								        data-pb-method="text"
+								        data-pb-tack="col"
+								        data-placeholder="Settlement Cycle"
+								        title=""> </select>
+							</div>
+						</div>
+						<div class="row row-cols-1 row-cols-sm-2 rol-cols-md-1 row-cols-lg-2 mb-0 mb-xl-4">
+							<div class="col">
+								<div class="fv-row mb-7">
+									<label class="fs-6 fw-semibold form-label mt-3">
+										<span>Charges Method</span>
+										<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+										   data-bs-toggle="tooltip"
+										   title="Which Method you Choose for Charge Method"></i>
+									</label>
+									<div class="btn-group w-100"
+									     data-kt-buttons="true"
+									     data-kt-buttons-target="[data-kt-button]">
+										<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-light-success"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="charge_method"
+											       value="1" />
+											Amount
+										</label>
+										<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-light-danger"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="charge_method"
+											       value="2" />
+											Percentage
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="fv-row mb-7">
+							<label class="form-label required">GST on MDR Applicable</label>
+							<div class="form-check form-switch form-check-custom form-check- form-check-solid">
+								<input class="form-check-input"
+								       type="checkbox"
+								       value="" />
+								<label class="form-check-label fw-semibold">
+									Do you Want To Apply This??
+								</label>
+								<input required
+								       type="text"
+								       name="balance_date"
+								       class="form-control form-control-solid"
+								       data-pb-control="date"
+								       data-pb-method="human"
+								       placeholder="Date of Balance"
+								       title="What is the Date of Opening Balance" />
+							</div>
+						</div>
+						<div class="separator mb-6"></div>
+					</form>
+				</div>
+				
+				<div class="card-footer d-flex flex-stack">
+					<div class="justify-content-start">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-light-warning btn-text-gray-600 btn-active-text-dark">Discard[Go Back]
+						</button>
+					
+					</div>
+					<div class="justify-content-end">
+						<button type="button"
+						        form="form-gateway-new"
+						        name="action"
+						        value="reset"
+						        data-e-value="save"
+						        data-e-nature="post"
+						        class="btn btn-light hover-elevate-down me-2">Reset
+						</button>
+						<button type="button"
+						        name="action"
+						        value="save"
+						        data-e-nature="post"
+						        form="form-gateway-new"
+						        data-form-submit
+						        data-kt-indicator
+						        class="btn btn-primary hover-elevate-up">
+							<span class="indicator-label">Save Gateway</span>
+							<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+							</span>
+						</button>
+					</div>
+				
+				</div>
+			
+			</div>
+		</div>
+		<div id="edit__cards"
+		     class=" sub-zone d-none">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">
+						<i class="fs-2x me-2 text-dark las la-user-edit"></i>
+						<h2>Edit Gateway</h2>
+					</div>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        name="card"
+						        value="new"
+						        class="btn btn-icon btn-sm btn-light-primary hover-elevate-up">
+							<i class="fs-1 las la-user-plus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body pt-5">
+					<form class="form form_valid"
+					      action=""
+					      method="post"
+					      data-valid-form
+					      data-pb-control="combo"
+					      data-form-sno="2"
+					      id="edit-gateway-form"
+					      autocomplete="off">
+						<div class="mb-7">
+							<label class="fs-6 fw-semibold mb-3">
+								<span>Update Avatar</span>
+								<i class="bi bi-question-circle ms-1 fs-7"
+								   data-bs-toggle="tooltip"
+								   title="Allowed file types: png, jpg, jpeg."></i>
+							</label>
+							<div class="mt-1">
+								<div class="image-input image-input-outline image-input-placeholder image-input-empty"
+								     data-kt-image-input="true">
+									<div class="image-input-wrapper w-100px h-100px"
+									     style="background-image: url('../../../assets/media/avatars/300-1.jpg')"></div>
+									<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+									       data-kt-image-input-action="change"
+									       data-bs-toggle="tooltip"
+									       title="Change avatar">
+										<i class="bi bi-pencil-fill fs-7"></i>
+										<input type="file"
+										       name="avatar"
+										       accept=".png, .jpg, .jpeg" />
+										<input type="hidden"
+										       name="avatar_remove" />
+									</label>
+									<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+									      data-kt-image-input-action="cancel"
+									      data-bs-toggle="tooltip"
+									      title="Cancel avatar">
+										<i class="bi bi-x fs-2"></i>
+									</span>
+									<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+									      data-kt-image-input-action="remove"
+									      data-bs-toggle="tooltip"
+									      title="Remove avatar">
+										<i class="bi bi-x fs-2"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Gateway Name</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title="Enter the Gateway's name."></i>
+								</label>
+								<input required
+								       type="text"
+								       class="form-control form-control-solid"
+								       name="gateway_name"
+								       placeholder=""
+								       title="Name of the Gateway" />
+							</div>
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Terminal ID</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title="Enter the Terminal ID"></i>
+								</label>
+								<input required
+								       type="text"
+								       class="form-control form-control-solid"
+								       name="terminal_id"
+								       placeholder=""
+								       title="" />
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Gateway Category</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="category"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-pb-source="categories"
+								        data-placeholder="Select Gateway Category"
+								        title=""> </select>
+							</div>
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Connect Account</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="connect_account_id"
+								        data-pb-source="connect_account"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-placeholder="Select Account"
+								        title=""> </select>
+							</div>
+						</div>
+						<div class="row row-cols-1 rol-cols-md-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="form-label mt-3">
+									<span class="required">Settlement Charges</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title=""></i>
+								</label>
+								<input type="text"
+								       name="settlement_charges"
+								       required
+								       class="form-control form-control-solid text-end"
+								       data-pb-control="mask"
+								       data-pb-method="amount"
+								       placeholder="Settlement Charges"
+								       title="Settlement Charges" />
+							</div>
+							<div class="col">
+								<label class="form-label mt-3">
+									<span class="required">Unsettled Amount</span>
+									<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+									   data-bs-toggle="tooltip"
+									   title=""></i>
+								</label>
+								<input type="text"
+								       name="unsettled_amount"
+								       required
+								       class="form-control form-control-solid text-end"
+								       data-pb-control="mask"
+								       data-pb-method="amount"
+								       placeholder="Unsettled Amount"
+								       title="Unsettled Amount" />
+							</div>
+						</div>
+						<div class="fv-row row row-cols-1 row-cols-xl-2 mb-0 mb-xl-4">
+							<div class="col">
+								<label class="fs-6 fw-semibold form-label mt-3">
+									<span class="required">Settlement Cycle</span>
+								</label>
+								<select required
+								        class="form-select form-select-solid lh-1 py-4"
+								        name="cycle_id"
+								        data-pb-source="cycle"
+								        data-pb-control="select"
+								        data-pb-method="simple"
+								        data-placeholder="Settlement Cycle"
+								        title=""> </select>
+							</div>
+							<div class="col">
+								<div class="fv-row mb-7">
+									<label class="fs-6 fw-semibold form-label mt-3">
+										<span>Charges Method</span>
+										<i class="bi bi-question-circle ms-2 fs-7 text-gray-600"
+										   data-bs-toggle="tooltip"
+										   title="Which Method you Choose for Charge Method"></i>
+									</label>
+									<div class="btn-group w-100"
+									     data-kt-buttons="true"
+									     data-kt-buttons-target="[data-kt-button]">
+										<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-light-success"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="charge_method"
+											       value="1" />
+											Amount
+										</label>
+										<label class="fw-semibold fs-5 btn btn-outline btn-color-muted btn-active-light-danger"
+										       data-kt-button="true">
+											<input class="btn-check"
+											       type="radio"
+											       name="charge_method"
+											       value="2" />
+											Percentage
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="fv-row mb-7">
+							<label class="form-label required">GST on MDR Applicable</label>
+							<div class="form-check form-switch form-check-custom form-check- form-check-solid">
+								<input class="form-check-input"
+								       name="check"
+								       type="checkbox"
+								       value="1" />
+								<label class="form-check-label fw-semibold">
+									Do you Want To Apply This??
+								</label>
+								<!--<input required-->
+								<!--       type="text"-->
+								<!--       name="balance_date"-->
+								<!--       class="form-control form-control-solid"-->
+								<!--       data-pb-control="date"-->
+								<!--       data-pb-method="human"-->
+								<!--       placeholder="Date of Balance"-->
+								<!--       title="What is the Date of Opening Balance" />-->
+							</div>
+						</div>
+						<div class="separator mb-6"></div>
+					
+					</form>
+				</div>
+				<div class="card-footer d-flex flex-stack">
+					<div class="justify-content-start">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-light-warning btn-text-gray-600 btn-active-text-dark">Cancel [Go Back]
+						</button>
+					</div>
+					<div class="justify-content-end">
+						<button type="button"
+						        form="form-gateway-new"
+						        name="action"
+						        value="reset"
+						        data-e-value="update"
+						        data-e-nature="post"
+						        class="btn btn-light hover-elevate-down me-2">Reset
+						</button>
+						<button type="button"
+						        form="edit-gateway-form"
+						        class="btn btn-primary"
+						        name="action"
+						        data-e-nature="post"
+						        data-form-submit=""
+						        value="update">
+							<span class="indicator-label">Save Changes</span>
+							<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="list__cards"
+		     class="sub-zone d-none">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					<div class="card-title">
+						<i class="fs-2x me-2 text-dark las la-users"></i>
+						<h3 class="text-dark">All Gateways</h3>
+					</div>
+					<div class="card-toolbar">
+						<button type="button"
+						        data-e-nature="redirect"
+						        data-e-path=""
+						        data-e-params=""
+						        class="btn btn-light-primary btn-active-light-primary hover-scale py-2 ps-2 pe-1 me-2"
+						        data-bs-toggle="tooltip"
+						        data-bs-html="true"
+						        title="<span class='fs-6'>Group Report of all Gateways</span>">
+							<i class="fs-1 las la-stream"></i>
+						</button>
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+					</div>
+				</div>
+				<div class="card-body px-0 py-2">
+					<div class="table-responsive">
+						<table class="table align-middle table-row-dashed gy-2 gs-4 text-gray-700 fs-5 bg-white rounded"
+						       data-load-table="false">
+							<thead>
+							<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+								<th nowrap=""
+								    class="min-w-250px">Gateway Name
+								</th>
+								<th nowrap=""
+								    class="min-w-150px">Unsettled Amount
+								</th>
+								<th nowrap=""
+								    class="min-w-150px">Settlement Cycle
+								</th>
+								<th nowrap=""
+								    class="min-w-150px">Last Settlement
+								</th>
+								<th nowrap=""
+								    class="min-w-100px text-center">Actions
+								</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="view__cards"
+		     class="sub-zone d-none">
+			<div class="card">
+				<div class="card-header pt-7">
+					<div class="card-title">
+						<h2>Gateway Details</h2>
+					</div>
+					<div class="card-toolbar gap-3">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<a data-e-nature="ignore"
+						   class="btn btn-sm btn-light btn-active-light-primary"
+						   data-kt-menu-trigger="hover"
+						   data-kt-menu-placement="bottom-end">
+							<i class="bi bi-menu-app-fill fs-2"></i> Options
+						</a>
+						<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
+						     data-kt-menu="true">
+							<div class="menu-item px-3">
+								<button type="button"
+								        name="card"
+								        value="edit"
+								        data-e-catch="id"
+								        data-pb-value=""
+								        class="btn btn-sm btn-color-gray-700 btn-light-secondary btn-active-light-info w-100 px-3 hover-scale">
+									<i class="fs-4 me-1 las la-edit"></i>Edit
+								</button>
+							</div>
+							<div class="menu-item px-3">
+								<button type="button"
+								        name="action"
+								        value="disable"
+								        data-e-catch="id"
+								        data-pb-value=""
+								        class="btn btn-sm btn-color-gray-700 btn-light-secondary btn-active-light-warning w-100 px-3 hover-scale">
+									<i class="fs-4 me-1 las la-ban"></i>Disable
+								</button>
+							</div>
+							<div class="menu-item px-3">
+								<button type="button"
+								        name="action"
+								        value="delete"
+								        data-e-catch="id"
+								        data-e-value=""
+								        data-e-nature="post"
+								        class="btn btn-sm btn-color-gray-700 btn-light-secondary btn-active-light-danger w-100 px-3 hover-scale">
+									<i class="fs-4 me-1 las la-trash"></i>Delete
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-body pt-5">
+					<div data-pb-control="header">
+						<div class="d-flex flex-stack">
+							<div class="d-flex gap-7 align-items-center">
+								<div class="symbol symbol-circle symbol-100px">
+									<img src="../../../assets/media/avatars/300-2.jpg"
+									     alt="image" />
+								</div>
+								<div class="d-flex flex-column gap-2">
+									<h3 class="mb-0"
+									    data-pb-control="view-gateway-header">name</h3>
+									<div class="d-flex align-items-center gap-2">
+										<i class="bi bi-envelope-open-fill text-gray-600 fs-6"></i>
+										<a href="#"
+										   class="text-muted text-hover-primary"
+										   data-pb-control="view-gateway-header">email</a>
+									</div>
+									<div class="d-flex align-items-center gap-2">
+										<i class="bi bi-telephone-outbound-fill text-gray-600 fs-6"></i>
+										<a href="#"
+										   class="text-muted text-hover-primary"
+										   data-pb-control="view-gateway-header">mobile</a>
+									</div>
+								</div>
+							</div>
+							<div class="menu menu-rounded menu-column menu-active-bg menu-hover-bg menu-title-gray-700 fs-5 fw-semibold w-200px"
+							     id="#kt_aside_menu"
+							     data-kt-menu="true">
+								<div class="menu-item">
+									<div class="menu-content pb-2">
+										<span class="menu-section text-muted text-uppercase fs-7 fw-bold">Quick Transactions</span>
+									</div>
+								</div>
+								<div class="menu-item">
+									<a type="button"
+									   data-e-name="table"
+									   data-e-value="settlements"
+									   data-e-catch="id"
+									   data-e-recall=""
+									   class="menu-link bg-light-success border-3 border-start border-success hover-scale">
+										<span class="menu-title text-success">View Settlements</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a type="button"
+									   data-e-name="table"
+									   data-e-value="sales_receipts"
+									   data-e-catch="id"
+									   data-e-recall=""
+									   class="menu-link bg-light-primary border-3 border-start border-primary hover-scale">
+										<span class="menu-title text-primary">Sales Receipts</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a type="button"
+									   data-e-name="table"
+									   data-e-value="customer_receipts"
+									   data-e-catch="id"
+									   data-e-recall=""
+									   class="menu-link bg-light-primary border-3 border-start border-primary hover-scale">
+										<span class="menu-title text-primary">Customer Receipts</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex flex-stack">
+							<div data-pb-append="balance"
+							     class="p-5 ps-0 w-100">
+								<!--append here-->
+							</div>
+						</div>
+					</div>
+					<div data-pb-control="body">
+						<div aria-description="balance chart"
+						     class="card card-flush overflow-hidden mb-7">
+							<div class="card-header py-5">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label fw-bold text-dark">Account Balance Chart</span>
+									<span class="text-gray-400 mt-1 fw-semibold fs-6">Month-wise</span>
+								</h3>
+								<div class="card-toolbar">
+									<a href="javascript:"
+									   class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+									   data-kt-menu-trigger="click"
+									   data-kt-menu-placement="bottom-end"
+									   data-kt-menu-overflow="true">
+										<i class="bi bi-menu-app-fill fs-2"></i>
+									</a>
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+									     data-kt-menu="true">
+										<div class="menu-item px-3">
+											<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Chart Date Range</div>
+										</div>
+										<div class="separator mb-3 opacity-75"></div>
+										<div class="menu-item px-3">
+											<a href="javascript:"
+											   class="menu-link px-3">This Fiscal Year</a>
+										</div>
+										<div class="menu-item px-3 mb-3">
+											<a href="javascript:"
+											   class="menu-link disabled px-3">Previous Fiscal Year</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-0"
+							     data-pb-child="chart">
+								<div data-pb-key="balance"></div>
+							</div>
+						</div>
+						<div aria-description="transaction bar chart"
+						     class="card card-flush overflow-hidden mb-7">
+							<div class="card-header py-5">
+								<h3 class="card-title align-items-start flex-column">
+									<span class="card-label fw-bold text-dark">Transaction Summary Chart</span>
+									<span class="text-gray-400 mt-1 fw-semibold fs-6">Month-wise</span>
+								</h3>
+								<div class="card-toolbar">
+									<a href="javascript:"
+									   class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+									   data-kt-menu-trigger="click"
+									   data-kt-menu-placement="bottom-end"
+									   data-kt-menu-overflow="true">
+										<i class="bi bi-menu-app-fill fs-2"></i>
+									</a>
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+									     data-kt-menu="true">
+										<div class="menu-item px-3">
+											<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Chart Date Range</div>
+										</div>
+										<div class="separator mb-3 opacity-75"></div>
+										<div class="menu-item px-3">
+											<a href="javascript:"
+											   class="menu-link px-3">This Fiscal Year</a>
+										</div>
+										<div class="menu-item px-3 mb-3">
+											<a href="javascript:"
+											   class="menu-link disabled px-3">Previous Fiscal Year</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-0"
+							     data-pb-child="chart">
+								<div data-pb-key="transaction"></div>
+							</div>
+						</div>
+					</div>
+					<div data-pb-control="footer">
+						<div class="card"
+						     aria-description="Other Detail of Account">
+							<div class="card-body"
+							     data-pb-append="other">
+								<!--	append here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cate__cards"
+		     class="sub-zone d-none">
+				<div class="card shadow-sm">
+					<div class="card-header">
+						<div class="card-title">
+							<i class="fs-2x me-2 text-dark las la-user-tag"></i>
+							<h3 class="">Add Category</h3>
+						</div>
+						<div class="card-toolbar">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-sm btn-light btn-text-dark hover-rotate-start me-2">
+								<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+								<span>Go Back</span>
+							</button>
+							<button type="button"
+							        name="card"
+							        value="new"
+							        
+							        class="btn btn-icon btn-sm btn-light-primary hover-elevate-up"><i class="fs-1 las la-user-plus"></i></button>
+						</div>
+					</div>
+					<div class="card-body">
+						// adding a simple form.
+					</div>
+					<div class="card-footer">
+						<div class="d-flex justify-content-end">
+							<button type="button"
+							        data-e-nature="back"
+							        class="btn btn-active-light-dark me-2">Discard
+							</button>
+							<button type="reset"
+							        class="btn btn-light hover-elevate-down me-2">Reset
+							</button>
+							<button type="button"
+							        name="action"
+							        value="cate"
+							        data-e-nature="post"
+							        class="btn btn-info hover-elevate-up">
+								<span class="indicator-label">Create Category</span>
+								<span class="indicator-progress">Creating...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div id="tables__cards"
+	     class="zone d-none">
+		<div class="card">
+			<div class="card-header">
+				<h3 class="card-title">
+					<span></span>
+				</h3>
+				<div class="card-toolbar">
+					<div class="gap-2">
+						<button type="button"
+						        data-e-nature="back"
+						        class="btn py-2 btn-light btn-text-dark hover-rotate-start">
+							<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+							<span>Go Back</span>
+						</button>
+						<button type="button"
+						        data-e-catch="id"
+						        data-e-nature="get"
+						        name="card"
+						        value="view"
+						        class="btn py-2 btn-light">View Details
+						</button>
+						<a data-e-nature="ignore"
+						   class="btn py-2 btn-light-primary"
+						   data-kt-menu-trigger="hover"
+						   data-kt-menu-placement="top-start"
+						   data-kt-menu-offset="0px, 0px">
+							Transaction Options </a>
+						<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-150px"
+						     data-kt-menu="true">
+							
+							<div class="menu-item px-3 mt-3">
+								<a type="button"
+								   data-e-type="table"
+								   data-e-value="settlements"
+								   data-e-catch="id"
+								   data-e-recall=""
+								   class="menu-link px-3">
+									Settlements </a>
+							</div>
+							
+							<div class="menu-item px-3">
+								<a type="button"
+								   data-e-type="table"
+								   data-e-value="sales_receipts"
+								   data-e-catch="id"
+								   data-e-recall=""
+								   class="menu-link px-3">
+									Sales Receipts </a>
+							</div>
+							
+							<div class="menu-item px-3">
+								<a type="button"
+								   data-e-type="table"
+								   data-e-value="customer_receipts"
+								   data-e-catch="id"
+								   data-e-recall=""
+								   class="menu-link px-3">
+									Customer Receipts </a>
+							</div>
+							
+							<div class="separator mt-3 opacity-75"></div>
+							
+							<div class="menu-item px-3">
+								<div class="menu-content px-3 py-3">
+									<a type="button"
+									   class="btn btn-light btn-sm px-4 w-100">
+										Change Setting </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table id="settlements"
+					       class="table align-middle table-row-dashed gy-1 gs-3 text-gray-700 fs-5 rounded">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th data-index="1"
+							    class="min-w-125px">Date
+							</th>
+							<th data-index="2"
+							    class="min-w-100px">Amount
+							</th>
+							<th data-index="3"
+							    class="min-w-150px">Bank
+							</th>
+							<th data-index="4"
+							    class="min-w-125px">Against
+							</th>
+							<th data-index="5"
+							    class="min-w-100px text-end">Actions
+							</th>
+						</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="sales_receipts"
+					       class="table align-middle table-row-dashed gy-1 gs-3 text-gray-700 fs-5 rounded">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th data-index="1"
+							    class="min-w-125px">Date
+							</th>
+							<th data-index="2"
+							    class="min-w-150px">Account
+							</th>
+							<th data-index="3"
+							    class="min-w-100px">Amount
+							</th>
+							<th data-index="4"
+							    class="min-w-100px text-end">Actions
+							</th>
+						</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="customer_receipts"
+					       class="table align-middle table-row-dashed gy-1 gs-3 text-gray-700 fs-5 rounded">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th data-index="1"
+							    class="min-w-125px">Date
+							</th>
+							<th data-index="2"
+							    class="min-w-150px">Account
+							</th>
+							<th data-index="3"
+							    class="min-w-100px">Amount
+							</th>
+							<th data-index="5"
+							    class="min-w-100px text-end">Actions
+							</th>
+						</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__cards">
+		<div data-pb-template="balance"
+		     class="d-none">
+			<div class="card card-flush">
+				<div class="card-body py-4 d-flex flex-wrap align-items-center">
+					<div class="d-flex flex-column content-justify-center flex-row-fluid fs-4">
+						<div class="d-flex fw-semibold align-items-center">
+							<div class="bullet w-8px h-3px rounded-2 bg-secondary me-3"></div>
+							<div class="text-gray-500 flex-grow-1 me-4">Unsettled Balance</div>
+							<div class="fw-bold text-gray-700 text-xxl-end rc_currency"
+							     data-cs-sign="1">$$@unsettled_balance@$$
+							</div>
+						</div>
+						<div class="d-flex fw-semibold align-items-center my-3">
+							<div class="bullet w-8px h-3px rounded-2 bg-success me-3"></div>
+							<div class="text-gray-500 flex-grow-1 me-4">Total of This Month</div>
+							<div class="fw-bold text-gray-700 text-xxl-end in_num">$$@current_month@$$
+							</div>
+						</div>
+						<div class="d-flex fw-semibold align-items-center">
+							<div class="bullet w-8px h-3px rounded-2 bg-danger me-3"></div>
+							<div class="text-gray-500 flex-grow-1 me-4">Total of Last Month</div>
+							<div class="fw-bold text-gray-700 text-xxl-end in_num">$$@last_month@$$
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-pb-template="other"
+		     class="d-none">
+			<div class="d-flex flex-column gap-5 mt-7">
+				<div class="d-flex flex-column gap-1">
+					<div class="fw-bold fs-6 text-muted">Notification Preferences</div>
+					<p class="fw-semibold fs-5">$$@notify_mode@$$</p>
+				</div>
+				<div class="d-flex flex-column gap-1">
+					<div class="fw-bold fs-6 text-muted">Account Category</div>
+					<p class="fw-semibold fs-5">$$@category@$$</p>
+				</div>
+				<div class="d-flex flex-column gap-1">
+					<div class="fw-bold fs-6 text-muted">Account Description</div>
+					<p class="fw-semibold fs-5">$$@description@$$</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

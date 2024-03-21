@@ -1,0 +1,251 @@
+<div data-pb-layout="sample"
+     data-e-welcome="ground"
+     data-layout="parent">
+	<div id="ground__sample"
+	     class="row g-7 zone">
+		<div id="single_string"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">single_string</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="single_string"
+					        class="btn btn-sm btn-light-dark">
+						Append Data
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div data-pb-append="single_string">
+					// single_string
+				</div>
+			</div>
+		</div>
+		<div id="single_element"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">single_element</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="single_element"
+					        class="btn btn-sm btn-light-dark">
+						Append Data
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div data-pb-append="single_element">
+					// single_element
+				</div>
+			</div>
+		</div>
+		<div id="loop_string"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">loop_string</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="loop_string"
+					        class="btn btn-sm btn-light-dark">
+						Append Data
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div data-pb-append="loop_string">
+					// loop_string
+				</div>
+			</div>
+		</div>
+		<div id="loop_element"
+		     class="card shadow-sm">
+			<div class="card-header">
+				<h3 class="card-title">loop_element</h3>
+				<div class="card-toolbar">
+					<button type="button"
+					        data-e-nature="option"
+					        name="stack"
+					        value="loop_element"
+					        class="btn btn-sm btn-light-dark">
+						Load Data
+					</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div data-pb-append="loop_element">
+					// loop_element
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="docx__sample"
+	     class="row zone mt-10">
+		<div class="card shadow-sm">
+			<div class="card-body fs-3">
+				<div class="table-responsive">
+					<table class="table table-bordered align-middle table-row-dashed gy-3 gs-4">
+						<thead>
+						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+							<th>Attribute</th>
+							<th>Working</th>
+							<th>Values</th>
+							<th>Example</th>
+						</tr>
+						</thead>
+						<tbody class="text-gray-600 fw-semibold fs-5">
+						<tr>
+							<td>data-pb-template</td>
+							<td>it has given to the template outer div in the template elements</td>
+							<td>any string that does not have any space.</td>
+							<td>data-pb-template="asdf"</td>
+						</tr>
+						<tr>
+							<td>data-pb-append</td>
+							<td>it has given to the show page outer attribute.</td>
+							<td>any string that same to the template.</td>
+							<td>data-pb-append="abcd"</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="templates__sample"
+	     class="row mt-10">
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<p>this is for single_string</p>
+				<div data-pb-template="single_string">
+					<div class="border rounded-2 border-2 p-10">
+						<div class="d-flex flex-column gap-5 mt-7">
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Notification Preferences</div>
+								<p class="fw-semibold fs-5">$$@notify_mode@$$</p>
+							</div>
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Account Category</div>
+								<p class="fw-semibold fs-5">$$@category@$$</p>
+							</div>
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Account Description</div>
+								<p class="fw-semibold fs-5">$$@description@$$</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>this is for single_element</p>
+				<div data-pb-template="single_element">
+					<div class="border border-2 rounded-2 p-10">
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Total Payments</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@payment@$$
+								</span>
+								<i class="fs-2 ms-2 text-danger bi bi-arrow-up-right-circle"></i>
+							</div>
+						</div>
+						<div class="separator separator-dashed my-3"></div>
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Total Receipts</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@receipt@$$
+								</span>
+								<i class="fs-2 ms-2 text-success bi bi-arrow-down-left-circle"></i>
+							</div>
+						</div>
+						<div class="separator separator-dashed my-3"></div>
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Net Flow of Month</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@net@$$
+								</span>
+								<i class="fs-2 ms-2 text-primary bi bi-arrow-right-circle"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>this is for loop_string</p>
+				<div data-pb-template="loop_string">
+					<div class="border rounded-2 border-2 p-10 my-5">
+						<div class="d-flex flex-column gap-5 mt-7">
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Notification Preferences</div>
+								<p class="fw-semibold fs-5">$$@notify_mode@$$</p>
+							</div>
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Account Category</div>
+								<p class="fw-semibold fs-5">$$@category@$$</p>
+							</div>
+							<div class="d-flex flex-column gap-1">
+								<div class="fw-bold fs-6 text-muted">Account Description</div>
+								<p class="fw-semibold fs-5">$$@description@$$</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>this is for loop_element</p>
+				<div data-pb-template="loop_element">
+					<div class="border border-2 rounded-2 p-10 my-3">
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Total Payments</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@payment@$$
+								</span>
+								<i class="fs-2 ms-2 text-danger bi bi-arrow-up-right-circle"></i>
+							</div>
+						</div>
+						<div class="separator separator-dashed my-3"></div>
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Total Receipts</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@receipt@$$
+								</span>
+								<i class="fs-2 ms-2 text-success bi bi-arrow-down-left-circle"></i>
+							</div>
+						</div>
+						<div class="separator separator-dashed my-3"></div>
+						<div class="d-flex flex-stack">
+							<div class="text-gray-700 fw-normal me-2">Net Flow of Month</div>
+							<div class="d-flex align-items-center">
+								<span class="text-gray-800 fw-bold rc_currency"
+								      data-cs-sign="1"
+								      data-cs-round="0">$$@net@$$
+								</span>
+								<i class="fs-2 ms-2 text-primary bi bi-arrow-right-circle"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
